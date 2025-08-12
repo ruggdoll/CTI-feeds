@@ -9,7 +9,7 @@ NB : Cette liste complète les feeds/connecteurs par défaut des projets OpenCTI
 |Divers  |[APNIC Community Honeynet Project](https://feeds.honeynet.asia) | des fichiers latest sont en fin de listing |
 |Divers  |[Azure Sentinel Public feed](https://github.com/Azure/Azure-Sentinel) | il faut fouiller |
 |Divers  |[Bambenekconsulting.com](https://osint.bambenekconsulting.com) | montrer patte blanche au préalable |
-|Divers  |[CERT-FR feed IOCs public](https://www.cert.ssi.gouv.fr/ioc/) | |
+|Divers  |[CERT-FR feed IOCs public](https://www.cert.ssi.gouv.fr/ioc/) | dont un feed MISP natif |
 |Divers  |[CTI Chef daily detection rules](https://dispatch.ctichef.com/feeds) | uniquement des règles de detection |
 |MISP    |[EcrimeLabs](https://ecrimelabs.net) | montrer patte blanche au préalable |
 |Liste   |[Github Bert-JanP](https://github.com/Bert-JanP/Open-Source-Threat-Intel-Feeds) | liste de sources CTI |
@@ -28,8 +28,8 @@ NB : Cette liste complète les feeds/connecteurs par défaut des projets OpenCTI
 |Divers  |[Github Xanderux](https://github.com/Xanderux/C2watcher) | |
 |Divers  |[Malshare.com](https://malshare.com/) | |
 |STIX    |[Mitre ATT&CK Github ](https://github.com/mitre-attack/attack-stix-data/) | |
-|Divers  |[Mr Looker ioc Feed](https://iocfeed.mrlooquer.com/) | |
-|Divers  |[NetManage public openCTI](https://opencti.netmanageit.com/dashboard) | |
+|Divers  |[Mr Looker IOCs Feed](https://iocfeed.mrlooquer.com/) | |
+|Divers  |[NetManage instance publique openCTI](https://opencti.netmanageit.com/dashboard) | |
 |CSV     |[Phishing Army Feed](https://phishing.army) | |
 |STIX    |[PulseDive](https://pulsedive.com) | |
 |Divers  |[Ransomware.live Feeds](https://www.ransomware.live/api) | |
@@ -37,3 +37,5 @@ NB : Cette liste complète les feeds/connecteurs par défaut des projets OpenCTI
 |Divers  |[Threatfeeds.io](https://threatfeeds.io) | |
 |JSON    |[TweetFeed](https://tweetfeed.live) | |
 |STIX    |[Viginum Github ](https://github.com/VIGINUM-FR/Rapports-Techniques) | |
+
+_MAJ du 13/08/2025
