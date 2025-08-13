@@ -12,9 +12,11 @@ NB : Cette liste complète les feeds/connecteurs par défaut des projets OpenCTI
 |[CERT-FR feed IOCs public](https://www.cert.ssi.gouv.fr/ioc) | dont un feed MISP natif |
 |[CTI Chef daily detection rules](https://dispatch.ctichef.com/feeds) | uniquement des règles de detection |
 |[cyberfury101 Gitlab](https://gitlab.com/Cyberfury101/deepdarkCTI) | sources CTI |
+|[despacito420 Github](https://github.com/despacito420/The-Feed)| Rapports CTI |
 |[devsecops Github](https://github.com/devsecops/awesome-devsecops) | sources CTI entre autres |
 |[drb-ra Github](https://github.com/drb-ra/C2IntelFeeds) | orienté C2, très actif |
 |[EcrimeLabs](https://ecrimelabs.net) | montrer patte blanche au préalable |
+|[EndlessFractal Github](https://github.com/EndlessFractal/Threat-Intel-Feed)|sources CTI |
 |[ESET Github](https://github.com/eset/malware-ioc/tree/master)| malheureusement pas super actif |
 |[fastfire Github](https://github.com/fastfire/deepdarkCTI) | orienté deep et darkweb |
 |[FGRibreau Github](https://github.com/FGRibreau/mailchecker) | voir list.txt |
