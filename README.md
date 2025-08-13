@@ -23,6 +23,7 @@ NB : Cette liste complète les feeds/connecteurs par défaut des projets OpenCTI
 |[hslatman Github](https://github.com/hslatman/awesome-threat-intelligence) | sources CTI |
 |[infoblox Github](https://github.com/infobloxopen/threat-intelligence) | sources CTI |
 |[Malshare.com](https://malshare.com) | |
+|[Midnight Slayer](https://start.me/p/wMPxqX/cyber-threat-intelligence)| start.me |
 |[Mitre ATT&CK Github ](https://github.com/mitre-attack/attack-stix-data) | |
 |[montysecurity Github](https://github.com/montysecurity) | voir C2-Tracker |
 |[Mr Looker IOCs Feed](https://iocfeed.mrlooquer.com) | |
