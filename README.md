@@ -6,6 +6,7 @@ NB : Cette liste complète les feeds/connecteurs par défaut des projets OpenCTI
 |----------------------------------------------------------------------------------|--------------------
 |[Amnesty International Github](https://github.com/AmnestyTech/investigations) | plutot orienté smartphone |
 |[APNIC Community Honeynet Project](https://feeds.honeynet.asia) | des fichiers latest sont en fin de listing |
+|[AlienVault Open Threat Exchange](https://otx.alienvault.com/api) | Source CTI |
 |[Azure Sentinel Public feed](https://github.com/Azure/Azure-Sentinel) | il faut fouiller |
 |[Bambenekconsulting.com](https://osint.bambenekconsulting.com) | montrer patte blanche au préalable |
 |[Bert-JanP Github](https://github.com/Bert-JanP/Open-Source-Threat-Intel-Feeds) | liste proche des feeds par défaut MISP |
@@ -23,6 +24,7 @@ NB : Cette liste complète les feeds/connecteurs par défaut des projets OpenCTI
 |[hslatman Github](https://github.com/hslatman/awesome-threat-intelligence) | sources CTI |
 |[infoblox Github](https://github.com/infobloxopen/threat-intelligence) | sources CTI |
 |[Malshare.com](https://malshare.com) | nombreux IOCs, parfois anciens |
+|[MalwareBazaar](https://bazaar.abuse.ch/) | Source CTI |
 |[Midnight Slayer](https://start.me/p/wMPxqX/cyber-threat-intelligence)| start.me |
 |[Mitre ATT&CK Github ](https://github.com/mitre-attack/attack-stix-data) | |
 |[montysecurity Github](https://github.com/montysecurity) | voir C2-Tracker |
@@ -36,7 +38,9 @@ NB : Cette liste complète les feeds/connecteurs par défaut des projets OpenCTI
 |[stamparm Ipsum Github](https://github.com/stamparm/Ipsum) | IOCs dont la fiabilité est graduelle |
 |[Stop Forum Scam](https://www.stopforumspam.com/downloads) | |
 |[Threatfeeds.io](https://threatfeeds.io) | sources CTI |
+|[ThreatFox](https://threatfox.abuse.ch/) | OIC associés à des logiciels malveillants |
 |[toliver38 Github](https://github.com/stars/toliver38/lists/detection-content) | CTI issue de Volexity |
+|[URLhaus](https://urlhaus.abuse.ch/) | dédiée au partage d'URL malveillantes |
 |[TweetFeed](https://tweetfeed.live) | |
 |[Viginum Github ](https://github.com/VIGINUM-FR/Rapports-Techniques) | |
 |[Xanderux Github](https://github.com/Xanderux/C2watcher) | orienté C2, actif|
