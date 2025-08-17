@@ -9,6 +9,7 @@ NB : Cette liste complète les feeds/connecteurs par défaut des projets OpenCTI
 |[Azure Sentinel Public feed](https://github.com/Azure/Azure-Sentinel) | il faut fouiller |
 |[Bambenekconsulting.com](https://osint.bambenekconsulting.com) | montrer patte blanche au préalable |
 |[Bert-JanP Github](https://github.com/Bert-JanP/Open-Source-Threat-Intel-Feeds) | liste proche des feeds par défaut MISP |
+|[Cisco Talos Github](https://github.com/Cisco-Talos)| voir IOCs |
 |[cyberfury101 Gitlab](https://gitlab.com/Cyberfury101/deepdarkCTI) | orienté deep et darkweb |
 |[drb-ra Github](https://github.com/drb-ra/C2IntelFeeds) | orienté C2, très actif |
 |[EcrimeLabs](https://ecrimelabs.net) | montrer patte blanche au préalable |
@@ -16,12 +17,18 @@ NB : Cette liste complète les feeds/connecteurs par défaut des projets OpenCTI
 |[fastfire Github](https://github.com/fastfire/deepdarkCTI) | orienté deep et darkweb |
 |[FGRibreau Github](https://github.com/FGRibreau/mailchecker) | voir list.txt |
 |[Malshare.com](https://malshare.com) | nombreux IOCs, parfois anciens |
+|[malware-traffic Github](https://github.com/malware-traffic/indicators)| IOCs de 2025|
+|[Mandiant Github](https://github.com/mandiant/iocs)| de vieux IOCs |
+|[Meta Github](https://github.com/facebook/threat-research)| IOCS et detection |
 |[Mitre ATT&CK Github ](https://github.com/mitre-attack/attack-stix-data) | |
 |[montysecurity Github](https://github.com/montysecurity) | voir C2-Tracker |
 |[Mr Looker IOCs Feed](https://iocfeed.mrlooquer.com) | IOCs JSON & CSV bientôt en STIX |
+|[Palo Alto Github ](https://github.com/PaloAltoNetworks/Unit42-Threat-Intelligence-Article-Information)| IOCs un peu fouilli |
 |[pan-unit42 Github](https://github.com/pan-unit42) | voir iocs |
 |[Phishing Army Feed](https://phishing.army) | liste de NDD liés au phishing |
+|[Prodaft Github](https://github.com/prodaft)| voir malware-ioc, actif|
 |[PulseDive](https://pulsedive.com) | plusieurs feeds disponibles |
+|[rodanmahrjan Github](https://github.com/rodanmaharjan/ThreatIntelligence)| pas mal d'IOCs récents|
 |[Ransomware.live Feeds](https://www.ransomware.live/api) | le plan gratuit permet 50 req/j |
 |[RedDrip7 Gihub](https://github.com/RedDrip7)| IOcs dans APT_Digital_Weapon |
 |[sophoslabs Github](https://github.com/sophoslabs/IoCs)| IOCs |
@@ -31,6 +38,7 @@ NB : Cette liste complète les feeds/connecteurs par défaut des projets OpenCTI
 |[Threatfeeds.io](https://threatfeeds.io) | sources CTI |
 |[Xanderux Github](https://github.com/Xanderux/C2watcher) | orienté C2, actif|
 |[xxspell Gitlab](https://gitlab.com/xxspell/ctifeeds)| feeds de 2018 |
+|[Zscaler Github](https://github.com/ThreatLabz/iocs)| actif et dense |
 
 # Rapports, analyses, informations
 |Source                                                                            |Commentaire         |
