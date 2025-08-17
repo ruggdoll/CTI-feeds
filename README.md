@@ -34,6 +34,7 @@ NB : Cette liste complète les feeds/connecteurs par défaut des projets OpenCTI
 |[Ransomware.live Feeds](https://www.ransomware.live/api) | le plan gratuit permet 50 req/j |
 |[RedDrip7 Gihub](https://github.com/RedDrip7)| IOcs dans APT_Digital_Weapon |
 |[sophoslabs Github](https://github.com/sophoslabs/IoCs)| IOCs |
+|[spydisec Github](https://github.com/spydisec/spydithreatintel)| tres complet |
 |[sroberts Github](https://github.com/sroberts/awesome-iocs)| Sources CTI |
 |[stamparm Ipsum Github](https://github.com/stamparm/Ipsum) | IOCs dont la fiabilité est graduelle |
 |[Stop Forum Scam](https://www.stopforumspam.com/downloads) | |
