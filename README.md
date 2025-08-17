@@ -17,6 +17,7 @@ NB : Cette liste complète les feeds/connecteurs par défaut des projets OpenCTI
 |[ESET Github](https://github.com/eset/malware-ioc/tree/master)| malheureusement pas super actif |
 |[fastfire Github](https://github.com/fastfire/deepdarkCTI) | orienté deep et darkweb |
 |[FGRibreau Github](https://github.com/FGRibreau/mailchecker) | voir list.txt |
+|[InfoSec Github](https://github.com/GithubInfosec/latest-malware-IoC)| |
 |[Malshare.com](https://malshare.com) | nombreux IOCs, parfois anciens |
 |[malware-traffic Github](https://github.com/malware-traffic/indicators)| IOCs de 2025|
 |[Mandiant Github](https://github.com/mandiant/iocs)| de vieux IOCs |
