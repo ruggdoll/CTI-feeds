@@ -35,7 +35,7 @@ NB : Cette liste complète les feeds/connecteurs par défaut des projets OpenCTI
 |[Ransomware.live Feeds](https://www.ransomware.live/api) | le plan gratuit permet 50 req/j |
 |[RedDrip7 Gihub](https://github.com/RedDrip7)| IOcs dans APT_Digital_Weapon |
 |[sophoslabs Github](https://github.com/sophoslabs/IoCs)| IOCs |
-|[sroberts github](https://github.com/sroberts/awesome-iocs)| Sources CTI |
+|[sroberts Github](https://github.com/sroberts/awesome-iocs)| Sources CTI |
 |[stamparm Ipsum Github](https://github.com/stamparm/Ipsum) | IOCs dont la fiabilité est graduelle |
 |[Stop Forum Scam](https://www.stopforumspam.com/downloads) | |
 |[Threatfeeds.io](https://threatfeeds.io) | sources CTI |
@@ -44,5 +44,6 @@ NB : Cette liste complète les feeds/connecteurs par défaut des projets OpenCTI
 |[Viginum Github ](https://github.com/VIGINUM-FR/Rapports-Techniques) | |
 |[Xanderux Github](https://github.com/Xanderux/C2watcher) | orienté C2, actif|
 |[xxspell Gitlab](https://gitlab.com/xxspell/ctifeeds)| feeds de 2018 |
+|[0xDanielLopez Github](https://github.com/0xDanielLopez)| sources CTI |
 
 _MAJ du 13/08/2025
