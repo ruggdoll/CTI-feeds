@@ -9,6 +9,7 @@ NB : Cette liste complète les feeds/connecteurs par défaut des projets OpenCTI
 |[Azure Sentinel Public feed](https://github.com/Azure/Azure-Sentinel) | il faut fouiller |
 |[Bambenekconsulting.com](https://osint.bambenekconsulting.com) | montrer patte blanche au préalable |
 |[Bert-JanP Github](https://github.com/Bert-JanP/Open-Source-Threat-Intel-Feeds) | liste proche des feeds par défaut MISP |
+|[Bitdefender Github](https://github.com/bitdefender/malware-ioc)| IOCs |
 |[Cisco Talos Github](https://github.com/Cisco-Talos)| voir IOCs |
 |[cyberfury101 Gitlab](https://gitlab.com/Cyberfury101/deepdarkCTI) | orienté deep et darkweb |
 |[drb-ra Github](https://github.com/drb-ra/C2IntelFeeds) | orienté C2, très actif |
@@ -59,5 +60,7 @@ NB : Cette liste complète les feeds/connecteurs par défaut des projets OpenCTI
 # Règles de detection
 |Source                                                                            |Commentaire         |
 |----------------------------------------------------------------------------------|--------------------|
+|[CISA Gov](https://github.com/cisagov)| Liste officielle des .gov |
 |[CTI Chef daily detection rules](https://dispatch.ctichef.com/feeds) | uniquement des règles de detection |
+|[HarfangLabs Github](https://github.com/HarfangLab/iocs)| |
 |[toliver38 Github](https://github.com/stars/toliver38/lists/detection-content) | CTI issue de Volexity |
