@@ -10,6 +10,8 @@ NB : Cette liste complète les feeds/connecteurs par défaut des projets OpenCTI
 |[Bambenekconsulting.com](https://osint.bambenekconsulting.com) | montrer patte blanche au préalable |
 |[Bert-JanP Github](https://github.com/Bert-JanP/Open-Source-Threat-Intel-Feeds) | liste proche des feeds par défaut MISP |
 |[Bitdefender Github](https://github.com/bitdefender/malware-ioc)| IOCs |
+|[CERT Mumbai](https://github.com/MH-CERT)| |
+|[CERT Thailand Telco](https://github.com/ttc-cert)| |
 |[Cisco Talos Github](https://github.com/Cisco-Talos)| voir IOCs |
 |[cyberfury101 Gitlab](https://gitlab.com/Cyberfury101/deepdarkCTI) | orienté deep et darkweb |
 |[drb-ra Github](https://github.com/drb-ra/C2IntelFeeds) | orienté C2, très actif |
