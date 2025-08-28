@@ -55,7 +55,7 @@ NB : Cette liste complète les feeds/connecteurs par défaut des projets OpenCTI
 |[EndlessFractal Github](https://github.com/EndlessFractal/Threat-Intel-Feed)|sources CTI |
 |[infoblox Github](https://github.com/infobloxopen/threat-intelligence) | sources CTI |
 |[Microsoft Security Blog](https://www.microsoft.com/en-us/security/blog/)| Rapports |
-|[Midnight Slayer](https://start.me/p/wMPxqX/cyber-threat-intelligence)| start.me |
+|[Midnight Slayer](https://start.me/p/wMPxqX/cyber-threat-intelligence)| start.me super riche |
 |[mthcht Github](https://github.com/mthcht) | sources CTI |
 |[NetManage instance publique openCTI](https://opencti.netmanageit.com/dashboard) | |
 |[TweetFeed](https://tweetfeed.live) | |
