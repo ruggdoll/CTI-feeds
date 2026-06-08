@@ -14,6 +14,7 @@ NB : Cette liste complète les feeds/connecteurs par défaut des projets OpenCTI
 |[CERT Thailand Telco](https://github.com/ttc-cert)| |
 |[Cisco Talos Github](https://github.com/Cisco-Talos)| voir IOCs |
 |[cyberfury101 Gitlab](https://gitlab.com/Cyberfury101/deepdarkCTI) | orienté deep et darkweb |
+|[dragnet Github](https://github.com/dragnet-dev/haul/tree/main/feeds) | IOCs |
 |[drb-ra Github](https://github.com/drb-ra/C2IntelFeeds) | orienté C2, très actif |
 |[EcrimeLabs](https://ecrimelabs.net) | montrer patte blanche au préalable |
 |[ESET Github](https://github.com/eset/malware-ioc/tree/master)| malheureusement pas super actif |
