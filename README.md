@@ -17,6 +17,7 @@ NB : Cette liste complète les feeds/connecteurs par défaut des projets OpenCTI
 |[dragnet Github](https://github.com/dragnet-dev/haul/tree/main/feeds) | IOCs |
 |[drb-ra Github](https://github.com/drb-ra/C2IntelFeeds) | orienté C2, très actif |
 |[EcrimeLabs](https://ecrimelabs.net) | montrer patte blanche au préalable |
+|[Endless Fractal](https://github.com/EndlessFractal/Threat-Intel-Feed) | Aggregat d'IOCs |
 |[ESET Github](https://github.com/eset/malware-ioc/tree/master)| malheureusement pas super actif |
 |[fastfire Github](https://github.com/fastfire/deepdarkCTI) | orienté deep et darkweb |
 |[FGRibreau Github](https://github.com/FGRibreau/mailchecker) | voir list.txt |
