@@ -17,7 +17,6 @@ NB : Cette liste complète les feeds/connecteurs par défaut des projets OpenCTI
 |[dragnet Github](https://github.com/dragnet-dev/haul/tree/main/feeds) | IOCs |
 |[drb-ra Github](https://github.com/drb-ra/C2IntelFeeds) | orienté C2, très actif |
 |[EcrimeLabs](https://ecrimelabs.net) | montrer patte blanche au préalable |
-|[Endless Fractal Github](https://github.com/EndlessFractal/Threat-Intel-Feed) | Aggregat d'IOCs |
 |[ESET Github](https://github.com/eset/malware-ioc/tree/master)| malheureusement pas super actif |
 |[fastfire Github](https://github.com/fastfire/deepdarkCTI) | orienté deep et darkweb |
 |[FGRibreau Github](https://github.com/FGRibreau/mailchecker) | voir list.txt |
@@ -55,6 +54,7 @@ NB : Cette liste complète les feeds/connecteurs par défaut des projets OpenCTI
 |[despacito420 Github](https://github.com/despacito420/The-Feed)| Rapports CTI |
 |[devsecops Github](https://github.com/devsecops/awesome-devsecops) | sources CTI entre autres |
 |[EndlessFractal Github](https://github.com/EndlessFractal/Threat-Intel-Feed)|sources CTI |
+|[hslatman Github](https://github.com/hslatman/awesome-threat-intelligence)| sources CTI |
 |[infoblox Github](https://github.com/infobloxopen/threat-intelligence) | sources CTI |
 |[Microsoft Security Blog](https://www.microsoft.com/en-us/security/blog/)| Rapports |
 |[Midnight Slayer](https://start.me/p/wMPxqX/cyber-threat-intelligence)| start.me super riche |
