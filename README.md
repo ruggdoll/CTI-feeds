@@ -90,11 +90,13 @@ CERT / CSIRT nationaux et agences. Beaucoup publient leurs IOCs dans des avis we
 |[CERT-FR / ANSSI](https://www.cert.ssi.gouv.fr/ioc) | feed IOCs officiel (+ MISP natif) ; outils DFIR sur [github.com/ANSSI-FR](https://github.com/ANSSI-FR) (DFIR-ORC, DFIR-OGRE) |
 |[VIGINUM](https://github.com/VIGINUM-FR/Rapports-Techniques) | rapports techniques sur l'ingérence numérique étrangère (dernière MAJ sept. 2025) |
 
-### Union européenne (institutions)
+### Organisations régionales et supranationales
 |Source                                                                            |Commentaire         |
 |----------------------------------------------------------------------------------|--------------------|
-|[ENISA — EU CSIRTs Network (CNW)](https://github.com/enisaeu/CNW) | agrège les avis des CSIRT nationaux de l'UE + CERT-EU |
-|[CERT-EU](https://cert.europa.eu/publications/threat-intelligence) | Threat Intelligence & security advisories ; [`droid`](https://github.com/certeu/droid) pour la gestion de règles Sigma |
+|[ENISA — EU CSIRTs Network (CNW)](https://github.com/enisaeu/CNW) (UE) | agrège les avis des CSIRT nationaux de l'UE + CERT-EU |
+|[CERT-EU](https://cert.europa.eu/publications/threat-intelligence) (UE) | Threat Intelligence & security advisories des institutions de l'UE ; [`droid`](https://github.com/certeu/droid) pour la gestion de règles Sigma |
+|[AfricaCERT](https://www.africacert.org) (Afrique) | organisation régionale des CSIRT africains |
+|[OEA — CSIRTAmericas](https://csirtamericas.org) (Amériques) | réseau des CSIRT nationaux des Amériques (Organisation des États américains) `[ES/EN/PT]` |
 
 ### États membres de l'UE
 |Pays|Source|Commentaire|
@@ -148,12 +150,6 @@ CERT / CSIRT nationaux et agences. Beaucoup publient leurs IOCs dans des avis we
 |Turquie | [USOM](https://www.usom.gov.tr) | centre national ; [liste publique d'URLs/IPs malveillantes](https://www.usom.gov.tr/url-list.txt) `[TR]` |
 |Ukraine | [CERT-UA](https://cert.gov.ua) | publication d'IOCs très prolifique (activité APT russe) ; articles détaillés + MISP `[UA/EN]` |
 |Uruguay | [CERTuy](https://www.cert.uy) | CERT national `[ES]` |
-
-### Réseaux régionaux
-|Source                                                                            |Commentaire         |
-|----------------------------------------------------------------------------------|--------------------|
-|[AfricaCERT](https://www.africacert.org) | organisation régionale des CSIRT africains |
-|[OEA — CSIRTAmericas](https://csirtamericas.org) | réseau des CSIRT nationaux des Amériques (Organisation des États américains) `[ES/EN/PT]` |
 
 # Éditeurs et laboratoires de recherche privés
 Blogs et publications de recherche des éditeurs de sécurité (IOCs et TTPs dans les billets).
