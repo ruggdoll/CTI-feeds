@@ -1,6 +1,11 @@
 # CTI-feeds
 Liste de sources de renseignement concernant la menace d'origine cyber
 
+## Sommaire
+- [Indices de compromissions](#indices-de-compromissions)
+- [Rapports, analyses, informations](#rapports-analyses-informations)
+- [Règles de detection](#règles-de-detection)
+
 # Indices de compromissions
 NB : Cette liste complète les feeds/connecteurs par défaut des projets OpenCTI et MISP
 |Source                                                                            |Commentaire         |
@@ -24,21 +29,21 @@ NB : Cette liste complète les feeds/connecteurs par défaut des projets OpenCTI
 |[Malshare.com](https://malshare.com) | nombreux IOCs, parfois anciens |
 |[malware-traffic Github](https://github.com/malware-traffic/indicators)| IOCs de 2025|
 |[Mandiant Github](https://github.com/mandiant/iocs)| de vieux IOCs |
-|[Meta Github](https://github.com/facebook/threat-research)| IOCS et detection |
-|[Mitre ATT&CK Github ](https://github.com/mitre-attack/attack-stix-data) | |
+|[Meta Github](https://github.com/facebook/threat-research)| IOCs et detection |
+|[Mitre ATT&CK Github](https://github.com/mitre-attack/attack-stix-data) | |
 |[montysecurity Github](https://github.com/montysecurity) | voir C2-Tracker |
 |[Mr Looker IOCs Feed](https://iocfeed.mrlooquer.com) | IOCs JSON & CSV bientôt en STIX |
-|[Onetracker](https://onetracker.org/ti)| IOCs |
-|[Palo Alto Github ](https://github.com/PaloAltoNetworks/Unit42-Threat-Intelligence-Article-Information)| IOCs un peu fouilli |
+|[Onetracker](https://onetracker.org/ti)| IOCs |
+|[Palo Alto Github](https://github.com/PaloAltoNetworks/Unit42-Threat-Intelligence-Article-Information)| IOCs un peu fouillis|
 |[pan-unit42 Github](https://github.com/pan-unit42) | voir iocs |
 |[Phishing Army Feed](https://phishing.army) | liste de NDD liés au phishing |
 |[Prodaft Github](https://github.com/prodaft)| voir malware-ioc, actif|
 |[PulseDive](https://pulsedive.com) | plusieurs feeds disponibles |
-|[rodanmahrjan Github](https://github.com/rodanmaharjan/ThreatIntelligence)| pas mal d'IOCs récents|
+|[rodanmaharjan Github](https://github.com/rodanmaharjan/ThreatIntelligence)| pas mal d'IOCs récents|
 |[Ransomware.live Feeds](https://www.ransomware.live/api) | le plan gratuit permet 50 req/j |
-|[RedDrip7 Gihub](https://github.com/RedDrip7)| IOcs dans APT_Digital_Weapon |
+|[RedDrip7 Github](https://github.com/RedDrip7)| IOCs dans APT_Digital_Weapon |
 |[sophoslabs Github](https://github.com/sophoslabs/IoCs)| IOCs |
-|[spydisec Github](https://github.com/spydisec/spydithreatintel)| tres complet |
+|[spydisec Github](https://github.com/spydisec/spydithreatintel)| très complet |
 |[sroberts Github](https://github.com/sroberts/awesome-iocs)| Sources CTI |
 |[stamparm Ipsum Github](https://github.com/stamparm/Ipsum) | IOCs dont la fiabilité est graduelle |
 |[Stop Forum Scam](https://www.stopforumspam.com/downloads) | |
@@ -50,7 +55,7 @@ NB : Cette liste complète les feeds/connecteurs par défaut des projets OpenCTI
 # Rapports, analyses, informations
 |Source                                                                            |Commentaire         |
 |----------------------------------------------------------------------------------|--------------------|
-|[Amnesty International Github](https://github.com/AmnestyTech/investigations) | plutot orienté smartphone |
+|[Amnesty International Github](https://github.com/AmnestyTech/investigations) | plutôt orienté smartphone |
 |[CERT-FR feed IOCs public](https://www.cert.ssi.gouv.fr/ioc) | dont un feed MISP natif |
 |[despacito420 Github](https://github.com/despacito420/The-Feed)| Rapports CTI |
 |[devsecops Github](https://github.com/devsecops/awesome-devsecops) | sources CTI entre autres |
@@ -62,7 +67,7 @@ NB : Cette liste complète les feeds/connecteurs par défaut des projets OpenCTI
 |[mthcht Github](https://github.com/mthcht) | sources CTI |
 |[NetManage instance publique openCTI](https://opencti.netmanageit.com/dashboard) | |
 |[TweetFeed](https://tweetfeed.live) | |
-|[Viginum Github ](https://github.com/VIGINUM-FR/Rapports-Techniques) | |
+|[Viginum Github](https://github.com/VIGINUM-FR/Rapports-Techniques) | |
 |[0xDanielLopez Github](https://github.com/0xDanielLopez)| sources CTI |
 
 # Règles de detection
