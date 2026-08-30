@@ -95,8 +95,12 @@ CERT / CSIRT nationaux et agences. Beaucoup publient leurs IOCs dans des avis we
 |----------------------------------------------------------------------------------|--------------------|
 |[ENISA — EU CSIRTs Network (CNW)](https://github.com/enisaeu/CNW) (UE) | agrège les avis des CSIRT nationaux de l'UE + CERT-EU |
 |[CERT-EU](https://cert.europa.eu/publications/threat-intelligence) (UE) | Threat Intelligence & security advisories des institutions de l'UE ; [`droid`](https://github.com/certeu/droid) pour la gestion de règles Sigma |
+|[Trusted Introducer / TF-CSIRT](https://www.trusted-introducer.org) (Europe) | annuaire et accréditation des CSIRT européens |
+|[APCERT](https://www.apcert.org) (Asie-Pacifique) | organisation régionale des CERT d'Asie-Pacifique ; rapports annuels et exercices |
 |[AfricaCERT](https://www.africacert.org) (Afrique) | organisation régionale des CSIRT africains |
 |[OEA — CSIRTAmericas](https://csirtamericas.org) (Amériques) | réseau des CSIRT nationaux des Amériques (Organisation des États américains) `[ES/EN/PT]` |
+|[OIC-CERT](https://oic-cert.org) (Org. de la coopération islamique) | réseau des CERT des États membres de l'OCI (secrétariat en Malaisie) ; peut être injoignable hors région |
+|[FIRST](https://www.first.org) (mondial) | forum mondial des équipes de réponse à incident ; [annuaire des équipes membres](https://www.first.org/members/teams/) |
 
 ### États membres de l'UE
 |Pays|Source|Commentaire|
