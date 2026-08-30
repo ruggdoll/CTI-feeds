@@ -107,23 +107,44 @@ CERT / CSIRT nationaux et agences. Beaucoup publient leurs IOCs dans des avis we
 |Pays|Source|Commentaire|
 |----|------|-----------|
 |Allemagne | [BSI / CERT-Bund](https://github.com/BSI-Bund) | honeypot MADCAT, Secvisogram (CSAF) ; avis de vulnérabilité sur [wid.cert-bund.de](https://wid.cert-bund.de) `[DE]` |
+|Autriche | [CERT.at / GovCERT Austria](https://www.cert.at) | avis, blog technique et statistiques ; opéré par nic.at `[DE/EN]` |
 |Belgique | [CCB / CERT.be](https://cert.be) | avis de sécurité avec IOCs |
+|Bulgarie | [CERT Bulgaria](https://govcert.bg) | CERT gouvernemental ; avis et actualités `[BG]` |
+|Chypre | [CSIRT-CY](https://csirt.cy) | CSIRT national ; alertes et avis `[EL/EN]` |
+|Croatie | [CERT.hr](https://www.cert.hr) | CERT national (CARNET) ; avis et publications `[HR]` |
+|Danemark | [CFCS](https://www.cfcs.dk) | centre de cybersécurité du renseignement (FE) ; cfcs.dk redirige vers samsik.dk depuis la réorganisation de 2025 `[DA/EN]` |
 |Espagne | [CCN-CERT](https://www.ccn-cert.cni.es) | CERT du renseignement ; rapports APT et outils (souvent sur inscription) `[ES]` |
 |Espagne | [INCIBE-CERT](https://www.incibe.es/en/incibe-cert) | avis, études et outils `[ES/EN]` |
 |Estonie | [CERT-EE / RIA](https://github.com/cert-ee) | Cuckoo3, S4A detector et autres outils |
+|Finlande | [NCSC-FI / Traficom](https://www.kyberturvallisuuskeskus.fi) | centre national ; alertes, rapports et notifications aux réseaux finlandais `[FI/SV/EN]` |
+|Grèce | [NCSA / EL CSIRT](https://cyber.gov.gr) | autorité nationale de cybersécurité et son CSIRT `[EL/EN]` |
+|Hongrie | [NKI / NBSZ](https://nki.gov.hu) | centre national de cybersécurité ; alertes et avis `[HU]` |
+|Irlande | [NCSC-IE](https://www.ncsc.gov.ie) | avis et alertes |
 |Italie | [CERT-AGID](https://cert-agid.gov.it) | feed IOC quotidien (malware / phishing visant l'Italie) ; inscription requise `[IT]` |
 |Lettonie | [CERT.LV](https://www.cert.lv/en/data-feed) | data feed national (sinkhole, IPs et domaines compromis) |
+|Lituanie | [NKSC](https://www.nksc.lt) | centre national de cybersécurité ; avis et rapports ; le site répond 403 aux robots, ouvrir dans un navigateur `[LT/EN]` |
 |Luxembourg | [CIRCL](https://www.circl.lu/doc/misp/feed-osint/) | feed MISP OSINT ; éditeur de MISP, AIL, Passive DNS/SSL ([github.com/CIRCL](https://github.com/CIRCL)) |
+|Malte | [CSIRTMalta](https://csirtmalta.gov.mt) | CSIRT national ; accès filtré hors de Malte (redirection vers une page d'attente lors de la vérification) |
 |Pays-Bas | [NCSC-NL](https://github.com/NCSC-NL) | dépôts d'IOCs et scripts de scan par campagne (Citrix, MOVEit, Zimbra…) |
 |Pologne | [CERT Polska / CERT.pl](https://github.com/CERT-Polska) | mwdb, drakvuf-sandbox, karton, Artemis ; blocklist de domaines [hole.cert.pl](https://hole.cert.pl) |
+|Portugal | [CNCS / CERT.PT](https://www.cncs.gov.pt) | centre national ; avis et coordination d'incidents `[PT]` |
+|Roumanie | [DNSC](https://www.dnsc.ro) | directorat national (ex-CERT-RO) ; alertes et guides ; le site répond 403 aux robots, ouvrir dans un navigateur `[RO/EN]` |
+|Slovaquie | [SK-CERT](https://www.sk-cert.sk) | autorité nationale ; avis de vulnérabilité quotidiens `[SK/EN]` |
+|Slovénie | [SI-CERT](https://www.cert.si) | CERT national (Arnes) ; avis et alertes `[SL/EN]` |
 |Suède | [CERT-SE](https://www.cert.se) | alertes et analyses `[SV/EN]` |
 |Tchéquie | [NÚKIB](https://nukib.gov.cz/en/) | alertes, avertissements et rapports |
 
 ### Autres pays
 |Pays|Source|Commentaire|
 |----|------|-----------|
+|Albanie | [AKSK](https://aksk.gov.al) | autorité nationale de cybersécurité (ex-AKCESK) ; alertes et rapports `[SQ/EN]` |
 |Arabie saoudite | [Saudi CERT](https://cert.gov.sa) | avis et alertes de sécurité `[AR/EN]` |
+|Argentine | [CERT.ar](https://www.argentina.gob.ar/jefatura/innovacion-ciencia-y-tecnologia/centro-nacional-de-ciberseguridad/certar) | CERT national (Centro Nacional de Ciberseguridad) `[ES]` |
 |Australie | [ACSC / ASD](https://www.cyber.gov.au/about-us/view-all-content/alerts-and-advisories) | alertes et avis avec IOCs |
+|Azerbaïdjan | [CERT.AZ](https://cert.az) | CERT gouvernemental ; alertes `[AZ/EN]` |
+|Bangladesh | [BGD e-GOV CIRT](https://www.cirt.gov.bd) | CIRT national très actif : alertes, rapports d'analyse et IOCs |
+|Bélarus | [CERT.BY](https://cert.by) | CERT national (OAC) `[RU]` |
+|Bolivie | [CGII / CSIRT-Bolivia](https://csirt.gob.bo) | centre de gestion d'incidents (AGETIC) ; alertes et avis `[ES]` |
 |Brésil | [CERT.br](https://cert.br) | honeypots, données spam, statistiques nationales `[PT/EN]` |
 |Canada | [CCCS / Cyber Centre](https://github.com/CybercentreCanada) | AssemblyLine, extracteurs de config, outils SOC ; avis sur [cyber.gc.ca](https://www.cyber.gc.ca/en/alerts-advisories) |
 |Chili | [CSIRT de Gobierno](https://csirt.gob.cl) | alertes et IOCs publiés très régulièrement `[ES]` |
@@ -131,30 +152,63 @@ CERT / CSIRT nationaux et agences. Beaucoup publient leurs IOCs dans des avis we
 |Chine | [CVERC](https://www.cverc.org.cn) | centre national de réponse aux virus `[ZH]` |
 |Colombie | [colCERT](https://www.colcert.gov.co) | CERT national `[ES]` |
 |Corée du Sud | [KrCERT / KISA](https://www.krcert.or.kr) | avis, takedown phishing/C2, rapports `[KO]` |
+|Côte d'Ivoire | [CI-CERT](https://www.artci.ci) | CERT national, rattaché au régulateur ARTCI |
+|Égypte | [EG-CERT](https://egcert.eg) | CERT national (NTRA) ; connexion refusée depuis certains réseaux lors de la vérification `[AR/EN]` |
 |Émirats arabes unis | [aeCERT](https://aecert.ae) | CERT national ; alertes et sensibilisation `[AR/EN]` |
+|Équateur | [EcuCERT](https://www.ecucert.gob.ec) | CERT national (Arcotel) ; alertes `[ES]` |
 |États-Unis | [CISA](https://github.com/cisagov) | liste `.gov`, catalogue [KEV](https://github.com/cisagov/kev-data), avis [CSAF](https://github.com/cisagov/CSAF) ; alertes sur [cisa.gov](https://www.cisa.gov/news-events/cybersecurity-advisories) |
 |États-Unis | [CERT/CC (CMU SEI)](https://github.com/CERTCC) | coordination de divulgation (VINCE, SSVC, Vultron), outils d'analyse binaire |
 |États-Unis | [DARPA — Transparent Computing / OpTC](https://github.com/FiveDirections/OpTC-data) | datasets de traces hôte/réseau annotées pour la recherche en détection APT (agence du DoD) |
 |États-Unis | [IMPACT Cyber Trust](https://www.impactcybertrust.org) | place de marché de datasets de cybersécurité pour la recherche (financé par le DHS) |
 |États-Unis | [Los Alamos National Laboratory](https://csr.lanl.gov/data/) | datasets host / auth / réseau, scénarios APT (laboratoire du DOE / NNSA) |
 |États-Unis | [NSA Cybersecurity](https://github.com/nsacyber) | guides de durcissement et de détection, configurations |
+|Géorgie | [CERT.GOV.GE](https://cert.dga.gov.ge) | CERT gouvernemental (Digital Governance Agency) `[KA/EN]` |
+|Ghana | [CSA / CERT-GH](https://www.csa.gov.gh) | Cyber Security Authority et CERT national ; alertes et avis |
+|Hong Kong | [HKCERT](https://www.hkcert.org) | alertes, blog de veille et rapports `[ZH/EN]` |
 |Inde | [CERT-In](https://www.cert-in.org.in) | CERT national : avis, notes de vulnérabilité, alertes |
 |Inde | [CERT Mumbai (MH-CERT)](https://github.com/MH-CERT) | repo `Indicator-of-Compromise-IOC-` ; activité faible |
 |Inde | [Cyber Swachhता Kendra (CSK)](https://www.csk.gov.in) | centre de nettoyage de botnets opéré par CERT-In ; outils et avis |
 |Inde | [NCIIPC](https://nciipc.gov.in) | protection des infrastructures critiques ; bulletins avec IOCs `[EN ; accès surtout depuis l'Inde]` |
+|Indonésie | [BSSN](https://www.bssn.go.id) | agence nationale (dont l'Id-SIRTII/CC) ; le site répond 403 aux robots, ouvrir dans un navigateur `[ID]` |
 |Iran | [Maher / CERT.ir](https://cert.ir) | CERT national `[FA]` |
+|Islande | [CERT-IS](https://www.cert.is) | CERT national ; alertes `[IS/EN]` |
+|Israël | [INCD](https://www.gov.il/en/departments/israel_national_cyber_directorate) | directorat national ; alertes et rapports ; le portail gov.il répond 403 aux robots, ouvrir dans un navigateur `[HE/EN]` |
 |Japon | [JPCERT/CC](https://github.com/JPCERTCC) | `phishurl-list`, `jpcert-yara`, `Contagious-Interview-IoCs`, `CobaltStrike-Config`, LogonTracer, EmoCheck |
+|Jordanie | [NCSC-JO](https://ncsc.jo) | centre national de cybersécurité ; alertes `[AR/EN]` |
+|Kazakhstan | [KZ-CERT](https://cert.gov.kz) | CERT national (State Technical Service) `[KK/RU/EN]` |
 |Kenya | [National KE-CIRT/CC](https://ke-cirt.go.ke) | CERT national ; avis et rapports |
+|Macédoine du Nord | [MKD-CIRT](https://mkd-cirt.mk) | CIRT national (AEK) ; avis `[MK/EN]` |
+|Malaisie | [MyCERT](https://www.mycert.org.my) | CERT national (CyberSecurity Malaysia) : avis et alertes ; le site répond 403 aux robots, ouvrir dans un navigateur |
 |Maroc | [DGSSI / maCERT](https://www.dgssi.gov.ma) | avis et bulletins de sécurité `[FR/AR]` |
+|Maurice | [CERT-MU](https://cert-mu.govmu.org) | CERT national ; alertes et guides |
+|Mexique | [CERT-MX](https://www.gob.mx/gncertmx) | CERT national (Guardia Nacional) `[ES]` |
+|Moldavie | [CERT-GOV-MD](https://cert.gov.md) | CERT gouvernemental (STISC) ; alertes `[RO/EN]` |
+|Monténégro | [CIRT.ME](https://cirt.gov.me) | CIRT national ; avis `[CNR/EN]` |
+|Nigeria | [ngCERT](https://cert.gov.ng) | CERT national ; avis et alertes ; le site répond 403 aux robots, ouvrir dans un navigateur |
+|Norvège | [NSM / NCSC-NO](https://nsm.no) | autorité nationale de sécurité ; alertes et rapports `[NO/EN]` |
 |Nouvelle-Zélande | [NCSC-NZ](https://www.ncsc.govt.nz) | avis et alertes (CERT NZ y a été intégré en 2024) |
 |Oman | [OCERT](https://www.cert.gov.om) | CERT national ; alertes `[AR/EN]` |
+|Ouzbékistan | [UZCERT](https://uzcert.uz) | CERT national (Centre de cybersécurité) `[UZ/RU]` |
+|Pakistan | [PKCERT](https://pkcert.gov.pk) | CERT national (opérationnel depuis 2024) ; avis et alertes |
+|Panama | [CSIRT Panamá](https://cert.pa) | CSIRT national (AIG) ; alertes `[ES]` |
+|Paraguay | [CERT-PY](https://www.cert.gov.py) | CERT national ; publie régulièrement avis et IOCs `[ES]` |
+|Pérou | [PeCERT](https://pecert.gob.pe) | CERT gouvernemental `[ES]` |
+|Philippines | [CERT-PH / NCERT](https://ncert.gov.ph) | CERT national (DICT) ; le site répond 403 aux robots, ouvrir dans un navigateur |
+|Qatar | [NCSA / Q-CERT](https://www.ncsa.gov.qa) | agence nationale (intègre Q-CERT) ; alertes `[AR/EN]` |
+|République dominicaine | [CNCS / CSIRT-RD](https://cncs.gob.do) | centre national de cybersécurité ; alertes `[ES]` |
 |Royaume-Uni | [NCSC-UK](https://www.ncsc.gov.uk/section/keep-up-to-date/threat-reports) | rapports de menace avec IOCs ; packs de config sur [github.com/ukncsc](https://github.com/ukncsc) |
 |Russie | [NKTsKI / GosSOPKA](https://safe-surf.ru) | CERT national (safe-surf.ru) ; portail russophone, accès limité `[RU]` |
+|Serbie | [Nacionalni CERT](https://www.cert.rs) | CERT national (RATEL) ; avis `[SR/EN]` |
+|Singapour | [SingCERT / CSA](https://www.csa.gov.sg/singcert) | alertes et avis ; la CSA héberge aussi l'ASEAN Regional CERT |
+|Sri Lanka | [Sri Lanka CERT](https://www.cert.gov.lk) | CERT national ; alertes `[SI/TA/EN]` |
 |Suisse | [GovCERT.ch](https://github.com/govcert-ch/CTI) | dépôt `CTI` (IOCs et notes d'analyse), actif |
+|Taïwan | [TWCERT/CC](https://www.twcert.org.tw) | CERT national ; avis et rapports `[ZH/EN]` |
 |Thaïlande | [TTC-CERT](https://github.com/ttc-cert) | CERT du secteur télécom : blocklist recommandée, règles Sigma/YARA, events MISP ; rien de neuf depuis 2024 |
+|Tunisie | [ANCS / tunCERT](https://www.ancs.tn) | agence nationale (ex-ANSI) et son CERT ; connexion refusée depuis certains réseaux lors de la vérification `[FR/AR]` |
 |Turquie | [USOM](https://www.usom.gov.tr) | centre national ; [liste publique d'URLs/IPs malveillantes](https://www.usom.gov.tr/url-list.txt) `[TR]` |
 |Ukraine | [CERT-UA](https://cert.gov.ua) | publication d'IOCs très prolifique (activité APT russe) ; articles détaillés + MISP `[UA/EN]` |
 |Uruguay | [CERTuy](https://www.cert.uy) | CERT national `[ES]` |
+|Vietnam | [VNCERT/CC](https://vncert.vn) | CERT national (min. de l'Information et des Communications) `[VI]` |
 
 # Éditeurs et laboratoires de recherche privés
 Blogs et publications de recherche des éditeurs de sécurité (IOCs et TTPs dans les billets).
@@ -164,16 +218,26 @@ Blogs et publications de recherche des éditeurs de sécurité (IOCs et TTPs dan
 |[AhnLab ASEC](https://asec.ahnlab.com/en/) (Corée du Sud) | blog très prolifique (Kimsuky, Lazarus, malware ciblant l'Asie) `[KO ; blog EN]` |
 |[Antiy Labs / 安天](https://www.antiy.net) (Chine) | rapports APT `[ZH ; certains rapports EN]` |
 |[BI.ZONE](https://bi.zone) (Russie) | recherche menaces (groupe Sber) ; lib [`bi-zone/bizone-ti-lib`](https://github.com/bi-zone/bizone-ti-lib) `[EN/RU]` |
+|[Brandefense](https://brandefense.io/blog/) (Turquie) | recherche menaces et rapports d'acteurs `[EN]` |
+|[CERT Orange Polska](https://cert.orange.pl) (Pologne) | CERT de l'opérateur : alertes, analyses et blocklist CyberTarcza `[PL]` |
+|[Check Point Research](https://research.checkpoint.com) (Israël) | recherche menaces très prolifique ; IOCs par billet `[EN]` |
+|[Cisco Talos](https://blog.talosintelligence.com) (États-Unis) | blog de recherche ; les IOCs associés sont sur le repo GitHub (section Indices de compromissions) `[EN]` |
+|[ClearSky Cyber Security](https://www.clearskysec.com/blog/) (Israël) | rapports APT, notamment Moyen-Orient `[EN]` |
 |[CloudSEK](https://www.cloudsek.com/blog) (Inde) | recherche menaces, fuites, surface d'attaque `[EN]` |
-|[Cyble](https://cyble.com/blog/) (Inde / États-Unis) | recherche menaces très prolifique `[EN]` |
 |[CronUp](https://www.cronup.com/blog/) (Chili) | threat intel centrée Amérique latine `[ES]` |
+|[CTM360](https://www.ctm360.com) (Bahreïn) | veille et rapports centrés Golfe / Moyen-Orient `[EN]` |
+|[Cyble](https://cyble.com/blog/) (Inde / États-Unis) | recherche menaces très prolifique `[EN]` |
 |[CYFIRMA](https://www.cyfirma.com/research/) (Inde / Singapour) | rapports d'attribution et de campagne `[EN]` |
 |[Doctor Web / Dr.Web](https://news.drweb.com) (Russie) | analyses de malware avec IOCs `[RU/EN]` |
+|[ESET — WeLiveSecurity](https://www.welivesecurity.com) (Slovaquie) | blog de recherche ; les IOCs associés sont sur le repo GitHub (section Indices de compromissions) `[EN ; éditions FR/DE/ES]` |
 |[F6](https://www.f6.ru) (ex-F.A.C.C.T., Russie) | cybercriminalité russophone `[RU]` |
+|[G DATA CyberDefense](https://blog.gdatasoftware.com) (Allemagne) | analyses de malware `[EN/DE]` |
 |[Group-IB](https://www.group-ib.com/blog/) (Singapour) | e-crime, rapports détaillés avec IOCs `[EN]` |
 |[K7 Labs](https://labs.k7computing.com) (Inde) | analyses de malware (éditeur AV de Chennai) `[EN]` |
 |[Kaspersky — Securelist](https://securelist.com) (Russie) | équipe GReAT, IOCs par rapport `[EN]` |
 |[Kaspersky ICS-CERT](https://ics-cert.kaspersky.com) (Russie) | spécialisé OT / ICS `[EN]` |
+|[Knownsec 404 Team / 知道创宇](https://paper.seebug.org) (Chine) | papers de recherche (plateforme Seebug) ; connexion refusée depuis certains réseaux lors de la vérification `[ZH]` |
+|[Lab52 / S2 Grupo](https://lab52.io) (Espagne) | recherche APT et géopolitique cyber `[EN]` |
 |[Macnica Security Research](https://security.macnica.co.jp/) (Japon) | rapports APT visant le Japon `[JP]` |
 |[Metabase Q — Ocelot](https://www.metabaseq.com) (Mexique) | recherche menaces centrée Amérique latine `[EN/ES]` |
 |[Microsoft — Security Blog / MSTIC](https://www.microsoft.com/en-us/security/blog/) (États-Unis) | rapports et analyses `[EN]` |
@@ -182,11 +246,14 @@ Blogs et publications de recherche des éditeurs de sécurité (IOCs et TTPs dan
 |[Positive Technologies — PT ESC](https://github.com/PositiveTechnologies) (Russie) | recherche menaces ; règles Suricata figées 2022 sur [`ptresearch/AttackDetection`](https://github.com/ptresearch/AttackDetection) `[EN/RU]` |
 |[QiAnXin TI Center / 奇安信](https://ti.qianxin.com) (Chine) | portail Threat Intelligence ; voir aussi [RedDrip7](https://github.com/RedDrip7) `[ZH]` |
 |[Sekoia.io](https://blog.sekoia.io) (France) | recherche menaces, TDR `[EN/FR]` |
+|[SentinelLABS](https://www.sentinelone.com/labs/) (États-Unis) | recherche menaces, rapports APT `[EN]` |
 |[Seqrite Labs / Quick Heal](https://www.seqrite.com/blog/) (Inde) | fort sur les APT d'Asie du Sud (SideCopy, Transparent Tribe…) `[EN]` |
 |[Sequretek](https://www.sequretek.com/resources/threat-advisory) (Inde) | avis de menace `[EN]` |
 |[Solar 4RAYS](https://solar4rays.ru) (Russie) | bulletins d'IOCs (groupe Rostelecom) `[RU]` |
+|[S2W](https://s2w.inc/en/resource) (Corée du Sud) | recherche menaces (équipe Talon) : darkweb, groupes nord-coréens `[EN/KO]` |
 |[TeamT5](https://teamt5.org/en/) (Taïwan) | recherche APT nexus-Chine `[EN/ZH]` |
 |[ThreatBook / 微步在线](https://threatbook.io) (Chine) | éditeur TI ; lookups communautaires gratuits sur [x.threatbook.com](https://x.threatbook.com) `[EN/ZH]` |
+|[Viettel Cyber Security](https://blog.viettelcybersecurity.com) (Vietnam) | analyses de menaces et de vulnérabilités `[VI/EN]` |
 |[Yoroi — Z-Lab](https://yoroi.company/research/) (Italie) | analyses de campagnes et de malware `[IT/EN]` |
 
 # Sources académiques et datasets de recherche
@@ -200,6 +267,7 @@ Laboratoires universitaires et jeux de données pour l'entraînement, l'évaluat
 |[Stratosphere Laboratory](https://www.stratosphereips.org) (CTU Prague, Tchéquie) | datasets malware / IoT (CTU-13, IoT-23) + feed de blocklists gratuit + IDS [Slips](https://github.com/stratosphereips/StratosphereLinuxIPS) |
 |[The Honeynet Project](https://www.honeynet.org) | organisation de recherche (chapitres académiques) : outils, challenges forensic, données honeypot |
 |[theZoo](https://github.com/ytisf/theZoo) | corpus de malware vivant pour la recherche |
+|[UNSW Canberra Cyber](https://research.unsw.edu.au/projects/toniot-datasets) (Australie) | datasets UNSW-NB15, ToN_IoT et Bot-IoT pour la recherche IDS / IoT |
 |[VirusShare](https://virusshare.com) | vaste corpus de malware ; accès chercheurs sur demande |
 
 # Rapports, analyses, informations
@@ -207,6 +275,9 @@ Méta-listes, agrégateurs et bibliothèques de rapports.
 |Source                                                                            |Commentaire         |
 |----------------------------------------------------------------------------------|--------------------|
 |[APTnotes](https://github.com/aptnotes/data) | archive historique de rapports APT publics ; figée fin 2024 |
+|[blackorbird Github](https://github.com/blackorbird/APT_REPORT) | collecte de rapports et d'indicateurs APT classés par groupe, très actif |
+|[curated-intel Github](https://github.com/curated-intel) | collectif Curated Intelligence : threat notes, listes par campagne (Ukraine, MOVEit…), CTI Fundamentals |
+|[CyberMonitor Github](https://github.com/CyberMonitor/APT_CyberCriminal_Campagin_Collections) | archive de campagnes APT / cybercrime classées par année ; figée depuis mi-2024 |
 |[despacito420 Github](https://github.com/despacito420/The-Feed)| liste curée d'articles SOC/DFIR/CTI ; activité faible (dernière MAJ janv. 2026) |
 |[devsecops Github](https://github.com/devsecops/awesome-devsecops) | liste d'outils DevSecOps (dont CTI) ; figée depuis 2024 |
 |[EndlessFractal Github](https://github.com/EndlessFractal/Threat-Intel-Feed)| agrégation et consolidation automatiques de feeds, actif |
