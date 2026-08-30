@@ -127,6 +127,9 @@ CERT / CSIRT nationaux et agences. Beaucoup publient leurs IOCs dans des avis we
 |Émirats arabes unis | [aeCERT](https://aecert.ae) | CERT national ; alertes et sensibilisation `[AR/EN]` |
 |États-Unis | [CISA](https://github.com/cisagov) | liste `.gov`, catalogue [KEV](https://github.com/cisagov/kev-data), avis [CSAF](https://github.com/cisagov/CSAF) ; alertes sur [cisa.gov](https://www.cisa.gov/news-events/cybersecurity-advisories) |
 |États-Unis | [CERT/CC (CMU SEI)](https://github.com/CERTCC) | coordination de divulgation (VINCE, SSVC, Vultron), outils d'analyse binaire |
+|États-Unis | [DARPA — Transparent Computing / OpTC](https://github.com/FiveDirections/OpTC-data) | datasets de traces hôte/réseau annotées pour la recherche en détection APT (agence du DoD) |
+|États-Unis | [IMPACT Cyber Trust](https://www.impactcybertrust.org) | place de marché de datasets de cybersécurité pour la recherche (financé par le DHS) |
+|États-Unis | [Los Alamos National Laboratory](https://csr.lanl.gov/data/) | datasets host / auth / réseau, scénarios APT (laboratoire du DOE / NNSA) |
 |États-Unis | [NSA Cybersecurity](https://github.com/nsacyber) | guides de durcissement et de détection, configurations |
 |Inde | [CERT-In](https://www.cert-in.org.in) | CERT national : avis, notes de vulnérabilité, alertes |
 |Inde | [CERT Mumbai (MH-CERT)](https://github.com/MH-CERT) | repo `Indicator-of-Compromise-IOC-` ; activité faible |
@@ -190,11 +193,8 @@ Laboratoires universitaires et jeux de données pour l'entraînement, l'évaluat
 |Source                                                                            |Commentaire         |
 |----------------------------------------------------------------------------------|--------------------|
 |[Canadian Institute for Cybersecurity (UNB)](https://www.unb.ca/cic/datasets/) (Canada) | datasets IDS, malware Android (CICMalDroid), DoH, DDoS… très utilisés en recherche |
-|[CAIDA](https://www.caida.org/catalog/datasets/) (UC San Diego, États-Unis) | télescope réseau, DDoS, données de scan (certains sur demande) |
+|[CAIDA](https://www.caida.org/catalog/datasets/) (UC San Diego, États-Unis) | télescope réseau, DDoS, données de scan (certains sur demande) ; financements NSF / DHS |
 |[Citizen Lab](https://github.com/citizenlab) (Université de Toronto, Canada) | recherche spyware / censure ; voir aussi section Menace mobile |
-|[DARPA OpTC / Transparent Computing](https://github.com/FiveDirections/OpTC-data) (États-Unis) | traces hôte/réseau annotées pour la détection APT |
-|[IMPACT Cyber Trust](https://www.impactcybertrust.org) (DHS, États-Unis) | place de marché de datasets de cybersécurité pour la recherche |
-|[Los Alamos National Laboratory](https://csr.lanl.gov/data/) (États-Unis) | datasets host / auth / réseau (Unified Host & Network, scénarios APT) |
 |[SecRepo](https://secrepo.com) | index de « Samples of Security Related Data » |
 |[Stratosphere Laboratory](https://www.stratosphereips.org) (CTU Prague, Tchéquie) | datasets malware / IoT (CTU-13, IoT-23) + feed de blocklists gratuit + IDS [Slips](https://github.com/stratosphereips/StratosphereLinuxIPS) |
 |[The Honeynet Project](https://www.honeynet.org) | organisation de recherche (chapitres académiques) : outils, challenges forensic, données honeypot |
