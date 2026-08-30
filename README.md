@@ -97,6 +97,7 @@ CERT / CSIRT nationaux et agences. Beaucoup publient leurs IOCs dans des avis we
 |[CERT-EU](https://cert.europa.eu/publications/threat-intelligence) (UE) | Threat Intelligence & security advisories des institutions de l'UE ; [`droid`](https://github.com/certeu/droid) pour la gestion de règles Sigma |
 |[Trusted Introducer / TF-CSIRT](https://www.trusted-introducer.org) (Europe) | annuaire et accréditation des CSIRT européens |
 |[APCERT](https://www.apcert.org) (Asie-Pacifique) | organisation régionale des CERT d'Asie-Pacifique ; rapports annuels et exercices |
+|[ASEAN Regional CERT](https://www.csa.gov.sg/news-events/press-releases/establishment-of-asean-regional-computer-emergency-response-team/) (Asie du Sud-Est) | CERT régional de l'ASEAN, hébergé par la CSA (Singapour) ; opérationnel depuis 2024, pas encore de site autonome — page de la CSA |
 |[AfricaCERT](https://www.africacert.org) (Afrique) | organisation régionale des CSIRT africains |
 |[OEA — CSIRTAmericas](https://csirtamericas.org) (Amériques) | réseau des CSIRT nationaux des Amériques (Organisation des États américains) `[ES/EN/PT]` |
 |[OIC-CERT](https://oic-cert.org) (Org. de la coopération islamique) | réseau des CERT des États membres de l'OCI (secrétariat en Malaisie) ; peut être injoignable hors région |
