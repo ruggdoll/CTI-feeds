@@ -1,497 +1,697 @@
 # CTI-feeds
-Liste de sources de renseignement concernant la menace d'origine cyber
 
-> Dernière vérification des liens : 2026-09-01 (3e passe : sources orientées « rapports » — référentiels d'incidents, bases d'acteurs, rapports périodiques, rapports annuels)
+Liste de sources de renseignement concernant la menace d'origine cyber.
+
+> Dernière vérification des liens : 2026-09-02 (~470 sources ; tag `IOC` audité le 2026-09-02). Méthode au §19.
 >
-> Les sources ne sont pas restreintes à l'anglais. La langue est indiquée entre crochets — p. ex. `[ZH]`, `[RU]`, `[KO]` — lorsqu'elle n'est ni le français ni l'anglais ; la traduction automatique du navigateur suffit dans la plupart des cas.
+> Les sources ne sont pas restreintes à l'anglais. La langue est indiquée entre crochets — p. ex. `[ZH]`, `[RU]`, `[KO]` — lorsqu'elle n'est ni le français ni l'anglais.
 >
-> Aucune source n'est écartée en raison de son pays d'origine ou de son affiliation. Le recoupement des informations et la prise en compte du contexte propre à chaque source relèvent de l'analyste.
+> Aucune source n'est écartée en raison de son pays d'origine ou de son affiliation. Le recoupement des informations et la prise en compte du contexte propre à chaque source relèvent de l'analyste. Chaque section ouvre par le **biais** propre à la famille de producteurs : c'est la première chose à garder en tête au recoupement.
+
+## Lire une ligne
+
+| Colonne | Valeurs |
+|---|---|
+| **Contenu** | `IOC` = observables exploitables (hash, IP, domaines, URL, adresses, règles) · `RENS` = analyses, rapports, attribution, contexte · `IOC+RENS` = les deux. **Le tag `IOC` n'est attribué que sur preuve** : dépôt/feed dont le contenu a été vu, ou sonde ayant extrait des hash, IP ou indicateurs défangés du texte des publications (méthode détaillée au §19). Une source réputée publier des IOC mais dont la sonde n'a rien extrait reste `RENS`, avec la mention « IOC non vérifiés » quand le site est en JavaScript, bloque les robots ou publie en PDF. |
+| **Accès** | `feed` (TXT/CSV/JSON/STIX/MISP, URL stable) · `repo` (GitHub/GitLab) · `API` · `RSS` (flux vérifié) · `web` (pas de flux) · `PDF` · `inscr.` (compte requis) · `bot` (site vivant mais bloque les robots : ouvrir dans un navigateur) · `géo` (filtrage géographique probable) |
+| **Activité** | date du dernier commit vérifiée pour les dépôts ; sinon « vivant » = répond au 2026-09-02 |
+
+Pour l'ingestion automatique (MISP, OpenCTI), ne retenir que `feed`, `repo` et `API` ; les `RSS` vont dans un lecteur ou un connecteur RSS, avec extraction d'IOC à la demande.
 
 ## Sommaire
-- [Indices de compromissions](#indices-de-compromissions)
-- [Menace mobile](#menace-mobile)
-- [Sources gouvernementales et étatiques](#sources-gouvernementales-et-étatiques)
-- [Éditeurs et laboratoires de recherche privés](#éditeurs-et-laboratoires-de-recherche-privés)
-- [Sources académiques et datasets de recherche](#sources-académiques-et-datasets-de-recherche)
-- [Rapports, analyses, informations](#rapports-analyses-informations)
-- [Règles de detection](#règles-de-detection)
 
-# Indices de compromissions
-NB : Cette liste complète les feeds/connecteurs par défaut des projets OpenCTI et MISP
-|Source                                                                            |Commentaire         |
-|----------------------------------------------------------------------------------|--------------------|
-|[abuse.ch](https://abuse.ch) — [URLhaus](https://urlhaus.abuse.ch), [MalwareBazaar](https://bazaar.abuse.ch), [ThreatFox](https://threatfox.abuse.ch), [Feodo Tracker](https://feodotracker.abuse.ch), [SSLBL](https://sslbl.abuse.ch) | URLs, échantillons, IOCs, C2, certificats ; API + exports CSV / JSON / MISP / Suricata (hébergé par la Haute école spécialisée bernoise) |
-|[AlienVault OTX](https://otx.alienvault.com) | pulses communautaires, très gros volume ; API gratuite |
-|[APNIC Community Honeynet Project](https://feeds.honeynet.asia) | honeypots Asie-Pacifique ; les fichiers `latest` sont en fin de listing |
-|[APTtrail Github](https://github.com/trilwu/apttrail) ([site](https://trilwu.github.io/apttrail)) | ~170k IOCs attribués par groupe APT (identifiants `Gxxxx` ATT&CK) ; formats MISP / STIX / Suricata / listes par type et par groupe ; rythme de mise à jour irrégulier |
-|[Avast / Gen Digital Github](https://github.com/avast/ioc) | IOCs (+ YARA) des billets Avast/AVG/Norton, rangés par famille de malware |
-|[Azure Sentinel Public feed](https://github.com/Azure/Azure-Sentinel) | dépôt massif du SIEM Microsoft ; IOCs et règles dispersés, il faut fouiller |
-|[Bambenekconsulting.com](https://osint.bambenekconsulting.com) | feeds OSINT (DGA, C2) ; accès sur demande |
-|[Binary Defense — banlist](https://www.binarydefense.com) | liste d'IPs à mauvaise réputation ([banlist.txt](https://www.binarydefense.com/banlist.txt)) |
-|[BruteForceBlocker](https://danger.rulez.sk/index.php/bruteforceblocker/) | IPs de brute-force SSH signalées par des serveurs participants (danger.rulez.sk) |
-|[Bert-JanP Github](https://github.com/Bert-JanP/Open-Source-Threat-Intel-Feeds) | feeds OSS librement réutilisables (IP, URL, CVE, hash), très actif |
-|[Bitdefender Github](https://github.com/bitdefender/malware-ioc)| IOCs des whitepapers Bitdefender, tenu à jour |
-|[blocklist.de](https://www.blocklist.de) | IPs signalées via fail2ban par des serveurs participants (SSH, mail, web) |
-|[Botvrij.eu](https://www.botvrij.eu) | IOCs OSINT au format MISP / CSV |
-|[CINS Score / CI Army](https://cinsscore.com) | liste d'IPs à mauvaise réputation (CINS Active Threat Intelligence), gratuite |
-|[Cisco Talos Github](https://github.com/Cisco-Talos/IOCs)| IOCs des publications Talos |
-|[Critical Path Security Github](https://github.com/CriticalPathSecurity/Public-Intelligence-Feeds) | feeds quotidiens d'IPs / domaines au format Zeek Intelligence Framework |
-|[CyberCrime Tracker](https://cybercrime-tracker.net) | panels C2 de malware (Pony, Loki, etc.) |
-|[cyberfury101 Gitlab](https://gitlab.com/Cyberfury101/deepdarkCTI) | copie de `deepdarkCTI`, inactive depuis 2021 ; préférer le dépôt fastfire |
-|[Datadog Security Labs Github](https://github.com/DataDog/malicious-software-packages-dataset) | corpus de paquets PyPI / npm malveillants (archives chiffrées + JSON), MAJ quotidienne — supply chain |
-|[DigitalSide Threat-Intel](https://osint.digitalside.it) ([mirror GitHub](https://github.com/davidonzo/Threat-Intel)) | IOCs OSINT (STIX / CSV / MISP) ; rythme ralenti depuis fin 2024 |
-|[dragnet Github](https://github.com/dragnet-dev) | moteur d'agrégation `dragnet` public ; le repo de sorties `haul` (IOCs/Sigma/STIX) annoncé n'est pas encore publié |
-|[drb-ra Github](https://github.com/drb-ra/C2IntelFeeds) | orienté C2, mise à jour quotidienne, très actif |
-|[EcrimeLabs](https://ecrimelabs.net) | feeds fournis sur demande |
-|[Elastic Security Labs Github](https://github.com/elastic/labs-releases) | IOCs, YARA et extracteurs des articles [Elastic Security Labs](https://www.elastic.co/security-labs) ; actif (distinct de `elastic/detection-rules`) |
-|[Emerging Threats — compromised IPs](https://rules.emergingthreats.net/blockrules/compromised-ips.txt) | liste d'IPs compromises, classique |
-|[ESET Github](https://github.com/eset/malware-ioc/tree/master)| IOCs des investigations ESET ; mises à jour épisodiques |
-|[fastfire Github](https://github.com/fastfire/deepdarkCTI) | collection deep et darkweb, très actif |
-|[FGRibreau Github](https://github.com/FGRibreau/mailchecker) | détection d'emails jetables ; voir `list.txt` |
-|[GreenSnow](https://greensnow.co) | IPs de brute-force et de scan ([greensnow.txt](https://blocklist.greensnow.co/greensnow.txt)) |
-|[HaGeZi DNS Blocklists Github](https://github.com/hagezi/dns-blocklists) | liste `tif` (Threat Intelligence Feeds) : malware / phishing / C2 agrégés au format hosts / RPZ / ABP |
-|[Huntress Labs Github](https://github.com/huntresslabs/threat-intel) | IOCs et YARA de la télémétrie MDR (intrusions PME, abus RMM), actif |
-|[InfoSec Github](https://github.com/GithubInfosec/latest-malware-IoC)| IoC/IoA d'investigations InfoSec ; peu actif (dernière MAJ mi-2025) |
-|[Intezer — community-intelligence Github](https://github.com/intezer/community-intelligence) | IOCs curés par campagne (APT et cybercrime), formats CSV / Markdown / TXT ; actif |
-|[Inversion DNSBL (elliotwutingfeng) Github](https://github.com/elliotwutingfeng/Inversion-DNSBL-Blocklists) | URLs malveillantes issues du scan de sources publiques ; formats hosts / ABP |
-|[Maltrail — trails statiques](https://github.com/stamparm/maltrail/tree/master/trails/static) | listes d'IOCs (C2, DGA, scanners) rangées par famille de malware ; même auteur qu'Ipsum |
-|[Malshare.com](https://malshare.com) | plateforme d'échantillons + IOCs ; inscription gratuite / clé API |
-|[malware-traffic Github](https://github.com/malware-traffic/indicators)| IOCs de malware-traffic-analysis.net, classés par année |
-|[Mandiant Github](https://github.com/mandiant/iocs)| archivé, IOCs de 2019 ; recherche vivante sur le [blog Google Cloud Threat Intelligence](https://cloud.google.com/blog/topics/threat-intelligence) |
-|[MetaMask — eth-phishing-detect Github](https://github.com/MetaMask/eth-phishing-detect) | blocklist de domaines de phishing Web3 utilisée par le wallet MetaMask, très active `[crypto]` |
-|[Meta Github](https://github.com/facebook/threat-research)| IOCs et indicateurs de détection, actif |
-|[Netskope Threat Labs Github](https://github.com/netskopeoss/NetskopeThreatLabsIOCs) | IOCs par billet ([blog](https://www.netskope.com/blog)) ; angle abus de services cloud légitimes, très actif |
-|[Mitre ATT&CK Github](https://github.com/mitre-attack/attack-stix-data) | données STIX du framework ATT&CK |
-|[montysecurity Github](https://github.com/montysecurity) | voir `C2-Tracker` (archivé avril 2026) et les connecteurs OpenCTI |
-|[Mr Looquer IOCs Feed](https://iocfeed.mrlooquer.com) | feed IPv4/IPv6 (JSON & CSV) ; dernières données fin 2023 |
-|[Onetracker](https://onetracker.org/ti)| annuaire de ressources : échantillons, PCAP, images forensic, feeds, blocklists |
-|[OpenPhish](https://openphish.com) / [PhishTank](https://phishtank.org) | URLs de phishing ; feeds communautaires gratuits (versions publiques limitées) |
-|[Palo Alto Github](https://github.com/PaloAltoNetworks/Unit42-Threat-Intelligence-Article-Information)| IOCs liés aux articles Unit 42, actif ; remplace l'ancien repo `pan-unit42/iocs` |
-|[Palo Alto — Unit42 timely-threat-intel Github](https://github.com/PaloAltoNetworks/Unit42-timely-threat-intel) | IOCs des posts courts X/LinkedIn d'Unit 42 (distinct du repo Article-Information), très actif |
-|[pan-unit42 Github](https://github.com/pan-unit42) | org Unit 42 ; `pan-unit42/iocs` archivé, utiliser le repo Article-Information ci-dessus |
-|[Phishing Army Feed](https://phishing.army) | blocklist de domaines liés au phishing (versions basic et extended) |
-|[Phishing.Database (mitchellkrogza) Github](https://github.com/mitchellkrogza/Phishing.Database) | agrégation de domaines / IPs / liens de phishing depuis des sources publiques |
-|[polkadot-js — phishing Github](https://github.com/polkadot-js/phishing) | blocklist de sites / adresses de phishing de l'écosystème Polkadot (non-EVM) `[crypto]` |
-|[Prodaft Github](https://github.com/prodaft)| voir `malware-ioc` (IOCs d'investigations) et CRADLE (plateforme CTI) |
-|[PulseDive](https://pulsedive.com) | plateforme CTI, plusieurs feeds ; compte gratuit disponible |
-|[Ransomware.live Feeds](https://www.ransomware.live/api) | API victimes/groupes ransomware ; le plan gratuit permet 50 req/j |
-|[RedDrip7 Github](https://github.com/RedDrip7)| `APT_Digital_Weapon` : IOCs APT catégorisés par QiAnXin (奇安信, Chine), actif |
-|[rodanmaharjan Github](https://github.com/rodanmaharjan/ThreatIntelligence)| blocklist IOC pour MISP / pare-feu ; dernière MAJ sept. 2025 |
-|[SANS ISC / DShield](https://isc.sans.edu) | IPs de scan et d'attaque, blocklists quotidiennes ([feeds](https://www.dshield.org/howto.html)) |
-|[Scam Sniffer — scam-database Github](https://github.com/scamsniffer/scam-database) | domaines de drainers + adresses (ETH) d'arnaques Web3, MAJ quotidienne `[crypto]` |
-|[Sekoia.io — Community Github](https://github.com/SEKOIA-IO/Community) | IOCs et règles Sigma en complément du [blog Sekoia](https://blog.sekoia.io) (déjà listé plus bas) |
-|[Shadowserver](https://www.shadowserver.org/what-we-do/network-reporting/) | ONG ; rapports quotidiens gratuits pour votre ASN / plage IP + [dashboard public](https://dashboard.shadowserver.org) |
-|[sophoslabs Github](https://github.com/sophoslabs/IoCs)| IOCs issus des publications Sophos, actif |
-|[Spamhaus DROP / EDROP](https://www.spamhaus.org/blocklists/do-not-route-or-peer/) | plages IP détournées ou contrôlées par des cybercriminels ; TXT / JSON |
-|[spydisec Github](https://github.com/spydisec/spydithreatintel)| agrégat OSINT + blocklists communautaires, mise à jour quotidienne |
-|[sroberts Github](https://github.com/sroberts/awesome-iocs)| liste curée de sources IOC |
-|[stamparm Ipsum Github](https://github.com/stamparm/Ipsum) | feed quotidien d'IPs malveillantes avec score de fiabilité graduel |
-|[Stop Forum Spam](https://www.stopforumspam.com/downloads) | listes d'IP / domaines / emails de spam de forum |
-|[Threatfeeds.io](https://threatfeeds.io) | annuaire de feeds gratuits/OSS ; peu mis à jour depuis ~2019 |
-|[ViriBack C2 Tracker](https://tracker.viriback.com) | panels C2 actifs (stealers, RAT) ; export CSV |
-|[WithSecure Labs Github](https://github.com/WithSecureLabs/iocs) | IOCs par campagne ([W/Labs](https://www.withsecure.com/en/resources-hub/w-labs/)) ; bonne couverture Lazarus / Europe du Nord, actif |
-|[Wiz Research Github](https://github.com/wiz-sec-public/wiz-research-iocs) | IOCs cloud-native (conteneurs, CI/CD, supply chain) ; [blog](https://www.wiz.io/blog/tag/research) |
-|[Xanderux Github](https://github.com/Xanderux/C2watcher) | feed C2 quotidien, actif |
-|[xxspell Gitlab](https://gitlab.com/xxspell/ctifeeds)| instantané de janvier 2024, non maintenu depuis |
-|[Zscaler Github](https://github.com/ThreatLabz/iocs)| IOCs des rapports Zscaler ThreatLabz, actif et dense |
+1. [Référentiels et annuaires](#1-référentiels-et-annuaires)
+2. [Feeds communautaires, fondations et lutte anti-abus](#2-feeds-communautaires-fondations-et-lutte-anti-abus)
+3. [CERT / CSIRT nationaux et organisations régionales](#3-cert--csirt-nationaux-et-organisations-régionales)
+4. [Police, justice, sanctions et attribution officielle](#4-police-justice-sanctions-et-attribution-officielle)
+5. [CERT sectoriels, ISAC et infrastructures critiques](#5-cert-sectoriels-isac-et-infrastructures-critiques)
+6. [Infrastructure Internet : registres, RIR, NREN, cloud, opérateurs](#6-infrastructure-internet--registres-rir-nren-cloud-opérateurs)
+7. [Éditeurs et laboratoires de recherche privés](#7-éditeurs-et-laboratoires-de-recherche-privés)
+8. [Réponse à incident, conseil, assurance](#8-réponse-à-incident-conseil-assurance)
+9. [Recherche académique et datasets](#9-recherche-académique-et-datasets)
+10. [Cybercriminalité : trackers, sites de fuite, victimologie](#10-cybercriminalité--trackers-sites-de-fuite-victimologie)
+11. [Chercheurs indépendants, communautés et agrégateurs](#11-chercheurs-indépendants-communautés-et-agrégateurs)
+12. [Journalistes et médias spécialisés](#12-journalistes-et-médias-spécialisés)
+13. [Ingérence numérique et abus de plateformes](#13-ingérence-numérique-et-abus-de-plateformes)
+14. [Bases d'incidents, think tanks et rapports de référence](#14-bases-dincidents-think-tanks-et-rapports-de-référence)
+15. [Sandboxes et dépôts d'échantillons](#15-sandboxes-et-dépôts-déchantillons)
+16. [Règles de détection](#16-règles-de-détection)
+17. [Angles morts](#17-angles-morts)
+18. [Sources écartées](#18-sources-écartées)
+19. [Méthodologie et vérification](#19-méthodologie-et-vérification)
 
-# Menace mobile
-Sources dédiées aux compromissions de smartphones (spyware mercenaire, stalkerware, trojans bancaires Android).
-|Source                                                                            |Commentaire         |
-|----------------------------------------------------------------------------------|--------------------|
-|[Amnesty International — investigations](https://github.com/AmnestyTech/investigations) | IOCs (STIX) des enquêtes du Security Lab : Pegasus, Predator/Cytrox, campagnes Android… ; dernière MAJ fin 2024 |
-|[AssoEchap — stalkerware-indicators](https://github.com/AssoEchap/stalkerware-indicators) | stalkerware Android : noms de paquets, C2, règles YARA et Suricata/Snort ; maintenu par Échap + Amnesty Security Lab, actif |
-|[Citizen Lab — malware-indicators](https://github.com/citizenlab/malware-indicators) | IOCs des enquêtes Citizen Lab (Université de Toronto) sur le spyware mercenaire (Pegasus, Predator, Candiru…) |
-|[Cleafy Labs](https://www.cleafy.com/labs) (Italie) | trojans bancaires Android et fraude (SpyNote, Copybara…) ; pas de flux, IOCs en fin de billet `[EN]` |
-|[Lookout Threat Lab](https://www.lookout.com/threat-intelligence) (États-Unis) | spyware / surveillanceware mobile ; complément de Citizen Lab / Amnesty |
-|[MVT Project — mvt-indicators](https://github.com/mvt-project/mvt-indicators) | index d'IOCs (STIX) compatibles avec l'outil forensic [MVT](https://github.com/mvt-project/mvt) (iOS / Android), actif |
-|[ThreatFabric](https://www.threatfabric.com/blogs) (Pays-Bas) | référence des trojans bancaires Android ; IOCs en fin de billet, flux RSS `[EN]` |
-|[Zimperium zLabs — IOC Github](https://github.com/Zimperium/IOC) (États-Unis) | IOCs par campagne de malware Android (banking trojans, OTP stealers, FakeCall…), actif |
+---
 
-# Sources gouvernementales et étatiques
-CERT / CSIRT nationaux et agences. Beaucoup publient leurs IOCs dans des avis web plutôt que dans des feeds structurés.
+## 1. Référentiels et annuaires
+
+*Biais : aucun observable frais ; mais sans table d'alias, le recoupement entre éditeurs est impossible (un même acteur porte 5 à 10 noms).*
+
+| Source | Pays | Contenu | Accès | Activité | Commentaire |
+|---|---|---|---|---|---|
+| [MITRE ATT&CK — STIX](https://github.com/mitre-attack/attack-stix-data) · [Groups](https://attack.mitre.org/groups/) · [Campaigns](https://attack.mitre.org/campaigns/) | US | RENS | repo/web | vivant | référentiel de techniques, groupes, logiciels et campagnes |
+| [MISP Galaxy](https://github.com/MISP/misp-galaxy) | LU/EU | RENS | repo (JSON) | 2026-08-31 | référentiel canonique d'acteurs, outils, campagnes ; **la** table de correspondance des alias |
+| [Malpedia](https://malpedia.caad.fkie.fraunhofer.de) · [acteurs](https://malpedia.caad.fkie.fraunhofer.de/actors) | DE | IOC+RENS | web/API, inscr. | vivant | familles de malware, règles YARA, références (Fraunhofer FKIE) |
+| [ETDA / ThaiCERT APT Encyclopedia](https://apt.etda.or.th) | TH | RENS | web | vivant | fiches groupes et outils APT |
+| [APT Groups and Operations (F. Roth)](https://apt.threattracking.com) | DE | RENS | web (Google Sheets) | vivant | tableur historique des alias APT par pays |
+| [SOCRadar Threat Actor DB](https://socradar.io/threat-actors/) | TR | RENS | web | vivant | fiches d'acteurs gratuites |
+| [ORKL](https://orkl.eu) | EU | RENS | web/API | vivant | bibliothèque de rapports CTI indexés |
+| [lazarus.day](https://lazarus.day) | — | RENS | web | vivant | index des rapports sur les groupes nord-coréens |
+| [RST Cloud — awesome-threat-actor-resources](https://github.com/rstcloud/awesome-threat-actor-resources) | — | RENS | repo | vivant | méta-liste de profils d'acteurs et datasets |
+| [Trusted Introducer](https://www.trusted-introducer.org) · [export JSON](https://www.trusted-introducer.org/trusted-introducer/directory/downloads/json/teams/) | EU | RENS | JSON | vivant | annuaire de 554 équipes (contacts, PGP, constituency) ; le seul export machine européen |
+| [FIRST](https://www.first.org) · [API](https://api.first.org/data/v1/teams?limit=100) | — | RENS | API | vivant | 879 équipes mondiales, paginé par 100 ; diff mensuel recommandé (§19) |
+| [Onetracker](https://onetracker.org/ti) | — | RENS | web | vivant | annuaire d'échantillons, PCAP, feeds, blocklists |
+| [hslatman — awesome-threat-intelligence](https://github.com/hslatman/awesome-threat-intelligence) · [sroberts — awesome-iocs](https://github.com/sroberts/awesome-iocs) · [InQuest — awesome-yara](https://github.com/InQuest/awesome-yara) | — | RENS | repo | vivant | listes de référence |
+| [Threatfeeds.io](https://threatfeeds.io) | — | RENS | web | ~2019 | annuaire de feeds, peu mis à jour |
+
+## 2. Feeds communautaires, fondations et lutte anti-abus
+
+*Biais : mesurent le volume et l'opportunisme (spam, scans, phishing de masse), pas le ciblé ; les listes de blocage produisent des faux positifs par conception. Les agrégateurs recyclent : vérifier la provenance avant d'empiler.*
+
+### 2.1 Fondations et projets de référence
+
+| Source | Pays | Contenu | Accès | Activité | Commentaire |
+|---|---|---|---|---|---|
+| [abuse.ch](https://abuse.ch) — [URLhaus](https://urlhaus.abuse.ch), [MalwareBazaar](https://bazaar.abuse.ch), [ThreatFox](https://threatfox.abuse.ch), [Feodo Tracker](https://feodotracker.abuse.ch), [SSLBL](https://sslbl.abuse.ch) | CH | IOC | feed/API (CSV/JSON/MISP/Suricata) | vivant | hébergé par la Haute école spécialisée bernoise ; site bloque les robots, les feeds non |
+| [AlienVault OTX](https://otx.alienvault.com) | US | IOC+RENS | API | vivant | pulses communautaires, très gros volume |
+| [Shadowserver](https://www.shadowserver.org/what-we-do/network-reporting/) · [dashboard](https://dashboard.shadowserver.org) | US | IOC+RENS | inscr. | vivant | ONG ; rapports quotidiens gratuits pour votre ASN |
+| [SANS ISC / DShield](https://isc.sans.edu) · [feeds](https://www.dshield.org/howto.html) | US | IOC+RENS | feed | vivant | IP de scan et d'attaque, blocklists quotidiennes, diary |
+| [Spamhaus DROP / EDROP](https://www.spamhaus.org/blocklists/do-not-route-or-peer/) | CH/UK | IOC | feed (TXT/JSON) | vivant | plages IP détournées ou criminelles |
+| [CIRCL — feed MISP OSINT](https://www.circl.lu/doc/misp/feed-osint/) · [GitHub](https://github.com/CIRCL) | LU | IOC+RENS | feed (MISP) | vivant | éditeur de MISP, AIL, Passive DNS/SSL |
+| [Botvrij.eu](https://www.botvrij.eu) | NL | IOC | feed (MISP/CSV) | vivant | |
+| [Stratosphere Laboratory](https://www.stratosphereips.org) | CZ | IOC+RENS | feed/repo | vivant | datasets CTU-13, IoT-23, blocklists, IDS Slips (CTU Prague) |
+| [The Honeynet Project](https://www.honeynet.org) | — | RENS | web | vivant | outils, challenges, données honeypot |
+| [APNIC Community Honeynet](https://feeds.honeynet.asia) | AU | IOC | feed | vivant | honeypots Asie-Pacifique |
+| [DataPlane.org](https://dataplane.org) | US | IOC | feed (TXT) | vivant | ONG ; honeypots SSH/SIP/DNS/VNC |
+| [Project Honey Pot / http:BL](https://www.projecthoneypot.org) | US | IOC | API DNS | vivant | harvesters, spammers |
+| [HoneyDB](https://honeydb.io) | — | IOC | API | vivant | honeypots communautaires |
+| [CyberGreen](https://cybergreen.net/) | US | RENS | RSS | vivant | métriques d'hygiène par pays/ASN |
+| [Global Cyber Alliance](https://globalcyberalliance.org/) | US | RENS | RSS | vivant | honeyfarm AIDE, DMARC |
+| [APWG](https://apwg.org/) | US | RENS | PDF ; eCrime eXchange inscr. | vivant | rapports trimestriels phishing |
+| [Global Anti-Scam Alliance](https://gasa.org/) | — | RENS | PDF | vivant | rapports scam par pays |
+
+### 2.2 Blocklists IP / domaines
+
+| Source | Pays | Contenu | Accès | Activité | Commentaire |
+|---|---|---|---|---|---|
+| [blocklist.de](https://www.blocklist.de) | DE | IOC | feed | vivant | IP signalées via fail2ban |
+| [CINS Score / CI Army](https://cinsscore.com) | US | IOC | feed | vivant | |
+| [stamparm — Ipsum](https://github.com/stamparm/Ipsum) · [Maltrail trails](https://github.com/stamparm/maltrail/tree/master/trails/static) | RS | IOC | repo | 2026-09-01 | Ipsum : IP scorées ; Maltrail : trails par famille (C2, DGA, scanners) |
+| [Emerging Threats — compromised-ips](https://rules.emergingthreats.net/blockrules/compromised-ips.txt) | US | IOC | feed | vivant | |
+| [Binary Defense banlist](https://binarydefense.com/banlist.txt) | US | IOC | feed | vivant | |
+| [GreenSnow](https://blocklist.greensnow.co/greensnow.txt) | FR | IOC | feed | vivant | brute-force, scans |
+| [BruteForceBlocker](https://danger.rulez.sk/projects/bruteforceblocker/blist.php) | SK | IOC | feed | vivant | SSH |
+| [Phishing Army](https://phishing.army) | IT | IOC | feed | vivant | domaines de phishing |
+| [OpenPhish](https://openphish.com) / [PhishTank](https://phishtank.org) | — | IOC | feed | vivant | versions publiques limitées |
+| [Phishing.Database](https://github.com/mitchellkrogza/Phishing.Database) | ZA | IOC | repo | 2026-08-23 | domaines/IP/liens de phishing |
+| [Inversion DNSBL Blocklists](https://github.com/elliotwutingfeng/Inversion-DNSBL-Blocklists) | SG | IOC | repo | 2026-09-01 | URL malveillantes issues de scans originaux (ses dépôts `ThreatFox-IOC-*` sont des miroirs) |
+| [HaGeZi DNS Blocklists](https://github.com/hagezi/dns-blocklists) | DE | IOC | repo (hosts/ABP/RPZ) | 2026-09-01 | liste TIF pour DNS-RPZ |
+| [The Block List Project](https://blocklistproject.github.io/Lists/) | — | IOC | repo | 2026-07-20 | |
+| [FireHOL IP lists](https://iplists.firehol.org) · [repo](https://github.com/firehol/blocklist-ipsets) | — | IOC | repo | 2026-09-01 | agrégation scorée de ~400 listes ; plutôt warninglist / comparaison de couverture |
+| [SURBL](https://www.surbl.org) / [URIBL](https://uribl.com) | US | IOC | DNSBL, licence | vivant | URI de spam et phishing |
+| [CleanTalk](https://cleantalk.org/blacklists) | — | IOC | API | vivant | |
+| [AbuseIPDB](https://www.abuseipdb.com) | — | IOC | API, bot | vivant | signalements communautaires |
+| [Stop Forum Spam](https://www.stopforumspam.com/downloads) | — | IOC | feed | vivant | |
+| [dan.me.uk Tor list](https://www.dan.me.uk/torlist/) | UK | IOC | feed (1 req/30 min) | vivant | nœuds Tor ; à charger en warninglist |
+| [threatview.io](https://threatview.io) | — | IOC | feed | vivant | IP/domaines/hash/C2 quotidiens |
+| [ELLIO](https://ellio.tech) | CZ | IOC | inscr. ; blog RSS | vivant | IP de scans massifs |
+
+| [hole.cert.pl](https://hole.cert.pl) | PL | IOC | feed | vivant | blocklist de domaines CERT Polska |
+| [FGRibreau — mailchecker](https://github.com/FGRibreau/mailchecker) | FR | IOC | repo | vivant | domaines d'emails jetables |
+
+### 2.3 Crypto / Web3
+
+| Source | Pays | Contenu | Accès | Activité | Commentaire |
+|---|---|---|---|---|---|
+| [Scam Sniffer — scam-database](https://github.com/scamsniffer/scam-database) | — | IOC | repo (JSON) | 2026-09-01 | domaines de drainers, adresses ; quotidien |
+| [MetaMask — eth-phishing-detect](https://github.com/MetaMask/eth-phishing-detect) | US | IOC | repo (JSON) | 2026-09-01 | liste du wallet |
+| [polkadot-js phishing](https://github.com/polkadot-js/phishing) | — | IOC | repo (JSON) | 2026-08-01 | non-EVM |
+| [PhishFort lists](https://github.com/phishfort/phishfort-lists) | — | IOC | repo | 2025-08-05 | ralenti |
+| [TRM Labs — Chainabuse](https://chainabuse.com) | US | IOC | web/API | vivant | adresses signalées, pas d'export bulk gratuit |
+| [SlowMist / 慢雾](https://hacked.slowmist.io) · [Knowledge-Base](https://github.com/SlowMist/Knowledge-Base) | CN | RENS | web/repo | 2026-08-12 | base d'incidents Web3 `[ZH/EN]` |
+
+## 3. CERT / CSIRT nationaux et organisations régionales
+
+*Biais : mandat public, IOC souvent tardifs mais fiables ; l'attribution est parfois politique (voir §17 sur les contre-narratifs). Beaucoup publient dans des avis web plutôt qu'en feed.*
 
 ### France
-|Source                                                                            |Commentaire         |
-|----------------------------------------------------------------------------------|--------------------|
-|[CERT-FR / ANSSI](https://www.cert.ssi.gouv.fr/ioc) | feed IOCs officiel (+ MISP natif) ; outils DFIR sur [github.com/ANSSI-FR](https://github.com/ANSSI-FR) (DFIR-ORC, DFIR-OGRE) |
-|[VIGINUM](https://github.com/VIGINUM-FR/Rapports-Techniques) | rapports techniques sur l'ingérence numérique étrangère (dernière MAJ sept. 2025) |
+
+| Source | Contenu | Accès | Commentaire |
+|---|---|---|---|
+| [CERT-FR / ANSSI](https://www.cert.ssi.gouv.fr/ioc) · [GitHub ANSSI-FR](https://github.com/ANSSI-FR) | IOC+RENS | feed (MISP) / repo | feed IOC officiel ; outils DFIR (DFIR-ORC, DFIR-OGRE) |
+| [VIGINUM](https://github.com/VIGINUM-FR/Rapports-Techniques) | RENS | repo | ingérence numérique étrangère (dernière MAJ sept. 2025) |
+| [Cybermalveillance.gouv.fr](https://www.cybermalveillance.gouv.fr/) | RENS | web, bot | alertes grand public, rapport annuel |
+| [Phishing Initiative](https://phishing-initiative.eu/contrib/) · [Signal Spam](https://www.signal-spam.fr/) | IOC | web | signalement d'URL de phishing / spam |
 
 ### Organisations régionales et supranationales
-|Source                                                                            |Commentaire         |
-|----------------------------------------------------------------------------------|--------------------|
-|[ENISA — EU CSIRTs Network (CNW)](https://github.com/enisaeu/CNW) (UE) | agrège les avis des CSIRT nationaux de l'UE + CERT-EU |
-|[CERT-EU](https://cert.europa.eu/publications/threat-intelligence) (UE) | Threat Intelligence & security advisories des institutions de l'UE ; [`droid`](https://github.com/certeu/droid) pour la gestion de règles Sigma |
-|[Trusted Introducer / TF-CSIRT](https://www.trusted-introducer.org) (Europe) | annuaire et accréditation des CSIRT européens |
-|[APCERT](https://www.apcert.org) (Asie-Pacifique) | organisation régionale des CERT d'Asie-Pacifique ; rapports annuels et exercices |
-|[ASEAN Regional CERT](https://www.csa.gov.sg/news-events/press-releases/establishment-of-asean-regional-computer-emergency-response-team/) (Asie du Sud-Est) | CERT régional de l'ASEAN, hébergé par la CSA (Singapour) ; opérationnel depuis 2024, pas encore de site autonome — page de la CSA |
-|[AfricaCERT](https://www.africacert.org) (Afrique) | organisation régionale des CSIRT africains |
-|[OEA — CSIRTAmericas](https://csirtamericas.org) (Amériques) | réseau des CSIRT nationaux des Amériques (Organisation des États américains) `[ES/EN/PT]` |
-|[OIC-CERT](https://oic-cert.org) (Org. de la coopération islamique) | réseau des CERT des États membres de l'OCI (secrétariat en Malaisie) ; peut être injoignable hors région |
-|[FIRST](https://www.first.org) (mondial) | forum mondial des équipes de réponse à incident ; [annuaire des équipes membres](https://www.first.org/members/teams/) |
+
+| Source | Contenu | Accès | Commentaire |
+|---|---|---|---|
+| [ENISA — CSIRTs Network](https://github.com/enisaeu/CNW) · [publications](https://www.enisa.europa.eu/publications) (UE) | IOC+RENS | repo / PDF | avis agrégés des CSIRT de l'UE ; Threat Landscape annuel |
+| [CERT-EU](https://cert.europa.eu/publications/threat-intelligence) · [`droid`](https://github.com/certeu/droid) (UE) | IOC+RENS | web / repo | institutions de l'UE ; gestion de règles Sigma |
+| [Europol — newsroom](https://www.europol.europa.eu/media-press/newsroom) (UE) | RENS | web | démantèlements, infrastructures saisies |
+| [NATO CCDCOE](https://ccdcoe.org/library/publications/) | RENS | PDF | recherche cyber-conflit |
+| [Trusted Introducer / TF-CSIRT](https://www.trusted-introducer.org) (Europe) | RENS | JSON | voir §1 |
+| [APCERT](https://www.apcert.org) (Asie-Pacifique) · [ASEAN Regional CERT](https://www.csa.gov.sg/news-events/press-releases/establishment-of-asean-regional-computer-emergency-response-team/) · [AfricaCERT](https://www.africacert.org) · [OEA — CSIRTAmericas](https://csirtamericas.org) `[ES/EN/PT]` · [OIC-CERT](https://oic-cert.org) | RENS | web | organisations régionales ; OIC-CERT parfois injoignable hors région |
+| [FIRST](https://www.first.org) | RENS | API | voir §1 |
+| [UNODC cybercrime](https://www.unodc.org/unodc/en/cybercrime/) · [ITU-D](https://www.itu.int/itu-d/sites/cybersecurity/) | RENS | web | rapports, pas d'observables |
 
 ### États membres de l'UE
-|Pays|Source|Commentaire|
-|----|------|-----------|
-|Allemagne | [BSI / CERT-Bund](https://github.com/BSI-Bund) | honeypot MADCAT, Secvisogram (CSAF) ; avis de vulnérabilité sur [wid.cert-bund.de](https://wid.cert-bund.de) `[DE]` |
-|Autriche | [CERT.at / GovCERT Austria](https://www.cert.at) | avis, blog technique et statistiques ; opéré par nic.at `[DE/EN]` |
-|Belgique | [CCB / CERT.be](https://cert.be) | avis de sécurité avec IOCs |
-|Bulgarie | [CERT Bulgaria](https://govcert.bg) | CERT gouvernemental ; avis et actualités `[BG]` |
-|Chypre | [CSIRT-CY](https://csirt.cy) | CSIRT national ; alertes et avis `[EL/EN]` |
-|Croatie | [CERT.hr](https://www.cert.hr) | CERT national (CARNET) ; avis et publications `[HR]` |
-|Danemark | [CFCS](https://www.cfcs.dk) | centre de cybersécurité du renseignement (FE) ; cfcs.dk redirige vers samsik.dk depuis la réorganisation de 2025 `[DA/EN]` |
-|Espagne | [CCN-CERT](https://www.ccn-cert.cni.es) | CERT du renseignement ; rapports APT et outils (souvent sur inscription) `[ES]` |
-|Espagne | [INCIBE-CERT](https://www.incibe.es/en/incibe-cert) | avis, études et outils `[ES/EN]` |
-|Estonie | [CERT-EE / RIA](https://github.com/cert-ee) | Cuckoo3, S4A detector et autres outils |
-|Finlande | [NCSC-FI / Traficom](https://www.kyberturvallisuuskeskus.fi) | centre national ; alertes, rapports et notifications aux réseaux finlandais `[FI/SV/EN]` |
-|Grèce | [NCSA / EL CSIRT](https://cyber.gov.gr) | autorité nationale de cybersécurité et son CSIRT `[EL/EN]` |
-|Hongrie | [NKI / NBSZ](https://nki.gov.hu) | centre national de cybersécurité ; alertes et avis `[HU]` |
-|Irlande | [NCSC-IE](https://www.ncsc.gov.ie) | avis et alertes |
-|Italie | [CERT-AGID](https://cert-agid.gov.it) | feed IOC quotidien (malware / phishing visant l'Italie) ; inscription requise `[IT]` |
-|Lettonie | [CERT.LV](https://www.cert.lv/en/data-feed) | data feed national (sinkhole, IPs et domaines compromis) |
-|Lituanie | [NKSC](https://www.nksc.lt) | centre national de cybersécurité ; avis et rapports ; le site répond 403 aux robots, ouvrir dans un navigateur `[LT/EN]` |
-|Luxembourg | [CIRCL](https://www.circl.lu/doc/misp/feed-osint/) | feed MISP OSINT ; éditeur de MISP, AIL, Passive DNS/SSL ([github.com/CIRCL](https://github.com/CIRCL)) |
-|Malte | [CSIRTMalta](https://csirtmalta.gov.mt) | CSIRT national ; accès filtré hors de Malte (redirection vers une page d'attente lors de la vérification) |
-|Pays-Bas | [NCSC-NL](https://github.com/NCSC-NL) | dépôts d'IOCs et scripts de scan par campagne (Citrix, MOVEit, Zimbra…) |
-|Pologne | [CERT Polska / CERT.pl](https://github.com/CERT-Polska) | mwdb, drakvuf-sandbox, karton, Artemis ; blocklist de domaines [hole.cert.pl](https://hole.cert.pl) |
-|Portugal | [CNCS / CERT.PT](https://www.cncs.gov.pt) | centre national ; avis et coordination d'incidents `[PT]` |
-|Roumanie | [DNSC](https://www.dnsc.ro) | directorat national (ex-CERT-RO) ; alertes et guides ; le site répond 403 aux robots, ouvrir dans un navigateur `[RO/EN]` |
-|Slovaquie | [SK-CERT](https://www.sk-cert.sk) | autorité nationale ; avis de vulnérabilité quotidiens `[SK/EN]` |
-|Slovénie | [SI-CERT](https://www.cert.si) | CERT national (Arnes) ; avis et alertes `[SL/EN]` |
-|Suède | [CERT-SE](https://www.cert.se) | alertes et analyses `[SV/EN]` |
-|Tchéquie | [NÚKIB](https://nukib.gov.cz/en/) | alertes, avertissements et rapports |
+
+| Pays | Source | Contenu | Accès | Commentaire |
+|---|---|---|---|---|
+| Allemagne | [BSI / CERT-Bund](https://github.com/BSI-Bund) · [wid.cert-bund.de](https://wid.cert-bund.de) · [Lagebericht](https://www.bsi.bund.de/DE/Service-Navi/Publikationen/Lagebericht/lagebericht_node.html) | IOC+RENS | repo/web/PDF | honeypot MADCAT, CSAF ; rapport annuel `[DE]` |
+| Autriche | [CERT.at](https://www.cert.at) | RENS | web, blog bot | opéré par nic.at `[DE/EN]` |
+| Belgique | [CCB / CERT.be](https://cert.be) | RENS | web, bot | IOC non vérifiés |
+| Bulgarie | [CERT Bulgaria](https://govcert.bg) | RENS | web | `[BG]` |
+| Chypre | [CSIRT-CY](https://csirt.cy) | RENS | web | `[EL/EN]` |
+| Croatie | [CERT.hr](https://www.cert.hr) | RENS | web | `[HR]` |
+| Danemark | [CFCS](https://www.cfcs.dk) | RENS | web | redirige vers samsik.dk `[DA/EN]` |
+| Espagne | [CCN-CERT](https://www.ccn-cert.cni.es) · [INCIBE-CERT](https://www.incibe.es/en/incibe-cert) | RENS | web, inscr. ; CCN bot | rapports APT ; IOC non vérifiés (CCN réservé, INCIBE : avis sans observables) `[ES]` |
+| Estonie | [CERT-EE / RIA](https://github.com/cert-ee) | RENS | repo | outils (Cuckoo3, S4A), pas d'IOC |
+| Finlande | [NCSC-FI / Traficom](https://www.kyberturvallisuuskeskus.fi) | RENS | web | `[FI/SV/EN]` |
+| Grèce | [NCSA / EL CSIRT](https://cyber.gov.gr) | RENS | web | `[EL/EN]` |
+| Hongrie | [NKI / NBSZ](https://nki.gov.hu) | RENS | web | `[HU]` |
+| Irlande | [NCSC-IE](https://www.ncsc.gov.ie) · [IRISSCERT](https://iriss.ie/) | RENS | web / RSS | IRISSCERT : CERT non lucratif |
+| Italie | [CERT-AGID](https://cert-agid.gov.it) | IOC | feed, inscr. | malware/phishing visant l'Italie, quotidien `[IT]` |
+| Lettonie | [CERT.LV](https://www.cert.lv/en/data-feed) | IOC | feed, sur demande | data feed national (sinkhole, IP/domaines compromis) ; contenu réservé |
+| Lituanie | [NKSC](https://www.nksc.lt) | RENS | web, bot | `[LT/EN]` |
+| Luxembourg | [CIRCL](https://www.circl.lu) | IOC+RENS | feed | voir §2.1 |
+| Malte | [CSIRTMalta](https://csirtmalta.gov.mt) | RENS | web, géo | |
+| Pays-Bas | [NCSC-NL](https://github.com/NCSC-NL) | IOC | repo | IOC et scripts par campagne |
+| Pologne | [CERT Polska](https://github.com/CERT-Polska) · [publikacje](https://cert.pl/publikacje/) · [NASK raporty](https://www.nask.pl/raporty) | IOC+RENS | repo / Atom / PDF | mwdb, drakvuf, Artemis ; hole.cert.pl (§2.2) `[PL/EN]` |
+| Portugal | [CNCS / CERT.PT](https://www.cncs.gov.pt) | RENS | web | `[PT]` |
+| Roumanie | [DNSC](https://www.dnsc.ro) | RENS | web, bot | `[RO/EN]` |
+| Slovaquie | [SK-CERT](https://www.sk-cert.sk) | RENS | web | `[SK/EN]` |
+| Slovénie | [SI-CERT](https://www.cert.si) | RENS | web | `[SL/EN]` |
+| Suède | [CERT-SE](https://www.cert.se) | RENS | web | `[SV/EN]` |
+| Tchéquie | [NÚKIB](https://nukib.gov.cz/en/) | RENS | web | |
 
 ### Autres pays
-|Pays|Source|Commentaire|
-|----|------|-----------|
-|Albanie | [AKSK](https://aksk.gov.al) | autorité nationale de cybersécurité (ex-AKCESK) ; alertes et rapports `[SQ/EN]` |
-|Arabie saoudite | [Saudi CERT](https://cert.gov.sa) | avis et alertes de sécurité `[AR/EN]` |
-|Argentine | [CERT.ar](https://www.argentina.gob.ar/jefatura/innovacion-ciencia-y-tecnologia/centro-nacional-de-ciberseguridad/certar) | CERT national (Centro Nacional de Ciberseguridad) `[ES]` |
-|Australie | [ACSC / ASD](https://www.cyber.gov.au/about-us/view-all-content/alerts-and-advisories) | alertes et avis avec IOCs |
-|Azerbaïdjan | [CERT.AZ](https://cert.az) | CERT gouvernemental ; alertes `[AZ/EN]` |
-|Bangladesh | [BGD e-GOV CIRT](https://www.cirt.gov.bd) | CIRT national très actif : alertes, rapports d'analyse et IOCs |
-|Bélarus | [CERT.BY](https://cert.by) | CERT national (OAC) `[RU]` |
-|Bolivie | [CGII / CSIRT-Bolivia](https://csirt.gob.bo) | centre de gestion d'incidents (AGETIC) ; alertes et avis `[ES]` |
-|Brésil | [CERT.br](https://cert.br) | honeypots, données spam, statistiques nationales `[PT/EN]` |
-|Canada | [CCCS / Cyber Centre](https://github.com/CybercentreCanada) | AssemblyLine, extracteurs de config, outils SOC ; avis sur [cyber.gc.ca](https://www.cyber.gc.ca/en/alerts-advisories) |
-|Chili | [CSIRT de Gobierno](https://csirt.gob.cl) | alertes et IOCs publiés très régulièrement `[ES]` |
-|Chine | [CNCERT/CC](https://www.cert.org.cn/publish/english/index.html) | CERT national ; rapports et statistiques `[ZH ; page EN limitée]` |
-|Chine | [CVERC](https://www.cverc.org.cn) | centre national de réponse aux virus `[ZH]` |
-|Colombie | [colCERT](https://www.colcert.gov.co) | CERT national `[ES]` |
-|Corée du Sud | [KrCERT / KISA](https://www.krcert.or.kr) | avis, takedown phishing/C2, rapports `[KO]` |
-|Côte d'Ivoire | [CI-CERT](https://www.artci.ci) | CERT national, rattaché au régulateur ARTCI |
-|Égypte | [EG-CERT](https://egcert.eg) | CERT national (NTRA) ; connexion refusée depuis certains réseaux lors de la vérification `[AR/EN]` |
-|Émirats arabes unis | [aeCERT](https://aecert.ae) | CERT national ; alertes et sensibilisation `[AR/EN]` |
-|Équateur | [EcuCERT](https://www.ecucert.gob.ec) | CERT national (Arcotel) ; alertes `[ES]` |
-|États-Unis | [CISA](https://github.com/cisagov) | liste `.gov`, catalogue [KEV](https://github.com/cisagov/kev-data), avis [CSAF](https://github.com/cisagov/CSAF) ; alertes sur [cisa.gov](https://www.cisa.gov/news-events/cybersecurity-advisories) |
-|États-Unis | [CERT/CC (CMU SEI)](https://github.com/CERTCC) | coordination de divulgation (VINCE, SSVC, Vultron), outils d'analyse binaire |
-|États-Unis | [DARPA — Transparent Computing / OpTC](https://github.com/FiveDirections/OpTC-data) | datasets de traces hôte/réseau annotées pour la recherche en détection APT (agence du DoD) |
-|États-Unis | [IMPACT Cyber Trust](https://www.impactcybertrust.org) | place de marché de datasets de cybersécurité pour la recherche (financé par le DHS) |
-|États-Unis | [Los Alamos National Laboratory](https://csr.lanl.gov/data/) | datasets host / auth / réseau, scénarios APT (laboratoire du DOE / NNSA) |
-|États-Unis | [NSA Cybersecurity](https://github.com/nsacyber) | guides de durcissement et de détection, configurations |
-|Géorgie | [CERT.GOV.GE](https://cert.dga.gov.ge) | CERT gouvernemental (Digital Governance Agency) `[KA/EN]` |
-|Ghana | [CSA / CERT-GH](https://www.csa.gov.gh) | Cyber Security Authority et CERT national ; alertes et avis |
-|Hong Kong | [HKCERT](https://www.hkcert.org) | alertes, blog de veille et rapports `[ZH/EN]` |
-|Inde | [CERT-In](https://www.cert-in.org.in) | CERT national : avis, notes de vulnérabilité, alertes |
-|Inde | [CERT Mumbai (MH-CERT)](https://github.com/MH-CERT) | repo `Indicator-of-Compromise-IOC-` ; activité faible |
-|Inde | [Cyber Swachhता Kendra (CSK)](https://www.csk.gov.in) | centre de nettoyage de botnets opéré par CERT-In ; outils et avis |
-|Inde | [NCIIPC](https://nciipc.gov.in) | protection des infrastructures critiques ; bulletins avec IOCs `[EN ; accès surtout depuis l'Inde]` |
-|Indonésie | [BSSN](https://www.bssn.go.id) | agence nationale (dont l'Id-SIRTII/CC) ; le site répond 403 aux robots, ouvrir dans un navigateur `[ID]` |
-|Iran | [Maher / CERT.ir](https://cert.ir) | CERT national `[FA]` |
-|Islande | [CERT-IS](https://www.cert.is) | CERT national ; alertes `[IS/EN]` |
-|Israël | [INCD](https://www.gov.il/en/departments/israel_national_cyber_directorate) | directorat national ; alertes et rapports ; le portail gov.il répond 403 aux robots, ouvrir dans un navigateur `[HE/EN]` |
-|Japon | [JPCERT/CC](https://github.com/JPCERTCC) | `phishurl-list`, `jpcert-yara`, `Contagious-Interview-IoCs`, `CobaltStrike-Config`, LogonTracer, EmoCheck ; blog d'analyse [« Eyes »](https://blogs.jpcert.or.jp/en/) (IOCs par billet, flux Atom) |
-|Jordanie | [NCSC-JO](https://ncsc.jo) | centre national de cybersécurité ; alertes `[AR/EN]` |
-|Kazakhstan | [KZ-CERT](https://cert.gov.kz) | CERT national (State Technical Service) `[KK/RU/EN]` |
-|Kenya | [National KE-CIRT/CC](https://ke-cirt.go.ke) | CERT national ; avis et rapports |
-|Macédoine du Nord | [MKD-CIRT](https://mkd-cirt.mk) | CIRT national (AEK) ; avis `[MK/EN]` |
-|Malaisie | [MyCERT](https://www.mycert.org.my) | CERT national (CyberSecurity Malaysia) : avis et alertes ; le site répond 403 aux robots, ouvrir dans un navigateur |
-|Maroc | [DGSSI / maCERT](https://www.dgssi.gov.ma) | avis et bulletins de sécurité `[FR/AR]` |
-|Maurice | [CERT-MU](https://cert-mu.govmu.org) | CERT national ; alertes et guides |
-|Mexique | [CERT-MX](https://www.gob.mx/gncertmx) | CERT national (Guardia Nacional) `[ES]` |
-|Moldavie | [CERT-GOV-MD](https://cert.gov.md) | CERT gouvernemental (STISC) ; alertes `[RO/EN]` |
-|Monténégro | [CIRT.ME](https://cirt.gov.me) | CIRT national ; avis `[CNR/EN]` |
-|Nigeria | [ngCERT](https://cert.gov.ng) | CERT national ; avis et alertes ; le site répond 403 aux robots, ouvrir dans un navigateur |
-|Norvège | [NSM / NCSC-NO](https://nsm.no) | autorité nationale de sécurité ; alertes et rapports `[NO/EN]` |
-|Nouvelle-Zélande | [NCSC-NZ](https://www.ncsc.govt.nz) | avis et alertes (CERT NZ y a été intégré en 2024) |
-|Oman | [OCERT](https://www.cert.gov.om) | CERT national ; alertes `[AR/EN]` |
-|Ouzbékistan | [UZCERT](https://uzcert.uz) | CERT national (Centre de cybersécurité) `[UZ/RU]` |
-|Pakistan | [PKCERT](https://pkcert.gov.pk) | CERT national (opérationnel depuis 2024) ; avis et alertes |
-|Panama | [CSIRT Panamá](https://cert.pa) | CSIRT national (AIG) ; alertes `[ES]` |
-|Paraguay | [CERT-PY](https://www.cert.gov.py) | CERT national ; publie régulièrement avis et IOCs `[ES]` |
-|Pérou | [PeCERT](https://pecert.gob.pe) | CERT gouvernemental `[ES]` |
-|Philippines | [CERT-PH / NCERT](https://ncert.gov.ph) | CERT national (DICT) ; le site répond 403 aux robots, ouvrir dans un navigateur |
-|Qatar | [NCSA / Q-CERT](https://www.ncsa.gov.qa) | agence nationale (intègre Q-CERT) ; alertes `[AR/EN]` |
-|République dominicaine | [CNCS / CSIRT-RD](https://cncs.gob.do) | centre national de cybersécurité ; alertes `[ES]` |
-|Royaume-Uni | [NCSC-UK](https://www.ncsc.gov.uk/section/keep-up-to-date/threat-reports) | rapports de menace avec IOCs ; packs de config sur [github.com/ukncsc](https://github.com/ukncsc) |
-|Russie | [NKTsKI / GosSOPKA](https://safe-surf.ru) | CERT national (safe-surf.ru) ; portail russophone, accès limité `[RU]` |
-|Serbie | [Nacionalni CERT](https://www.cert.rs) | CERT national (RATEL) ; avis `[SR/EN]` |
-|Singapour | [SingCERT / CSA](https://www.csa.gov.sg/singcert) | alertes et avis ; la CSA héberge aussi l'ASEAN Regional CERT |
-|Sri Lanka | [Sri Lanka CERT](https://www.cert.gov.lk) | CERT national ; alertes `[SI/TA/EN]` |
-|Suisse | [GovCERT.ch](https://github.com/govcert-ch/CTI) | dépôt `CTI` (IOCs et notes d'analyse), actif |
-|Tadjikistan | [CERT.TJ](https://cert.tj) | CERT national ; le seul d'Asie centrale avec un flux RSS `[RU/TJ]` |
-|Taïwan | [TWCERT/CC](https://www.twcert.org.tw) | CERT national ; avis et rapports `[ZH/EN]` |
-|Thaïlande | [TTC-CERT](https://github.com/ttc-cert) | CERT du secteur télécom : blocklist recommandée, règles Sigma/YARA, events MISP ; rien de neuf depuis 2024 |
-|Thaïlande | [ThaiCERT / ETDA](https://www.thaicert.or.th) | avis et alertes (distinct de l'[APT Encyclopedia](https://apt.etda.or.th)) ; flux RSS `[TH/EN]` |
-|Tunisie | [ANCS / tunCERT](https://www.ancs.tn) | agence nationale (ex-ANSI) et son CERT ; connexion refusée depuis certains réseaux lors de la vérification `[FR/AR]` |
-|Turquie | [USOM](https://www.usom.gov.tr) | centre national ; [liste publique d'URLs/IPs malveillantes](https://www.usom.gov.tr/url-list.txt) `[TR]` |
-|Ukraine | [CERT-UA](https://cert.gov.ua) | publication d'IOCs très prolifique (activité APT russe) ; articles détaillés + MISP `[UA/EN]` |
-|Ukraine | [SSSCIP / ДССЗЗІ](https://cip.gov.ua/en) | service d'État de protection (tutelle de CERT-UA) ; rapports semestriels d'ensemble `[UA/EN]` |
-|Uruguay | [CERTuy](https://www.cert.uy) | CERT national `[ES]` |
-|Vietnam | [VNCERT/CC](https://vncert.vn) | CERT national (min. de l'Information et des Communications) `[VI]` |
 
-# Éditeurs et laboratoires de recherche privés
-Blogs et publications de recherche des éditeurs de sécurité (IOCs et TTPs dans les billets).
-|Source                                                                            |Commentaire         |
-|----------------------------------------------------------------------------------|--------------------|
-|[360 Netlab](https://blog.netlab.360.com) (Chine) | feeds C2 / DGA / botnet historiques ; peu actif depuis 2022 `[ZH/EN]` |
-|[360 高级威胁研究院 / 360 威胁情报中心](https://ti.360.net/) (Chine) | équipe APT de 360 : « 每周高级威胁情报解读 » hebdo, rapport annuel APT (nommage APT-C-xx) `[ZH]` |
-|[Acronis TRU](https://www.acronis.com/en/tru/) (Suisse) | analyses de malware et de ransomware ; flux RSS `[EN]` |
-|[AhnLab ASEC](https://asec.ahnlab.com/en/) (Corée du Sud) | blog très prolifique (Kimsuky, Lazarus, malware ciblant l'Asie) `[KO ; blog EN]` |
-|[Antiy Labs / 安天](https://www.antiy.net) (Chine) | rapports APT `[ZH ; certains rapports EN]` |
-|[ANY.RUN](https://any.run/cybersecurity-blog/) | analyses de malware issues de la sandbox ; flux RSS `[EN]` |
-|[Aqua Nautilus](https://www.aquasec.com/blog/) (Israël / États-Unis) | menaces cloud et conteneurs `[EN]` |
-|[Arctic Wolf Labs](https://arcticwolf.com/resources/blog/) (États-Unis) | intrusions et ransomware, télémétrie IR ; flux RSS `[EN]` |
-|[Aryaka — Threat Research](https://www.aryaka.com/blog/) (États-Unis) | rapports APT très détaillés, forte couverture Transparent Tribe / APT36 (C2 tradecraft) `[EN]` |
-|[Base4 Security](https://base4sec.com/insights/) (Argentine) | recherche menaces Amérique latine `[ES]` |
-|[BI.ZONE](https://bi.zone) (Russie) | recherche menaces (groupe Sber) ; lib [`bi-zone/bizone-ti-lib`](https://github.com/bi-zone/bizone-ti-lib) `[EN/RU]` |
-|[Bitsight TRACE](https://www.bitsight.com/blog) (États-Unis) | botnets et sinkholes `[EN]` |
-|[Brandefense](https://brandefense.io/blog/) (Turquie) | recherche menaces et rapports d'acteurs `[EN]` |
-|[Broadcom / Symantec Threat Hunter Team](https://www.security.com/threat-intelligence) (États-Unis) | APT et ransomware ; flux RSS, [bulletins de protection](https://www.broadcom.com/support/security-center/protection-bulletin) `[EN]` |
-|[Censys Research](https://censys.com/resources/blog/) (États-Unis) | infrastructure exposée et C2 ; flux RSS `[EN]` |
-|[CERT Orange Polska](https://cert.orange.pl) (Pologne) | CERT de l'opérateur : alertes, analyses et blocklist CyberTarcza `[PL]` |
-|[Check Point Research](https://research.checkpoint.com) (Israël) | recherche menaces très prolifique ; IOCs par billet `[EN]` |
-|[Cisco Talos](https://blog.talosintelligence.com) (États-Unis) | blog de recherche ; les IOCs associés sont sur le repo GitHub (section Indices de compromissions) `[EN]` |
-|[ClearSky Cyber Security](https://www.clearskysec.com/blog/) (Israël) | rapports APT, notamment Moyen-Orient `[EN]` |
-|[CloudSEK](https://www.cloudsek.com/blog) (Inde) | recherche menaces, fuites, surface d'attaque `[EN]` |
-|[Cofense](https://cofense.com/blog/) (États-Unis) | phishing et campagnes e-mail `[EN]` |
-|[CronUp](https://www.cronup.com/blog/) (Chili) | threat intel centrée Amérique latine `[ES]` |
-|[CrySyS Lab (BME)](https://blog.crysys.hu/) (Hongrie) | laboratoire universitaire (Duqu, sKyWIper) ; flux RSS `[EN]` |
-|[CTM360](https://www.ctm360.com) (Bahreïn) | veille et rapports centrés Golfe / Moyen-Orient `[EN]` |
-|[Cybereason](https://www.cybereason.com/blog) (États-Unis) | malware et ransomware ; flux RSS `[EN]` |
-|[Cyble](https://cyble.com/blog/) (Inde / États-Unis) | recherche menaces très prolifique `[EN]` |
-|[CyCraft](https://www.cycraft.com/blog) (Taïwan) | rapports APT nexus-Chine visant Taïwan `[EN/ZH]` |
-|[CYFIRMA](https://www.cyfirma.com/research/) (Inde / Singapour) | rapports d'attribution et de campagne `[EN]` |
-|[DBAPPSecurity / 安恒信息 — 安恒威胁情报中心](https://ti.dbappsecurity.com.cn/blog/) (Chine) | blog TI ; labo 猎影 (Hunting Shadow), attribution APT `[ZH]` |
-|[Deep Instinct](https://www.deepinstinct.com/blog) (Israël) | analyses de malware `[EN]` |
-|[Doctor Web / Dr.Web](https://news.drweb.com) (Russie) | analyses de malware avec IOCs `[RU/EN]` |
-|[DomainTools](https://www.domaintools.com/blog) (États-Unis) | investigation d'infrastructure DNS `[EN]` |
-|[Dragos](https://www.dragos.com/blog) (États-Unis) | référence ICS/OT ; IOCs dans les rapports de groupes (Voltzite…), flux RSS `[EN]` |
-|[DTS Solution](https://www.dts-solution.com) (Émirats arabes unis) | recherche menaces Golfe ; flux RSS présent, page blog à vérifier `[EN]` |
-|[Emsisoft](https://www.emsisoft.com/en/blog/) (Nouvelle-Zélande) | ransomware et statistiques ; flux RSS `[EN]` |
-|[ENKI WhiteHat — Threat Research](https://www.enki.co.kr/en/media-center/blog) (Corée du Sud) | analyses d'intrusions APT nord-coréennes (Kimsuky ciblant des éditeurs groupware KR), billets EN détaillés `[KO ; blog EN]` |
-|[Ensign InfoSecurity](https://www.ensigninfosecurity.com/resources) (Singapour) | menaces Asie du Sud-Est `[EN]` |
-|[eSentire TRU](https://www.esentire.com/resources/blog) (Canada) | Threat Response Unit : intrusions récurrentes `[EN]` |
-|[ESET — WeLiveSecurity](https://www.welivesecurity.com) (Slovaquie) | blog de recherche ; les IOCs associés sont sur le repo GitHub (section Indices de compromissions) `[EN ; éditions FR/DE/ES]` |
-|[EST Security / ESRC — 알약 블로그](https://blog.alyac.co.kr) (Corée du Sud) | analyses de malware et d'APT nord-coréennes (Kimsuky…) très fréquentes ; IOCs par billet `[KO]` |
-|[F6](https://www.f6.ru) (ex-F.A.C.C.T., Russie) | cybercriminalité russophone `[RU]` |
-|[FalconFeeds.io](https://falconfeeds.io) (Inde) | suivi temps réel : revendications de victimes ransomware, hacktivisme, fuites darkweb (opéré par Technisanct, Kochi) `[EN]` |
-|[Flashpoint](https://flashpoint.io/blog/) (États-Unis) | underground criminel, ransomware `[EN]` |
-|[Fortinet FortiGuard Labs](https://www.fortinet.com/blog/threat-research) (États-Unis) | malware et phishing ; IOCs en fin de billet `[EN]` |
-|[G DATA CyberDefense](https://blog.gdatasoftware.com) (Allemagne) | analyses de malware `[EN/DE]` |
-|[Genians — Genians Security Center](https://www.genians.co.kr/en/blog/threat_intelligence) (Corée du Sud) | blog prolifique sur les APT nord-coréennes (Kimsuky, APT37/ScarCruft, RokRAT) ; IOCs par billet, flux RSS `[KO ; blog EN]` |
-|[Google Cloud Threat Intelligence (Mandiant)](https://cloud.google.com/blog/topics/threat-intelligence) (États-Unis) | APT et cybercrime ; le repo `mandiant/iocs` est archivé (2019), la recherche vivante est ici `[EN]` |
-|[GreyNoise Labs](https://www.greynoise.io/blog) (États-Unis) | scans de masse et exploitation opportuniste `[EN]` |
-|[Group-IB](https://www.group-ib.com/blog/) (Singapour) | e-crime, rapports détaillés avec IOCs `[EN]` |
-|[Help AG](https://www.helpag.com) (Émirats arabes unis) | recherche menaces Golfe ; flux RSS présent, page blog à vérifier en navigateur `[EN]` |
-|[Hunt.io](https://hunt.io/blog) (États-Unis) | suivi d'infrastructure C2 ; feeds sur compte `[EN]` |
-|[IIJ — wizSafe Security Signal](https://wizsafe.iij.ad.jp) (Japon) | bilans mensuels de la menace observée (DDoS, malware, scan) et analyses ; flux RSS `[JP]` |
-|[Intel 471](https://www.intel471.com/blog) (États-Unis) | underground criminel, IAB `[EN]` |
-|[ISH Tecnologia](https://ish.com.br/blog/) (Brésil) | menaces visant le Brésil ; flux RSS `[PT]` |
-|[ITOCHU Cyber & Intelligence](https://blog-en.itochuci.co.jp) (Japon) | analyses de malware et d'APT visant le Japon (Tropic Trooper, malspam JP…) ; flux RSS `[JP ; blog EN]` |
-|[K7 Labs](https://labs.k7computing.com) (Inde) | analyses de malware (éditeur AV de Chennai) `[EN]` |
-|[Kaspersky ICS-CERT](https://ics-cert.kaspersky.com) (Russie) | spécialisé OT / ICS `[EN]` |
-|[Kaspersky — Securelist](https://securelist.com) (Russie) | équipe GReAT, IOCs par rapport `[EN]` |
-|[KELA](https://www.kelacyber.com/blog/) (Israël) | cybercrime, courtiers d'accès initial `[EN]` |
-|[Knownsec 404 Team / 知道创宇](https://paper.seebug.org) (Chine) | papers de recherche (plateforme Seebug) ; connexion refusée depuis certains réseaux lors de la vérification `[ZH]` |
-|[Lab52 / S2 Grupo](https://lab52.io) (Espagne) | recherche APT et géopolitique cyber `[EN]` |
-|[LAC — LAC WATCH](https://www.lac.co.jp/lacwatch/) (Japon) | rapports du JSOC et du Cyber Emergency Center sur les menaces visant le Japon `[JP]` |
-|[LevelBlue SpiderLabs (ex-Trustwave)](https://www.levelblue.com/blogs/spiderlabs-blog) (États-Unis) | malware, phishing, e-mail ; flux RSS `[EN]` |
-|[Macnica Security Research](https://security.macnica.co.jp/) (Japon) | rapports APT visant le Japon `[JP]` |
-|[Malwarebytes Labs](https://www.malwarebytes.com/blog/category/threat-intel) (États-Unis) | malware grand public et arnaques `[EN]` |
-|[MBSD (三井物産セキュアディレクション)](https://www.mbsd.jp/research/) (Japon) | recherche technique, malware visant le Japon `[JP]` |
-|[Metabase Q — Ocelot](https://www.metabaseq.com) (Mexique) | recherche menaces centrée Amérique latine `[EN/ES]` |
-|[Microsoft — Security Blog / MSTIC](https://www.microsoft.com/en-us/security/blog/) (États-Unis) | rapports et analyses `[EN]` |
-|[Morphisec](https://www.morphisec.com/blog/) (Israël) | loaders et chaînes d'infection ; flux RSS `[EN]` |
-|[nao-sec](https://nao-sec.org) (Japon) | collectif de recherche : analyses, outils (RTF weaponizer decoder…) `[JP/EN]` |
-|[NEC サイバーセキュリティブログ](https://jpn.nec.com/cybersecurity/blog/) (Japon) | analyses de menaces `[JP]` |
-|[Netcraft](https://www.netcraft.com/resources/blog) (Royaume-Uni) | phishing et fraude à grande échelle `[EN]` |
-|[Nozomi Networks Labs](https://www.nozominetworks.com/labs) (États-Unis / Suisse) | ICS/OT et IoT `[EN]` |
-|[NSFOCUS / 绿盟](https://nsfocusglobal.com/blog/) (Chine) | rapports APT (labo 伏影 / Fuying) ; flux RSS sur le blog global `[EN (global) / ZH]` |
-|[NSHC ThreatRecon](https://threatrecon.nshc.net) (Corée du Sud) | suivi des groupes « SectorXX » (APT nord-coréennes, chinoises…) ; [repo `IoC-List`](https://github.com/nshc-threatrecon/IoC-List) gelé fin 2021 `[EN/KO]` |
-|[OpenAnalysis Labs (OALabs)](https://research.openanalysis.net/) (Canada) | reverse engineering, loaders ; flux RSS `[EN]` |
-|[Positive Technologies — PT ESC](https://github.com/PositiveTechnologies) (Russie) | recherche menaces ; règles Suricata figées 2022 sur [`ptresearch/AttackDetection`](https://github.com/ptresearch/AttackDetection) `[EN/RU]` |
-|[Proofpoint Threat Insight](https://www.proofpoint.com/us/blog/threat-insight) (États-Unis) | e-mail, acteurs TA5xx ; IOCs en tableaux `[EN]` |
-|[QiAnXin TI Center / 奇安信](https://ti.qianxin.com) (Chine) | portail Threat Intelligence ; voir aussi [RedDrip7](https://github.com/RedDrip7) `[ZH]` |
-|[Rapid7](https://www.rapid7.com/blog/) (États-Unis) | vulnérabilités et campagnes ; flux RSS `[EN]` |
-|[Recorded Future / Insikt Group](https://www.recordedfuture.com/research) (États-Unis) | APT et cybercrime ; dépôt `Insikt-Group/Research` figé 2023 → n'utiliser que le blog `[EN]` |
-|[Red Canary](https://redcanary.com/resources-center/category/blog/) (États-Unis) | détection, techniques les plus vues `[EN]` |
-|[ReliaQuest](https://reliaquest.com/blog/) (États-Unis) | cybercrime et ransomware ; flux RSS `[EN]` |
-|[S2W](https://s2w.inc/en/resource) (Corée du Sud) | recherche menaces (équipe Talon) : darkweb, groupes nord-coréens `[EN/KO]` |
-|[Sangfor / 深信服 — 千里目安全技术中心](https://www.sangfor.com.cn/security-tech) (Chine) | rapports APT et analyses de campagnes (6 laboratoires) ; accès filtré hors de Chine `[ZH]` |
-|[Scitum (Telmex)](https://www.scitum.com.mx/) (Mexique) | recherche menaces Amérique latine `[ES]` |
-|[Secureworks CTU](https://www.secureworks.com) (États-Unis) | Counter Threat Unit ; Secureworks a été absorbé par Sophos (2025) `[EN]` |
-|[Security Vision](https://www.securityvision.ru/blog/) (Russie) | analyses `[RU]` |
-|[Sekoia.io](https://blog.sekoia.io) (France) | recherche menaces, TDR `[EN/FR]` |
-|[SentinelLABS](https://www.sentinelone.com/labs/) (États-Unis) | recherche menaces, rapports APT `[EN]` |
-|[Seqrite Labs / Quick Heal](https://www.seqrite.com/blog/) (Inde) | fort sur les APT d'Asie du Sud (SideCopy, Transparent Tribe…) `[EN]` |
-|[Sequretek](https://www.sequretek.com/resources/threat-advisory) (Inde) | avis de menace `[EN]` |
-|[Silent Push](https://www.silentpush.com/blog/) (États-Unis) | IOCs d'infrastructure très détaillés (pDNS, C2) ; flux RSS, feeds payants `[EN]` |
-|[SILIKN](https://www.silikn.com/) (Mexique) | analyses centrées Amérique latine ; flux RSS `[ES]` |
-|[SOCRadar](https://socradar.io/blog/) (Turquie) | darkweb et ransomware ; volume élevé, IOCs variables `[EN]` |
-|[Solar 4RAYS](https://solar4rays.ru) (Russie) | bulletins d'IOCs (groupe Rostelecom) `[RU]` |
-|[Solar — analytics](https://rt-solar.ru/analytics/reports/) (Russie) | rapports (complète Solar 4RAYS) `[RU]` |
-|[Sucuri](https://blog.sucuri.net/) (États-Unis) | malware web, skimmers, compromissions CMS/WordPress ; flux RSS `[EN]` |
-|[Sygnia](https://www.sygnia.co/blog/) (Israël) | réponse à incident et APT ; flux RSS `[EN]` |
-|[Team Cymru](https://www.team-cymru.com/blog) (États-Unis) | analyse d'infrastructure et de C2 `[EN]` |
-|[TeamT5](https://teamt5.org/en/) (Taïwan) | recherche APT nexus-Chine `[EN/ZH]` |
-|[Telefónica Tech](https://telefonicatech.com/en/blog) (Espagne) | télécom et menaces `[EN/ES]` |
-|[Tempest Security](https://www.tempest.com.br/blog) (Brésil) | menaces visant le Brésil `[PT]` |
-|[Tencent Security — 威胁情报中心 / 御见](https://tix.qq.com) (Chine) | portail de threat intelligence de Tencent : rapports APT et lookups ([s.tencent.com](https://s.tencent.com)) `[ZH]` |
-|[ThreatBook / 微步在线](https://threatbook.io) (Chine) | éditeur TI ; lookups communautaires gratuits sur [x.threatbook.com](https://x.threatbook.com) `[EN/ZH]` |
-|[Threatray](https://www.threatray.com) (Suisse) | similarité de code et suivi de campagnes `[EN]` |
-|[Trend Micro Research](https://www.trendmicro.com/en_us/research.html) (Japon / États-Unis) | couverture large ; IOCs en PDF joints aux articles, dépôt `trendmicro/research` figé 2024 `[EN/JP]` |
-|[Truesec](https://www.truesec.com/hub/blog) (Suède) | réponse à incident et ransomware (Nordiques) `[EN/SV]` |
-|[TXOne Networks](https://www.txone.com/resources/blog/) (Taïwan) | ICS/OT, rapport annuel OT `[EN]` |
-|[Uptycs Threat Research](https://www.uptycs.com/blog) (États-Unis) | malware Linux et cloud ; flux RSS `[EN]` |
-|[Validin](https://www.validin.com/blog/) (États-Unis) | investigation d'infrastructure et pDNS `[EN]` |
-|[Varonis Threat Labs](https://www.varonis.com/blog/tag/threat-research) (États-Unis) | Windows et SaaS ; flux RSS `[EN]` |
-|[Viettel Cyber Security](https://blog.viettelcybersecurity.com) (Vietnam) | analyses de menaces et de vulnérabilités `[VI/EN]` |
-|[Yoroi — Z-Lab](https://yoroi.company/research/) (Italie) | analyses de campagnes et de malware `[IT/EN]` |
-|[安全内参 (secrss.com)](https://www.secrss.com/articles?tag=APT) (Chine) | agrégateur éditorial : traductions et synthèses de rapports APT chinois et étrangers `[ZH]` |
-|[安全客 (anquanke.com)](https://www.anquanke.com/) (Chine) | plateforme d'articles de recherche (360) `[ZH]` |
-|[火绒安全 / Huorong](https://www.huorong.cn/info/) (Chine) | analyses de malware grand public visant la Chine `[ZH]` |
-|[瑞星 / Rising](https://www.rising.com.cn/) (Chine) | rapports annuels et semestriels de menace `[ZH]` |
+| Pays | Source | Contenu | Accès | Commentaire |
+|---|---|---|---|---|
+| Albanie | [AKSK](https://aksk.gov.al) | RENS | web | `[SQ/EN]` |
+| Arabie saoudite | [Saudi CERT](https://cert.gov.sa) | RENS | web | `[AR/EN]` |
+| Argentine | [CERT.ar](https://www.argentina.gob.ar/jefatura/innovacion-ciencia-y-tecnologia/centro-nacional-de-ciberseguridad/certar) | RENS | web | `[ES]` |
+| Australie | [ACSC / ASD](https://www.cyber.gov.au/about-us/view-all-content/alerts-and-advisories) | RENS | web, bot | IOC non vérifiés (503 au robot) |
+| Azerbaïdjan | [CERT.AZ](https://cert.az) | RENS | web | `[AZ/EN]` |
+| Bangladesh | [BGD e-GOV CIRT](https://www.cirt.gov.bd) | RENS | web, bot | très actif ; IOC non vérifiés |
+| Bélarus | [CERT.BY](https://cert.by) | RENS | web | `[RU]` |
+| Bolivie | [CGII / CSIRT-Bolivia](https://csirt.gob.bo) | RENS | web | `[ES]` |
+| Brésil | [CERT.br](https://cert.br) | RENS | web | honeypots, spam, statistiques agrégées (pas d'IOC publiés) `[PT/EN]` |
+| Canada | [CCCS](https://github.com/CybercentreCanada) · [avis](https://www.cyber.gc.ca/en/alerts-advisories) · [National Cyber Threat Assessment](https://www.cyber.gc.ca/en/guidance/national-cyber-threat-assessment-2025-2026) | IOC+RENS | repo/web | AssemblyLine, extracteurs de config ; évaluation biennale |
+| Chili | [CSIRT de Gobierno](https://csirt.gob.cl) | RENS | web, bot | très régulier ; IOC non vérifiés `[ES]` |
+| Chine | [CNCERT/CC](https://www.cert.org.cn/publish/english/index.html) · [CVERC](https://www.cverc.org.cn) | RENS | web | rapports et contre-attribution `[ZH]` |
+| Colombie | [colCERT](https://www.colcert.gov.co) | RENS | web | `[ES]` |
+| Corée du Sud | [KrCERT / KISA](https://www.krcert.or.kr) | RENS | web (JS) | IOC non vérifiés `[KO]` |
+| Côte d'Ivoire | [CI-CERT](https://www.artci.ci) | RENS | web | |
+| Égypte | [EG-CERT](https://egcert.eg) | RENS | web, géo | `[AR/EN]` |
+| Émirats arabes unis | [aeCERT](https://aecert.ae) | RENS | web | `[AR/EN]` |
+| Équateur | [EcuCERT](https://www.ecucert.gob.ec) | RENS | web | `[ES]` |
+| États-Unis | [CISA](https://github.com/cisagov) · [KEV](https://github.com/cisagov/kev-data) · [avis](https://www.cisa.gov/news-events/cybersecurity-advisories) · [CERT/CC](https://github.com/CERTCC) · [NSA Cybersecurity](https://github.com/nsacyber) | IOC+RENS | repo/web | |
+| Géorgie | [CERT.GOV.GE](https://cert.dga.gov.ge) | RENS | web | `[KA/EN]` |
+| Ghana | [CSA / CERT-GH](https://www.csa.gov.gh) | RENS | web | |
+| Hong Kong | [HKCERT](https://www.hkcert.org) | RENS | web | bulletins de vulnérabilités, pas d'IOC `[ZH/EN]` |
+| Inde | [CERT-In](https://www.cert-in.org.in) · [CSK](https://www.csk.gov.in) · [NCIIPC](https://nciipc.gov.in) | RENS | web (JS) | IOC non vérifiés ; NCIIPC surtout accessible depuis l'Inde |
+| Inde | [MH-CERT](https://github.com/MH-CERT) | IOC | repo | `Indicator-of-Compromise-IOC-`, activité faible |
+| Indonésie | [BSSN](https://www.bssn.go.id) | RENS | web, bot | `[ID]` |
+| Iran | [Maher / CERT.ir](https://cert.ir) | RENS | web, géo | `[FA]` ; voir §17 |
+| Islande | [CERT-IS](https://www.cert.is) | RENS | web | `[IS/EN]` |
+| Israël | [INCD](https://www.gov.il/en/departments/israel_national_cyber_directorate) | RENS | web, bot | `[HE/EN]` |
+| Japon | [JPCERT/CC](https://github.com/JPCERTCC) · [blog « Eyes »](https://blogs.jpcert.or.jp/en/) · [JSAC](https://jsac.jpcert.or.jp/) | IOC+RENS | repo / Atom | phishurl-list, YARA, LogonTracer ; hash dans les billets `[JP/EN]` |
+| Japon | [NCO](https://www.cyber.go.jp/) · [IPA 10大脅威](https://www.ipa.go.jp/security/10threats/) | RENS | web/PDF | NCO = ex-NISC `[JP]` |
+| Japon | [フィッシング対策協議会](https://www.antiphishing.jp/) | RENS | Atom | alertes phishing quasi quotidiennes ; URL présentes dans les alertes mais non extraites par la sonde (IOC non vérifiés) `[JP]` |
+| Jordanie | [NCSC-JO](https://ncsc.jo) | RENS | web | `[AR/EN]` |
+| Kazakhstan | [KZ-CERT](https://cert.gov.kz) | RENS | web | `[KK/RU/EN]` |
+| Kenya | [National KE-CIRT/CC](https://ke-cirt.go.ke) | RENS | web | |
+| Macédoine du Nord | [MKD-CIRT](https://mkd-cirt.mk) | RENS | web | `[MK/EN]` |
+| Malaisie | [MyCERT](https://www.mycert.org.my) | RENS | web, bot | |
+| Maroc | [DGSSI / maCERT](https://www.dgssi.gov.ma) | RENS | web | `[FR/AR]` |
+| Maurice | [CERT-MU](https://cert-mu.govmu.org) | RENS | web | |
+| Mexique | [CERT-MX](https://www.gob.mx/gncertmx) | RENS | web | `[ES]` |
+| Moldavie | [CERT-GOV-MD](https://cert.gov.md) | RENS | web | `[RO/EN]` |
+| Monténégro | [CIRT.ME](https://cirt.gov.me) | RENS | web | `[CNR/EN]` |
+| Nigeria | [ngCERT](https://cert.gov.ng) | RENS | web, bot | |
+| Norvège | [NSM / NCSC-NO](https://nsm.no) | RENS | web | `[NO/EN]` |
+| Nouvelle-Zélande | [NCSC-NZ](https://www.ncsc.govt.nz) | IOC+RENS | web | IP dans certaines alertes (ponctuel) |
+| Oman | [OCERT](https://www.cert.gov.om) | RENS | web | `[AR/EN]` |
+| Ouzbékistan | [UZCERT](https://uzcert.uz) | RENS | web | `[UZ/RU]` |
+| Pakistan | [PKCERT](https://pkcert.gov.pk) | RENS | web | |
+| Panama | [CSIRT Panamá](https://cert.pa) | RENS | web | `[ES]` |
+| Paraguay | [CERT-PY](https://www.cert.gov.py) | IOC+RENS | web | notifications `malware_url` avec IP et URL `[ES]` |
+| Pérou | [PeCERT](https://pecert.gob.pe) | RENS | web | `[ES]` |
+| Philippines | [CERT-PH / NCERT](https://ncert.gov.ph) | RENS | web, bot | |
+| Qatar | [NCSA / Q-CERT](https://www.ncsa.gov.qa) | RENS | web | `[AR/EN]` |
+| République dominicaine | [CNCS / CSIRT-RD](https://cncs.gob.do) | RENS | web | `[ES]` |
+| Royaume-Uni | [NCSC-UK — threat reports](https://www.ncsc.gov.uk/section/keep-up-to-date/threat-reports) · [blog](https://www.ncsc.gov.uk/section/keep-up-to-date/ncsc-blog) · [GitHub](https://github.com/ukncsc) | IOC+RENS | web/repo | |
+| Russie | [NKTsKI / GosSOPKA](https://safe-surf.ru) | RENS | web, géo | `[RU]` |
+| Serbie | [Nacionalni CERT](https://www.cert.rs) | RENS | web | `[SR/EN]` |
+| Singapour | [SingCERT / CSA](https://www.csa.gov.sg/singcert) | RENS | web | |
+| Sri Lanka | [Sri Lanka CERT](https://www.cert.gov.lk) | RENS | web | `[SI/TA/EN]` |
+| Suisse | [GovCERT.ch — CTI](https://github.com/govcert-ch/CTI) | IOC+RENS | repo | actif |
+| Tadjikistan | [CERT.TJ](https://cert.tj/) | RENS | RSS | seul CERT d'Asie centrale avec flux `[RU/TJ]` |
+| Taïwan | [TWCERT/CC](https://www.twcert.org.tw) | RENS | web | `[ZH/EN]` |
+| Thaïlande | [TTC-CERT](https://github.com/ttc-cert) | IOC | repo, figé 2024 | blocklist, Sigma/YARA, events MISP (télécom) |
+| Thaïlande | [ThaiCERT](https://www.thaicert.or.th/) | RENS | RSS | agence nationale |
+| Tunisie | [ANCS / tunCERT](https://www.ancs.tn) | RENS | web, géo | `[FR/AR]` |
+| Turquie | [USOM → Siber Güvenlik Başkanlığı](https://www.usom.gov.tr) | RENS | web | **l'ancienne liste publique `url-list.txt` redirige vers une API Swagger (siberguvenlik.gov.tr/api) : plus de feed ouvert** `[TR]` |
+| Ukraine | [CERT-UA](https://cert.gov.ua) | IOC+RENS | web (JS) + MISP sur demande | sections « Індикатори компрометації » (URL défangées, hash) dans chaque article ; très prolifique sur l'activité russe `[UA/EN]` |
+| Ukraine | [SSSCIP](https://cip.gov.ua/en) | RENS | web | autorité de tutelle, rapports semestriels |
+| Uruguay | [CERTuy](https://www.cert.uy) | RENS | web | `[ES]` |
+| Vietnam | [VNCERT/CC](https://vncert.vn) | RENS | web | `[VI]` |
 
-# Sources académiques et datasets de recherche
-Laboratoires universitaires et jeux de données pour l'entraînement, l'évaluation et la recherche en détection.
-|Source                                                                            |Commentaire         |
-|----------------------------------------------------------------------------------|--------------------|
-|[Canadian Institute for Cybersecurity (UNB)](https://www.unb.ca/cic/datasets/) (Canada) | datasets IDS, malware Android (CICMalDroid), DoH, DDoS… très utilisés en recherche |
-|[CAIDA](https://www.caida.org/catalog/datasets/) (UC San Diego, États-Unis) | télescope réseau, DDoS, données de scan (certains sur demande) ; financements NSF / DHS |
-|[Citizen Lab](https://github.com/citizenlab) (Université de Toronto, Canada) | recherche spyware / censure ; voir aussi section Menace mobile |
-|[SecRepo](https://secrepo.com) | index de « Samples of Security Related Data » |
-|[Stratosphere Laboratory](https://www.stratosphereips.org) (CTU Prague, Tchéquie) | datasets malware / IoT (CTU-13, IoT-23) + feed de blocklists gratuit + IDS [Slips](https://github.com/stratosphereips/StratosphereLinuxIPS) |
-|[The Honeynet Project](https://www.honeynet.org) | organisation de recherche (chapitres académiques) : outils, challenges forensic, données honeypot |
-|[theZoo](https://github.com/ytisf/theZoo) | corpus de malware vivant pour la recherche |
-|[UNSW Canberra Cyber](https://research.unsw.edu.au/projects/toniot-datasets) (Australie) | datasets UNSW-NB15, ToN_IoT et Bot-IoT pour la recherche IDS / IoT |
-|[VirusShare](https://virusshare.com) | vaste corpus de malware ; accès chercheurs sur demande |
+## 4. Police, justice, sanctions et attribution officielle
 
-# Rapports, analyses, informations
-Méta-listes, agrégateurs et bibliothèques de rapports.
-|Source                                                                            |Commentaire         |
-|----------------------------------------------------------------------------------|--------------------|
-|[APT Groups and Operations (F. Roth)](https://apt.threattracking.com) | tableur historique des alias APT par pays ; référence de dé-duplication des noms |
-|[APTnotes](https://github.com/aptnotes/data) | archive historique de rapports APT publics ; figée fin 2024 |
-|[Atlantic Council — Cyber Statecraft Initiative](https://www.atlanticcouncil.org/programs/cyber-statecraft-initiative/) | rapports (chaîne d'appro., marché des intrusions, cyber-statecraft) ; flux RSS général |
-|[blackorbird Github](https://github.com/blackorbird/APT_REPORT) | collecte de rapports et d'indicateurs APT classés par groupe, très actif |
-|[Botconf](https://www.botconf.eu/) | actes de conférence (botnets, CTI) ; flux RSS |
-|[BushidoUK — Ransomware Tool Matrix Github](https://github.com/BushidoUK/Ransomware-Tool-Matrix) | matrice outils ↔ groupes de ransomware (exploitable en détection), actif |
-|[Center for Threat-Informed Defense — Attack Flow Github](https://github.com/center-for-threat-informed-defense/attack-flow) | modélisation de séquences d'attaque dérivées de rapports publics ; JSON |
-|[CFR Cyber Operations Tracker](https://www.cfr.org/cyber-operations/) | opérations étatiques depuis 2005, base interrogeable |
-|[Coveware](https://coveware.com/ransomware-blog/) | rapport trimestriel ransomware (rançons, vecteurs) — données de négociation uniques ; flux RSS |
-|[CSIS Significant Cyber Incidents](https://www.csis.org/programs/strategic-technologies-program/significant-cyber-incidents) | chronologie d'incidents majeurs (web / PDF) |
-|[curated-intel Github](https://github.com/curated-intel) | collectif Curated Intelligence : threat notes, listes par campagne (Ukraine, MOVEit…), CTI Fundamentals |
-|[Cyber Threat Alliance](https://www.cyberthreatalliance.org/resources/) | rapports conjoints multi-éditeurs |
-|[CyberMonitor Github](https://github.com/CyberMonitor/APT_CyberCriminal_Campagin_Collections) | archive de campagnes APT / cybercrime classées par année ; figée depuis mi-2024 |
-|[CyberPeace Institute — Cyber Attacks in Times of Conflict](https://cyberconflicts.protect.ngo/) | attaques liées au conflit en Ukraine (acteurs, cibles, secteurs) |
-|[cyberwarfare.live](https://cyberwarfare.live/) | suivi de conflits cyber et d'hacktivisme ; flux RSS, à recouper |
-|[DarkFeed](https://app.darkfeed.io/mainpage) (Israël) | victimologie ransomware ; tableau de bord, API sur inscription |
-|[databreaches.net](https://databreaches.net/) | journalisme d'investigation sur les fuites ; flux RSS, souvent en amont des revendications |
-|[DCID — Dyadic Cyber Incident and Campaign Dataset](https://dcid.online/) | dataset académique d'incidents inter-étatiques ; CSV, flux RSS |
-|[despacito420 Github](https://github.com/despacito420/The-Feed)| liste curée d'articles SOC/DFIR/CTI ; activité faible (dernière MAJ janv. 2026) |
-|[devsecops Github](https://github.com/devsecops/awesome-devsecops) | liste d'outils DevSecOps (dont CTI) ; figée depuis 2024 |
-|[DFRLab (Atlantic Council)](https://dfrlab.org/) | enquêtes OSINT sur l'influence et le cyber ; flux RSS |
-|[ecrime.ch](https://ecrime.ch/) (Suisse) | statistiques ransomware / leak sites |
-|[EndlessFractal Github](https://github.com/EndlessFractal/Threat-Intel-Feed)| agrégation et consolidation automatiques de feeds, actif |
-|[ETDA / ThaiCERT APT Encyclopedia](https://apt.etda.or.th) | fiches détaillées de groupes et d'outils APT |
-|[EU DisinfoLab](https://www.disinfo.eu/) (UE) | FIMI et opérations d'influence ; flux RSS, complète VIGINUM |
-|[EuRepoC — European Repository of Cyber Incidents](https://eurepoc.eu) | base codée d'incidents cyber politiquement pertinents (attribution, intensité, réponse) ; dashboard + exports, flux RSS — projet académique Heidelberg / CPS |
-|[FIRST — papers](https://www.first.org/resources/papers/) | présentations des conférences FIRST |
-|[FS-ISAC Insights](https://www.fsisac.com/insights) | rapports sectoriels finance (partie publique) ; flux RSS |
-|[gm7.org — 信息安全知识库](https://www.gm7.org) | agrégateur / archive de contenu sécurité chinois (actualités, vulnérabilités, campagnes APT, collectes de hash) ; flux RSS très dense `[ZH]` |
-|[Google Project Zero — 0days in the wild Github](https://github.com/googleprojectzero/0days-in-the-wild) | 0-day exploités in-the-wild avec analyses racine ; Markdown + tableur |
-|[Graphika](https://www.graphika.com/reports) | rapports sur les réseaux d'influence |
-|[GuidePoint GRIT](https://www.guidepointsecurity.com/blog/) | rapports ransomware trimestriels ; flux RSS |
-|[Hackmanac](https://hackmanac.com/) (Italie) | base d'incidents et rapports (HackReports) |
-|[HackYourMom](https://hackyourmom.com/) (Ukraine) | communauté ; guides et listes, contenu grand public / hacktiviste, à recouper `[UA]` |
-|[Halcyon](https://www.halcyon.ai/blog) | profils de groupes ransomware |
-|[Have I Been Pwned](https://haveibeenpwned.com) | flux des fuites de données ([RSS](https://haveibeenpwned.com/feed/breaches/)) — hors IOC mais utile en veille |
-|[Health-ISAC](https://health-isac.org/resources-and-news/) | rapports santé (partie publique) ; flux RSS |
-|[hslatman Github](https://github.com/hslatman/awesome-threat-intelligence)| liste de référence des ressources CTI |
-|[infoblox Github](https://github.com/infobloxopen/threat-intelligence) | IOCs et rapports Infoblox (threat intel DNS), actif |
-|[lazarus.day](https://lazarus.day) | index dédié des rapports publics sur les groupes nord-coréens (Lazarus, Kimsuky, APT37, Andariel…) |
-|[Malpedia](https://malpedia.caad.fkie.fraunhofer.de) | familles de malware, règles YARA, références (Fraunhofer FKIE) ; compte gratuit |
-|[Malpedia — Actors](https://malpedia.caad.fkie.fraunhofer.de/actors) | fiches acteurs avec familles et références (web / API) |
-|[mdecrevoisier Github](https://github.com/mdecrevoisier/EVTX-to-MITRE-Attack) | 270+ échantillons EVTX mappés ATT&CK, pour mesurer la couverture SIEM |
-|[Meta — Adversarial Threat Reports](https://about.fb.com/news/) | rapports trimestriels sur les opérations d'influence et le spyware ; filtrer le flux RSS général |
-|[Microsoft — On the Issues / MTAC](https://blogs.microsoft.com/on-the-issues/) | rapports MTAC (ingérence, acteurs étatiques), Digital Defense Report ; flux RSS |
-|[Midnight Slayer](https://start.me/p/wMPxqX/cyber-threat-intelligence)| tableau de bord start.me ; bloque les robots, ouvrir dans un navigateur |
-|[MISP Galaxy Github](https://github.com/MISP/misp-galaxy) | référentiel canonique d'acteurs, outils et campagnes (clusters `threat-actor`, `malpedia`, `mitre-*`) — la table de correspondance des noms d'acteurs ; JSON |
-|[MITRE ATT&CK — Campaigns](https://attack.mitre.org/campaigns/) | campagnes nommées liées aux groupes (web / STIX via `attack-stix-data`) |
-|[MITRE ATT&CK — Groups & Software](https://attack.mitre.org/groups/) | complément « lisible » des données STIX : fiches groupes et logiciels |
-|[MS-ISAC (CIS)](https://www.cisecurity.org/ms-isac) | avis et rapports pour les collectivités |
-|[mthcht Github](https://github.com/mthcht) | voir `awesome-lists` (SOC/CERT/CTI) et `ThreatIntel-Reports`, très actif |
-|[NATO CCDCOE — publications](https://ccdcoe.org/library/publications/) | recherche cyber-conflit, rapports par pays |
-|[NetManageIT instance publique OpenCTI](https://opencti.netmanageit.com) | instance OpenCTI publique en lecture seule ; actuellement hors ligne (2026) |
-|[ORKL](https://orkl.eu) | bibliothèque de rapports CTI / APT indexés et cherchables + API |
-|[RAND — cyber warfare](https://www.rand.org/topics/cyber-warfare.html) | études ; flux RSS |
-|[ransom-db](https://www.ransom-db.com/) | victimes ransomware en temps réel |
-|[RansomLook](https://www.ransomlook.io/) | suivi des sites de fuite ransomware, groupes, forums, Telegram ; web + API + flux RSS |
-|[ransomwatch (joshhighet) Github](https://github.com/joshhighet/ransomwatch) | posts de sites de fuite ransomware (JSON) ; historique depuis 2021 |
-|[Risky Business News](https://news.risky.biz/) (Australie) | newsletter d'analyse quotidienne, très bonne couverture des rapports APT ; flux RSS |
-|[RST Cloud — awesome-threat-actor-resources](https://github.com/rstcloud/awesome-threat-actor-resources) | méta-liste de profils d'acteurs et de datasets APT publics |
-|[Serianu](https://www.serianu.com/) (Kenya) | « Africa Cyber Security Report » annuels ; pas d'IOC atomiques `[EN]` |
-|[SlowMist / 慢雾 — Knowledge-Base Github](https://github.com/SlowMist/Knowledge-Base) | analyses d'incidents Web3 ([base d'incidents](https://hacked.slowmist.io)) `[ZH/EN ; crypto]` |
-|[SOCRadar — Threat Actor DB](https://socradar.io/threat-actors/) (Turquie) | fiches d'acteurs (APT, ransomware, hacktivistes), gratuit sans inscription |
-|[tanjiti/sec_profile Github](https://github.com/tanjiti/sec_profile) | méta-index mensuel des publications de recherche sécurité chinoises (par source et par chercheur), très actif `[ZH]` |
-|[The DFIR Report](https://thedfirreport.com) | rapports d'intrusion détaillés (chronologie, IOCs, TTPs, règles Sigma) |
-|[The Record (Recorded Future)](https://therecord.media/) | actualité cyber orientée menace |
-|[TweetFeed](https://tweetfeed.live) | IOCs partagés par la communauté infosec (ex-Twitter) ; voir aussi 0xDanielLopez |
-|[Virus Bulletin](https://www.virusbulletin.com/virusbulletin/) | papers de conférence VB, analyses malware et APT — archive de référence |
-|[vx-underground](https://vx-underground.org) | collections APT, échantillons, papers ; bloque les robots, ouvrir dans un navigateur |
-|[0xDanielLopez Github](https://github.com/0xDanielLopez)| auteur de TweetFeed ; aussi `phishunt-feed` et `phishing_kits` |
+*Biais : attribution nominative et sélective (ce qui est judiciarisable ou sanctionnable) ; excellent pour les noms, tardif pour les IOC.*
 
-### Rapports annuels de référence (PDF, généralement sans flux)
-|Éditeur|Rapport|
-|-------|-------|
-|[Verizon](https://www.verizon.com/business/resources/reports/dbir/) | DBIR — Data Breach Investigations Report |
-|[IBM X-Force](https://www.ibm.com/reports/threat-intelligence) | Threat Intelligence Index |
-|[CrowdStrike](https://www.crowdstrike.com/en-us/resources/reports/) | Global Threat Report, Threat Hunting Report |
-|[Mandiant / Google](https://cloud.google.com/security/mandiant) | M-Trends |
-|[Picus Security](https://www.picussecurity.com/red-report) | Red Report (techniques ATT&CK observées) |
-|[NETSCOUT](https://www.netscout.com/threatreport) | DDoS Threat Intelligence Report |
-|[Nokia](https://www.nokia.com/networks/security-portfolio/threat-intelligence-report/) | Threat Intelligence Report (télécom / IoT) |
-|[CLUSIT](https://clusit.it/rapporto-clusit/) | Rapporto Clusit `[IT]` |
-|[Carnegie Endowment](https://carnegieendowment.org/programs/technology-and-international-affairs) | études FinCyber, spyware, cyber-statecraft |
-|[Comparitech](https://www.comparitech.com/news/) | roundups ransomware |
-|[Anthropic](https://www.anthropic.com/news) / [OpenAI](https://openai.com/global-affairs/) | rapports sur l'abus de LLM par des acteurs étatiques |
-|[ENISA](https://www.enisa.europa.eu/publications) | Threat Landscape annuel et rapports sectoriels |
-|[CCCS / Cyber Centre](https://www.cyber.gc.ca/en/guidance/national-cyber-threat-assessment-2025-2026) (Canada) | National Cyber Threat Assessment (biennal) `[EN/FR]` |
-|[BSI](https://www.bsi.bund.de/DE/Service-Navi/Publikationen/Lagebericht/lagebericht_node.html) (Allemagne) | Lagebericht (rapport annuel de situation) `[DE]` |
-|[NPA — 警察庁 サイバー警察局](https://www.npa.go.jp/publications/statistics/cybersecurity/) (Japon) | « サイバー空間をめぐる脅威の情勢 » semestriel + 注意喚起 nominatives (MirrorFace…) `[JP]` |
-|[IPA — 情報セキュリティ10大脅威](https://www.ipa.go.jp/security/10threats/) (Japon) | classement annuel + 解説書 `[JP]` |
-|[JSAC (JPCERT)](https://jsac.jpcert.or.jp/) (Japon) | actes de conférence : analyses APT visant le Japon `[JP/EN]` |
-|[NASK — raporty](https://www.nask.pl/raporty) (Pologne) | rapports dont désinformation `[PL]` |
-|[OFAC — recent actions](https://ofac.treasury.gov/recent-actions) (États-Unis) | sanctions cyber (personnes, infrastructures, mixers) — attribution nominative |
-|[DOJ — press releases](https://www.justice.gov/news) (États-Unis) | actes d'accusation cyber — attribution nominative |
+| Source | Pays | Contenu | Accès | Commentaire |
+|---|---|---|---|---|
+| [警察庁 サイバー警察局 (NPA)](https://www.npa.go.jp/publications/statistics/cybersecurity/) | JP | RENS | web/PDF | rapport semestriel + 注意喚起 nominatives (MirrorFace…) ; édition 令和7年 en mars 2026 `[JP]` |
+| [OFAC — recent actions](https://ofac.treasury.gov/recent-actions) | US | RENS | web | sanctions : personnes, mixers, hébergeurs (adresses crypto et domaines dans les désignations, non extraits) |
+| [DOJ — press releases](https://www.justice.gov/news) | US | RENS | web | actes d'accusation |
+| [IC3](https://www.ic3.gov/) · [ODNI](https://www.dni.gov/) | US | RENS | web, bot | rapports annuels |
+| [Europol](https://www.europol.europa.eu/media-press/newsroom) | UE | RENS | web | voir §3 |
+| [Interpol — cyber threat assessments](https://www.interpol.int/Crimes/Cybercrime/Cyber-threat-assessments) | — | RENS | PDF, bot | seule synthèse régionale Afrique |
+| [Access Now — Digital Security Helpline](https://www.accessnow.org/help/) | — | RENS | RSS | société civile : spyware et phishing ciblant ONG/journalistes |
 
-# Règles de detection
-|Source                                                                            |Commentaire         |
-|----------------------------------------------------------------------------------|--------------------|
-|[chronicle detection-rules](https://github.com/chronicle/detection-rules) | règles YARA-L pour Google Security Operations |
-|[CTI Chef → RuleCheck.io Detections Digest](https://detections-digest.rulecheck.io) | le site ctichef.com est hors ligne depuis début 2026 ; seule subsiste la newsletter de suivi des règles de détection |
-|[elastic detection-rules](https://github.com/elastic/detection-rules) | règles de détection Elastic Security, très actif |
-|[HarfangLab Github](https://github.com/HarfangLab/iocs)| IOCs publiés par l'EDR français HarfangLab |
-|[InQuest awesome-yara](https://github.com/InQuest/awesome-yara) | liste curée de règles, outils et ressources YARA |
-|[MISP warninglists](https://github.com/MISP/misp-warninglists) | listes pour écarter les faux positifs (CDN, cloud, bogons, top domains…) |
-|[Neo23x0 signature-base](https://github.com/Neo23x0/signature-base) | base YARA + IOCs de Florian Roth (moteur de THOR / Loki) |
-|[RussianPanda — Yara-Rules Github](https://github.com/RussianPanda95/Yara-Rules) | règles YARA d'une chercheuse indépendante, forte cadence sur les stealers |
-|[SigmaHQ/sigma](https://github.com/SigmaHQ/sigma) | le dépôt canonique des règles Sigma |
-|[splunk security_content](https://github.com/splunk/security_content) | détections et analytics Splunk (research.splunk.com) |
-|[Sublime-Security rules](https://github.com/Sublime-Security/sublime-rules) | détection d'attaques par email (phishing, BEC, malware) |
-|[The DFIR Report — Sigma Rules](https://github.com/The-DFIR-Report/Sigma-Rules) | règles Sigma issues d'investigations réelles |
-|[bartblaze — Yara-rules Github](https://github.com/bartblaze/Yara-rules) | règles YARA de Bart Blaze |
-|[ReversingLabs — YARA rules Github](https://github.com/reversinglabs/reversinglabs-yara-rules) | packs YARA de ReversingLabs |
-|[Volexity Github](https://github.com/volexity/threat-intel) | signatures (YARA) et IOCs des billets de blog Volexity |
-|[YARAHQ yara-forge](https://github.com/YARAHQ/yara-forge) | packs YARA consolidés et normalisés, publiés en releases |
+## 5. CERT sectoriels, ISAC et infrastructures critiques
+
+*Biais : partage restreint aux membres ; la partie publique est mince mais parfois unique (SektorCERT/Zyxel). Les 63 CERT bancaires et 216 CERT d'entreprise listés dans TI ne publient rien : plafond structurel de la veille ouverte.*
+
+| Source | Pays | Secteur | Contenu | Accès | Commentaire |
+|---|---|---|---|---|---|
+| [SektorCERT](https://sektorcert.dk/) | DK | infrastructures critiques | RENS | RSS | analyse de l'attaque Zyxel 2023 (IOC dans le PDF, non vérifiés) |
+| [KraftCERT](https://www.kraftcert.no/no/) | NO | énergie | RENS | web | `[NO]` |
+| [Cert-IST](https://www.cert-ist.com/public/) | FR | industrie/services | RENS | web | avis publics partiels |
+| [CERTFin](https://www.certfin.it/) | IT | finance | RENS | web | ABI Lab |
+| [Z-CERT](https://www.z-cert.nl/) | NL | santé | RENS | web, bot | |
+| [SHARE CERT](https://www.sharecert.rs/) | RS | société civile, médias | RENS | RSS | `[SR]` |
+| [FS-ISAC Insights](https://www.fsisac.com/insights) | US | finance | RENS | RSS | |
+| [Health-ISAC](https://health-isac.org/resources-and-news/) | US | santé | RENS | RSS | |
+| [MS-ISAC (CIS)](https://www.cisecurity.org/ms-isac) | US | collectivités | RENS | web | |
+| [WaterISAC](https://www.waterisac.org/) | US | eau | RENS | RSS | |
+| [RH-ISAC](https://rhisac.org/) | US | retail | RENS | RSS | |
+| [Aviation ISAC](https://www.a-isac.com/) · [Auto-ISAC](https://automotiveisac.com/) | US | aviation, automobile | RENS | web | |
+| [EE-ISAC](https://www.eeisac.eu/) · [ER-ISAC](https://er-isac.eu/) | EU | énergie, rail | RENS | web, bot | |
+| [Cyber Threat Alliance](https://www.cyberthreatalliance.org/resources/) | US | multi | RENS | web | rapports conjoints ; ses communiqués listent les membres |
+| [ECSO](https://www.ecso.org/) | EU | multi | RENS | RSS | |
+| [Kaspersky ICS-CERT](https://ics-cert.kaspersky.com) | RU | OT | RENS | web | IOC en PDF, non vérifiés ; voir aussi §7.2 |
+
+## 6. Infrastructure Internet : registres, RIR, NREN, cloud, opérateurs
+
+*Biais : vision réseau que personne d'autre n'a ; conflit d'intérêt évident sur l'abus qu'ils hébergent ou enregistrent.*
+
+| Source | Pays | Contenu | Accès | Commentaire |
+|---|---|---|---|---|
+| [ICANN DAAR](https://www.icann.org/octo-ssr/daar) | US | RENS | PDF | mesure mensuelle de l'abus par TLD |
+| [NetBeacon Institute](https://netbeacon.org/) | US | RENS | RSS | ex-DNS Abuse Institute |
+| [AFNIC — Observatoire](https://www.afnic.fr/observatoire-ressources/) | FR | RENS | RSS | abus du .fr |
+| [SIDN Labs](https://www.sidnlabs.nl/en/news-and-blogs) | NL | RENS | web | recherche DNS/abus .nl |
+| [Nominet](https://nominet.uk/news/) | UK | RENS | web | suspensions .uk |
+| [SWITCH-CERT](https://www.switch.ch/en/cert) | CH | RENS | web | abus .ch, universités |
+| [TWNIC](https://twnic.tw/blog/) | TW | RENS | web | `[ZH]` |
+| [RNIDS](https://www.rnids.rs/) · [NIX.CZ](https://nix.cz/) | RS/CZ | RENS | web | registre .rs, IXP tchèque |
+| [Nameshield](https://blog.nameshield.com/fr/) | FR | RENS | RSS | registrar : typosquatting |
+| [RIPE Labs](https://labs.ripe.net/) | NL | RENS | RSS | hijacks BGP, mesures |
+| [APNIC Blog](https://blog.apnic.net/) | AU | RENS | RSS | |
+| [LACNIC CSIRT](https://www.lacnic.net/csirt) | UY | RENS | web | `[ES/EN]` |
+| [CERN CERT](https://security.web.cern.ch/) · [EGI CSIRT](https://csirt.egi.eu/) · [SURFcert](https://www.surf.nl/en/services/security/surfcert) · [REN-ISAC](https://www.ren-isac.net/) | CH/EU/NL/US | RENS | web / RSS | NREN et grille |
+| [Cloudflare — security](https://blog.cloudflare.com/tag/security/) · [Radar](https://radar.cloudflare.com) | US | RENS | RSS / bot | DDoS, botnets |
+| [Akamai — security research](https://www.akamai.com/blog/security-research) | US | RENS | web, bot | IOC non vérifiés |
+| [Fastly — security](https://www.fastly.com/blog/category/security) | US | RENS | RSS | |
+| [AWS Security Blog](https://aws.amazon.com/blogs/security/) | US | RENS | RSS | honeypot MadPot, takedowns |
+| [Telefónica Tech](https://telefonicatech.com/en/blog) | ES | RENS | web | |
+| [CERT Orange Polska](https://cert.orange.pl) | PL | RENS | RSS | alertes ; la blocklist CyberTarcza n'est pas publiée `[PL]` |
+| [Exatel](https://exatel.pl/blog/) | PL | RENS | RSS | opérateur d'État `[PL]` |
+| [CHT Security](https://www.chtsecurity.com/news) | TW | RENS | web | Chunghwa Telecom `[ZH]` |
+| [IIJ — wizSafe](https://wizsafe.iij.ad.jp) | JP | RENS | RSS | bilans mensuels `[JP]` |
+| [Viettel Cyber Security](https://blog.viettelcybersecurity.com) | VN | IOC+RENS | web | hash et IP dans les billets `[VI/EN]` |
+| [CUJO AI](https://cujo.com/blog/) | US | RENS | RSS | télémétrie IoT domestique via FAI |
+| [Deutsche Telekom — T-Pot](https://github.com/telekom-security/tpotce) | DE | — | repo | outil honeypot (pas de feed public) |
+
+## 7. Éditeurs et laboratoires de recherche privés
+
+*Biais : marketing, fragmentation des noms d'acteurs, « early share » sélectif entre membres d'alliances ; biais d'échantillon (leur base clients). Le meilleur volume d'IOC frais reste ici.*
+
+### 7.1 Généralistes, par région
+
+**Amérique du Nord**
+
+| Source | Contenu | Accès | Activité | Commentaire |
+|---|---|---|---|---|
+| [Cisco Talos](https://blog.talosintelligence.com) · [IOCs](https://github.com/Cisco-Talos/IOCs) | IOC+RENS | RSS / repo | vivant | |
+| [Palo Alto Unit 42](https://unit42.paloaltonetworks.com) · [Article IOCs](https://github.com/PaloAltoNetworks/Unit42-Threat-Intelligence-Article-Information) · [timely-threat-intel](https://github.com/PaloAltoNetworks/Unit42-timely-threat-intel) | IOC+RENS | RSS / repo | 2026-09-01 | `pan-unit42/iocs` archivé |
+| [Google Cloud Threat Intelligence / Mandiant](https://cloud.google.com/blog/topics/threat-intelligence) · [M-Trends](https://cloud.google.com/security/mandiant) · [TAG/GTIG](https://blog.google/security/) | IOC+RENS | web | vivant | le dépôt `mandiant/iocs` est archivé (2019) |
+| [Microsoft Security / MSTIC](https://www.microsoft.com/en-us/security/blog/) · [Azure-Sentinel](https://github.com/Azure/Azure-Sentinel) | IOC+RENS | web / repo | vivant | |
+| [Meta — threat-research](https://github.com/facebook/threat-research) | IOC | repo | vivant | |
+| [SentinelLABS](https://www.sentinelone.com/labs/) | IOC+RENS | web | vivant | |
+| [Zscaler ThreatLabz](https://github.com/ThreatLabz/iocs) | IOC | repo | vivant | |
+| [Sophos](https://github.com/sophoslabs/IoCs) | IOC | repo | vivant | blog bloque les robots ; absorbe Secureworks CTU |
+| [Broadcom / Symantec Threat Hunter](https://www.security.com/threat-intelligence) · [protection bulletins](https://www.broadcom.com/support/security-center/protection-bulletin) | IOC+RENS | RSS / web | vivant | |
+| [Trend Micro Research](https://www.trendmicro.com/en_us/research.html) | IOC+RENS | web (IOC en PDF) | vivant | dépôt GitHub figé 2024-11 |
+| [Fortinet FortiGuard Labs](https://www.fortinet.com/blog/threat-research) | IOC+RENS | web | vivant | |
+| [Proofpoint Threat Insight](https://www.proofpoint.com/us/blog/threat-insight) | IOC+RENS | web | vivant | |
+| [Recorded Future / Insikt](https://www.recordedfuture.com/research) · [The Record](https://therecord.media/) | RENS | web | vivant | dépôt `Insikt-Group/Research` figé 2023 |
+| [CrowdStrike](https://www.crowdstrike.com/en-us/blog/) · [rapports](https://www.crowdstrike.com/en-us/resources/reports/) | RENS | web/PDF | vivant | |
+| [Elastic Security Labs](https://www.elastic.co/security-labs) · [labs-releases](https://github.com/elastic/labs-releases) | IOC+RENS | web / repo | 2026-09-01 | |
+| [Netskope Threat Labs](https://www.netskope.com/blog) · [IOCs](https://github.com/netskopeoss/NetskopeThreatLabsIOCs) | IOC+RENS | RSS / repo | 2026-09-01 | abus de services cloud |
+| [Huntress](https://www.huntress.com/blog) · [threat-intel](https://github.com/huntresslabs/threat-intel) | IOC+RENS | web / repo | 2026-08-19 | télémétrie MDR PME |
+| [Wiz Research](https://www.wiz.io/blog/tag/research) · [IOCs](https://github.com/wiz-sec-public/wiz-research-iocs) | IOC+RENS | web / repo | 2026-08-06 | cloud |
+| [Datadog Security Labs](https://securitylabs.datadoghq.com) · [malicious-software-packages-dataset](https://github.com/datadog/malicious-software-packages-dataset) | IOC+RENS | repo | 2026-08-31 | supply chain PyPI/npm, quotidien |
+| [Infoblox](https://github.com/infobloxopen/threat-intelligence) | IOC+RENS | repo | vivant | DNS |
+| [Cybereason](https://www.cybereason.com/blog) · [Rapid7](https://www.rapid7.com/blog/) · [Arctic Wolf](https://arcticwolf.com/resources/blog/) | IOC+RENS | RSS | vivant | IOC dans les billets (Cybereason : défangés) |
+| [ReliaQuest](https://reliaquest.com/blog/) · [Varonis](https://www.varonis.com/blog/tag/threat-research) · [Uptycs](https://www.uptycs.com/blog) · [Morphisec](https://www.morphisec.com/blog/) | RENS | RSS | vivant | |
+| [Malwarebytes Labs](https://www.malwarebytes.com/blog/category/threat-intel) · [eSentire TRU](https://www.esentire.com/resources/blog) · [Deep Instinct](https://www.deepinstinct.com/blog) · [Aqua Nautilus](https://www.aquasec.com/blog/) · [Sucuri](https://blog.sucuri.net/) | IOC+RENS | web / RSS | vivant | Sucuri : web/CMS (IP) |
+| [Red Canary](https://redcanary.com/resources-center/category/blog/) | RENS | RSS | vivant | techniques, pas d'IOC |
+| [LevelBlue SpiderLabs](https://www.levelblue.com/blogs/spiderlabs-blog) | IOC+RENS | RSS | vivant | ex-Trustwave |
+| [Intel 471](https://www.intel471.com/blog) · [Flashpoint](https://flashpoint.io/blog/) · [Cyware](https://www.cyware.com/resources/threat-briefings) | RENS | web | vivant | underground |
+| [Trinity Cyber](https://www.trinitycyber.com/blog) | IOC+RENS | RSS | vivant | membre CTA ; hash dans les billets |
+| [SonicWall Capture Labs](https://www.sonicwall.com/blog) · [WatchGuard Threat Lab](https://www.watchguard.com/wgrd-news/blog) · [ExtraHop](https://www.extrahop.com/blog) · [SecurityScorecard](https://securityscorecard.com/resources/research/) | RENS | web / RSS | vivant | membres CTA |
+| [Aryaka](https://www.aryaka.com/blog/) | RENS | web | vivant | Transparent Tribe / APT36 |
+| [Trellix ARC](https://www.trellix.com/blogs/research/) | RENS | web, bot | — | dépôt IOC figé 2021 |
+
+**Europe (hors Russie)**
+
+| Source | Pays | Contenu | Accès | Activité | Commentaire |
+|---|---|---|---|---|---|
+| [ESET — WeLiveSecurity](https://www.welivesecurity.com) · [malware-ioc](https://github.com/eset/malware-ioc) | SK | IOC+RENS | web / repo | vivant | |
+| [Gen Digital / Avast Threat Labs](https://www.gendigital.com/blog/insights) · [ioc](https://github.com/avast/ioc) | CZ | IOC+RENS | RSS / repo | 2026-06-01 | |
+| [Bitdefender](https://github.com/bitdefender/malware-ioc) | RO | IOC | repo | vivant | |
+| [WithSecure Labs](https://www.withsecure.com/en/resources-hub/w-labs/) · [iocs](https://github.com/WithSecureLabs/iocs) | FI | IOC+RENS | web / repo | 2026-08-27 | ex-F-Secure |
+| [Sekoia.io](https://blog.sekoia.io) · [Community](https://github.com/SEKOIA-IO/Community) | FR | IOC+RENS | web / repo | 2026-08-24 | IOC + Sigma dans le dépôt |
+| [HarfangLab](https://github.com/HarfangLab/iocs) | FR | IOC | repo | vivant | |
+| [TEHTRIS](https://tehtris.com/en/blog/) | FR | IOC+RENS | web | vivant | honeypots mondiaux ; hash dans les billets |
+| [Intrinsec](https://www.intrinsec.com/blog/) | FR | RENS | RSS | vivant | infra ransomware, bulletproof hosting ; IOC en PDF, non vérifiés |
+| [OWN Security](https://www.own.security/ressources) · [Wavestone RiskInsight](https://www.riskinsight-wavestone.com/) · [Synetis](https://www.synetis.com/blog/) · [SysDream](https://sysdream.com/propos/blog/) | FR | RENS | web / RSS | vivant | |
+| [Check Point Research](https://research.checkpoint.com) · [TI reports](https://research.checkpoint.com/category/threat-intelligence-reports/) | IL | IOC+RENS | web | vivant | absorbe Avanan |
+| [Sygnia](https://www.sygnia.co/blog/) | IL | IOC+RENS | RSS | vivant | IOC ponctuels |
+| [ClearSky](https://www.clearskysec.com/blog/) · [KELA](https://www.kelacyber.com/blog/) · [IRONSCALES](https://ironscales.com/blog) | IL | RENS | web / RSS | vivant | ClearSky : site JS, IOC non vérifiés |
+| [G DATA](https://blog.gdatasoftware.com) | DE | IOC+RENS | web | vivant | hash dans les billets |
+| [HiSolutions Research](https://research.hisolutions.com/) · [DCSO CyTec](https://blog.dcso.de) | DE | RENS | RSS / — | vivant | DCSO injoignable lors de la vérification |
+| [Kaspersky — Securelist](https://securelist.com) | RU/CH | IOC+RENS | web | vivant | GReAT ; MD5 et indicateurs défangés en fin de rapport |
+| [Certego](https://www.certego.net/blog/) · [Cleafy](https://www.cleafy.com/labs) | IT | IOC+RENS | RSS / web | vivant | Cleafy : IOC ponctuels `[IT/EN]` |
+| [Yoroi Z-Lab](https://yoroi.company/research/) · [Yarix](https://www.yarix.com/en) · [HWG Sababa](https://www.hwgsababa.com/blog/) · [Tinexta Cyber](https://www.tinextacyber.com/) · [Telsy](https://www.telsy.com/en/blog/) | IT | RENS | web / bot | vivant | Yoroi : IOC non vérifiés (site JS) ; Telsy bloque les robots `[IT/EN]` |
+| [Maltiverse](https://maltiverse.com) | ES | IOC | API, inscr. | vivant | plateforme IOC ouverte |
+| [Lab52 / S2 Grupo](https://lab52.io) · [Mnemo](https://mnemo.com/blog-ciberseguridad/) · [Versia](https://www.versia.com/blog) · [Aiuken](https://www.aiuken.com/blog) · [S21sec](https://www.s21sec.com/blog/) | ES | RENS | web / RSS | vivant | Lab52 : IOC non vérifiés (site JS) `[ES/EN]` |
+| [Fox-IT](https://blog.fox-it.com/) · [ThreatFabric](https://www.threatfabric.com/blogs) | NL | IOC+RENS | RSS | vivant | centaines de hash dans les billets |
+| [NCC Group](https://www.nccgroup.com/research/) · [Northwave](https://northwave-cybersecurity.com/threat-intel-research) · [Tesorion](https://www.tesorion.nl/en) | UK/NL | RENS | web | vivant | NCC bloque les robots |
+| [NVISO Labs](https://blog.nviso.eu/) | BE | IOC+RENS | RSS | vivant | hash dans le flux |
+| [Truesec](https://www.truesec.com/hub/blog) · [Conscia](https://conscia.com/blog/) · [mnemonic](https://www.mnemonic.io/resources/blog/) | SE/DK/NO | RENS | web | vivant | mnemonic bloque les robots |
+| [Nord Security](https://nordsecurity.com/blog) · [NRD Cyber Security](https://www.nrdcs.lt/) | LT | RENS | web | vivant | |
+| [CERT Polska — voir §3](https://cert.pl) · [ComCERT](https://www.comcert.pl/aktualnosci/) · [RedTeam.pl](https://blog.redteam.pl/) | PL | RENS | RSS | vivant | `[PL]` |
+| [Safetech](https://safetech.ro/blog/) · [Bit Sentinel](https://bit-sentinel.com/blog/) · [certSIGN](https://www.certsign.ro/ro/) | RO | RENS | RSS | vivant | `[RO/EN]` |
+| [CrySyS Lab](https://blog.crysys.hu/) | HU | RENS | RSS | vivant | académique, APT Europe centrale |
+| [Obrela](https://www.obrela.com/resources/blog) | GR | RENS | RSS | vivant | |
+| [Oneconsult](https://oneconsult.com/en/blog/) · [Acronis TRU](https://www.acronis.com/en/tru/) | CH | IOC+RENS | RSS | vivant | hash dans les billets |
+| [Open Systems](https://www.open-systems.com/blog/) · [Threatray](https://www.threatray.com) | CH | RENS | web | vivant | |
+| [Brandefense](https://brandefense.io/blog/) · [SOCRadar](https://socradar.io/blog/) · [Barikat](https://www.barikat.com.tr/blog) | TR | RENS | web | vivant | `[TR/EN]` |
+| [Orange Cyberdefense](https://www.orangecyberdefense.com/global/blog) | FR | RENS | web, bot | — | Security Navigator |
+
+**Russie**
+
+| Source | Contenu | Accès | Commentaire |
+|---|---|---|---|
+| [BI.ZONE](https://bi.zone) · [bizone-ti-lib](https://github.com/bi-zone/bizone-ti-lib) | RENS | web / repo (lib) | groupe Sber ; IOC non vérifiés `[EN/RU]` |
+| [Positive Technologies](https://github.com/PositiveTechnologies) · [AttackDetection](https://github.com/ptresearch/AttackDetection) | RENS | repo (Suricata figé 2022), site bot | `[EN/RU]` |
+| [Doctor Web](https://news.drweb.com) | IOC+RENS | web | indicateurs défangés dans les analyses `[RU/EN]` |
+| [F6](https://www.f6.ru) · [Solar 4RAYS](https://solar4rays.ru) · [Solar analytics](https://rt-solar.ru/analytics/reports/) · [Security Vision](https://www.securityvision.ru/blog/) · [Infosecurity/Softline](https://www.infosec.ru/glavnye-temy/) | RENS | web, géo | F6 et Solar injoignables au robot : IOC non vérifiés `[RU]` |
+| [Group-IB](https://www.group-ib.com/blog/) | IOC+RENS | web | siège Singapour ; hash et IP dans les billets `[EN]` |
+
+**Chine**
+
+| Source | Contenu | Accès | Commentaire |
+|---|---|---|---|
+| [QiAnXin / 奇安信](https://ti.qianxin.com) · [RedDrip7](https://github.com/RedDrip7) | IOC+RENS | web (bot) / repo | IOC via le dépôt `APT_Digital_Weapon` `[ZH]` |
+| [360 高级威胁研究院 / 威胁情报中心](https://ti.360.net) | RENS | web | hebdo « 每周高级威胁情报解读 », nommage APT-C-xx ; remplace 360 Netlab (inactif) `[ZH]` |
+| [Antiy / 安天](https://www.antiy.net) · [DBAPPSecurity / 安恒](https://ti.dbappsecurity.com.cn/blog/) | IOC+RENS | web / RSS | hash dans les rapports `[ZH]` |
+| [NSFOCUS / 绿盟](https://nsfocusglobal.com/blog/) · [Knownsec 404](https://paper.seebug.org) · [Sangfor / 深信服](https://www.sangfor.com.cn/security-tech) · [Tencent 御见](https://tix.qq.com) · [ThreatBook / 微步](https://threatbook.io) | RENS | web, parfois géo | IOC non vérifiés (sites JS ou filtrés ; ThreatBook : lookups, pas de liste) `[ZH]` |
+| [火绒 Huorong](https://www.huorong.cn/info/) · [瑞星 Rising](https://www.rising.com.cn/) | RENS | web | `[ZH]` |
+| [CVERC](https://www.cverc.org.cn) | RENS | web | contre-attribution officielle `[ZH]` |
+
+**Japon, Corée, Taïwan**
+
+| Source | Pays | Contenu | Accès | Commentaire |
+|---|---|---|---|---|
+| [ITOCHU C&I](https://blog-en.itochuci.co.jp) · [Macnica](https://security.macnica.co.jp/) · [nao-sec](https://nao-sec.org) · [IIJ-SECT](https://sect.iij.ad.jp/) | JP | IOC+RENS | RSS / web | hash dans les billets (ITOCHU : ~200) `[JP/EN]` |
+| [LAC WATCH](https://www.lac.co.jp/lacwatch/) · [MBSD](https://www.mbsd.jp/research/) · [NRI Secure](https://www.nri-secure.co.jp/blog) · [NEC](https://jpn.nec.com/cybersecurity/blog/) · [Hitachi HIRT](https://www.hitachi.com/en/hirt/) · [SecureBrain](https://www.securebrain.co.jp/top/) · [Cyber Defense Institute](https://www.cyberdefense.jp/) | JP | RENS | web | `[JP]` |
+| [AhnLab ASEC](https://asec.ahnlab.com/en/) · [Genians](https://www.genians.co.kr/en/blog/threat_intelligence) · [NSHC ThreatRecon](https://threatrecon.nshc.net) · [EST Security / ESRC](https://blog.alyac.co.kr) | KR | IOC+RENS | RSS / web | MD5 et indicateurs défangés (Genians ~50 par lot d'articles) ; fort sur les APT nord-coréennes `[KO/EN]` |
+| [ENKI WhiteHat](https://www.enki.co.kr/en/media-center/blog) · [S2W](https://s2w.inc/en/resource) · [Penta Security](https://www.pentasecurity.com/blog/) · [Cloudbric](https://www.cloudbric.com/blogs/) · [SANDS Lab](https://sandslab.io/) · [IGLOO](https://www.igloo.co.kr/) · [SK shieldus](https://www.skshieldus.com/) | KR | RENS | web / RSS ; IGLOO, SK shieldus : bot | ENKI, S2W : sites JS, IOC non vérifiés `[KO]` |
+| [TeamT5](https://teamt5.org/en/) | TW | IOC+RENS | web | APT nexus-Chine ; hash dans les billets `[ZH/EN]` |
+| [CyCraft](https://www.cycraft.com/blog) · [ZUSO](https://www.zuso.ai/blog) · [ISSDU](https://www.issdu.com.tw/en) · [TXOne](https://www.txone.com/resources/blog/) | TW | RENS | web | PSIRT QNAP/Synology/Zyxel/ASUS pour les campagnes NAS/routeurs `[ZH/EN]` |
+
+**Inde, Asie du Sud-Est, Océanie**
+
+| Source | Pays | Contenu | Accès | Commentaire |
+|---|---|---|---|---|
+| [CloudSEK](https://www.cloudsek.com/blog) · [Cyble](https://cyble.com/blog/) · [CYFIRMA](https://www.cyfirma.com/research/) · [Seqrite](https://www.seqrite.com/blog/) | IN | IOC+RENS | web / RSS | hash et IP dans les billets |
+| [K7 Labs](https://labs.k7computing.com) · [Sequretek](https://www.sequretek.com/resources/threat-advisory) · [FalconFeeds](https://falconfeeds.io) | IN | RENS | web | K7 : site JS, Sequretek : bot — IOC non vérifiés |
+| [Ensign InfoSecurity](https://www.ensigninfosecurity.com/resources) · [Group-IB](https://www.group-ib.com/blog/) | SG | RENS | web | |
+| [Red Piranha](https://redpiranha.net/news-events) · [CyberCX](https://cybercx.com.au/blog/) | AU | RENS | web | |
+
+**Moyen-Orient et Afrique**
+
+| Source | Pays | Contenu | Accès | Commentaire |
+|---|---|---|---|---|
+| [CTM360](https://www.ctm360.com) | BH | RENS | web | Golfe ; parle d'IOC sans les publier |
+| [Help AG](https://www.helpag.com) · [DTS Solution](https://www.dts-solution.com) | AE | RENS | RSS présent, blog 404 | à vérifier en navigateur |
+| [LMPS](https://www.lmps-group.com/fr/blog/) · [Raiseguard](https://raiseguard.com/blog) | MA/TN | RENS | web | `[FR]` |
+| [Serianu](https://www.serianu.com/) | KE | RENS | PDF | rapport annuel Afrique |
+
+**Amérique latine**
+
+| Source | Pays | Contenu | Accès | Commentaire |
+|---|---|---|---|---|
+| [CronUp](https://www.cronup.com/blog/) | CL | RENS | web | IOC non vérifiés (site JS) `[ES]` |
+| [Metabase Q — Ocelot](https://www.metabaseq.com) · [Scitum](https://www.scitum.com.mx/) · [SILIKN](https://www.silikn.com/) | MX | RENS | web / RSS | `[ES/EN]` |
+| [ISH Tecnologia](https://ish.com.br/blog/) · [Tempest](https://www.tempest.com.br/blog) · [Apura](https://apura.io/) | BR | RENS | RSS / web | `[PT]` |
+| [Base4](https://base4sec.com/insights/) · [INSSIDE](https://www.insside.net/blog-ciberseguridad-insside/) | AR | RENS | web / RSS | `[ES]` |
+| [B-Secure](https://www.b-secure.co/blog) · [Datasec](https://datasec-soft.com/blog/) · [Cyberseg](https://www.cyberseg.com/blog) · [SISAP](https://www.sisap.com/) · [GBM](https://www.gbm.net/) · [Canvia](https://www.canvia.com/blog/) | CO/UY/GT/CR/PE | RENS | RSS / web | surtout du marketing ; CronUp et Metabase Q restent les vraies sources CTI `[ES]` |
+
+### 7.2 Spécialisés, par thème
+
+**ICS / OT**
+
+| Source | Pays | Contenu | Accès | Commentaire |
+|---|---|---|---|---|
+| [Dragos](https://www.dragos.com/blog) | US | RENS | RSS | rapports de groupes, Year in Review ; IOC réservés à WorldView |
+| [Claroty Team82](https://claroty.com/team82) | US/IL | RENS | Atom (disclosures) | vulnérabilités |
+| [Nozomi Networks Labs](https://www.nozominetworks.com/labs) | US/CH | RENS | web | |
+| [Forescout Vedere Labs](https://www.forescout.com/research-labs/) | US | RENS | web, bot | |
+| [TXOne Networks](https://www.txone.com/resources/blog/) | TW | RENS | web | |
+| [Kaspersky ICS-CERT](https://ics-cert.kaspersky.com) | RU | IOC+RENS | web | |
+
+**Mobile**
+
+| Source | Pays | Contenu | Accès | Activité | Commentaire |
+|---|---|---|---|---|---|
+| [Amnesty Tech — investigations](https://github.com/AmnestyTech/investigations) | — | IOC | repo (STIX) | fin 2024 | Pegasus, Predator |
+| [Citizen Lab — malware-indicators](https://github.com/citizenlab/malware-indicators) | CA | IOC+RENS | repo | vivant | |
+| [MVT — mvt-indicators](https://github.com/mvt-project/mvt-indicators) | — | IOC | repo (STIX) | vivant | |
+| [AssoEchap — stalkerware-indicators](https://github.com/AssoEchap/stalkerware-indicators) | FR | IOC | repo | vivant | |
+| [Zimperium zLabs](https://zimperium.com/blog) · [IOC](https://github.com/Zimperium/IOC) | US | IOC+RENS | RSS / repo | 2026-08-25 | IOC dans le dépôt (pas dans les billets) ; banking trojans, malware Android |
+| [ThreatFabric](https://www.threatfabric.com/blogs) | NL | IOC+RENS | RSS | vivant | trojans bancaires ; ~75 hash par lot de billets |
+| [Cleafy Labs](https://www.cleafy.com/labs) | IT | IOC+RENS | web | vivant | IOC ponctuels |
+| [Lookout Threat Lab](https://www.lookout.com/threat-intelligence) | US | RENS | web | vivant | surveillanceware ; IOC non vérifiés (site JS) |
+| [Apple — Threat notifications](https://support.apple.com/en-us/102174) | US | RENS | web | vivant | spyware mercenaire |
+
+**Sécurité mail et phishing**
+
+| Source | Pays | Contenu | Accès | Commentaire |
+|---|---|---|---|---|
+| [Proofpoint — voir 7.1] | US | IOC+RENS | web | hash dans les billets |
+| [Cloudmark](https://www.cloudmark.com/en/blog) | US | RENS | web | |
+| [Cofense](https://cofense.com/blog/) · [Abnormal](https://abnormal.ai/blog) · [Barracuda](https://blog.barracuda.com/) · [INKY](https://www.inky.com/en/blog) · [KnowBe4](https://blog.knowbe4.com/) · [Validity](https://www.validity.com/blog/) · [Mailgun](https://www.mailgun.com/blog/) · [Data443 / Cyren](https://data443.com/cyren-threat-intelligence/) | US | RENS | web / RSS | aucun hash/IP dans les billets ; KnowBe4 absorbe Egress ; Data443 a repris Cyren |
+| [Mimecast](https://www.mimecast.com/blog/) | UK | RENS | web | |
+| [Hornetsecurity](https://www.hornetsecurity.com/en/blog/) · [Retarus](https://www.retarus.com/blog/en/) | DE | RENS | web / RSS | Hornetsecurity absorbe Vade |
+| [Libraesva](https://www.libraesva.com/blog) | IT | RENS | web | |
+| [Fortra (Agari, PhishLabs)](https://www.fortra.com/) | US | RENS | bot | rapports phishing de référence |
+| [Netcraft](https://www.netcraft.com/resources/blog) | UK | RENS | web | |
+| [Abusix](https://abusix.com/blog/) | DE | RENS | RSS | |
+
+**Infrastructure, C2, pDNS, scans**
+
+| Source | Pays | Contenu | Accès | Commentaire |
+|---|---|---|---|---|
+| [Silent Push](https://www.silentpush.com/blog/) · [Validin](https://www.validin.com/blog/) · [Hunt.io](https://hunt.io/blog) · [Team Cymru](https://www.team-cymru.com/blog) | US | IOC+RENS | RSS / web ; feeds payants | IP et hash en clair dans les billets (Hunt.io : >100) |
+| [DomainTools](https://www.domaintools.com/blog) · [Spur](https://spur.us/blog) | US | RENS | web | Spur bloque les robots |
+| [Censys](https://censys.com/resources/blog/) · [GreyNoise](https://www.greynoise.io/blog) | US | IOC+RENS | RSS / web / API | Censys : hash dans le flux ; GreyNoise : IP |
+| [Bitsight](https://www.bitsight.com/blog) | US | RENS | RSS | |
+| [drb-ra C2IntelFeeds](https://github.com/drb-ra/C2IntelFeeds) · [Xanderux C2watcher](https://github.com/Xanderux/C2watcher) · [ViriBack](https://tracker.viriback.com) · [CyberCrime Tracker](https://cybercrime-tracker.net) | — | IOC | repo / feed | trackers C2 ; `montysecurity/C2-Tracker` archivé avril 2026 |
+| [Bambenek](https://osint.bambenekconsulting.com) · [EcrimeLabs](https://ecrimelabs.net) | US/DK | IOC | sur demande | |
+| [Critical Path Security](https://github.com/CriticalPathSecurity/Public-Intelligence-Feeds) | US | IOC | repo (Zeek Intel) | 2026-09-01 |
+
+**Vulnérabilités et exploitation**
+
+| Source | Pays | Contenu | Accès | Commentaire |
+|---|---|---|---|---|
+| [CISA KEV](https://github.com/cisagov/kev-data) · [VulnCheck](https://www.vulncheck.com/blog) · [Rapid7 AttackerKB / DB](https://www.rapid7.com/db/) · [ZDI](https://www.zerodayinitiative.com/blog) · [Exploit-DB](https://www.exploit-db.com/) · [Vulners](https://vulners.com/) · [Wiz Vulnerability DB](https://www.wiz.io/vulnerability-database) | US | IOC+RENS | repo / Atom / RSS / web | |
+| [Google Project Zero — 0days in the wild](https://github.com/googleprojectzero/0days-in-the-wild) | US | RENS | repo | 2026-08-10 |
+| [Nuclei templates](https://github.com/projectdiscovery/nuclei-templates) | — | IOC | repo | 2026-09-01 |
+| [DEVCORE / Orange Tsai](https://blog.orange.tw/) | TW | RENS | Atom | recherche offensive |
+
+**Crypto / Web3** — voir §2.3.
+
+## 8. Réponse à incident, conseil, assurance
+
+*Biais : échantillon limité à leurs clients et leurs sinistres ; excellents sur les TTP réels, rares sur les IOC.*
+
+| Source | Pays | Contenu | Accès | Commentaire |
+|---|---|---|---|---|
+| [The DFIR Report](https://thedfirreport.com) · [Sigma](https://github.com/The-DFIR-Report/Sigma-Rules) | — | IOC+RENS | web / repo | rapports d'intrusion détaillés ; hash et IP en clair |
+| [Kroll Cyber](https://www.kroll.com/en/insights/cyber) · [S-RM](https://www.s-rminform.com/cyber-intelligence-briefing) · [PwC TI](https://www.pwc.com/gx/en/issues/cybersecurity/cyber-threat-intelligence.html) | US/UK | RENS | web / RSS | |
+| [Coveware](https://coveware.com/ransomware-blog/) · [GuidePoint GRIT](https://www.guidepointsecurity.com/blog/) · [Halcyon](https://www.halcyon.ai/blog) | US | RENS | RSS / web | négociation et rapports ransomware |
+| [Coalition](https://www.coalitioninc.com/blog) | US | RENS | web | assureur |
+| [Cyber Threat Alliance — voir §5] · [Virus Bulletin](https://www.virusbulletin.com/virusbulletin/) · [Botconf](https://www.botconf.eu/) · [FIRST papers](https://www.first.org/resources/papers/) · [JSAC — voir §3] | — | RENS | web / RSS | actes de conférence |
+
+## 9. Recherche académique et datasets
+
+*Biais : rigueur, mais latence ; peu d'observables frais.*
+
+| Source | Pays | Contenu | Accès | Commentaire |
+|---|---|---|---|---|
+| [Canadian Institute for Cybersecurity (UNB)](https://www.unb.ca/cic/datasets/) | CA | — | datasets | IDS, malware Android, DoH |
+| [CAIDA](https://www.caida.org/catalog/datasets/) | US | — | datasets, partiellement sur demande | télescope réseau |
+| [Citizen Lab](https://github.com/citizenlab) | CA | IOC+RENS | repo | voir §7.2 mobile |
+| [Stratosphere — voir §2.1] · [UNSW Canberra](https://research.unsw.edu.au/projects/toniot-datasets) · [SecRepo](https://secrepo.com) · [theZoo](https://github.com/ytisf/theZoo) · [VirusShare](https://virusshare.com) | CZ/AU/— | — | datasets | |
+| [DARPA OpTC](https://github.com/FiveDirections/OpTC-data) · [IMPACT Cyber Trust](https://www.impactcybertrust.org) · [Los Alamos](https://csr.lanl.gov/data/) | US | — | datasets | |
+| [Malpedia — voir §1] · [Honeynet Project — voir §2.1] | | | | |
+| [CrySyS Lab](https://blog.crysys.hu/) | HU | RENS | RSS | |
+| [mdecrevoisier — EVTX-to-MITRE-Attack](https://github.com/mdecrevoisier/EVTX-to-MITRE-Attack) | — | — | repo | EVTX mappés ATT&CK |
+| [CTID Attack Flow](https://github.com/center-for-threat-informed-defense/attack-flow) | US | RENS | repo | 2026-08-13 |
+
+## 10. Cybercriminalité : trackers, sites de fuite, victimologie
+
+*Biais : **observables adverses**. Les revendications d'attaquants sont gonflées, recyclent de vieilles fuites, inventent des victimes. À collecter, jamais à promouvoir en indicateur sans recoupement.*
+
+| Source | Contenu | Accès | Activité | Commentaire |
+|---|---|---|---|---|
+| [Ransomware.live](https://www.ransomware.live/api) | RENS | API (50 req/j gratuit) | vivant | victimes et groupes ; victimologie, pas d'IOC réseau |
+| [RansomLook](https://www.ransomlook.io/) | RENS | RSS / API | vivant | leak sites, forums, Telegram ; open source ; victimologie, pas d'IOC réseau |
+| [ransomwatch](https://ransomwatch.telemetry.ltd/) · [repo](https://github.com/joshhighet/ransomwatch) | RENS | repo (JSON) | 2026-03-03 | historique depuis 2021 |
+| [ecrime.ch](https://ecrime.ch/) · [DarkFeed](https://app.darkfeed.io/mainpage) · [Hackmanac](https://hackmanac.com/) · [ransom-db](https://www.ransom-db.com/) | RENS | web | vivant | victimologie |
+| [fastfire — deepdarkCTI](https://github.com/fastfire/deepdarkCTI) | RENS | repo | vivant | deep/dark web ; la copie `Cyberfury101` est inactive depuis 2021 |
+| [FalconFeeds](https://falconfeeds.io) | RENS | web | vivant | revendications, hacktivisme |
+| [BushidoUK — Ransomware Tool Matrix](https://github.com/BushidoUK/Ransomware-Tool-Matrix) | RENS | repo | 2026-08-29 | outils par groupe |
+| [databreaches.net](https://databreaches.net/) | RENS | RSS | vivant | journalisme sur les fuites |
+| [Have I Been Pwned — breaches](https://haveibeenpwned.com/feed/breaches/) | RENS | RSS / API | vivant | |
+| [cyberwarfare.live](https://cyberwarfare.live/) | RENS | RSS | vivant | hacktivisme ; à recouper |
+
+## 11. Chercheurs indépendants, communautés et agrégateurs
+
+*Biais : rapides, non vérifiés, disparaissent ; les agrégateurs d'agrégateurs recyclent des IOC périmés.*
+
+| Source | Contenu | Accès | Activité | Commentaire |
+|---|---|---|---|---|
+| [Bert-JanP — Open-Source-Threat-Intel-Feeds](https://github.com/Bert-JanP/Open-Source-Threat-Intel-Feeds) | IOC | repo | vivant | |
+| [spydisec](https://github.com/spydisec/spydithreatintel) · [EndlessFractal](https://github.com/EndlessFractal/Threat-Intel-Feed) · [rodanmaharjan](https://github.com/rodanmaharjan/ThreatIntelligence) | IOC | repo | vivant / 2025-09 | agrégats |
+| [Intezer — community-intelligence](https://github.com/intezer/community-intelligence) · [Meta — voir §7.1] · [GithubInfosec](https://github.com/GithubInfosec/latest-malware-IoC) | IOC | repo | vivant / mi-2025 | |
+| [malware-traffic — indicators](https://github.com/malware-traffic/indicators) · [PRODAFT](https://github.com/prodaft) · [DigitalSide](https://osint.digitalside.it) | IOC | repo / feed | vivant ; DigitalSide ralenti | |
+| [TweetFeed](https://tweetfeed.live) · [0xDanielLopez](https://github.com/0xDanielLopez) | IOC | web / repo | vivant | IOC partagés sur X ; phishunt, phishing_kits |
+| [curated-intel](https://github.com/curated-intel) · [mthcht](https://github.com/mthcht) · [blackorbird — APT_REPORT](https://github.com/blackorbird/APT_REPORT) · [despacito420 — The-Feed](https://github.com/despacito420/The-Feed) | IOC+RENS | repo | vivant | listes par campagne, ThreatIntel-Reports |
+| [APTnotes](https://github.com/aptnotes/data) · [CyberMonitor](https://github.com/CyberMonitor/APT_CyberCriminal_Campagin_Collections) | RENS | repo | figés 2024 | archives |
+| [vx-underground](https://vx-underground.org) | IOC+RENS | web, bot | vivant | |
+| [gm7.org — 信息安全知识库](https://www.gm7.org) · [tanjiti — sec_profile](https://github.com/tanjiti/sec_profile) · [安全内参 secrss](https://www.secrss.com/articles?tag=APT) · [安全客](https://www.anquanke.com/) | RENS | RSS / repo / web | vivant | agrégateurs chinois `[ZH]` |
+| [Habr — infosecurity](https://habr.com/ru/hubs/infosecurity/articles/) · [Xakep](https://xakep.ru/) | RENS | RSS | vivant | `[RU]` |
+| [piyolog](https://piyolog.hatenadiary.jp/) | RENS | RSS | vivant | chronologies d'incidents japonais `[JP]` |
+| [Midnight Slayer — start.me](https://start.me/p/wMPxqX/cyber-threat-intelligence) | RENS | web, bot | vivant | |
+| [dragnet](https://github.com/dragnet-dev) · [Mr Looquer](https://iocfeed.mrlooquer.com) · [xxspell](https://gitlab.com/xxspell/ctifeeds) | IOC | repo / feed | annoncé / 2023 / 2024 | à surveiller ; peu ou pas maintenus |
+
+## 12. Journalistes et médias spécialisés
+
+*Biais : sensationnalisme et absence d'IOC ; mais premiers sur les victimes, les infrastructures nommées et les fuites.*
+
+| Source | Pays | Contenu | Accès | Commentaire |
+|---|---|---|---|---|
+| [Krebs on Security](https://krebsonsecurity.com/) · [Zero Day (K. Zetter)](https://www.zetter-zeroday.com/) · [CyberScoop](https://cyberscoop.com/) · [SecurityWeek](https://www.securityweek.com/) · [Risky Business News](https://news.risky.biz/) · [The Record](https://therecord.media/) · [BleepingComputer](https://www.bleepingcomputer.com/news/security/) | US/AU | RENS | RSS ; BleepingComputer bot | |
+| [ZATAZ](https://www.zataz.com/) · [LeMagIT](https://www.lemagit.fr/actualites/cybersecurite) · [Numerama Cyberguerre](https://www.numerama.com/cyberguerre/) | FR | RENS | RSS / web / bot | LeMagIT : suivi ransomware très fin |
+| [Hispasec — una al día](https://unaaldia.hispasec.com/) | ES | RENS | RSS | `[ES]` |
+| [Red Hot Cyber](https://www.redhotcyber.com/) | IT | RENS | RSS | `[IT]` |
+| [heise Security](https://www.heise.de/security) | DE | RENS | RSS | `[DE]` |
+| [Security NEXT](https://www.security-next.com/) | JP | RENS | web | `[JP]` |
+| [보안뉴스 Boan News](https://www.boannews.com/) | KR | RENS | RSS | `[KO]` |
+| [Bellingcat](https://www.bellingcat.com/) | NL | RENS | web | OSINT |
+
+## 13. Ingérence numérique et abus de plateformes
+
+*Biais : les plateformes ne publient que ce qui les valorise.*
+
+| Source | Contenu | Accès | Commentaire |
+|---|---|---|---|
+| [VIGINUM — voir §3] · [EU DisinfoLab](https://www.disinfo.eu/) · [DFRLab](https://dfrlab.org/) · [Graphika](https://www.graphika.com/reports) | RENS | RSS / web | FIMI |
+| [Microsoft On the Issues (MTAC)](https://blogs.microsoft.com/on-the-issues/) | RENS | RSS | Digital Defense Report |
+| [Meta — newsroom](https://about.fb.com/news/) | RENS | RSS (filtrer « adversarial threat ») | rapports trimestriels |
+| [Google TAG / GTIG](https://blog.google/security/) | RENS | web | bulletins |
+| [TikTok — covert influence operations](https://www.tiktok.com/safety/en/transparency/covert-influence-operations) | RENS | web | |
+| [OpenAI — Disrupting malicious uses of AI](https://openai.com/global-affairs/disrupting-malicious-uses-of-ai/) · [Anthropic](https://www.anthropic.com/news/detecting-countering-misuse-aug-2025) | RENS | bot / web | abus des LLM par des acteurs étatiques |
+
+## 14. Bases d'incidents, think tanks et rapports de référence
+
+*Biais : politiques ou commerciaux ; utiles pour le contexte et les tendances, jamais pour les observables.*
+
+| Source | Pays | Contenu | Accès | Commentaire |
+|---|---|---|---|---|
+| [EuRepoC](https://eurepoc.eu) | DE | RENS | RSS / exports | base codée d'incidents politiquement pertinents |
+| [CFR Cyber Operations Tracker](https://www.cfr.org/cyber-operations/) · [CSIS Significant Cyber Incidents](https://www.csis.org/programs/strategic-technologies-program/significant-cyber-incidents) · [DCID](https://dcid.online/) · [CyberPeace Institute](https://cyberconflicts.protect.ngo/) | US/CH | RENS | web / RSS | |
+| [RAND](https://www.rand.org/topics/cyber-warfare.html) · [Atlantic Council Cyber Statecraft](https://www.atlanticcouncil.org/programs/cyber-statecraft-initiative/) · [Carnegie](https://carnegieendowment.org/programs/technology-and-international-affairs) | US | RENS | RSS / web | |
+| [Verizon DBIR](https://www.verizon.com/business/resources/reports/dbir/) · [IBM X-Force](https://www.ibm.com/reports/threat-intelligence) · [Picus Red Report](https://www.picussecurity.com/red-report) · [NETSCOUT](https://www.netscout.com/threatreport) · [CLUSIT](https://clusit.it/rapporto-clusit/) | — | RENS | PDF | rapports annuels |
+| [NetManageIT — OpenCTI public](https://opencti.netmanageit.com) | — | IOC+RENS | web | hors ligne en 2026 |
+
+## 15. Sandboxes et dépôts d'échantillons
+
+*Biais : échantillons soumis par des tiers, donc bruités, parfois plantés.*
+
+| Source | Contenu | Accès | Commentaire |
+|---|---|---|---|
+| [MalwareBazaar — voir §2.1] · [MalShare](https://malshare.com) · [VirusShare — voir §9] | IOC | API, inscr. | |
+| [urlscan.io](https://urlscan.io/) · [Hybrid Analysis](https://hybrid-analysis.com/) · [Triage](https://tria.ge/) · [FileScan.io](https://www.filescan.io/) · [UnpacMe](https://www.unpac.me/) · [PolySwarm](https://polyswarm.io/) | IOC | web / API | comptes gratuits |
+| [ANY.RUN](https://any.run/cybersecurity-blog/) · [Yomi](https://yomi.yoroi.company/) · [Threat.Zone](https://threat.zone/) · [OALabs](https://research.openanalysis.net/) | IOC+RENS | RSS / web | Threat.Zone : Turquie |
+| [Joe Sandbox](https://www.joesandbox.com/) · [CAPE](https://capesandbox.com/) | IOC | bot | |
+
+## 16. Règles de détection
+
+| Source | Contenu | Accès | Activité | Commentaire |
+|---|---|---|---|---|
+| [SigmaHQ](https://github.com/SigmaHQ/sigma) · [elastic detection-rules](https://github.com/elastic/detection-rules) · [splunk security_content](https://github.com/splunk/security_content) · [chronicle detection-rules](https://github.com/chronicle/detection-rules) · [Sublime rules](https://github.com/Sublime-Security/sublime-rules) | IOC | repo | vivant | |
+| [Neo23x0 signature-base](https://github.com/Neo23x0/signature-base) · [YARAHQ yara-forge](https://github.com/YARAHQ/yara-forge) · [Volexity](https://github.com/volexity/threat-intel) · [HarfangLab — voir §7.1] · [JPCERT yara — voir §3] | IOC | repo | vivant | |
+| [RussianPanda — Yara-Rules](https://github.com/RussianPanda95/Yara-Rules) · [bartblaze](https://github.com/bartblaze/Yara-rules) · [ReversingLabs](https://github.com/reversinglabs/reversinglabs-yara-rules) | IOC | repo | 2026-08 / 2026-01 / 2025-11 | |
+| [MISP warninglists](https://github.com/MISP/misp-warninglists) | IOC | repo | vivant | faux positifs ; y ajouter FireHOL level1 et la liste Tor |
+| [RuleCheck.io Detections Digest](https://detections-digest.rulecheck.io) | RENS | newsletter | vivant | ctichef.com hors ligne |
+| [Nuclei — voir §7.2] | | | | |
+
+## 17. Angles morts
+
+Constats après cinq passes de recherche (IOC, rapports, typologie, annuaires TI/M3AAWG/FIRST). Ces trous sont structurels, pas un défaut de recherche : la répartition des annuaires le montre.
+
+| Zone / famille | Constat |
+|---|---|
+| **Golfe** | 18 membres FIRST (banques centrales, télécoms, autorités) : aucune publication technique ouverte ; Bahreïn et Koweït sur abonnement. |
+| **Iran** | AFTA (`afta.gov.ir`), centres APA (`nsec.ir`, `cert.iut.ac.ir`), Padvish publient des IOC mais répondent 503 hors d'Iran ; 0 membre FIRST. |
+| **Corée** | FSI, NCSC-KR, IGLOO, SK shieldus bloquent hors du pays — sources majeures sur les APT nord-coréennes. |
+| **Asie du Sud / Sud-Est, Afrique subsaharienne** | une équipe FIRST par pays (le CERT national). |
+| **Asie centrale / Caucase** | CERT.TJ seul flux ; TSARKA et CERT.AM injoignables. |
+| **Adtech / anti-bot** (Confiant, HUMAN, DataDome, Imperva) | seule famille à voir le malvertising et les proxies résidentiels ; tous bloquent les robots. |
+| **CERT bancaires et industriels** | présents dans TI/FIRST, ne publient pas ; observables réservés aux cercles fermés. |
+| **États producteurs de contre-narratifs** (CVERC, NKTsKI, agences occidentales) | attribution miroir, IOC réels mêlés à des récits : recouper systématiquement. |
+| **Telegram / Discord / Mastodon** | non explorables automatiquement ; couverts indirectement (§10). |
+
+## 18. Sources écartées
+
+Vérifiées et rejetées (dépôt figé > 18 mois, page morte, miroir, source absorbée). Ne pas réintroduire sans nouvelle vérification.
+
+| Source | Raison |
+|---|---|
+| `mandiant/iocs`, `advanced-threat-research/IOCs` (Trellix), `Insikt-Group/Research`, `trendmicro/research`, `StrangerealIntel/*`, `swisscom/detections`, `Orange-Cyberdefense/russia-ukraine_IOCs`, `CryptoScamDB/blacklist`, `Yara-Rules/rules`, `InQuest/yara-rules-vt`, `KasperskyLab/klara`, `kbandla/APTnotes`, `0xToxin/Malware-IOCs`, `MalGamy/YARA_Rules`, `nshc-threatrecon/IoC-List`, `montysecurity/C2-Tracker` | figés ou archivés (2019–2024) |
+| `executemalware/Malware-IOCs`, `ditekshen/detection`, `ThreatMon-Reports-IOC`, `pr0xylife/*` | activité déclinante (2024–2025) : surveiller |
+| `elliotwutingfeng/ThreatFox-IOC-*`, `URLhaus-IOC`, `Cyberfury101/deepdarkCTI` | miroirs |
+| Secureworks CTU, CyberArk Labs, Vade, Egress, Avanan, Zix, Cyren | absorbés (Sophos, Palo Alto, Hornetsecurity, KnowBe4, Check Point, OpenText, Data443) |
+| CSIS Security Group (DK), Stanford Internet Observatory, Cyber Defense Institute blog, `SlowMist/SlowMist-Hacked`, USOM `url-list.txt` | introuvables, fermés ou remplacés (USOM → API Swagger de siberguvenlik.gov.tr) |
+
+## 19. Méthodologie et vérification
+
+**Comment les sources ont été trouvées.** Cinq passes : (1) recherche par pays et langue, vérification par lot ; (2) rapports et référentiels d'acteurs ; (3) typologie de 20 familles de producteurs, chacune avec son biais, et fouille de la liste des membres de la Cyber Threat Alliance ; (4) JSON public Trusted Introducer (554 équipes) et communiqués M3AAWG ; (5) API publique FIRST (879 équipes). La fouille d'annuaires a rapporté plus que toutes les requêtes en langue locale réunies.
+
+**Comment le tag `IOC` est attribué.** Sur preuve uniquement : dépôt/feed dont le contenu a été vu, ou sonde de crawl (accueil + 25–40 pages internes, texte visible seulement) / sonde RSS ayant extrait ≥ 3 SHA-256, ≥ 10 IP publiques ou des indicateurs défangés. Le nombre de mentions du mot « IOC » ne compte pas : SOCRadar (111 mentions, 0 hash) ou CTM360 (42, 0) restent `RENS`.
+
+**Comment les liens sont vérifiés.** Statut HTTP + auto-découverte RSS/Atom pour les sites ; pour GitHub, date réelle du dernier commit lue sur `https://github.com/<org>/<repo>/commits.atom` (sans quota API). Seuil de rejet : 18 mois sans commit. Vérification hebdomadaire pour les URL, mensuelle pour le diff des annuaires TI et FIRST.
+
+**Contribuer.** Une ligne = une source, avec Contenu (`IOC` / `RENS` / `IOC+RENS`), Accès (feed/repo/API/RSS/web/PDF/inscr./bot/géo), date d'activité vérifiée et un commentaire d'une ligne indiquant ce qu'elle apporte que les autres n'ont pas. Une source qui ne passe pas la vérification va en §18 avec sa raison.
