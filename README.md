@@ -12,7 +12,7 @@ Liste de sources de renseignement concernant la menace d'origine cyber.
 
 | Colonne | Valeurs |
 |---|---|
-| **Contenu** | `IOC` = observables exploitables (hash, IP, domaines, URL, adresses, règles) · `RENS` = analyses, rapports, attribution, contexte · `IOC+RENS` = les deux. **Le tag `IOC` n'est attribué que sur preuve** : dépôt/feed dont le contenu a été vu, ou sonde ayant extrait des hash, IP ou indicateurs défangés du texte des publications (méthode détaillée au §19). Une source réputée publier des IOC mais dont la sonde n'a rien extrait reste `RENS`, avec la mention « IOC non vérifiés » quand le site est en JavaScript, bloque les robots ou publie en PDF. |
+| **Contenu** | `IOC` = observables exploitables (hash, IP, domaines, URL, adresses, règles) · `RENS` = analyses, rapports, attribution, contexte · `IOC+RENS` = les deux. **Le tag `IOC` n'est attribué que sur preuve** : dépôt/feed dont le contenu a été vu, ou sonde ayant extrait des hash, IP ou indicateurs défangés du texte des publications (méthode au §19, résultats dans [`verification-IOC-2026-09-02.md`](verification-IOC-2026-09-02.md)). Une source réputée publier des IOC mais dont la sonde n'a rien extrait reste `RENS`, avec la mention « IOC non vérifiés » quand le site est en JavaScript, bloque les robots ou publie en PDF. |
 | **Accès** | `feed` (TXT/CSV/JSON/STIX/MISP, URL stable) · `repo` (GitHub/GitLab) · `API` · `RSS` (flux vérifié) · `web` (pas de flux) · `PDF` · `inscr.` (compte requis) · `bot` (site vivant mais bloque les robots : ouvrir dans un navigateur) · `géo` (filtrage géographique probable) |
 | **Activité** | date du dernier commit vérifiée pour les dépôts ; sinon « vivant » = répond au 2026-09-02 |
 
@@ -690,7 +690,7 @@ Vérifiées et rejetées (dépôt figé > 18 mois, page morte, miroir, source ab
 
 **Comment les sources ont été trouvées.** Cinq passes : (1) recherche par pays et langue, vérification par lot ; (2) rapports et référentiels d'acteurs ; (3) typologie de 20 familles de producteurs, chacune avec son biais, et fouille de la liste des membres de la Cyber Threat Alliance ; (4) JSON public Trusted Introducer (554 équipes) et communiqués M3AAWG ; (5) API publique FIRST (879 équipes). La fouille d'annuaires a rapporté plus que toutes les requêtes en langue locale réunies.
 
-**Comment le tag `IOC` est attribué.** Sur preuve uniquement : dépôt/feed dont le contenu a été vu, ou sonde de crawl (accueil + 25–40 pages internes, texte visible seulement) / sonde RSS ayant extrait ≥ 3 SHA-256, ≥ 10 IP publiques ou des indicateurs défangés. Le nombre de mentions du mot « IOC » ne compte pas : SOCRadar (111 mentions, 0 hash) ou CTM360 (42, 0) restent `RENS`.
+**Comment le tag `IOC` est attribué.** Sur preuve uniquement : dépôt/feed dont le contenu a été vu, ou sonde de crawl (accueil + 25–40 pages internes, texte visible seulement) / sonde RSS ayant extrait ≥ 3 SHA-256, ≥ 10 IP publiques ou des indicateurs défangés. Le nombre de mentions du mot « IOC » ne compte pas : SOCRadar (111 mentions, 0 hash) ou CTM360 (42, 0) restent `RENS`. Résultats détaillés par source : [`verification-IOC-2026-09-02.md`](verification-IOC-2026-09-02.md).
 
 **Comment les liens sont vérifiés.** Statut HTTP + auto-découverte RSS/Atom pour les sites ; pour GitHub, date réelle du dernier commit lue sur `https://github.com/<org>/<repo>/commits.atom` (sans quota API). Seuil de rejet : 18 mois sans commit. Vérification hebdomadaire pour les URL, mensuelle pour le diff des annuaires TI et FIRST.
 
