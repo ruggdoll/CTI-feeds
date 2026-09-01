@@ -364,7 +364,8 @@ Pour l'ingestion automatique (MISP, OpenCTI), ne retenir que `feed`, `repo` et `
 | [Malwarebytes Labs](https://www.malwarebytes.com/blog/category/threat-intel) · [eSentire TRU](https://www.esentire.com/resources/blog) · [Deep Instinct](https://www.deepinstinct.com/blog) · [Aqua Nautilus](https://www.aquasec.com/blog/) · [Sucuri](https://blog.sucuri.net/) | IOC+RENS | web / RSS | vivant | Sucuri : web/CMS (IP) |
 | [Red Canary](https://redcanary.com/resources-center/category/blog/) | RENS | RSS | vivant | techniques, pas d'IOC |
 | [LevelBlue SpiderLabs](https://www.levelblue.com/blogs/spiderlabs-blog) | IOC+RENS | RSS | vivant | ex-Trustwave |
-| [Intel 471](https://www.intel471.com/blog) · [Flashpoint](https://flashpoint.io/blog/) · [Cyware](https://www.cyware.com/resources/threat-briefings) | RENS | web | vivant | underground |
+| [Intel 471](https://www.intel471.com/blog) | IOC+RENS | RSS | vivant | underground ; 17 SHA-256 sur 30 billets (sonde 2026-09-02) |
+| [Flashpoint](https://flashpoint.io/blog/) · [Cyware](https://www.cyware.com/resources/threat-briefings) | RENS | web | vivant | underground |
 | [Trinity Cyber](https://www.trinitycyber.com/blog) | IOC+RENS | RSS | vivant | membre CTA ; hash dans les billets |
 | [SonicWall Capture Labs](https://www.sonicwall.com/blog) · [WatchGuard Threat Lab](https://www.watchguard.com/wgrd-news/blog) · [ExtraHop](https://www.extrahop.com/blog) · [SecurityScorecard](https://securityscorecard.com/resources/research/) | RENS | web / RSS | vivant | membres CTA |
 | [Aryaka](https://www.aryaka.com/blog/) | RENS | web | vivant | Transparent Tribe / APT36 |
@@ -513,7 +514,8 @@ Pour l'ingestion automatique (MISP, OpenCTI), ne retenir que `feed`, `repo` et `
 | Source | Pays | Contenu | Accès | Commentaire |
 |---|---|---|---|---|
 | [Silent Push](https://www.silentpush.com/blog/) · [Validin](https://www.validin.com/blog/) · [Hunt.io](https://hunt.io/blog) · [Team Cymru](https://www.team-cymru.com/blog) | US | IOC+RENS | RSS / web ; feeds payants | IP et hash en clair dans les billets (Hunt.io : >100) |
-| [DomainTools](https://www.domaintools.com/blog) · [Spur](https://spur.us/blog) | US | RENS | web | Spur bloque les robots |
+| [DomainTools](https://www.domaintools.com/blog) | US | IOC+RENS | RSS | ~76 domaines défangés sur 30 billets (sonde 2026-09-02) |
+| [Spur](https://spur.us/blog) | US | RENS | web | bloque les robots |
 | [Censys](https://censys.com/resources/blog/) · [GreyNoise](https://www.greynoise.io/blog) | US | IOC+RENS | RSS / web / API | Censys : hash dans le flux ; GreyNoise : IP |
 | [Bitsight](https://www.bitsight.com/blog) | US | RENS | RSS | |
 | [drb-ra C2IntelFeeds](https://github.com/drb-ra/C2IntelFeeds) · [Xanderux C2watcher](https://github.com/Xanderux/C2watcher) · [ViriBack](https://tracker.viriback.com) · [CyberCrime Tracker](https://cybercrime-tracker.net) | — | IOC | repo / feed | trackers C2 ; `montysecurity/C2-Tracker` archivé avril 2026 |
@@ -539,7 +541,8 @@ Pour l'ingestion automatique (MISP, OpenCTI), ne retenir que `feed`, `repo` et `
 |---|---|---|---|---|
 | [The DFIR Report](https://thedfirreport.com) · [Sigma](https://github.com/The-DFIR-Report/Sigma-Rules) | — | IOC+RENS | web / repo | rapports d'intrusion détaillés ; hash et IP en clair |
 | [Kroll Cyber](https://www.kroll.com/en/insights/cyber) · [S-RM](https://www.s-rminform.com/cyber-intelligence-briefing) · [PwC TI](https://www.pwc.com/gx/en/issues/cybersecurity/cyber-threat-intelligence.html) | US/UK | RENS | web / RSS | |
-| [Coveware](https://coveware.com/ransomware-blog/) · [GuidePoint GRIT](https://www.guidepointsecurity.com/blog/) · [Halcyon](https://www.halcyon.ai/blog) | US | RENS | RSS / web | négociation et rapports ransomware |
+| [GuidePoint GRIT](https://www.guidepointsecurity.com/blog/) | US | IOC+RENS | RSS | 11 SHA-256 + 66 domaines défangés sur 12 billets (sonde 2026-09-02) |
+| [Coveware](https://coveware.com/ransomware-blog/) · [Halcyon](https://www.halcyon.ai/blog) | US | RENS | RSS / web | négociation et rapports ransomware |
 | [Coalition](https://www.coalitioninc.com/blog) | US | RENS | web | assureur |
 | [Cyber Threat Alliance — voir §5] · [Virus Bulletin](https://www.virusbulletin.com/virusbulletin/) · [Botconf](https://www.botconf.eu/) · [FIRST papers](https://www.first.org/resources/papers/) · [JSAC — voir §3] | — | RENS | web / RSS | actes de conférence |
 

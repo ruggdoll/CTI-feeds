@@ -41,6 +41,41 @@ Tout le reste est `RENS`, même quand la source est réputée publier des IOC (A
 | **IOC+RENS** | Symantec (54 sha), Fortinet (39), Proofpoint (17), Trend Micro (19 IP, 24 kw), Talos (19), Unit 42 (118), Check Point (40), Google TI (21), MSTIC (12), SentinelLABS (4), Securelist (115 MD5, 229 défangés sur 6 articles), ThreatFabric (75), Cleafy (2 sha, 8 kw — ponctuel), WithSecure (15), Gen/Avast (28), Netskope (12 sha via RSS + dépôt), Huntress (11), Wiz (109 IP), Rapid7 (17 IP), Arctic Wolf (6), Malwarebytes (23), eSentire (5), Deep Instinct (3), Sucuri (23 IP), LevelBlue (16), Trinity Cyber (46), Silent Push (34 IP, 73 kw), Validin (10 IP), Hunt.io (107 sha, 54 IP), Team Cymru (12 sha, 16 IP), GreyNoise (9 IP, 17 kw), Viettel (4 sha, 8 IP, 40 kw), Certego (4), Fox-IT (325), G DATA (39), Acronis TRU (42), TEHTRIS (74), TeamT5 (3 sha, 83 kw), Genians (51 MD5, 68 défangés), ESRC/alyac (3 IP, 5 kw — ponctuel), NSHC (24), IIJ-SECT (22), Macnica (8), ITOCHU (197), CloudSEK (8 sha, 16 IP), Cyble (10), CYFIRMA (5), Seqrite (8), DBAPPSecurity (35), Dr.Web (81 défangés), Group-IB (67), DFIR Report (24 sha, 44 IP), JPCERT blog (162), nao-sec (19), WeLiveSecurity (11), Aqua (6 sha, 15 défangés), Sygnia (2 sha, 4 kw — ponctuel), Censys (59 sha via RSS), NVISO (10 via RSS), Oneconsult (5 via RSS), Cybereason (4 défangés, 22 kw), ASEC (5 MD5, 3 kw sur 8 articles), Antiy (5 MD5, 2 IP), Zimperium (dépôt IOC), Sekoia (dépôt Community), QiAnXin (dépôt RedDrip7), Elastic (dépôt labs-releases), Bitdefender / ESET / Sophos / Zscaler / Talos / Meta / Infoblox / HarfangLab / Volexity (dépôts) |
 | **RENS** (aucune preuve) | Intrinsec (35 kw, 0 hash — IOC en PDF), Zimperium blog seul, Lookout, Dragos, Claroty, Nozomi, ReliaQuest, Morphisec, Red Canary, Uptycs, SonicWall, WatchGuard, SecurityScorecard, DomainTools, Bitsight, Netcraft, Cofense, Abnormal, Barracuda, INKY, KnowBe4, Validity, Mailgun, Cloudmark, IRONSCALES, Kaspersky ICS-CERT (IOC en PDF), SektorCERT, AWS, CERT Orange PL, Yoroi, Lab52, NCC Group, Northwave, Tesorion, ClearSky, KELA, HiSolutions, Threatray, Access Now, CyCraft, TXOne, ENKI, S2W, LAC, MBSD, NRI Secure, Hitachi HIRT, K7, CronUp, Metabase Q, ISH, CTM360 (42 kw, 0 hash), NSFOCUS, 360, ThreatBook (37 kw, 0 hash), BI.ZONE, Aryaka, Brandefense, SOCRadar (111 kw, 0 hash), Intel 471, Flashpoint, Varonis (1 sha, 5 IP — insuffisant), ExtraHop, Positive Technologies (règles figées 2022), wizSafe, F6, Solar (injoignables) |
 
+## Passe approfondie — sonde RSS sur 90 jours (2026-09-02)
+
+Seconde sonde, automatisée (`survey_ioc.py` du projet d'ingestion) : découverte
+de flux + lecture de **jusqu'à 30 articles des 95 derniers jours** par source,
+extraction hash en clair + indicateurs défangés. 308 sources `rss`/`web` non
+encore intégrées.
+
+**29 verdicts IOC.** Retenus pour ingestion (croisés avec la sonde ci-dessus) :
+
+| Source | Preuve (90 j) |
+|---|---|
+| Acronis TRU | 105 SHA-256 / 17 billets |
+| Fox-IT | 54 SHA-256 / 8 billets |
+| ELLIO | 63 SHA-256 + IP de scan défangées |
+| nao-sec | 37 SHA-256 / 8 billets |
+| Intel 471 | 17 SHA-256 / 30 billets → **passe de RENS à IOC+RENS** |
+| Microsoft MSTIC (blog) | 16 SHA-256 |
+| Seqrite | 16 SHA-256 + 11 MD5 |
+| Huntress (blog) | 15 SHA-256 + 93 défangés (complète le dépôt) |
+| GuidePoint GRIT | 11 SHA-256 + 66 défangés → **passe de RENS à IOC+RENS** |
+| Certego | 11 SHA-256 |
+| CloudSEK | 9 SHA-256 + 9 MD5 + 147 défangés |
+| G DATA | 8 SHA-256 (flux EN feedblitz) |
+| IIJ-SECT | 7 SHA-256 / 3 billets |
+| Arctic Wolf | 6 SHA-256 + 36 défangés |
+| Aqua Nautilus | 6 SHA-256 + 7 défangés (supply chain) |
+| Oneconsult | 5 SHA-256 / 4 billets |
+| DomainTools | 76 domaines défangés → **passe de RENS à IOC+RENS** |
+| Doctor Web | 9 domaines/URL défangés |
+
+Écartés malgré un verdict IOC : Palo Alto Unit 42 (déjà couvert par le dépôt
+Article-Information), Rapid7 AttackerKB (doublon du flux Rapid7), RH-ISAC
+(digest re-publiant des IOC tiers — bruit de corrélation), Bitsight, Habr,
+CUJO AI, RansomLook, Krebs (volume trop faible ou pas d'observable atomique).
+
 ## Enseignement
 
 Le nombre de mentions « IOC » ne prédit pas la présence d'observables : SOCRadar (111 mentions, 0 hash), CTM360 (42, 0), ThreatBook (37, 0), Intrinsec (35, 0) parlent d'IOC sans les publier dans le texte — ils sont dans des PDF, des plateformes payantes ou des images. À l'inverse, Fox-IT, ITOCHU, Unit 42 ou Hunt.io livrent des centaines de hash en clair. C'est cette seconde catégorie qui mérite le tag.
