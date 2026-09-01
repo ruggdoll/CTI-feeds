@@ -1,7 +1,7 @@
 # CTI-feeds
 Liste de sources de renseignement concernant la menace d'origine cyber
 
-> Dernière vérification des liens : 2026-09-01 (2e passe : ajouts multi-régions + Web3 + ICS/OT)
+> Dernière vérification des liens : 2026-09-01 (3e passe : sources orientées « rapports » — référentiels d'incidents, bases d'acteurs, rapports périodiques, rapports annuels)
 >
 > Les sources ne sont pas restreintes à l'anglais. La langue est indiquée entre crochets — p. ex. `[ZH]`, `[RU]`, `[KO]` — lorsqu'elle n'est ni le français ni l'anglais ; la traduction automatique du navigateur suffit dans la plupart des cas.
 >
@@ -245,6 +245,7 @@ Blogs et publications de recherche des éditeurs de sécurité (IOCs et TTPs dan
 |Source                                                                            |Commentaire         |
 |----------------------------------------------------------------------------------|--------------------|
 |[360 Netlab](https://blog.netlab.360.com) (Chine) | feeds C2 / DGA / botnet historiques ; peu actif depuis 2022 `[ZH/EN]` |
+|[360 高级威胁研究院 / 360 威胁情报中心](https://ti.360.net/) (Chine) | équipe APT de 360 : « 每周高级威胁情报解读 » hebdo, rapport annuel APT (nommage APT-C-xx) `[ZH]` |
 |[Acronis TRU](https://www.acronis.com/en/tru/) (Suisse) | analyses de malware et de ransomware ; flux RSS `[EN]` |
 |[AhnLab ASEC](https://asec.ahnlab.com/en/) (Corée du Sud) | blog très prolifique (Kimsuky, Lazarus, malware ciblant l'Asie) `[KO ; blog EN]` |
 |[Antiy Labs / 安天](https://www.antiy.net) (Chine) | rapports APT `[ZH ; certains rapports EN]` |
@@ -269,6 +270,7 @@ Blogs et publications de recherche des éditeurs de sécurité (IOCs et TTPs dan
 |[CTM360](https://www.ctm360.com) (Bahreïn) | veille et rapports centrés Golfe / Moyen-Orient `[EN]` |
 |[Cybereason](https://www.cybereason.com/blog) (États-Unis) | malware et ransomware ; flux RSS `[EN]` |
 |[Cyble](https://cyble.com/blog/) (Inde / États-Unis) | recherche menaces très prolifique `[EN]` |
+|[CyCraft](https://www.cycraft.com/blog) (Taïwan) | rapports APT nexus-Chine visant Taïwan `[EN/ZH]` |
 |[CYFIRMA](https://www.cyfirma.com/research/) (Inde / Singapour) | rapports d'attribution et de campagne `[EN]` |
 |[DBAPPSecurity / 安恒信息 — 安恒威胁情报中心](https://ti.dbappsecurity.com.cn/blog/) (Chine) | blog TI ; labo 猎影 (Hunting Shadow), attribution APT `[ZH]` |
 |[Deep Instinct](https://www.deepinstinct.com/blog) (Israël) | analyses de malware `[EN]` |
@@ -307,10 +309,12 @@ Blogs et publications de recherche des éditeurs de sécurité (IOCs et TTPs dan
 |[LevelBlue SpiderLabs (ex-Trustwave)](https://www.levelblue.com/blogs/spiderlabs-blog) (États-Unis) | malware, phishing, e-mail ; flux RSS `[EN]` |
 |[Macnica Security Research](https://security.macnica.co.jp/) (Japon) | rapports APT visant le Japon `[JP]` |
 |[Malwarebytes Labs](https://www.malwarebytes.com/blog/category/threat-intel) (États-Unis) | malware grand public et arnaques `[EN]` |
+|[MBSD (三井物産セキュアディレクション)](https://www.mbsd.jp/research/) (Japon) | recherche technique, malware visant le Japon `[JP]` |
 |[Metabase Q — Ocelot](https://www.metabaseq.com) (Mexique) | recherche menaces centrée Amérique latine `[EN/ES]` |
 |[Microsoft — Security Blog / MSTIC](https://www.microsoft.com/en-us/security/blog/) (États-Unis) | rapports et analyses `[EN]` |
 |[Morphisec](https://www.morphisec.com/blog/) (Israël) | loaders et chaînes d'infection ; flux RSS `[EN]` |
 |[nao-sec](https://nao-sec.org) (Japon) | collectif de recherche : analyses, outils (RTF weaponizer decoder…) `[JP/EN]` |
+|[NEC サイバーセキュリティブログ](https://jpn.nec.com/cybersecurity/blog/) (Japon) | analyses de menaces `[JP]` |
 |[Netcraft](https://www.netcraft.com/resources/blog) (Royaume-Uni) | phishing et fraude à grande échelle `[EN]` |
 |[Nozomi Networks Labs](https://www.nozominetworks.com/labs) (États-Unis / Suisse) | ICS/OT et IoT `[EN]` |
 |[NSFOCUS / 绿盟](https://nsfocusglobal.com/blog/) (Chine) | rapports APT (labo 伏影 / Fuying) ; flux RSS sur le blog global `[EN (global) / ZH]` |
@@ -333,6 +337,7 @@ Blogs et publications de recherche des éditeurs de sécurité (IOCs et TTPs dan
 |[Seqrite Labs / Quick Heal](https://www.seqrite.com/blog/) (Inde) | fort sur les APT d'Asie du Sud (SideCopy, Transparent Tribe…) `[EN]` |
 |[Sequretek](https://www.sequretek.com/resources/threat-advisory) (Inde) | avis de menace `[EN]` |
 |[Silent Push](https://www.silentpush.com/blog/) (États-Unis) | IOCs d'infrastructure très détaillés (pDNS, C2) ; flux RSS, feeds payants `[EN]` |
+|[SILIKN](https://www.silikn.com/) (Mexique) | analyses centrées Amérique latine ; flux RSS `[ES]` |
 |[SOCRadar](https://socradar.io/blog/) (Turquie) | darkweb et ransomware ; volume élevé, IOCs variables `[EN]` |
 |[Solar 4RAYS](https://solar4rays.ru) (Russie) | bulletins d'IOCs (groupe Rostelecom) `[RU]` |
 |[Solar — analytics](https://rt-solar.ru/analytics/reports/) (Russie) | rapports (complète Solar 4RAYS) `[RU]` |
@@ -347,11 +352,16 @@ Blogs et publications de recherche des éditeurs de sécurité (IOCs et TTPs dan
 |[Threatray](https://www.threatray.com) (Suisse) | similarité de code et suivi de campagnes `[EN]` |
 |[Trend Micro Research](https://www.trendmicro.com/en_us/research.html) (Japon / États-Unis) | couverture large ; IOCs en PDF joints aux articles, dépôt `trendmicro/research` figé 2024 `[EN/JP]` |
 |[Truesec](https://www.truesec.com/hub/blog) (Suède) | réponse à incident et ransomware (Nordiques) `[EN/SV]` |
+|[TXOne Networks](https://www.txone.com/resources/blog/) (Taïwan) | ICS/OT, rapport annuel OT `[EN]` |
 |[Uptycs Threat Research](https://www.uptycs.com/blog) (États-Unis) | malware Linux et cloud ; flux RSS `[EN]` |
 |[Validin](https://www.validin.com/blog/) (États-Unis) | investigation d'infrastructure et pDNS `[EN]` |
 |[Varonis Threat Labs](https://www.varonis.com/blog/tag/threat-research) (États-Unis) | Windows et SaaS ; flux RSS `[EN]` |
 |[Viettel Cyber Security](https://blog.viettelcybersecurity.com) (Vietnam) | analyses de menaces et de vulnérabilités `[VI/EN]` |
 |[Yoroi — Z-Lab](https://yoroi.company/research/) (Italie) | analyses de campagnes et de malware `[IT/EN]` |
+|[安全内参 (secrss.com)](https://www.secrss.com/articles?tag=APT) (Chine) | agrégateur éditorial : traductions et synthèses de rapports APT chinois et étrangers `[ZH]` |
+|[安全客 (anquanke.com)](https://www.anquanke.com/) (Chine) | plateforme d'articles de recherche (360) `[ZH]` |
+|[火绒安全 / Huorong](https://www.huorong.cn/info/) (Chine) | analyses de malware grand public visant la Chine `[ZH]` |
+|[瑞星 / Rising](https://www.rising.com.cn/) (Chine) | rapports annuels et semestriels de menace `[ZH]` |
 
 # Sources académiques et datasets de recherche
 Laboratoires universitaires et jeux de données pour l'entraînement, l'évaluation et la recherche en détection.
@@ -371,36 +381,100 @@ Laboratoires universitaires et jeux de données pour l'entraînement, l'évaluat
 Méta-listes, agrégateurs et bibliothèques de rapports.
 |Source                                                                            |Commentaire         |
 |----------------------------------------------------------------------------------|--------------------|
+|[APT Groups and Operations (F. Roth)](https://apt.threattracking.com) | tableur historique des alias APT par pays ; référence de dé-duplication des noms |
 |[APTnotes](https://github.com/aptnotes/data) | archive historique de rapports APT publics ; figée fin 2024 |
+|[Atlantic Council — Cyber Statecraft Initiative](https://www.atlanticcouncil.org/programs/cyber-statecraft-initiative/) | rapports (chaîne d'appro., marché des intrusions, cyber-statecraft) ; flux RSS général |
 |[blackorbird Github](https://github.com/blackorbird/APT_REPORT) | collecte de rapports et d'indicateurs APT classés par groupe, très actif |
+|[Botconf](https://www.botconf.eu/) | actes de conférence (botnets, CTI) ; flux RSS |
 |[BushidoUK — Ransomware Tool Matrix Github](https://github.com/BushidoUK/Ransomware-Tool-Matrix) | matrice outils ↔ groupes de ransomware (exploitable en détection), actif |
+|[Center for Threat-Informed Defense — Attack Flow Github](https://github.com/center-for-threat-informed-defense/attack-flow) | modélisation de séquences d'attaque dérivées de rapports publics ; JSON |
+|[CFR Cyber Operations Tracker](https://www.cfr.org/cyber-operations/) | opérations étatiques depuis 2005, base interrogeable |
+|[Coveware](https://coveware.com/ransomware-blog/) | rapport trimestriel ransomware (rançons, vecteurs) — données de négociation uniques ; flux RSS |
+|[CSIS Significant Cyber Incidents](https://www.csis.org/programs/strategic-technologies-program/significant-cyber-incidents) | chronologie d'incidents majeurs (web / PDF) |
 |[curated-intel Github](https://github.com/curated-intel) | collectif Curated Intelligence : threat notes, listes par campagne (Ukraine, MOVEit…), CTI Fundamentals |
+|[Cyber Threat Alliance](https://www.cyberthreatalliance.org/resources/) | rapports conjoints multi-éditeurs |
 |[CyberMonitor Github](https://github.com/CyberMonitor/APT_CyberCriminal_Campagin_Collections) | archive de campagnes APT / cybercrime classées par année ; figée depuis mi-2024 |
+|[CyberPeace Institute — Cyber Attacks in Times of Conflict](https://cyberconflicts.protect.ngo/) | attaques liées au conflit en Ukraine (acteurs, cibles, secteurs) |
+|[cyberwarfare.live](https://cyberwarfare.live/) | suivi de conflits cyber et d'hacktivisme ; flux RSS, à recouper |
+|[DarkFeed](https://app.darkfeed.io/mainpage) (Israël) | victimologie ransomware ; tableau de bord, API sur inscription |
+|[databreaches.net](https://databreaches.net/) | journalisme d'investigation sur les fuites ; flux RSS, souvent en amont des revendications |
+|[DCID — Dyadic Cyber Incident and Campaign Dataset](https://dcid.online/) | dataset académique d'incidents inter-étatiques ; CSV, flux RSS |
 |[despacito420 Github](https://github.com/despacito420/The-Feed)| liste curée d'articles SOC/DFIR/CTI ; activité faible (dernière MAJ janv. 2026) |
 |[devsecops Github](https://github.com/devsecops/awesome-devsecops) | liste d'outils DevSecOps (dont CTI) ; figée depuis 2024 |
+|[DFRLab (Atlantic Council)](https://dfrlab.org/) | enquêtes OSINT sur l'influence et le cyber ; flux RSS |
+|[ecrime.ch](https://ecrime.ch/) (Suisse) | statistiques ransomware / leak sites |
 |[EndlessFractal Github](https://github.com/EndlessFractal/Threat-Intel-Feed)| agrégation et consolidation automatiques de feeds, actif |
 |[ETDA / ThaiCERT APT Encyclopedia](https://apt.etda.or.th) | fiches détaillées de groupes et d'outils APT |
+|[EU DisinfoLab](https://www.disinfo.eu/) (UE) | FIMI et opérations d'influence ; flux RSS, complète VIGINUM |
+|[EuRepoC — European Repository of Cyber Incidents](https://eurepoc.eu) | base codée d'incidents cyber politiquement pertinents (attribution, intensité, réponse) ; dashboard + exports, flux RSS — projet académique Heidelberg / CPS |
+|[FIRST — papers](https://www.first.org/resources/papers/) | présentations des conférences FIRST |
+|[FS-ISAC Insights](https://www.fsisac.com/insights) | rapports sectoriels finance (partie publique) ; flux RSS |
 |[gm7.org — 信息安全知识库](https://www.gm7.org) | agrégateur / archive de contenu sécurité chinois (actualités, vulnérabilités, campagnes APT, collectes de hash) ; flux RSS très dense `[ZH]` |
+|[Google Project Zero — 0days in the wild Github](https://github.com/googleprojectzero/0days-in-the-wild) | 0-day exploités in-the-wild avec analyses racine ; Markdown + tableur |
+|[Graphika](https://www.graphika.com/reports) | rapports sur les réseaux d'influence |
+|[GuidePoint GRIT](https://www.guidepointsecurity.com/blog/) | rapports ransomware trimestriels ; flux RSS |
+|[Hackmanac](https://hackmanac.com/) (Italie) | base d'incidents et rapports (HackReports) |
 |[HackYourMom](https://hackyourmom.com/) (Ukraine) | communauté ; guides et listes, contenu grand public / hacktiviste, à recouper `[UA]` |
+|[Halcyon](https://www.halcyon.ai/blog) | profils de groupes ransomware |
 |[Have I Been Pwned](https://haveibeenpwned.com) | flux des fuites de données ([RSS](https://haveibeenpwned.com/feed/breaches/)) — hors IOC mais utile en veille |
+|[Health-ISAC](https://health-isac.org/resources-and-news/) | rapports santé (partie publique) ; flux RSS |
 |[hslatman Github](https://github.com/hslatman/awesome-threat-intelligence)| liste de référence des ressources CTI |
 |[infoblox Github](https://github.com/infobloxopen/threat-intelligence) | IOCs et rapports Infoblox (threat intel DNS), actif |
-|[Malpedia](https://malpedia.caad.fkie.fraunhofer.de) | familles de malware, règles YARA, références (Fraunhofer FKIE) ; compte gratuit |
-|[mdecrevoisier Github](https://github.com/mdecrevoisier/EVTX-to-MITRE-Attack) | 270+ échantillons EVTX mappés ATT&CK, pour mesurer la couverture SIEM |
-|[Midnight Slayer](https://start.me/p/wMPxqX/cyber-threat-intelligence)| tableau de bord start.me ; bloque les robots, ouvrir dans un navigateur |
-|[MITRE ATT&CK — Groups & Software](https://attack.mitre.org/groups/) | complément « lisible » des données STIX : fiches groupes et logiciels |
-|[mthcht Github](https://github.com/mthcht) | voir `awesome-lists` (SOC/CERT/CTI) et `ThreatIntel-Reports`, très actif |
-|[NetManageIT instance publique OpenCTI](https://opencti.netmanageit.com) | instance OpenCTI publique en lecture seule ; actuellement hors ligne (2026) |
 |[lazarus.day](https://lazarus.day) | index dédié des rapports publics sur les groupes nord-coréens (Lazarus, Kimsuky, APT37, Andariel…) |
+|[Malpedia](https://malpedia.caad.fkie.fraunhofer.de) | familles de malware, règles YARA, références (Fraunhofer FKIE) ; compte gratuit |
+|[Malpedia — Actors](https://malpedia.caad.fkie.fraunhofer.de/actors) | fiches acteurs avec familles et références (web / API) |
+|[mdecrevoisier Github](https://github.com/mdecrevoisier/EVTX-to-MITRE-Attack) | 270+ échantillons EVTX mappés ATT&CK, pour mesurer la couverture SIEM |
+|[Meta — Adversarial Threat Reports](https://about.fb.com/news/) | rapports trimestriels sur les opérations d'influence et le spyware ; filtrer le flux RSS général |
+|[Microsoft — On the Issues / MTAC](https://blogs.microsoft.com/on-the-issues/) | rapports MTAC (ingérence, acteurs étatiques), Digital Defense Report ; flux RSS |
+|[Midnight Slayer](https://start.me/p/wMPxqX/cyber-threat-intelligence)| tableau de bord start.me ; bloque les robots, ouvrir dans un navigateur |
+|[MISP Galaxy Github](https://github.com/MISP/misp-galaxy) | référentiel canonique d'acteurs, outils et campagnes (clusters `threat-actor`, `malpedia`, `mitre-*`) — la table de correspondance des noms d'acteurs ; JSON |
+|[MITRE ATT&CK — Campaigns](https://attack.mitre.org/campaigns/) | campagnes nommées liées aux groupes (web / STIX via `attack-stix-data`) |
+|[MITRE ATT&CK — Groups & Software](https://attack.mitre.org/groups/) | complément « lisible » des données STIX : fiches groupes et logiciels |
+|[MS-ISAC (CIS)](https://www.cisecurity.org/ms-isac) | avis et rapports pour les collectivités |
+|[mthcht Github](https://github.com/mthcht) | voir `awesome-lists` (SOC/CERT/CTI) et `ThreatIntel-Reports`, très actif |
+|[NATO CCDCOE — publications](https://ccdcoe.org/library/publications/) | recherche cyber-conflit, rapports par pays |
+|[NetManageIT instance publique OpenCTI](https://opencti.netmanageit.com) | instance OpenCTI publique en lecture seule ; actuellement hors ligne (2026) |
 |[ORKL](https://orkl.eu) | bibliothèque de rapports CTI / APT indexés et cherchables + API |
+|[RAND — cyber warfare](https://www.rand.org/topics/cyber-warfare.html) | études ; flux RSS |
+|[ransom-db](https://www.ransom-db.com/) | victimes ransomware en temps réel |
+|[RansomLook](https://www.ransomlook.io/) | suivi des sites de fuite ransomware, groupes, forums, Telegram ; web + API + flux RSS |
+|[ransomwatch (joshhighet) Github](https://github.com/joshhighet/ransomwatch) | posts de sites de fuite ransomware (JSON) ; historique depuis 2021 |
+|[Risky Business News](https://news.risky.biz/) (Australie) | newsletter d'analyse quotidienne, très bonne couverture des rapports APT ; flux RSS |
 |[RST Cloud — awesome-threat-actor-resources](https://github.com/rstcloud/awesome-threat-actor-resources) | méta-liste de profils d'acteurs et de datasets APT publics |
 |[Serianu](https://www.serianu.com/) (Kenya) | « Africa Cyber Security Report » annuels ; pas d'IOC atomiques `[EN]` |
 |[SlowMist / 慢雾 — Knowledge-Base Github](https://github.com/SlowMist/Knowledge-Base) | analyses d'incidents Web3 ([base d'incidents](https://hacked.slowmist.io)) `[ZH/EN ; crypto]` |
+|[SOCRadar — Threat Actor DB](https://socradar.io/threat-actors/) (Turquie) | fiches d'acteurs (APT, ransomware, hacktivistes), gratuit sans inscription |
 |[tanjiti/sec_profile Github](https://github.com/tanjiti/sec_profile) | méta-index mensuel des publications de recherche sécurité chinoises (par source et par chercheur), très actif `[ZH]` |
 |[The DFIR Report](https://thedfirreport.com) | rapports d'intrusion détaillés (chronologie, IOCs, TTPs, règles Sigma) |
+|[The Record (Recorded Future)](https://therecord.media/) | actualité cyber orientée menace |
 |[TweetFeed](https://tweetfeed.live) | IOCs partagés par la communauté infosec (ex-Twitter) ; voir aussi 0xDanielLopez |
+|[Virus Bulletin](https://www.virusbulletin.com/virusbulletin/) | papers de conférence VB, analyses malware et APT — archive de référence |
 |[vx-underground](https://vx-underground.org) | collections APT, échantillons, papers ; bloque les robots, ouvrir dans un navigateur |
 |[0xDanielLopez Github](https://github.com/0xDanielLopez)| auteur de TweetFeed ; aussi `phishunt-feed` et `phishing_kits` |
+
+### Rapports annuels de référence (PDF, généralement sans flux)
+|Éditeur|Rapport|
+|-------|-------|
+|[Verizon](https://www.verizon.com/business/resources/reports/dbir/) | DBIR — Data Breach Investigations Report |
+|[IBM X-Force](https://www.ibm.com/reports/threat-intelligence) | Threat Intelligence Index |
+|[CrowdStrike](https://www.crowdstrike.com/en-us/resources/reports/) | Global Threat Report, Threat Hunting Report |
+|[Mandiant / Google](https://cloud.google.com/security/mandiant) | M-Trends |
+|[Picus Security](https://www.picussecurity.com/red-report) | Red Report (techniques ATT&CK observées) |
+|[NETSCOUT](https://www.netscout.com/threatreport) | DDoS Threat Intelligence Report |
+|[Nokia](https://www.nokia.com/networks/security-portfolio/threat-intelligence-report/) | Threat Intelligence Report (télécom / IoT) |
+|[CLUSIT](https://clusit.it/rapporto-clusit/) | Rapporto Clusit `[IT]` |
+|[Carnegie Endowment](https://carnegieendowment.org/programs/technology-and-international-affairs) | études FinCyber, spyware, cyber-statecraft |
+|[Comparitech](https://www.comparitech.com/news/) | roundups ransomware |
+|[Anthropic](https://www.anthropic.com/news) / [OpenAI](https://openai.com/global-affairs/) | rapports sur l'abus de LLM par des acteurs étatiques |
+|[ENISA](https://www.enisa.europa.eu/publications) | Threat Landscape annuel et rapports sectoriels |
+|[CCCS / Cyber Centre](https://www.cyber.gc.ca/en/guidance/national-cyber-threat-assessment-2025-2026) (Canada) | National Cyber Threat Assessment (biennal) `[EN/FR]` |
+|[BSI](https://www.bsi.bund.de/DE/Service-Navi/Publikationen/Lagebericht/lagebericht_node.html) (Allemagne) | Lagebericht (rapport annuel de situation) `[DE]` |
+|[NPA — 警察庁 サイバー警察局](https://www.npa.go.jp/publications/statistics/cybersecurity/) (Japon) | « サイバー空間をめぐる脅威の情勢 » semestriel + 注意喚起 nominatives (MirrorFace…) `[JP]` |
+|[IPA — 情報セキュリティ10大脅威](https://www.ipa.go.jp/security/10threats/) (Japon) | classement annuel + 解説書 `[JP]` |
+|[JSAC (JPCERT)](https://jsac.jpcert.or.jp/) (Japon) | actes de conférence : analyses APT visant le Japon `[JP/EN]` |
+|[NASK — raporty](https://www.nask.pl/raporty) (Pologne) | rapports dont désinformation `[PL]` |
+|[OFAC — recent actions](https://ofac.treasury.gov/recent-actions) (États-Unis) | sanctions cyber (personnes, infrastructures, mixers) — attribution nominative |
+|[DOJ — press releases](https://www.justice.gov/news) (États-Unis) | actes d'accusation cyber — attribution nominative |
 
 # Règles de detection
 |Source                                                                            |Commentaire         |
