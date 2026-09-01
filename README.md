@@ -1,7 +1,7 @@
 # CTI-feeds
 Liste de sources de renseignement concernant la menace d'origine cyber
 
-> Dernière vérification des liens : 2026-08-30
+> Dernière vérification des liens : 2026-09-01
 >
 > Les sources ne sont pas restreintes à l'anglais. La langue est indiquée entre crochets — p. ex. `[ZH]`, `[RU]`, `[KO]` — lorsqu'elle n'est ni le français ni l'anglais ; la traduction automatique du navigateur suffit dans la plupart des cas.
 >
@@ -23,6 +23,7 @@ NB : Cette liste complète les feeds/connecteurs par défaut des projets OpenCTI
 |[abuse.ch](https://abuse.ch) — [URLhaus](https://urlhaus.abuse.ch), [MalwareBazaar](https://bazaar.abuse.ch), [ThreatFox](https://threatfox.abuse.ch), [Feodo Tracker](https://feodotracker.abuse.ch), [SSLBL](https://sslbl.abuse.ch) | URLs, échantillons, IOCs, C2, certificats ; API + exports CSV / JSON / MISP / Suricata (hébergé par la Haute école spécialisée bernoise) |
 |[AlienVault OTX](https://otx.alienvault.com) | pulses communautaires, très gros volume ; API gratuite |
 |[APNIC Community Honeynet Project](https://feeds.honeynet.asia) | honeypots Asie-Pacifique ; les fichiers `latest` sont en fin de listing |
+|[APTtrail Github](https://github.com/trilwu/apttrail) ([site](https://trilwu.github.io/apttrail)) | ~170k IOCs attribués par groupe APT (identifiants `Gxxxx` ATT&CK) ; formats MISP / STIX / Suricata / listes par type et par groupe ; rythme de mise à jour irrégulier |
 |[Azure Sentinel Public feed](https://github.com/Azure/Azure-Sentinel) | dépôt massif du SIEM Microsoft ; IOCs et règles dispersés, il faut fouiller |
 |[Bambenekconsulting.com](https://osint.bambenekconsulting.com) | feeds OSINT (DGA, C2) ; accès sur demande |
 |[Bert-JanP Github](https://github.com/Bert-JanP/Open-Source-Threat-Intel-Feeds) | feeds OSS librement réutilisables (IP, URL, CVE, hash), très actif |
@@ -41,6 +42,7 @@ NB : Cette liste complète les feeds/connecteurs par défaut des projets OpenCTI
 |[fastfire Github](https://github.com/fastfire/deepdarkCTI) | collection deep et darkweb, très actif |
 |[FGRibreau Github](https://github.com/FGRibreau/mailchecker) | détection d'emails jetables ; voir `list.txt` |
 |[InfoSec Github](https://github.com/GithubInfosec/latest-malware-IoC)| IoC/IoA d'investigations InfoSec ; peu actif (dernière MAJ mi-2025) |
+|[Intezer — community-intelligence Github](https://github.com/intezer/community-intelligence) | IOCs curés par campagne (APT et cybercrime), formats CSV / Markdown / TXT ; actif |
 |[Malshare.com](https://malshare.com) | plateforme d'échantillons + IOCs ; inscription gratuite / clé API |
 |[malware-traffic Github](https://github.com/malware-traffic/indicators)| IOCs de malware-traffic-analysis.net, classés par année |
 |[Mandiant Github](https://github.com/mandiant/iocs)| archivé, IOCs de 2019 |
@@ -173,7 +175,7 @@ CERT / CSIRT nationaux et agences. Beaucoup publient leurs IOCs dans des avis we
 |Iran | [Maher / CERT.ir](https://cert.ir) | CERT national `[FA]` |
 |Islande | [CERT-IS](https://www.cert.is) | CERT national ; alertes `[IS/EN]` |
 |Israël | [INCD](https://www.gov.il/en/departments/israel_national_cyber_directorate) | directorat national ; alertes et rapports ; le portail gov.il répond 403 aux robots, ouvrir dans un navigateur `[HE/EN]` |
-|Japon | [JPCERT/CC](https://github.com/JPCERTCC) | `phishurl-list`, `jpcert-yara`, `Contagious-Interview-IoCs`, `CobaltStrike-Config`, LogonTracer, EmoCheck |
+|Japon | [JPCERT/CC](https://github.com/JPCERTCC) | `phishurl-list`, `jpcert-yara`, `Contagious-Interview-IoCs`, `CobaltStrike-Config`, LogonTracer, EmoCheck ; blog d'analyse [« Eyes »](https://blogs.jpcert.or.jp/en/) (IOCs par billet, flux Atom) |
 |Jordanie | [NCSC-JO](https://ncsc.jo) | centre national de cybersécurité ; alertes `[AR/EN]` |
 |Kazakhstan | [KZ-CERT](https://cert.gov.kz) | CERT national (State Technical Service) `[KK/RU/EN]` |
 |Kenya | [National KE-CIRT/CC](https://ke-cirt.go.ke) | CERT national ; avis et rapports |
@@ -217,6 +219,7 @@ Blogs et publications de recherche des éditeurs de sécurité (IOCs et TTPs dan
 |[360 Netlab](https://blog.netlab.360.com) (Chine) | feeds C2 / DGA / botnet historiques ; peu actif depuis 2022 `[ZH/EN]` |
 |[AhnLab ASEC](https://asec.ahnlab.com/en/) (Corée du Sud) | blog très prolifique (Kimsuky, Lazarus, malware ciblant l'Asie) `[KO ; blog EN]` |
 |[Antiy Labs / 安天](https://www.antiy.net) (Chine) | rapports APT `[ZH ; certains rapports EN]` |
+|[Aryaka — Threat Research](https://www.aryaka.com/blog/) (États-Unis) | rapports APT très détaillés, forte couverture Transparent Tribe / APT36 (C2 tradecraft) `[EN]` |
 |[BI.ZONE](https://bi.zone) (Russie) | recherche menaces (groupe Sber) ; lib [`bi-zone/bizone-ti-lib`](https://github.com/bi-zone/bizone-ti-lib) `[EN/RU]` |
 |[Brandefense](https://brandefense.io/blog/) (Turquie) | recherche menaces et rapports d'acteurs `[EN]` |
 |[CERT Orange Polska](https://cert.orange.pl) (Pologne) | CERT de l'opérateur : alertes, analyses et blocklist CyberTarcza `[PL]` |
@@ -228,23 +231,33 @@ Blogs et publications de recherche des éditeurs de sécurité (IOCs et TTPs dan
 |[CTM360](https://www.ctm360.com) (Bahreïn) | veille et rapports centrés Golfe / Moyen-Orient `[EN]` |
 |[Cyble](https://cyble.com/blog/) (Inde / États-Unis) | recherche menaces très prolifique `[EN]` |
 |[CYFIRMA](https://www.cyfirma.com/research/) (Inde / Singapour) | rapports d'attribution et de campagne `[EN]` |
+|[DBAPPSecurity / 安恒信息 — 安恒威胁情报中心](https://ti.dbappsecurity.com.cn/blog/) (Chine) | blog TI ; labo 猎影 (Hunting Shadow), attribution APT `[ZH]` |
 |[Doctor Web / Dr.Web](https://news.drweb.com) (Russie) | analyses de malware avec IOCs `[RU/EN]` |
+|[ENKI WhiteHat — Threat Research](https://www.enki.co.kr/en/media-center/blog) (Corée du Sud) | analyses d'intrusions APT nord-coréennes (Kimsuky ciblant des éditeurs groupware KR), billets EN détaillés `[KO ; blog EN]` |
 |[ESET — WeLiveSecurity](https://www.welivesecurity.com) (Slovaquie) | blog de recherche ; les IOCs associés sont sur le repo GitHub (section Indices de compromissions) `[EN ; éditions FR/DE/ES]` |
+|[EST Security / ESRC — 알약 블로그](https://blog.alyac.co.kr) (Corée du Sud) | analyses de malware et d'APT nord-coréennes (Kimsuky…) très fréquentes ; IOCs par billet `[KO]` |
 |[F6](https://www.f6.ru) (ex-F.A.C.C.T., Russie) | cybercriminalité russophone `[RU]` |
+|[FalconFeeds.io](https://falconfeeds.io) (Inde) | suivi temps réel : revendications de victimes ransomware, hacktivisme, fuites darkweb (opéré par Technisanct, Kochi) `[EN]` |
 |[G DATA CyberDefense](https://blog.gdatasoftware.com) (Allemagne) | analyses de malware `[EN/DE]` |
+|[Genians — Genians Security Center](https://www.genians.co.kr/en/blog/threat_intelligence) (Corée du Sud) | blog prolifique sur les APT nord-coréennes (Kimsuky, APT37/ScarCruft, RokRAT) ; IOCs par billet, flux RSS `[KO ; blog EN]` |
 |[Group-IB](https://www.group-ib.com/blog/) (Singapour) | e-crime, rapports détaillés avec IOCs `[EN]` |
+|[IIJ — wizSafe Security Signal](https://wizsafe.iij.ad.jp) (Japon) | bilans mensuels de la menace observée (DDoS, malware, scan) et analyses ; flux RSS `[JP]` |
+|[ITOCHU Cyber & Intelligence](https://blog-en.itochuci.co.jp) (Japon) | analyses de malware et d'APT visant le Japon (Tropic Trooper, malspam JP…) ; flux RSS `[JP ; blog EN]` |
 |[K7 Labs](https://labs.k7computing.com) (Inde) | analyses de malware (éditeur AV de Chennai) `[EN]` |
 |[Kaspersky — Securelist](https://securelist.com) (Russie) | équipe GReAT, IOCs par rapport `[EN]` |
 |[Kaspersky ICS-CERT](https://ics-cert.kaspersky.com) (Russie) | spécialisé OT / ICS `[EN]` |
 |[Knownsec 404 Team / 知道创宇](https://paper.seebug.org) (Chine) | papers de recherche (plateforme Seebug) ; connexion refusée depuis certains réseaux lors de la vérification `[ZH]` |
 |[Lab52 / S2 Grupo](https://lab52.io) (Espagne) | recherche APT et géopolitique cyber `[EN]` |
+|[LAC — LAC WATCH](https://www.lac.co.jp/lacwatch/) (Japon) | rapports du JSOC et du Cyber Emergency Center sur les menaces visant le Japon `[JP]` |
 |[Macnica Security Research](https://security.macnica.co.jp/) (Japon) | rapports APT visant le Japon `[JP]` |
 |[Metabase Q — Ocelot](https://www.metabaseq.com) (Mexique) | recherche menaces centrée Amérique latine `[EN/ES]` |
 |[Microsoft — Security Blog / MSTIC](https://www.microsoft.com/en-us/security/blog/) (États-Unis) | rapports et analyses `[EN]` |
 |[nao-sec](https://nao-sec.org) (Japon) | collectif de recherche : analyses, outils (RTF weaponizer decoder…) `[JP/EN]` |
-|[NSFOCUS / 绿盟](https://nsfocusglobal.com/blog/) (Chine) | rapports APT `[EN (global) / ZH]` |
+|[NSFOCUS / 绿盟](https://nsfocusglobal.com/blog/) (Chine) | rapports APT (labo 伏影 / Fuying) ; flux RSS sur le blog global `[EN (global) / ZH]` |
+|[NSHC ThreatRecon](https://threatrecon.nshc.net) (Corée du Sud) | suivi des groupes « SectorXX » (APT nord-coréennes, chinoises…) ; [repo `IoC-List`](https://github.com/nshc-threatrecon/IoC-List) gelé fin 2021 `[EN/KO]` |
 |[Positive Technologies — PT ESC](https://github.com/PositiveTechnologies) (Russie) | recherche menaces ; règles Suricata figées 2022 sur [`ptresearch/AttackDetection`](https://github.com/ptresearch/AttackDetection) `[EN/RU]` |
 |[QiAnXin TI Center / 奇安信](https://ti.qianxin.com) (Chine) | portail Threat Intelligence ; voir aussi [RedDrip7](https://github.com/RedDrip7) `[ZH]` |
+|[Sangfor / 深信服 — 千里目安全技术中心](https://www.sangfor.com.cn/security-tech) (Chine) | rapports APT et analyses de campagnes (6 laboratoires) ; accès filtré hors de Chine `[ZH]` |
 |[Sekoia.io](https://blog.sekoia.io) (France) | recherche menaces, TDR `[EN/FR]` |
 |[SentinelLABS](https://www.sentinelone.com/labs/) (États-Unis) | recherche menaces, rapports APT `[EN]` |
 |[Seqrite Labs / Quick Heal](https://www.seqrite.com/blog/) (Inde) | fort sur les APT d'Asie du Sud (SideCopy, Transparent Tribe…) `[EN]` |
@@ -252,6 +265,7 @@ Blogs et publications de recherche des éditeurs de sécurité (IOCs et TTPs dan
 |[Solar 4RAYS](https://solar4rays.ru) (Russie) | bulletins d'IOCs (groupe Rostelecom) `[RU]` |
 |[S2W](https://s2w.inc/en/resource) (Corée du Sud) | recherche menaces (équipe Talon) : darkweb, groupes nord-coréens `[EN/KO]` |
 |[TeamT5](https://teamt5.org/en/) (Taïwan) | recherche APT nexus-Chine `[EN/ZH]` |
+|[Tencent Security — 威胁情报中心 / 御见](https://tix.qq.com) (Chine) | portail de threat intelligence de Tencent : rapports APT et lookups ([s.tencent.com](https://s.tencent.com)) `[ZH]` |
 |[ThreatBook / 微步在线](https://threatbook.io) (Chine) | éditeur TI ; lookups communautaires gratuits sur [x.threatbook.com](https://x.threatbook.com) `[EN/ZH]` |
 |[Viettel Cyber Security](https://blog.viettelcybersecurity.com) (Vietnam) | analyses de menaces et de vulnérabilités `[VI/EN]` |
 |[Yoroi — Z-Lab](https://yoroi.company/research/) (Italie) | analyses de campagnes et de malware `[IT/EN]` |
@@ -282,6 +296,7 @@ Méta-listes, agrégateurs et bibliothèques de rapports.
 |[devsecops Github](https://github.com/devsecops/awesome-devsecops) | liste d'outils DevSecOps (dont CTI) ; figée depuis 2024 |
 |[EndlessFractal Github](https://github.com/EndlessFractal/Threat-Intel-Feed)| agrégation et consolidation automatiques de feeds, actif |
 |[ETDA / ThaiCERT APT Encyclopedia](https://apt.etda.or.th) | fiches détaillées de groupes et d'outils APT |
+|[gm7.org — 信息安全知识库](https://www.gm7.org) | agrégateur / archive de contenu sécurité chinois (actualités, vulnérabilités, campagnes APT, collectes de hash) ; flux RSS très dense `[ZH]` |
 |[hslatman Github](https://github.com/hslatman/awesome-threat-intelligence)| liste de référence des ressources CTI |
 |[infoblox Github](https://github.com/infobloxopen/threat-intelligence) | IOCs et rapports Infoblox (threat intel DNS), actif |
 |[Malpedia](https://malpedia.caad.fkie.fraunhofer.de) | familles de malware, règles YARA, références (Fraunhofer FKIE) ; compte gratuit |
@@ -290,8 +305,10 @@ Méta-listes, agrégateurs et bibliothèques de rapports.
 |[MITRE ATT&CK — Groups & Software](https://attack.mitre.org/groups/) | complément « lisible » des données STIX : fiches groupes et logiciels |
 |[mthcht Github](https://github.com/mthcht) | voir `awesome-lists` (SOC/CERT/CTI) et `ThreatIntel-Reports`, très actif |
 |[NetManageIT instance publique OpenCTI](https://opencti.netmanageit.com) | instance OpenCTI publique en lecture seule ; actuellement hors ligne (2026) |
+|[lazarus.day](https://lazarus.day) | index dédié des rapports publics sur les groupes nord-coréens (Lazarus, Kimsuky, APT37, Andariel…) |
 |[ORKL](https://orkl.eu) | bibliothèque de rapports CTI / APT indexés et cherchables + API |
 |[RST Cloud — awesome-threat-actor-resources](https://github.com/rstcloud/awesome-threat-actor-resources) | méta-liste de profils d'acteurs et de datasets APT publics |
+|[tanjiti/sec_profile Github](https://github.com/tanjiti/sec_profile) | méta-index mensuel des publications de recherche sécurité chinoises (par source et par chercheur), très actif `[ZH]` |
 |[The DFIR Report](https://thedfirreport.com) | rapports d'intrusion détaillés (chronologie, IOCs, TTPs, règles Sigma) |
 |[TweetFeed](https://tweetfeed.live) | IOCs partagés par la communauté infosec (ex-Twitter) ; voir aussi 0xDanielLopez |
 |[vx-underground](https://vx-underground.org) | collections APT, échantillons, papers ; bloque les robots, ouvrir dans un navigateur |
