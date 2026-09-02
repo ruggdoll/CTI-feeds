@@ -95,26 +95,28 @@ Pour l'ingestion automatique (MISP, OpenCTI), ne retenir que `feed`, `repo` et `
 |---|---|---|---|---|---|
 | [blocklist.de](https://www.blocklist.de) | DE | IOC | feed | vivant | IP signalées via fail2ban |
 | [CINS Score / CI Army](https://cinsscore.com) | US | IOC | feed | vivant | |
-| [stamparm — Ipsum](https://github.com/stamparm/Ipsum) · [Maltrail trails](https://github.com/stamparm/maltrail/tree/master/trails/static) | RS | IOC | repo | 2026-09-01 | Ipsum : IP scorées ; Maltrail : trails par famille (C2, DGA, scanners) |
+| [stamparm — Ipsum](https://github.com/stamparm/Ipsum) | RS | IOC | repo | 2026-09-01 | IP scorées par le nombre de listes qui les signalent |
+| [stamparm — Maltrail trails](https://github.com/stamparm/maltrail/tree/master/trails/static) | RS | IOC | repo | 2026-09-01 | trails statiques par famille (C2, DGA, scanners) |
 | [Emerging Threats — compromised-ips](https://rules.emergingthreats.net/blockrules/compromised-ips.txt) | US | IOC | feed | vivant | |
 | [Binary Defense banlist](https://binarydefense.com/banlist.txt) | US | IOC | feed | vivant | |
 | [GreenSnow](https://blocklist.greensnow.co/greensnow.txt) | FR | IOC | feed | vivant | brute-force, scans |
 | [BruteForceBlocker](https://danger.rulez.sk/projects/bruteforceblocker/blist.php) | SK | IOC | feed | vivant | SSH |
 | [Phishing Army](https://phishing.army) | IT | IOC | feed | vivant | domaines de phishing |
-| [OpenPhish](https://openphish.com) / [PhishTank](https://phishtank.org) | — | IOC | feed | vivant | versions publiques limitées |
+| [OpenPhish](https://openphish.com) | — | IOC | feed | vivant | flux public d'URL de phishing (version communautaire limitée) |
+| [PhishTank](https://phishtank.org) | US | IOC | feed | vivant | URL de phishing validées par la communauté (Cisco) ; enregistrement requis |
 | [Phishing.Database](https://github.com/mitchellkrogza/Phishing.Database) | ZA | IOC | repo | 2026-08-23 | domaines/IP/liens de phishing |
 | [Inversion DNSBL Blocklists](https://github.com/elliotwutingfeng/Inversion-DNSBL-Blocklists) | SG | IOC | repo | 2026-09-01 | URL malveillantes issues de scans originaux (ses dépôts `ThreatFox-IOC-*` sont des miroirs) |
 | [HaGeZi DNS Blocklists](https://github.com/hagezi/dns-blocklists) | DE | IOC | repo (hosts/ABP/RPZ) | 2026-09-01 | liste TIF pour DNS-RPZ |
 | [The Block List Project](https://blocklistproject.github.io/Lists/) | — | IOC | repo | 2026-07-20 | |
 | [FireHOL IP lists](https://iplists.firehol.org) · [repo](https://github.com/firehol/blocklist-ipsets) | — | IOC | repo | 2026-09-01 | agrégation scorée de ~400 listes ; plutôt warninglist / comparaison de couverture |
-| [SURBL](https://www.surbl.org) / [URIBL](https://uribl.com) | US | IOC | DNSBL, licence | vivant | URI de spam et phishing |
+| [SURBL](https://www.surbl.org) | US | IOC | DNSBL, licence | vivant | URI de spam et phishing |
+| [URIBL](https://uribl.com) | US | IOC | DNSBL, licence | vivant | URI de spam ; usage libre à faible volume |
 | [CleanTalk](https://cleantalk.org/blacklists) | — | IOC | API | vivant | |
 | [AbuseIPDB](https://www.abuseipdb.com) | — | IOC | API, bot | vivant | signalements communautaires |
 | [Stop Forum Spam](https://www.stopforumspam.com/downloads) | — | IOC | feed | vivant | |
 | [dan.me.uk Tor list](https://www.dan.me.uk/torlist/) | UK | IOC | feed (1 req/30 min) | vivant | nœuds Tor ; à charger en warninglist |
 | [threatview.io](https://threatview.io) | — | IOC | feed | vivant | IP/domaines/hash/C2 quotidiens |
 | [ELLIO](https://ellio.tech) | CZ | IOC | inscr. ; blog RSS | vivant | IP de scans massifs |
-
 | [hole.cert.pl](https://hole.cert.pl) | PL | IOC | feed | vivant | blocklist de domaines CERT Polska |
 | [FGRibreau — mailchecker](https://github.com/FGRibreau/mailchecker) | FR | IOC | repo | vivant | domaines d'emails jetables |
 
@@ -513,20 +515,34 @@ Pour l'ingestion automatique (MISP, OpenCTI), ne retenir que `feed`, `repo` et `
 
 | Source | Pays | Contenu | Accès | Commentaire |
 |---|---|---|---|---|
-| [Silent Push](https://www.silentpush.com/blog/) · [Validin](https://www.validin.com/blog/) · [Hunt.io](https://hunt.io/blog) · [Team Cymru](https://www.team-cymru.com/blog) | US | IOC+RENS | RSS / web ; feeds payants | IP et hash en clair dans les billets (Hunt.io : >100) |
+| [Silent Push](https://www.silentpush.com/blog/) | US | IOC+RENS | RSS / web ; feed payant | IOC dans les billets ; pivots infra |
+| [Validin](https://www.validin.com/blog/) | US | IOC+RENS | web / API ; payant | pivots pDNS et bannières |
+| [Hunt.io](https://hunt.io/blog) | US | IOC+RENS | web ; feed payant | IP et hash en clair dans les billets (>100) |
+| [Team Cymru](https://www.team-cymru.com/blog) | US | IOC+RENS | web ; feed payant | télémétrie réseau (Pure Signal) ; IOC dans les billets |
 | [DomainTools](https://www.domaintools.com/blog) | US | IOC+RENS | RSS | ~76 domaines défangés sur 30 billets (sonde 2026-09-02) |
 | [Spur](https://spur.us/blog) | US | RENS | web | bloque les robots |
-| [Censys](https://censys.com/resources/blog/) · [GreyNoise](https://www.greynoise.io/blog) | US | IOC+RENS | RSS / web / API | Censys : hash dans le flux ; GreyNoise : IP |
+| [Censys](https://censys.com/resources/blog/) | US | IOC+RENS | RSS / web / API | hash dans le flux ; balayage Internet |
+| [GreyNoise](https://www.greynoise.io/blog) | US | IOC+RENS | web / API | IP de scan de masse (contexte « bruit ») |
 | [Bitsight](https://www.bitsight.com/blog) | US | RENS | RSS | |
-| [drb-ra C2IntelFeeds](https://github.com/drb-ra/C2IntelFeeds) · [Xanderux C2watcher](https://github.com/Xanderux/C2watcher) · [ViriBack](https://tracker.viriback.com) · [CyberCrime Tracker](https://cybercrime-tracker.net) | — | IOC | repo / feed | trackers C2 ; `montysecurity/C2-Tracker` archivé avril 2026 |
-| [Bambenek](https://osint.bambenekconsulting.com) · [EcrimeLabs](https://ecrimelabs.net) | US/DK | IOC | sur demande | |
+| [drb-ra C2IntelFeeds](https://github.com/drb-ra/C2IntelFeeds) | — | IOC | repo | tracker C2 automatisé (CSV, IP/domaines) |
+| [Xanderux C2watcher](https://github.com/Xanderux/C2watcher) | — | IOC | repo | tracker C2 |
+| [ViriBack](https://tracker.viriback.com) | — | IOC | feed | panneaux C2 et malware (CSV) |
+| [CyberCrime Tracker](https://cybercrime-tracker.net) | — | IOC | feed | URL de panneaux C2 ; `montysecurity/C2-Tracker` archivé avril 2026 |
+| [Bambenek](https://osint.bambenekconsulting.com) | US | IOC | sur demande | feeds DGA et C2 |
+| [EcrimeLabs](https://ecrimelabs.net) | DK | IOC | sur demande | |
 | [Critical Path Security](https://github.com/CriticalPathSecurity/Public-Intelligence-Feeds) | US | IOC | repo (Zeek Intel) | 2026-09-01 |
 
 **Vulnérabilités et exploitation**
 
 | Source | Pays | Contenu | Accès | Commentaire |
 |---|---|---|---|---|
-| [CISA KEV](https://github.com/cisagov/kev-data) · [VulnCheck](https://www.vulncheck.com/blog) · [Rapid7 AttackerKB / DB](https://www.rapid7.com/db/) · [ZDI](https://www.zerodayinitiative.com/blog) · [Exploit-DB](https://www.exploit-db.com/) · [Vulners](https://vulners.com/) · [Wiz Vulnerability DB](https://www.wiz.io/vulnerability-database) | US | IOC+RENS | repo / Atom / RSS / web | |
+| [CISA KEV](https://github.com/cisagov/kev-data) | US | IOC+RENS | repo | catalogue des vulnérabilités activement exploitées (JSON) — preuve directe |
+| [VulnCheck](https://www.vulncheck.com/blog) | US | IOC+RENS | RSS / API | exploitation observée, KEV enrichi ; IOC non vérifiés (API sur inscription) |
+| [Rapid7 AttackerKB / DB](https://www.rapid7.com/db/) | US | RENS | web | évaluation d'exploitabilité |
+| [ZDI](https://www.zerodayinitiative.com/blog) | US | RENS | Atom | divulgations coordonnées |
+| [Exploit-DB](https://www.exploit-db.com/) | US | RENS | web | PoC et exploits publics (OffSec) |
+| [Vulners](https://vulners.com/) | — | RENS | API | agrégat de bulletins de vulnérabilités |
+| [Wiz Vulnerability DB](https://www.wiz.io/vulnerability-database) | US | RENS | web | contexte cloud |
 | [Google Project Zero — 0days in the wild](https://github.com/googleprojectzero/0days-in-the-wild) | US | RENS | repo | 2026-08-10 |
 | [Nuclei templates](https://github.com/projectdiscovery/nuclei-templates) | — | IOC | repo | 2026-09-01 |
 | [DEVCORE / Orange Tsai](https://blog.orange.tw/) | TW | RENS | Atom | recherche offensive |
@@ -555,8 +571,14 @@ Pour l'ingestion automatique (MISP, OpenCTI), ne retenir que `feed`, `repo` et `
 | [Canadian Institute for Cybersecurity (UNB)](https://www.unb.ca/cic/datasets/) | CA | — | datasets | IDS, malware Android, DoH |
 | [CAIDA](https://www.caida.org/catalog/datasets/) | US | — | datasets, partiellement sur demande | télescope réseau |
 | [Citizen Lab](https://github.com/citizenlab) | CA | IOC+RENS | repo | voir §7.2 mobile |
-| [Stratosphere — voir §2.1] · [UNSW Canberra](https://research.unsw.edu.au/projects/toniot-datasets) · [SecRepo](https://secrepo.com) · [theZoo](https://github.com/ytisf/theZoo) · [VirusShare](https://virusshare.com) | CZ/AU/— | — | datasets | |
-| [DARPA OpTC](https://github.com/FiveDirections/OpTC-data) · [IMPACT Cyber Trust](https://www.impactcybertrust.org) · [Los Alamos](https://csr.lanl.gov/data/) | US | — | datasets | |
+| [Stratosphere — voir §2.1](https://www.stratosphereips.org) | CZ | — | datasets | CTU-13, IoT-23 |
+| [UNSW Canberra — ToN_IoT](https://research.unsw.edu.au/projects/toniot-datasets) | AU | — | datasets | télémétrie IoT/OT étiquetée |
+| [SecRepo](https://secrepo.com) | — | — | datasets | index de datasets sécurité |
+| [theZoo](https://github.com/ytisf/theZoo) | — | — | repo | échantillons de malware vivants (recherche) |
+| [VirusShare](https://virusshare.com) | — | — | inscr. | dépôt d'échantillons, accès sur invitation |
+| [DARPA OpTC](https://github.com/FiveDirections/OpTC-data) | US | — | datasets | traces host/réseau étiquetées (2019) |
+| [IMPACT Cyber Trust](https://www.impactcybertrust.org) | US | — | datasets | catalogue DHS, accès sur demande |
+| [Los Alamos](https://csr.lanl.gov/data/) | US | — | datasets | logs d'authentification et de flux |
 | [Malpedia — voir §1] · [Honeynet Project — voir §2.1] | | | | |
 | [CrySyS Lab](https://blog.crysys.hu/) | HU | RENS | RSS | |
 | [mdecrevoisier — EVTX-to-MITRE-Attack](https://github.com/mdecrevoisier/EVTX-to-MITRE-Attack) | — | — | repo | EVTX mappés ATT&CK |
@@ -586,18 +608,29 @@ Pour l'ingestion automatique (MISP, OpenCTI), ne retenir que `feed`, `repo` et `
 | Source | Contenu | Accès | Activité | Commentaire |
 |---|---|---|---|---|
 | [Bert-JanP — Open-Source-Threat-Intel-Feeds](https://github.com/Bert-JanP/Open-Source-Threat-Intel-Feeds) | IOC | repo | vivant | |
-| [spydisec](https://github.com/spydisec/spydithreatintel) · [EndlessFractal](https://github.com/EndlessFractal/Threat-Intel-Feed) · [rodanmaharjan](https://github.com/rodanmaharjan/ThreatIntelligence) | IOC | repo | vivant / 2025-09 | agrégats |
-| [Intezer — community-intelligence](https://github.com/intezer/community-intelligence) · [Meta — voir §7.1] · [GithubInfosec](https://github.com/GithubInfosec/latest-malware-IoC) | IOC | repo | vivant / mi-2025 | |
-| [malware-traffic — indicators](https://github.com/malware-traffic/indicators) · [PRODAFT](https://github.com/prodaft) · [DigitalSide](https://osint.digitalside.it) | IOC | repo / feed | vivant ; DigitalSide ralenti | |
-| [TweetFeed](https://tweetfeed.live) · [0xDanielLopez](https://github.com/0xDanielLopez) | IOC | web / repo | vivant | IOC partagés sur X ; phishunt, phishing_kits |
-| [curated-intel](https://github.com/curated-intel) · [mthcht](https://github.com/mthcht) · [blackorbird — APT_REPORT](https://github.com/blackorbird/APT_REPORT) · [despacito420 — The-Feed](https://github.com/despacito420/The-Feed) | IOC+RENS | repo | vivant | listes par campagne, ThreatIntel-Reports |
+| [spydisec — spydithreatintel](https://github.com/spydisec/spydithreatintel) | IOC | repo | vivant | agrégat d'IOC quotidien |
+| [EndlessFractal — Threat-Intel-Feed](https://github.com/EndlessFractal/Threat-Intel-Feed) | IOC | repo | vivant | agrégat d'IOC |
+| [rodanmaharjan — ThreatIntelligence](https://github.com/rodanmaharjan/ThreatIntelligence) | IOC | repo | 2025-09 | agrégat, ralenti |
+| [Intezer — community-intelligence](https://github.com/intezer/community-intelligence) | IOC | repo | vivant | IOC communautaires |
+| [GithubInfosec — latest-malware-IoC](https://github.com/GithubInfosec/latest-malware-IoC) | IOC | repo | mi-2025 | ralenti |
+| [malware-traffic — indicators](https://github.com/malware-traffic/indicators) | IOC | repo | vivant | IOC des analyses de malware-traffic-analysis.net |
+| [PRODAFT](https://github.com/prodaft) | IOC | repo | vivant | IOC et outils publiés par l'éditeur |
+| [DigitalSide](https://osint.digitalside.it) | IOC | feed | ralenti | OSINT.DigitalSide (STIX / MISP / CSV) |
+| [TweetFeed](https://tweetfeed.live) | IOC | web / API | vivant | IOC partagés sur X, agrégés et datés |
+| [0xDanielLopez](https://github.com/0xDanielLopez) | IOC | repo | vivant | phishunt, phishing_kits |
+| [curated-intel](https://github.com/curated-intel) | IOC+RENS | repo | vivant | listes par campagne |
+| [mthcht — ThreatIntel-Reports](https://github.com/mthcht) | IOC+RENS | repo | vivant | ThreatIntel-Reports, listes de détection |
+| [blackorbird — APT_REPORT](https://github.com/blackorbird/APT_REPORT) | IOC+RENS | repo | vivant | collection de rapports APT |
+| [despacito420 — The-Feed](https://github.com/despacito420/The-Feed) | IOC+RENS | repo | vivant | agrégat d'IOC |
 | [APTnotes](https://github.com/aptnotes/data) · [CyberMonitor](https://github.com/CyberMonitor/APT_CyberCriminal_Campagin_Collections) | RENS | repo | figés 2024 | archives |
 | [vx-underground](https://vx-underground.org) | IOC+RENS | web, bot | vivant | |
 | [gm7.org — 信息安全知识库](https://www.gm7.org) · [tanjiti — sec_profile](https://github.com/tanjiti/sec_profile) · [安全内参 secrss](https://www.secrss.com/articles?tag=APT) · [安全客](https://www.anquanke.com/) | RENS | RSS / repo / web | vivant | agrégateurs chinois `[ZH]` |
 | [Habr — infosecurity](https://habr.com/ru/hubs/infosecurity/articles/) · [Xakep](https://xakep.ru/) | RENS | RSS | vivant | `[RU]` |
 | [piyolog](https://piyolog.hatenadiary.jp/) | RENS | RSS | vivant | chronologies d'incidents japonais `[JP]` |
 | [Midnight Slayer — start.me](https://start.me/p/wMPxqX/cyber-threat-intelligence) | RENS | web, bot | vivant | |
-| [dragnet](https://github.com/dragnet-dev) · [Mr Looquer](https://iocfeed.mrlooquer.com) · [xxspell](https://gitlab.com/xxspell/ctifeeds) | IOC | repo / feed | annoncé / 2023 / 2024 | à surveiller ; peu ou pas maintenus |
+| [dragnet](https://github.com/dragnet-dev) | IOC | repo | annoncé | à surveiller |
+| [Mr Looquer](https://iocfeed.mrlooquer.com) | IOC | feed | 2023 | peu ou pas maintenu |
+| [xxspell — ctifeeds](https://gitlab.com/xxspell/ctifeeds) | IOC | repo | 2024 | peu ou pas maintenu |
 
 ## 12. Journalistes et médias spécialisés
 
@@ -645,7 +678,8 @@ Pour l'ingestion automatique (MISP, OpenCTI), ne retenir que `feed`, `repo` et `
 
 | Source | Contenu | Accès | Commentaire |
 |---|---|---|---|
-| [MalwareBazaar — voir §2.1] · [MalShare](https://malshare.com) · [VirusShare — voir §9] | IOC | API, inscr. | |
+| [MalShare](https://malshare.com) | IOC | API, inscr. | dépôt d'échantillons gratuit, clé requise |
+| MalwareBazaar (voir §2.1) · VirusShare (voir §9) | IOC | API, inscr. | dépôts d'échantillons couverts dans leurs sections |
 | [urlscan.io](https://urlscan.io/) · [Hybrid Analysis](https://hybrid-analysis.com/) · [Triage](https://tria.ge/) · [FileScan.io](https://www.filescan.io/) · [UnpacMe](https://www.unpac.me/) · [PolySwarm](https://polyswarm.io/) | IOC | web / API | comptes gratuits |
 | [ANY.RUN](https://any.run/cybersecurity-blog/) · [Yomi](https://yomi.yoroi.company/) · [Threat.Zone](https://threat.zone/) · [OALabs](https://research.openanalysis.net/) | IOC+RENS | RSS / web | Threat.Zone : Turquie |
 | [Joe Sandbox](https://www.joesandbox.com/) · [CAPE](https://capesandbox.com/) | IOC | bot | |
@@ -654,9 +688,18 @@ Pour l'ingestion automatique (MISP, OpenCTI), ne retenir que `feed`, `repo` et `
 
 | Source | Contenu | Accès | Activité | Commentaire |
 |---|---|---|---|---|
-| [SigmaHQ](https://github.com/SigmaHQ/sigma) · [elastic detection-rules](https://github.com/elastic/detection-rules) · [splunk security_content](https://github.com/splunk/security_content) · [chronicle detection-rules](https://github.com/chronicle/detection-rules) · [Sublime rules](https://github.com/Sublime-Security/sublime-rules) | IOC | repo | vivant | |
-| [Neo23x0 signature-base](https://github.com/Neo23x0/signature-base) · [YARAHQ yara-forge](https://github.com/YARAHQ/yara-forge) · [Volexity](https://github.com/volexity/threat-intel) · [HarfangLab — voir §7.1] · [JPCERT yara — voir §3] | IOC | repo | vivant | |
-| [RussianPanda — Yara-Rules](https://github.com/RussianPanda95/Yara-Rules) · [bartblaze](https://github.com/bartblaze/Yara-rules) · [ReversingLabs](https://github.com/reversinglabs/reversinglabs-yara-rules) | IOC | repo | 2026-08 / 2026-01 / 2025-11 | |
+| [SigmaHQ](https://github.com/SigmaHQ/sigma) | IOC | repo | vivant | règles Sigma canoniques |
+| [elastic detection-rules](https://github.com/elastic/detection-rules) | IOC | repo | vivant | règles Elastic Security |
+| [splunk security_content](https://github.com/splunk/security_content) | IOC | repo | vivant | détections Splunk (ESCU) |
+| [chronicle detection-rules](https://github.com/chronicle/detection-rules) | IOC | repo | vivant | règles YARA-L (Google SecOps) |
+| [Sublime rules](https://github.com/Sublime-Security/sublime-rules) | IOC | repo | vivant | règles de détection e-mail |
+| [Neo23x0 signature-base](https://github.com/Neo23x0/signature-base) | IOC | repo | vivant | base YARA de référence (THOR / LOKI) |
+| [YARAHQ yara-forge](https://github.com/YARAHQ/yara-forge) | IOC | repo | vivant | agrégat normalisé de règles YARA publiques |
+| [Volexity — threat-intel](https://github.com/volexity/threat-intel) | IOC | repo | vivant | YARA et IOC par campagne |
+| [RussianPanda — Yara-Rules](https://github.com/RussianPanda95/Yara-Rules) | IOC | repo | 2026-08 | règles sur stealers et loaders |
+| [bartblaze — Yara-rules](https://github.com/bartblaze/Yara-rules) | IOC | repo | 2026-01 | règles génériques |
+| [ReversingLabs — yara-rules](https://github.com/reversinglabs/reversinglabs-yara-rules) | IOC | repo | 2025-11 | règles de l'éditeur |
+| HarfangLab (voir §7.1) · JPCERT/CC yara (voir §3) | IOC | repo | — | dépôts YARA couverts dans leurs sections |
 | [MISP warninglists](https://github.com/MISP/misp-warninglists) | IOC | repo | vivant | faux positifs ; y ajouter FireHOL level1 et la liste Tor |
 | [RuleCheck.io Detections Digest](https://detections-digest.rulecheck.io) | RENS | newsletter | vivant | ctichef.com hors ligne |
 | [Nuclei — voir §7.2] | | | | |
