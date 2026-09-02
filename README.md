@@ -2,7 +2,7 @@
 
 Liste de sources de renseignement concernant la menace d'origine cyber.
 
-> Dernière vérification des liens : 2026-09-02 (~470 sources ; tag `IOC` audité le 2026-09-02). Méthode au §19.
+> Dernière vérification des liens : 2026-09-02 (~620 sources ; tag `IOC` audité le 2026-09-02). Méthode au §19.
 >
 > Les sources ne sont pas restreintes à l'anglais. La langue est indiquée entre crochets — p. ex. `[ZH]`, `[RU]`, `[KO]` — lorsqu'elle n'est ni le français ni l'anglais.
 >
