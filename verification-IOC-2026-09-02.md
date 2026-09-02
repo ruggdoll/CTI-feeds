@@ -76,6 +76,86 @@ Article-Information), Rapid7 AttackerKB (doublon du flux Rapid7), RH-ISAC
 (digest re-publiant des IOC tiers — bruit de corrélation), Bitsight, Habr,
 CUJO AI, RansomLook, Krebs (volume trop faible ou pas d'observable atomique).
 
+## Feeds et dépôts — preuve directe (règle 1)
+
+Les sources ci-dessous portent le tag `IOC` ou `IOC+RENS` **sans passer par une
+sonde de texte** : ce sont des **flux ou des dépôts dont le format d'IOC est
+explicite** (listes TXT/CSV/JSON/MISP/STIX d'IP, domaines, URL, hachages, ou
+règles partageables). La preuve est l'inspection directe du contenu le
+2026-09-02 ; le nombre d'observables n'est pas compté, il est par construction
+supérieur au seuil. Cette liste complète les tableaux ci-dessus : toute source
+`IOC` du README doit figurer soit dans un tableau de sonde, soit ici.
+
+**§1 Référentiels** — Malpedia (familles de malware, règles YARA, API — Fraunhofer FKIE).
+
+**§2.1 Fondations et projets de référence** — abuse.ch (URLhaus, MalwareBazaar,
+ThreatFox, Feodo Tracker, SSLBL — CSV/JSON/MISP/Suricata) · AlienVault OTX (API,
+pulses) · CIRCL (feed MISP OSINT) · Botvrij.eu (MISP/CSV) · Spamhaus DROP/EDROP
+(TXT/JSON) · SANS ISC / DShield (blocklists quotidiennes) · Shadowserver
+(rapports ASN quotidiens, sur inscription) · Stratosphere Laboratory (blocklists
++ datasets CTU) · DataPlane.org (TXT, honeypots) · APNIC Community Honeynet
+(feed) · Project Honey Pot / http:BL (DNSBL) · HoneyDB (API).
+
+**§2.2 Blocklists IP / domaines** — blocklist.de · CINS Score / CI Army ·
+Emerging Threats compromised-ips · Binary Defense banlist · GreenSnow ·
+BruteForceBlocker · Phishing Army · OpenPhish · PhishTank · Phishing.Database
+(mitchellkrogza) · Inversion DNSBL Blocklists · HaGeZi DNS Blocklists · The Block
+List Project · FireHOL IP lists · SURBL · URIBL · CleanTalk · AbuseIPDB · Stop
+Forum Spam · dan.me.uk Tor list · threatview.io · stamparm Ipsum · stamparm
+Maltrail trails · hole.cert.pl · FGRibreau mailchecker.
+
+**§2.3 Crypto / Web3** — Scam Sniffer (scam-database) · MetaMask
+(eth-phishing-detect) · polkadot-js phishing · PhishFort lists · TRM Labs /
+Chainabuse (API).
+
+**§3 CERT — feeds et dépôts officiels** — CERT-FR / ANSSI (feed MISP TLP:CLEAR ;
+la preuve figure déjà dans le tableau CERT, la page `/ioc` documente le feed) ·
+CERT-AGID (feed quotidien sur inscription) · CERT.LV (data feed sur demande) ·
+NCSC-NL (dépôts d'IOC par campagne) · TTC-CERT (dépôt blocklist + events MISP,
+figé 2024) · MH-CERT (dépôt `Indicator-of-Compromise-IOC-`) · BSI / CERT-Bund
+(dépôts BSI-Bund, honeypot MADCAT, avis CSAF lisibles machine).
+
+**§7.2 Trackers C2** — drb-ra C2IntelFeeds · Xanderux C2watcher · ViriBack ·
+CyberCrime Tracker · Bambenek (sur demande) · EcrimeLabs (sur demande) ·
+Critical Path Security (dépôt Zeek Intel).
+
+**§7.2 Vulnérabilités** — Nuclei templates (dépôt de templates).
+VulnCheck reste marqué « IOC non vérifiés » (API sur inscription).
+
+**§7.2 Mobile** — Amnesty Tech investigations (STIX) — la preuve figure aussi
+dans le tableau Mobile.
+
+**§7.1 / §11 Dépôts d'éditeurs et d'agrégateurs** — Datadog Security Labs
+(malicious-software-packages-dataset) · Maltiverse (API/plateforme) · Bert-JanP
+Open-Source-Threat-Intel-Feeds · spydisec spydithreatintel · EndlessFractal
+Threat-Intel-Feed · rodanmaharjan ThreatIntelligence · Intezer
+community-intelligence · GithubInfosec latest-malware-IoC · malware-traffic
+indicators · PRODAFT · DigitalSide (STIX/MISP/CSV) · TweetFeed (API) ·
+0xDanielLopez (phishunt, phishing_kits) · curated-intel · mthcht · blackorbird
+APT_REPORT · despacito420 The-Feed · dragnet · Mr Looquer · xxspell ctifeeds ·
+vx-underground.
+
+**§15 Sandboxes et dépôts d'échantillons** — MalShare · urlscan.io · Hybrid
+Analysis · Triage · FileScan.io · UnpacMe · PolySwarm · ANY.RUN · Yomi ·
+Threat.Zone · Joe Sandbox · CAPE · OALabs. Accès par API ou recherche : les IOC
+sont extractibles à la requête, pas livrés en bloc — le tag `IOC` vaut pour la
+capacité d'export, pas pour un flux poussé.
+
+**§16 Dépôts de règles** — SigmaHQ · elastic detection-rules · splunk
+security_content · chronicle detection-rules · Sublime rules · Neo23x0
+signature-base · YARAHQ yara-forge · Volexity threat-intel · RussianPanda
+Yara-Rules · bartblaze Yara-rules · ReversingLabs yara-rules · MISP warninglists.
+Les règles (Sigma, YARA, YARA-L) sont traitées comme des `IOC` au sens large :
+signatures atomiques partageables.
+
+**Sous-liens non-IOC signalés pour correction** — `GitHub ANSSI-FR` (DFIR-ORC,
+DFIR-OGRE), `droid` (CERT-EU, gestion Sigma), `NSA Cybersecurity` (nsacyber,
+outils), `CERT/CC` (notes de vulnérabilité, pas d'observables), `NASK raporty`
+(PDF), `National Cyber Threat Assessment` (CCCS, évaluation biennale) : ce sont
+des facettes de leur CERT parent, sans flux d'observables propre. Le tag
+`IOC+RENS` de la ligne parente ne devrait pas s'y propager (à corriger côté
+parseur de catalogue).
+
 ## Enseignement
 
 Le nombre de mentions « IOC » ne prédit pas la présence d'observables : SOCRadar (111 mentions, 0 hash), CTM360 (42, 0), ThreatBook (37, 0), Intrinsec (35, 0) parlent d'IOC sans les publier dans le texte — ils sont dans des PDF, des plateformes payantes ou des images. À l'inverse, Fox-IT, ITOCHU, Unit 42 ou Hunt.io livrent des centaines de hash en clair. C'est cette seconde catégorie qui mérite le tag.
