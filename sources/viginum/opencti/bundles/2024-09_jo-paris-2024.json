@@ -1,0 +1,192 @@
+{
+ "type": "bundle",
+ "id": "bundle--44d01a2e-ff4d-4c07-ba59-3ecbd75ff6d9",
+ "objects": [
+  {
+   "type": "identity",
+   "spec_version": "2.1",
+   "id": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "name": "VIGINUM",
+   "identity_class": "organization"
+  },
+  {
+   "type": "marking-definition",
+   "spec_version": "2.1",
+   "id": "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+   "definition_type": "tlp",
+   "name": "TLP:CLEAR",
+   "definition": {
+    "tlp": "clear"
+   }
+  },
+  {
+   "type": "campaign",
+   "id": "campaign--b8e0e04a-9fcd-57bc-831d-a70fd4cd171e",
+   "name": "Olimpiya",
+   "spec_version": "2.1",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "intrusion-set",
+   "id": "intrusion-set--e7afca4f-e404-5d93-8a98-982d7599d50e",
+   "name": "Storm-1516",
+   "spec_version": "2.1",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "campaign",
+   "id": "campaign--e52ee709-fd1f-544a-a2e6-8415cc30d701",
+   "name": "Matrioshka",
+   "spec_version": "2.1",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "campaign",
+   "id": "campaign--682c1b8f-f3c1-5513-be16-b67a64930e8d",
+   "name": "RRN",
+   "spec_version": "2.1",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "intrusion-set",
+   "id": "intrusion-set--10a1d37e-f2c9-5f85-a36e-24f52be302cc",
+   "name": "Spamouflage",
+   "aliases": [
+    "Spamouflage",
+    "Dragonbridge",
+    "Spamouflage Dragon"
+   ],
+   "description": "Réseau de comptes inauthentiques d'origine chinoise ; actif contre les JOP24 du 10 au 29 juillet 2024 sur plusieurs plateformes (DouYin, Bilibili, YouTube, Facebook). Documenté par Graphika et Microsoft.",
+   "spec_version": "2.1",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "identity",
+   "id": "identity--abed0272-1872-55ff-bcdd-50962579a44e",
+   "name": "Comité international olympique",
+   "identity_class": "organization",
+   "description": "Organisateur des Jeux — cible de manœuvres informationnelles étrangères durant Paris 2024.",
+   "spec_version": "2.1",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--74f4883f-5baa-571e-8083-7e5dd8ae0d96",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "targets",
+   "source_ref": "campaign--b8e0e04a-9fcd-57bc-831d-a70fd4cd171e",
+   "target_ref": "identity--abed0272-1872-55ff-bcdd-50962579a44e",
+   "description": "campagne pro-azerbaïdjanaise appelant au boycott des JOP24 (#BoycottParis2024)"
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--d2e9576b-5f7b-58db-9842-fae967bbd72c",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "targets",
+   "source_ref": "intrusion-set--e7afca4f-e404-5d93-8a98-982d7599d50e",
+   "target_ref": "identity--abed0272-1872-55ff-bcdd-50962579a44e",
+   "description": "vidéo de menace sous fausse bannière du Hamas ciblant les athlètes israéliens (nov. 2023, juil. 2024)"
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--bac047d5-fd73-5220-a366-0b120f37ecf5",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "targets",
+   "source_ref": "intrusion-set--10a1d37e-f2c9-5f85-a36e-24f52be302cc",
+   "target_ref": "identity--abed0272-1872-55ff-bcdd-50962579a44e",
+   "description": "réseau chinois, 10-29 juillet 2024"
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--91c1c8ac-24a9-5fd8-a7cf-f816d7ac708a",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "targets",
+   "source_ref": "campaign--e52ee709-fd1f-544a-a2e6-8415cc30d701",
+   "target_ref": "identity--abed0272-1872-55ff-bcdd-50962579a44e",
+   "description": "publications ciblant les fact-checkers au sujet des JOP24"
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--ef945f58-cb6e-5ab7-a61b-e03c9d5c40e1",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "targets",
+   "source_ref": "campaign--682c1b8f-f3c1-5513-be16-b67a64930e8d",
+   "target_ref": "identity--abed0272-1872-55ff-bcdd-50962579a44e",
+   "description": ""
+  },
+  {
+   "type": "report",
+   "id": "report--3865cd53-5da7-538e-b873-fc404739c9f4",
+   "name": "Synthèse de la menace informationnelle ayant visé les Jeux Olympiques et Paralympiques de Paris 2024",
+   "report_types": [
+    "threat-report"
+   ],
+   "published": "2024-09-13T00:00:00.000Z",
+   "created": "2024-09-13T00:00:00.000Z",
+   "description": "Rapport public VIGINUM (13/09/2024). Sur la période avril 2023 – 8 septembre 2024, VIGINUM a identifié 43 manœuvres informationnelles impliquant des acteurs étrangers ayant ciblé les JOP de Paris 2024, majoritairement opportunistes, plus deux campagnes planifiées et coordonnées : « OLIMPIYA » (été 2023, acteurs pro-azerbaïdjanais, appels au boycott #BoycottParis2024 / #NoParis2024) et une campagne pro-russe. Modes opératoires adverses observés : manœuvres sous fausse bannière (vidéo de menace ciblant les athlètes israéliens sous les codes du Hamas, attribuée par Microsoft à Storm-1516), deepfakes et cheap fakes, doxing, détournement de comptes à forte audience, réseaux de comptes inauthentiques (dont le réseau chinois Spamouflage, actif 10-29 juillet 2024 sur DouYin, Bilibili, YouTube, Facebook), hashtags polarisants, vidéos décontextualisées. Recours par les campagnes RRN/Doppelgänger et Matriochka. La plupart des manœuvres ont peiné à obtenir une visibilité significative dans le débat public numérique francophone.\n",
+   "external_references": [
+    {
+     "source_name": "VIGINUM",
+     "description": "Rapport (PDF)",
+     "url": "https://www.sgdsn.gouv.fr/files/files/viginum/Publications/20240913_NP_SGDSN_VIGINUM_Rapport%20menace%20informationnelle%20durant%20les%20JOP24_VFF_0.pdf"
+    }
+   ],
+   "object_refs": [
+    "campaign--b8e0e04a-9fcd-57bc-831d-a70fd4cd171e",
+    "intrusion-set--e7afca4f-e404-5d93-8a98-982d7599d50e",
+    "campaign--e52ee709-fd1f-544a-a2e6-8415cc30d701",
+    "campaign--682c1b8f-f3c1-5513-be16-b67a64930e8d",
+    "intrusion-set--10a1d37e-f2c9-5f85-a36e-24f52be302cc",
+    "identity--abed0272-1872-55ff-bcdd-50962579a44e",
+    "relationship--74f4883f-5baa-571e-8083-7e5dd8ae0d96",
+    "relationship--d2e9576b-5f7b-58db-9842-fae967bbd72c",
+    "relationship--bac047d5-fd73-5220-a366-0b120f37ecf5",
+    "relationship--91c1c8ac-24a9-5fd8-a7cf-f816d7ac708a",
+    "relationship--ef945f58-cb6e-5ab7-a61b-e03c9d5c40e1"
+   ],
+   "spec_version": "2.1",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  }
+ ]
+}

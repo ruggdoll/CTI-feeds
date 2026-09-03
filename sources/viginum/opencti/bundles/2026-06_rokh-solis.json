@@ -1,0 +1,1939 @@
+{
+ "type": "bundle",
+ "id": "bundle--d688388c-f5cb-4815-b8da-4dff8f077ad6",
+ "objects": [
+  {
+   "type": "identity",
+   "spec_version": "2.1",
+   "id": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "name": "VIGINUM",
+   "identity_class": "organization"
+  },
+  {
+   "type": "marking-definition",
+   "spec_version": "2.1",
+   "id": "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+   "definition_type": "tlp",
+   "name": "TLP:CLEAR",
+   "definition": {
+    "tlp": "clear"
+   }
+  },
+  {
+   "type": "intrusion-set",
+   "id": "intrusion-set--00e72907-a327-547a-bf44-784571ffc807",
+   "name": "Rokh Solis",
+   "aliases": [
+    "Rokh Solis"
+   ],
+   "description": "MOI détecté par VIGINUM en mars 2026, ciblant LFI et ses candidats aux municipales 2026. Finalité de dénigrement politique et de polarisation. Attribué (marqueurs d'extranéité) à un acteur non-étatique localisé en Israël.\n",
+   "spec_version": "2.1",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "identity",
+   "id": "identity--fcd1dfec-7fb1-5d06-a40e-e024f5164bf2",
+   "name": "Blackcore",
+   "identity_class": "organization",
+   "description": "Entité israélienne sans statut légal identifiée par VIGINUM comme probablement à l'origine des campagnes ; infrastructure liée à electric-marinade.com / omrisystems.com.",
+   "x_opencti_aliases": [
+    "balckcore.com"
+   ],
+   "spec_version": "2.1",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "identity",
+   "id": "identity--984772e9-4879-581c-8e3a-98dd6cb15017",
+   "name": "GALACTICOS LTD",
+   "identity_class": "organization",
+   "description": "Société israélienne (n° 516599818) liée à l'infrastructure de Blackcore (registre Checkid.co.il).",
+   "spec_version": "2.1",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "identity",
+   "id": "identity--2437a338-ed76-5f78-bf61-06a6623a4db1",
+   "name": "La France Insoumise",
+   "identity_class": "organization",
+   "description": "Parti politique français, cible principale du MOI Rokh Solis.",
+   "spec_version": "2.1",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "identity",
+   "id": "identity--6607fe75-b26d-50d3-801c-6310b2160fe1",
+   "name": "Sébastien DELOGU",
+   "identity_class": "individual",
+   "description": "Député et candidat LFI aux municipales de Marseille — cible (blogdesophie.com, delogupourpalestine.com).",
+   "spec_version": "2.1",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "identity",
+   "id": "identity--87bc78fa-3f85-5db7-a547-d96815f40761",
+   "name": "François PIQUEMAL",
+   "identity_class": "individual",
+   "description": "Député et candidat LFI aux municipales de Toulouse — cible (piquemalzero.com, usurpation « Enfance et Partage »).",
+   "spec_version": "2.1",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "identity",
+   "id": "identity--f980bb64-e46f-5e55-9787-14f6e7a9b806",
+   "name": "David GUIRAUD",
+   "identity_class": "individual",
+   "description": "Député et candidat LFI aux municipales de Roubaix — cible (guiraudestzero.com, « La vérité cachée sur David Guiraud »).",
+   "spec_version": "2.1",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "domain-name",
+   "value": "blogdesophie.com",
+   "id": "domain-name--5e263f2e-46cb-5cf0-ab25-bbd90f902878",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--e3abc795-9a08-56f5-a1c1-a5684a964f3c",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "consists-of",
+   "source_ref": "intrusion-set--00e72907-a327-547a-bf44-784571ffc807",
+   "target_ref": "domain-name--5e263f2e-46cb-5cf0-ab25-bbd90f902878",
+   "description": "site du dispositif Rokh Solis (annexe / corps du rapport)"
+  },
+  {
+   "type": "domain-name",
+   "value": "delogupourpalestine.com",
+   "id": "domain-name--d3e2ab7b-b1ee-5c6f-8cdd-597f024f05a9",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--d7e171a0-c815-55ea-a84d-17e5685ca4f6",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "consists-of",
+   "source_ref": "intrusion-set--00e72907-a327-547a-bf44-784571ffc807",
+   "target_ref": "domain-name--d3e2ab7b-b1ee-5c6f-8cdd-597f024f05a9",
+   "description": "site du dispositif Rokh Solis (annexe / corps du rapport)"
+  },
+  {
+   "type": "domain-name",
+   "value": "piquemalzero.com",
+   "id": "domain-name--c1358468-68ed-5078-b764-510ec542193c",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--ab60e108-29cd-589b-8fa3-1de14b1340b9",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "consists-of",
+   "source_ref": "intrusion-set--00e72907-a327-547a-bf44-784571ffc807",
+   "target_ref": "domain-name--c1358468-68ed-5078-b764-510ec542193c",
+   "description": "site du dispositif Rokh Solis (annexe / corps du rapport)"
+  },
+  {
+   "type": "domain-name",
+   "value": "lalternative2026.com",
+   "id": "domain-name--bc63e36b-b440-5253-918c-4d564b82232a",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--803ebd8b-4d5a-51ab-aa67-4dd36c8d4257",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "consists-of",
+   "source_ref": "intrusion-set--00e72907-a327-547a-bf44-784571ffc807",
+   "target_ref": "domain-name--bc63e36b-b440-5253-918c-4d564b82232a",
+   "description": "site du dispositif Rokh Solis (annexe / corps du rapport)"
+  },
+  {
+   "type": "domain-name",
+   "value": "forsane-alizza.eu",
+   "id": "domain-name--c37fcf6a-2f73-5289-8750-cd9db0aab7d4",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--3e49027a-b1ea-5405-897c-0d77cf170c96",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "consists-of",
+   "source_ref": "intrusion-set--00e72907-a327-547a-bf44-784571ffc807",
+   "target_ref": "domain-name--c37fcf6a-2f73-5289-8750-cd9db0aab7d4",
+   "description": "site du dispositif Rokh Solis (annexe / corps du rapport)"
+  },
+  {
+   "type": "domain-name",
+   "value": "rcn-france.org",
+   "id": "domain-name--0d199545-6ecc-5d1b-8c5d-2763b4a67c2d",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--0467c355-057f-5d38-9998-3d3168769958",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "consists-of",
+   "source_ref": "intrusion-set--00e72907-a327-547a-bf44-784571ffc807",
+   "target_ref": "domain-name--0d199545-6ecc-5d1b-8c5d-2763b4a67c2d",
+   "description": "site du dispositif Rokh Solis (annexe / corps du rapport)"
+  },
+  {
+   "type": "domain-name",
+   "value": "rcn-france.com",
+   "id": "domain-name--f3393a4f-48d0-595b-9b95-44d980dfb4c2",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--63e8b2c0-36db-5c09-98b2-2bbc62411a1b",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "consists-of",
+   "source_ref": "intrusion-set--00e72907-a327-547a-bf44-784571ffc807",
+   "target_ref": "domain-name--f3393a4f-48d0-595b-9b95-44d980dfb4c2",
+   "description": "site du dispositif Rokh Solis (annexe / corps du rapport)"
+  },
+  {
+   "type": "domain-name",
+   "value": "guiraudestzero.com",
+   "id": "domain-name--25064619-2037-5ede-b158-54391a68582d",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--602de535-0b17-5b8c-9f37-fde7788facd2",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "consists-of",
+   "source_ref": "intrusion-set--00e72907-a327-547a-bf44-784571ffc807",
+   "target_ref": "domain-name--25064619-2037-5ede-b158-54391a68582d",
+   "description": "site du dispositif Rokh Solis (annexe / corps du rapport)"
+  },
+  {
+   "type": "domain-name",
+   "value": "renaissancecatholique.fr",
+   "id": "domain-name--5a82fcc9-417d-574b-8928-77a306949fd1",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--21bd9ef9-3ca2-5b86-8857-55483915528e",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "consists-of",
+   "source_ref": "intrusion-set--00e72907-a327-547a-bf44-784571ffc807",
+   "target_ref": "domain-name--5a82fcc9-417d-574b-8928-77a306949fd1",
+   "description": "site du dispositif Rokh Solis (annexe / corps du rapport)"
+  },
+  {
+   "type": "domain-name",
+   "value": "balckcore.com",
+   "id": "domain-name--262f2e55-0172-50ff-b55a-78485b2a7b1a",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--422dd37d-b3d7-5dd9-bbbf-443c82f8942d",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "consists-of",
+   "source_ref": "identity--fcd1dfec-7fb1-5d06-a40e-e024f5164bf2",
+   "target_ref": "domain-name--262f2e55-0172-50ff-b55a-78485b2a7b1a",
+   "description": "infrastructure liée à Blackcore / omrisystems (§3.3)"
+  },
+  {
+   "type": "domain-name",
+   "value": "blackcore.online",
+   "id": "domain-name--6110c169-18b3-51d5-a387-7450ec0b536e",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--b03c4cac-5e94-5c45-ba1e-f5e0a5fbe0f1",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "consists-of",
+   "source_ref": "identity--fcd1dfec-7fb1-5d06-a40e-e024f5164bf2",
+   "target_ref": "domain-name--6110c169-18b3-51d5-a387-7450ec0b536e",
+   "description": "infrastructure liée à Blackcore / omrisystems (§3.3)"
+  },
+  {
+   "type": "domain-name",
+   "value": "full-report.blackcore.online",
+   "id": "domain-name--55d730b2-1278-58c1-be4c-3b899ee201c6",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--ac4eb192-7883-5547-96c7-d092f4886f70",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "consists-of",
+   "source_ref": "identity--fcd1dfec-7fb1-5d06-a40e-e024f5164bf2",
+   "target_ref": "domain-name--55d730b2-1278-58c1-be4c-3b899ee201c6",
+   "description": "infrastructure liée à Blackcore / omrisystems (§3.3)"
+  },
+  {
+   "type": "domain-name",
+   "value": "electric-marinade.com",
+   "id": "domain-name--8fc696f4-3aa0-541e-8ed8-062d2a922d49",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--abd3c8e2-7c51-56f7-9fff-30ccb3a65a1c",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "consists-of",
+   "source_ref": "identity--fcd1dfec-7fb1-5d06-a40e-e024f5164bf2",
+   "target_ref": "domain-name--8fc696f4-3aa0-541e-8ed8-062d2a922d49",
+   "description": "infrastructure liée à Blackcore / omrisystems (§3.3)"
+  },
+  {
+   "type": "domain-name",
+   "value": "omrisystems.com",
+   "id": "domain-name--1bd0393a-17e9-5d12-9d5d-ab52a4784f92",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--d06ee707-98e6-5784-9ad1-77bac43f15d8",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "consists-of",
+   "source_ref": "identity--fcd1dfec-7fb1-5d06-a40e-e024f5164bf2",
+   "target_ref": "domain-name--1bd0393a-17e9-5d12-9d5d-ab52a4784f92",
+   "description": "infrastructure liée à Blackcore / omrisystems (§3.3)"
+  },
+  {
+   "type": "domain-name",
+   "value": "edge.omrisystems.com",
+   "id": "domain-name--32e623e2-162c-543a-aeb1-cbcac604cbc9",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--08cebada-7359-55be-b6f3-a2a36bedbaf3",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "consists-of",
+   "source_ref": "identity--fcd1dfec-7fb1-5d06-a40e-e024f5164bf2",
+   "target_ref": "domain-name--32e623e2-162c-543a-aeb1-cbcac604cbc9",
+   "description": "infrastructure liée à Blackcore / omrisystems (§3.3)"
+  },
+  {
+   "type": "domain-name",
+   "value": "sadaqahpalestine.com",
+   "id": "domain-name--473a269f-1b1e-5a9f-977e-db279240ef4e",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--e5863657-cc87-5b7c-917e-c6564f23aaa2",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "consists-of",
+   "source_ref": "identity--fcd1dfec-7fb1-5d06-a40e-e024f5164bf2",
+   "target_ref": "domain-name--473a269f-1b1e-5a9f-977e-db279240ef4e",
+   "description": "infrastructure liée à Blackcore / omrisystems (§3.3)"
+  },
+  {
+   "type": "ipv4-addr",
+   "value": "198.177.120.188",
+   "id": "ipv4-addr--eea27b09-d24b-5431-be43-d3d85c466850",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--5a328952-dbae-5f59-8edc-9a6e9279a7ee",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "consists-of",
+   "source_ref": "intrusion-set--00e72907-a327-547a-bf44-784571ffc807",
+   "target_ref": "ipv4-addr--eea27b09-d24b-5431-be43-d3d85c466850",
+   "description": "adresses IP liées au dispositif (§2 et §3)"
+  },
+  {
+   "type": "ipv4-addr",
+   "value": "198.177.120.194",
+   "id": "ipv4-addr--40f1abaf-1ce4-5996-a21f-050c6fda05db",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--586e141e-f9c8-50ba-9ed8-628fea30a810",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "consists-of",
+   "source_ref": "intrusion-set--00e72907-a327-547a-bf44-784571ffc807",
+   "target_ref": "ipv4-addr--40f1abaf-1ce4-5996-a21f-050c6fda05db",
+   "description": "adresses IP liées au dispositif (§2 et §3)"
+  },
+  {
+   "type": "ipv4-addr",
+   "value": "198.177.120.196",
+   "id": "ipv4-addr--3868f3c5-2cb8-5b3d-9aaf-71f80cf48e2b",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--d95ea408-da46-5140-9f77-58af89217bd1",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "consists-of",
+   "source_ref": "intrusion-set--00e72907-a327-547a-bf44-784571ffc807",
+   "target_ref": "ipv4-addr--3868f3c5-2cb8-5b3d-9aaf-71f80cf48e2b",
+   "description": "adresses IP liées au dispositif (§2 et §3)"
+  },
+  {
+   "type": "ipv4-addr",
+   "value": "80.78.18.115",
+   "id": "ipv4-addr--a3cfcebb-d71a-526e-8d3a-6e4df77fa561",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--9da00885-a803-56c0-b694-897bd43f1c54",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "consists-of",
+   "source_ref": "intrusion-set--00e72907-a327-547a-bf44-784571ffc807",
+   "target_ref": "ipv4-addr--a3cfcebb-d71a-526e-8d3a-6e4df77fa561",
+   "description": "adresses IP liées au dispositif (§2 et §3)"
+  },
+  {
+   "type": "ipv4-addr",
+   "value": "94.237.57.56",
+   "id": "ipv4-addr--7afb2154-e575-584c-a15b-70c6f1d91416",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--437cd0fc-010a-572f-a0f9-3ea3408315b9",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "consists-of",
+   "source_ref": "intrusion-set--00e72907-a327-547a-bf44-784571ffc807",
+   "target_ref": "ipv4-addr--7afb2154-e575-584c-a15b-70c6f1d91416",
+   "description": "adresses IP liées au dispositif (§2 et §3)"
+  },
+  {
+   "type": "ipv4-addr",
+   "value": "5.22.213.198",
+   "id": "ipv4-addr--05666ce2-a9bf-550e-af7e-83f7c77a5c00",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--545586ed-2906-51b7-a038-93dca83911ac",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "consists-of",
+   "source_ref": "intrusion-set--00e72907-a327-547a-bf44-784571ffc807",
+   "target_ref": "ipv4-addr--05666ce2-a9bf-550e-af7e-83f7c77a5c00",
+   "description": "adresses IP liées au dispositif (§2 et §3)"
+  },
+  {
+   "type": "ipv4-addr",
+   "value": "185.230.63.107",
+   "id": "ipv4-addr--04423f15-f02d-5705-909b-4c2d2e7bab57",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--fbbc20ac-2ef0-52a1-ab50-8597bd1fa24f",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "consists-of",
+   "source_ref": "intrusion-set--00e72907-a327-547a-bf44-784571ffc807",
+   "target_ref": "ipv4-addr--04423f15-f02d-5705-909b-4c2d2e7bab57",
+   "description": "adresses IP liées au dispositif (§2 et §3)"
+  },
+  {
+   "type": "ipv4-addr",
+   "value": "185.230.63.171",
+   "id": "ipv4-addr--26b461e4-a113-5976-8c27-3afbea3dcb1a",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--e694f2f9-0a56-58e2-87e4-5aebf3b03e62",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "consists-of",
+   "source_ref": "intrusion-set--00e72907-a327-547a-bf44-784571ffc807",
+   "target_ref": "ipv4-addr--26b461e4-a113-5976-8c27-3afbea3dcb1a",
+   "description": "adresses IP liées au dispositif (§2 et §3)"
+  },
+  {
+   "type": "ipv4-addr",
+   "value": "185.230.63.186",
+   "id": "ipv4-addr--4804afa1-9b32-5dbd-8575-fa4d6e2b81e5",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--6ead1029-e998-5c72-b279-e235dc66d010",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "consists-of",
+   "source_ref": "intrusion-set--00e72907-a327-547a-bf44-784571ffc807",
+   "target_ref": "ipv4-addr--4804afa1-9b32-5dbd-8575-fa4d6e2b81e5",
+   "description": "adresses IP liées au dispositif (§2 et §3)"
+  },
+  {
+   "type": "ipv4-addr",
+   "value": "34.149.87.45",
+   "id": "ipv4-addr--61c01326-780c-5b88-b397-39905afc32c3",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--d4fecd02-1333-59ba-b144-6b108e885409",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "consists-of",
+   "source_ref": "intrusion-set--00e72907-a327-547a-bf44-784571ffc807",
+   "target_ref": "ipv4-addr--61c01326-780c-5b88-b397-39905afc32c3",
+   "description": "adresses IP liées au dispositif (§2 et §3)"
+  },
+  {
+   "type": "email-addr",
+   "value": "quiestdelgou@gmail.com",
+   "id": "email-addr--fbf99788-1072-5c20-8954-e938dbf4e3d3",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--848ad3b5-7344-53f1-81d4-2e1a79a65faa",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--00e72907-a327-547a-bf44-784571ffc807",
+   "target_ref": "email-addr--fbf99788-1072-5c20-8954-e938dbf4e3d3",
+   "description": "adresse de contact d'un actif du MOI (corps du rapport)"
+  },
+  {
+   "type": "email-addr",
+   "value": "enfanceetpartageorg@proton.me",
+   "id": "email-addr--8ebbddd8-4fb1-599b-8ae5-fa785b955786",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--e0c7044c-b560-56f3-a0db-5e964847115d",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--00e72907-a327-547a-bf44-784571ffc807",
+   "target_ref": "email-addr--8ebbddd8-4fb1-599b-8ae5-fa785b955786",
+   "description": "adresse de contact d'un actif du MOI (corps du rapport)"
+  },
+  {
+   "type": "email-addr",
+   "value": "info@guiraudestzero.com",
+   "id": "email-addr--2a105bce-8252-5684-9cdd-c1f5ad37b363",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--baba4116-fcf8-5fbb-b3d5-c1fc8898a2e9",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--00e72907-a327-547a-bf44-784571ffc807",
+   "target_ref": "email-addr--2a105bce-8252-5684-9cdd-c1f5ad37b363",
+   "description": "adresse de contact d'un actif du MOI (corps du rapport)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "facebook",
+   "user_id": "100000966362066",
+   "id": "user-account--49544029-af01-5e3d-ab3e-a1692c6bd384",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--80311633-a447-54ba-abb4-1330a0047e45",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--00e72907-a327-547a-bf44-784571ffc807",
+   "target_ref": "user-account--49544029-af01-5e3d-ab3e-a1692c6bd384",
+   "description": "compte Facebook inauthentique amplificateur (annexe 5.3)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "facebook",
+   "user_id": "100002001680594",
+   "id": "user-account--44fc6dfe-5cc1-53f4-a8a7-141d64c62cdb",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--3f1e6fa0-397a-52a9-8404-c2a5ba869d8a",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--00e72907-a327-547a-bf44-784571ffc807",
+   "target_ref": "user-account--44fc6dfe-5cc1-53f4-a8a7-141d64c62cdb",
+   "description": "compte Facebook inauthentique amplificateur (annexe 5.3)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "facebook",
+   "user_id": "100004287882617",
+   "id": "user-account--8cdf784e-d75d-56ae-b8c3-2d986bab4553",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--31ff3e13-c097-5767-ac99-2732ceb778d1",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--00e72907-a327-547a-bf44-784571ffc807",
+   "target_ref": "user-account--8cdf784e-d75d-56ae-b8c3-2d986bab4553",
+   "description": "compte Facebook inauthentique amplificateur (annexe 5.3)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "facebook",
+   "user_id": "100005496518952",
+   "id": "user-account--b6a050cb-144c-5e76-bd71-bff400b6d3bc",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--ac067b98-474c-570c-b440-a0c6cf7a2cea",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--00e72907-a327-547a-bf44-784571ffc807",
+   "target_ref": "user-account--b6a050cb-144c-5e76-bd71-bff400b6d3bc",
+   "description": "compte Facebook inauthentique amplificateur (annexe 5.3)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "facebook",
+   "user_id": "100008980603303",
+   "id": "user-account--78a30a49-bcea-5011-a442-9d6597a5293d",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--00d5d903-6baa-59b3-be2b-08288577db3d",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--00e72907-a327-547a-bf44-784571ffc807",
+   "target_ref": "user-account--78a30a49-bcea-5011-a442-9d6597a5293d",
+   "description": "compte Facebook inauthentique amplificateur (annexe 5.3)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "facebook",
+   "user_id": "100009534210453",
+   "id": "user-account--274d8954-af14-5142-8847-03d52bedab18",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--d318f808-f33d-57b6-9173-0997d7b961bf",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--00e72907-a327-547a-bf44-784571ffc807",
+   "target_ref": "user-account--274d8954-af14-5142-8847-03d52bedab18",
+   "description": "compte Facebook inauthentique amplificateur (annexe 5.3)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "facebook",
+   "user_id": "100009837391284",
+   "id": "user-account--19bfb419-f8f2-5be9-a5c7-7cd6df8f194c",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--7a860c7f-c0c3-5651-ab9a-f186ddc4bce8",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--00e72907-a327-547a-bf44-784571ffc807",
+   "target_ref": "user-account--19bfb419-f8f2-5be9-a5c7-7cd6df8f194c",
+   "description": "compte Facebook inauthentique amplificateur (annexe 5.3)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "facebook",
+   "user_id": "100012527208960",
+   "id": "user-account--a9036f7c-0f4a-5a69-b292-39c478e98a44",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--652a790a-3872-5ddf-aabf-d47721744f7a",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--00e72907-a327-547a-bf44-784571ffc807",
+   "target_ref": "user-account--a9036f7c-0f4a-5a69-b292-39c478e98a44",
+   "description": "compte Facebook inauthentique amplificateur (annexe 5.3)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "facebook",
+   "user_id": "100012961032657",
+   "id": "user-account--f0ce8747-a7e6-5dba-800c-a04f0f998794",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--d2ea610d-4beb-5a33-87bc-b88fddd7c881",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--00e72907-a327-547a-bf44-784571ffc807",
+   "target_ref": "user-account--f0ce8747-a7e6-5dba-800c-a04f0f998794",
+   "description": "compte Facebook inauthentique amplificateur (annexe 5.3)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "facebook",
+   "user_id": "100025205192191",
+   "id": "user-account--34f6a358-8697-5108-a734-0111553fdd47",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--44258e90-469a-5b28-851e-64247c23ecbf",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--00e72907-a327-547a-bf44-784571ffc807",
+   "target_ref": "user-account--34f6a358-8697-5108-a734-0111553fdd47",
+   "description": "compte Facebook inauthentique amplificateur (annexe 5.3)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "facebook",
+   "user_id": "100026779241205",
+   "id": "user-account--7ecaca6b-8643-5e83-9bce-4c9c88d80555",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--46004f2d-4b42-58b4-83ad-ee60a85db6b6",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--00e72907-a327-547a-bf44-784571ffc807",
+   "target_ref": "user-account--7ecaca6b-8643-5e83-9bce-4c9c88d80555",
+   "description": "compte Facebook inauthentique amplificateur (annexe 5.3)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "facebook",
+   "user_id": "100052425981422",
+   "id": "user-account--6870e7ea-d9c9-5db9-8f96-8c527cc780ab",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--ca7a6467-5223-56df-946a-23fd15a01295",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--00e72907-a327-547a-bf44-784571ffc807",
+   "target_ref": "user-account--6870e7ea-d9c9-5db9-8f96-8c527cc780ab",
+   "description": "compte Facebook inauthentique amplificateur (annexe 5.3)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "facebook",
+   "user_id": "100065275154182",
+   "id": "user-account--72fdd768-1d98-5c3b-8b52-bc1ed73cb7fa",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--675ed98e-53ee-5d3d-86f6-3fad90d74e2f",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--00e72907-a327-547a-bf44-784571ffc807",
+   "target_ref": "user-account--72fdd768-1d98-5c3b-8b52-bc1ed73cb7fa",
+   "description": "compte Facebook inauthentique amplificateur (annexe 5.3)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "facebook",
+   "user_id": "100068076475246",
+   "id": "user-account--20381690-5e33-5030-af65-ff21cd695c65",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--a2c95a2d-9da0-5e55-bc8f-83ca800bc67d",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--00e72907-a327-547a-bf44-784571ffc807",
+   "target_ref": "user-account--20381690-5e33-5030-af65-ff21cd695c65",
+   "description": "compte Facebook inauthentique amplificateur (annexe 5.3)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "facebook",
+   "user_id": "100075968945688",
+   "id": "user-account--65848e17-b771-50db-8bdd-48e3a2c74a5f",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--06cf9e0a-b91d-5ad4-99ca-15cb57cb5e7f",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--00e72907-a327-547a-bf44-784571ffc807",
+   "target_ref": "user-account--65848e17-b771-50db-8bdd-48e3a2c74a5f",
+   "description": "compte Facebook inauthentique amplificateur (annexe 5.3)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "facebook",
+   "user_id": "100084410421939",
+   "id": "user-account--51199054-d906-5bc6-a280-30415fe7922e",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--c18fd432-0f9f-5e81-ab37-595d9e9f6506",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--00e72907-a327-547a-bf44-784571ffc807",
+   "target_ref": "user-account--51199054-d906-5bc6-a280-30415fe7922e",
+   "description": "compte Facebook inauthentique amplificateur (annexe 5.3)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "facebook",
+   "user_id": "100091682196038",
+   "id": "user-account--3e08ccc9-dc31-52c5-bd12-f67255d91f77",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--544a44f4-a192-5057-b395-69a6c516967a",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--00e72907-a327-547a-bf44-784571ffc807",
+   "target_ref": "user-account--3e08ccc9-dc31-52c5-bd12-f67255d91f77",
+   "description": "compte Facebook inauthentique amplificateur (annexe 5.3)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "facebook",
+   "user_id": "100091734470667",
+   "id": "user-account--e63a1fac-a8fc-54a8-a5a1-5732457061f4",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--8853cd18-9ae8-51bb-8f5f-ffb3e591f49f",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--00e72907-a327-547a-bf44-784571ffc807",
+   "target_ref": "user-account--e63a1fac-a8fc-54a8-a5a1-5732457061f4",
+   "description": "compte Facebook inauthentique amplificateur (annexe 5.3)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "facebook",
+   "user_id": "100091760943581",
+   "id": "user-account--ace27112-3ef7-557b-8c61-24da0202e09b",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--e9af76a0-10e2-567f-9a8c-6167fc770799",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--00e72907-a327-547a-bf44-784571ffc807",
+   "target_ref": "user-account--ace27112-3ef7-557b-8c61-24da0202e09b",
+   "description": "compte Facebook inauthentique amplificateur (annexe 5.3)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "facebook",
+   "user_id": "100091774052498",
+   "id": "user-account--b2971267-606e-5920-9596-e4764a80b5e3",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--539f8ea7-b100-5357-a5c3-86d3ba67085c",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--00e72907-a327-547a-bf44-784571ffc807",
+   "target_ref": "user-account--b2971267-606e-5920-9596-e4764a80b5e3",
+   "description": "compte Facebook inauthentique amplificateur (annexe 5.3)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "facebook",
+   "user_id": "100091777472324",
+   "id": "user-account--1dc465c5-d395-5d47-bb2a-6a51c53d23de",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--e85b1316-64be-5eda-b79e-a98208ef0af2",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--00e72907-a327-547a-bf44-784571ffc807",
+   "target_ref": "user-account--1dc465c5-d395-5d47-bb2a-6a51c53d23de",
+   "description": "compte Facebook inauthentique amplificateur (annexe 5.3)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "facebook",
+   "user_id": "100091783742493",
+   "id": "user-account--5aa230b8-83de-5e45-bd5c-6a73db182e26",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--c650e965-ea8c-54a4-8f47-13eed4246d5c",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--00e72907-a327-547a-bf44-784571ffc807",
+   "target_ref": "user-account--5aa230b8-83de-5e45-bd5c-6a73db182e26",
+   "description": "compte Facebook inauthentique amplificateur (annexe 5.3)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "facebook",
+   "user_id": "100091784311620",
+   "id": "user-account--faf68791-1627-5e14-9d63-fc51c66f4b10",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--954eb26d-f192-5bcd-affc-56cfc82f9630",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--00e72907-a327-547a-bf44-784571ffc807",
+   "target_ref": "user-account--faf68791-1627-5e14-9d63-fc51c66f4b10",
+   "description": "compte Facebook inauthentique amplificateur (annexe 5.3)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "facebook",
+   "user_id": "100091798291763",
+   "id": "user-account--eb32ab71-9b71-5afb-b55d-5bd09670000d",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--a03ded7c-184c-5710-96d3-d288cf9f17d8",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--00e72907-a327-547a-bf44-784571ffc807",
+   "target_ref": "user-account--eb32ab71-9b71-5afb-b55d-5bd09670000d",
+   "description": "compte Facebook inauthentique amplificateur (annexe 5.3)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "facebook",
+   "user_id": "100091825800193",
+   "id": "user-account--86099bff-29f1-501f-9207-b37226931497",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--78d96c4d-b83d-5341-93e7-7594b55cfc1b",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--00e72907-a327-547a-bf44-784571ffc807",
+   "target_ref": "user-account--86099bff-29f1-501f-9207-b37226931497",
+   "description": "compte Facebook inauthentique amplificateur (annexe 5.3)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "facebook",
+   "user_id": "100091830510088",
+   "id": "user-account--f96d7522-d269-57d8-b396-9769001e22ab",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--f5b2037d-d617-544f-b60d-a55d0b2473c0",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--00e72907-a327-547a-bf44-784571ffc807",
+   "target_ref": "user-account--f96d7522-d269-57d8-b396-9769001e22ab",
+   "description": "compte Facebook inauthentique amplificateur (annexe 5.3)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "facebook",
+   "user_id": "1197189204",
+   "id": "user-account--f276a036-822e-582f-9b67-f83cbeb335cf",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--f318c0f4-b42a-55bb-a594-c76df7e8998d",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--00e72907-a327-547a-bf44-784571ffc807",
+   "target_ref": "user-account--f276a036-822e-582f-9b67-f83cbeb335cf",
+   "description": "compte Facebook inauthentique amplificateur (annexe 5.3)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "facebook",
+   "user_id": "5699125734",
+   "id": "user-account--cd8aea9d-7219-509a-bcee-82bd6eddc4a1",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--b43e74ae-3645-5a71-af93-cf6848e6f4b4",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--00e72907-a327-547a-bf44-784571ffc807",
+   "target_ref": "user-account--cd8aea9d-7219-509a-bcee-82bd6eddc4a1",
+   "description": "compte Facebook inauthentique amplificateur (annexe 5.3)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "facebook",
+   "user_id": "6158578015",
+   "id": "user-account--bc619732-a277-5436-9d9c-f395fe87f5bb",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--754486f5-0d95-547e-bc45-1ac715b639cc",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--00e72907-a327-547a-bf44-784571ffc807",
+   "target_ref": "user-account--bc619732-a277-5436-9d9c-f395fe87f5bb",
+   "description": "compte Facebook inauthentique amplificateur (annexe 5.3)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "facebook",
+   "user_id": "6158598570",
+   "id": "user-account--13e75d06-0a0e-579b-8896-c5e02d3d382c",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--63d0142d-f531-5eb4-8ec9-6b70ee0734a5",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--00e72907-a327-547a-bf44-784571ffc807",
+   "target_ref": "user-account--13e75d06-0a0e-579b-8896-c5e02d3d382c",
+   "description": "compte Facebook inauthentique amplificateur (annexe 5.3)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "facebook",
+   "user_id": "7961925871",
+   "id": "user-account--057c6188-8e04-5544-82d2-a20f6d628b67",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--a4d393c0-2fea-5faf-b208-dab3f3b6a703",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--00e72907-a327-547a-bf44-784571ffc807",
+   "target_ref": "user-account--057c6188-8e04-5544-82d2-a20f6d628b67",
+   "description": "compte Facebook inauthentique amplificateur (annexe 5.3)"
+  },
+  {
+   "type": "attack-pattern",
+   "id": "attack-pattern--1c20ba87-d6b2-557a-adc5-da40e80004e9",
+   "name": "Develop AI-Generated Images (Deepfakes)",
+   "external_references": [
+    {
+     "source_name": "DISARM",
+     "external_id": "T0086.001"
+    }
+   ],
+   "spec_version": "2.1",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--dbe061c3-1ab5-5d31-8ae3-32001323e612",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "uses",
+   "source_ref": "intrusion-set--00e72907-a327-547a-bf44-784571ffc807",
+   "target_ref": "attack-pattern--1c20ba87-d6b2-557a-adc5-da40e80004e9"
+  },
+  {
+   "type": "attack-pattern",
+   "id": "attack-pattern--5eef0fd0-a698-5b2e-8836-01e52895e435",
+   "name": "Develop Inauthentic News Articles",
+   "external_references": [
+    {
+     "source_name": "DISARM",
+     "external_id": "T0085.003"
+    }
+   ],
+   "spec_version": "2.1",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--b9af2a3f-3270-57d2-945c-af47183f8f40",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "uses",
+   "source_ref": "intrusion-set--00e72907-a327-547a-bf44-784571ffc807",
+   "target_ref": "attack-pattern--5eef0fd0-a698-5b2e-8836-01e52895e435"
+  },
+  {
+   "type": "attack-pattern",
+   "id": "attack-pattern--70aa7fb2-d55e-5d97-a48b-ede2e9dce067",
+   "name": "Create Inauthentic Websites",
+   "external_references": [
+    {
+     "source_name": "DISARM",
+     "external_id": "T0013"
+    }
+   ],
+   "spec_version": "2.1",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--cff4415e-50cd-54d4-ac5c-4223931c6d97",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "uses",
+   "source_ref": "intrusion-set--00e72907-a327-547a-bf44-784571ffc807",
+   "target_ref": "attack-pattern--70aa7fb2-d55e-5d97-a48b-ede2e9dce067"
+  },
+  {
+   "type": "attack-pattern",
+   "id": "attack-pattern--7603187a-b84e-5853-8e70-6382a404c00e",
+   "name": "Impersonate Existing Organisation",
+   "external_references": [
+    {
+     "source_name": "DISARM",
+     "external_id": "T0099.003"
+    }
+   ],
+   "spec_version": "2.1",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--0b163e8a-c4ad-5692-82f4-030cdae66228",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "uses",
+   "source_ref": "intrusion-set--00e72907-a327-547a-bf44-784571ffc807",
+   "target_ref": "attack-pattern--7603187a-b84e-5853-8e70-6382a404c00e"
+  },
+  {
+   "type": "attack-pattern",
+   "id": "attack-pattern--82e8deae-1e64-56c0-be6c-9c0703e5a96a",
+   "name": "Create Inauthentic Accounts",
+   "external_references": [
+    {
+     "source_name": "DISARM",
+     "external_id": "T0090"
+    }
+   ],
+   "spec_version": "2.1",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--cf472e51-7b0d-5073-b140-9ba5c9690696",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "uses",
+   "source_ref": "intrusion-set--00e72907-a327-547a-bf44-784571ffc807",
+   "target_ref": "attack-pattern--82e8deae-1e64-56c0-be6c-9c0703e5a96a"
+  },
+  {
+   "type": "attack-pattern",
+   "id": "attack-pattern--d0d19da8-8955-5fcd-8e82-d365ed75b296",
+   "name": "Flood Information Space",
+   "external_references": [
+    {
+     "source_name": "DISARM",
+     "external_id": "T0049"
+    }
+   ],
+   "spec_version": "2.1",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--ff3ee435-22d4-5cdb-b494-67362e78c96e",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "uses",
+   "source_ref": "intrusion-set--00e72907-a327-547a-bf44-784571ffc807",
+   "target_ref": "attack-pattern--d0d19da8-8955-5fcd-8e82-d365ed75b296"
+  },
+  {
+   "type": "attack-pattern",
+   "id": "attack-pattern--06d2d87f-96e0-5a94-adcc-09cdd63ad475",
+   "name": "Cross-Posting",
+   "external_references": [
+    {
+     "source_name": "DISARM",
+     "external_id": "T0119"
+    }
+   ],
+   "spec_version": "2.1",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--e3ea25c8-d46c-5fab-b1ea-e84e99abdf74",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "uses",
+   "source_ref": "intrusion-set--00e72907-a327-547a-bf44-784571ffc807",
+   "target_ref": "attack-pattern--06d2d87f-96e0-5a94-adcc-09cdd63ad475"
+  },
+  {
+   "type": "attack-pattern",
+   "id": "attack-pattern--8956b8fb-a2ef-53f4-911a-d49c455b5ab9",
+   "name": "Divide",
+   "external_references": [
+    {
+     "source_name": "DISARM",
+     "external_id": "T0079"
+    }
+   ],
+   "spec_version": "2.1",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--1fb8aa07-cb94-5920-b234-796b0e31c5b7",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "uses",
+   "source_ref": "intrusion-set--00e72907-a327-547a-bf44-784571ffc807",
+   "target_ref": "attack-pattern--8956b8fb-a2ef-53f4-911a-d49c455b5ab9"
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--90786abb-6677-57b7-9ceb-78080ce701e6",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "attributed-to",
+   "source_ref": "identity--fcd1dfec-7fb1-5d06-a40e-e024f5164bf2",
+   "target_ref": "intrusion-set--00e72907-a327-547a-bf44-784571ffc807",
+   "description": "entreprise probablement à l'origine des campagnes"
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--78995529-9ff3-5a8a-897e-b687c945e6a9",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "identity--984772e9-4879-581c-8e3a-98dd6cb15017",
+   "target_ref": "identity--fcd1dfec-7fb1-5d06-a40e-e024f5164bf2",
+   "description": "infrastructure web commune"
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--ceabe2b8-3c87-5a4f-97d3-3130a8470b70",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "targets",
+   "source_ref": "intrusion-set--00e72907-a327-547a-bf44-784571ffc807",
+   "target_ref": "identity--2437a338-ed76-5f78-bf61-06a6623a4db1",
+   "description": ""
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--1fd14181-034e-57f2-8207-a816e86417d3",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "targets",
+   "source_ref": "intrusion-set--00e72907-a327-547a-bf44-784571ffc807",
+   "target_ref": "identity--6607fe75-b26d-50d3-801c-6310b2160fe1",
+   "description": ""
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--83846c4a-00fe-5759-840b-11fbbf0258bd",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "targets",
+   "source_ref": "intrusion-set--00e72907-a327-547a-bf44-784571ffc807",
+   "target_ref": "identity--87bc78fa-3f85-5db7-a547-d96815f40761",
+   "description": ""
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--6e22e955-3f44-517a-aba1-a5dad86360ba",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "targets",
+   "source_ref": "intrusion-set--00e72907-a327-547a-bf44-784571ffc807",
+   "target_ref": "identity--f980bb64-e46f-5e55-9787-14f6e7a9b806",
+   "description": ""
+  },
+  {
+   "type": "report",
+   "id": "report--c4523f7a-7dc5-545c-b05c-6487d6133f63",
+   "name": "Rokh Solis : analyse d'un mode opératoire informationnel ayant ciblé les élections municipales de mars 2026",
+   "report_types": [
+    "threat-report"
+   ],
+   "published": "2026-06-11T00:00:00.000Z",
+   "created": "2026-06-11T00:00:00.000Z",
+   "description": "Rapport technique VIGINUM (11/06/2026). En mars 2026, VIGINUM caractérise un nouveau mode opératoire informationnel, Rokh Solis, réunissant les critères d'une ingérence numérique étrangère, visant à dénigrer le parti La France Insoumise (LFI) et ses candidats aux municipales des 15 et 22 mars 2026 : Sébastien DELOGU (Marseille), François PIQUEMAL (Toulouse), David GUIRAUD (Roubaix). Quatre opérations informationnelles. Dispositif : ~6 sites web aux caractéristiques techniques communes (blogdesophie.com, delogupourpalestine.com, piquemalzero.com, lalternative2026.com, forsane-alizza.eu, rcn-france.org) + avatars coordonnés sur TikTok/Instagram/X/Facebook. Un volet met en scène l'opposition entre un pseudo-groupe islamiste radical (reprise du nom du groupe dissous « Forsane Alizza ») et une pseudo-association souverainiste catholique (« Renaissance catholique Nationale »), afin de polariser le débat en instrumentalisant la communauté musulmane. VIGINUM impute la campagne, avec plusieurs marqueurs d'extranéité (localisations Israël), à une entreprise israélienne sans statut légal, Blackcore, dont l'infrastructure (electric-marinade.com, omrisystems.com) révèle un large éventail d'outils d'amplification artificielle, avec des liens vers un business angel israélien et la société GALACTICOS LTD. Amplification également par des groupes de comptes a priori vietnamiens. Annexes du rapport : chronologie, schéma d'infrastructure, listes des comptes inauthentiques Meta (~40) et des groupes Facebook ciblés (~35), opération Angola.\n",
+   "external_references": [
+    {
+     "source_name": "VIGINUM",
+     "description": "Rapport (PDF)",
+     "url": "https://www.sgdsn.gouv.fr/files/files/viginum/Publications/20260611_SGDSN_VIGINUM_Rapport-technique_Rokh-Solis.pdf"
+    }
+   ],
+   "object_refs": [
+    "intrusion-set--00e72907-a327-547a-bf44-784571ffc807",
+    "identity--fcd1dfec-7fb1-5d06-a40e-e024f5164bf2",
+    "identity--984772e9-4879-581c-8e3a-98dd6cb15017",
+    "identity--2437a338-ed76-5f78-bf61-06a6623a4db1",
+    "identity--6607fe75-b26d-50d3-801c-6310b2160fe1",
+    "identity--87bc78fa-3f85-5db7-a547-d96815f40761",
+    "identity--f980bb64-e46f-5e55-9787-14f6e7a9b806",
+    "domain-name--5e263f2e-46cb-5cf0-ab25-bbd90f902878",
+    "relationship--e3abc795-9a08-56f5-a1c1-a5684a964f3c",
+    "domain-name--d3e2ab7b-b1ee-5c6f-8cdd-597f024f05a9",
+    "relationship--d7e171a0-c815-55ea-a84d-17e5685ca4f6",
+    "domain-name--c1358468-68ed-5078-b764-510ec542193c",
+    "relationship--ab60e108-29cd-589b-8fa3-1de14b1340b9",
+    "domain-name--bc63e36b-b440-5253-918c-4d564b82232a",
+    "relationship--803ebd8b-4d5a-51ab-aa67-4dd36c8d4257",
+    "domain-name--c37fcf6a-2f73-5289-8750-cd9db0aab7d4",
+    "relationship--3e49027a-b1ea-5405-897c-0d77cf170c96",
+    "domain-name--0d199545-6ecc-5d1b-8c5d-2763b4a67c2d",
+    "relationship--0467c355-057f-5d38-9998-3d3168769958",
+    "domain-name--f3393a4f-48d0-595b-9b95-44d980dfb4c2",
+    "relationship--63e8b2c0-36db-5c09-98b2-2bbc62411a1b",
+    "domain-name--25064619-2037-5ede-b158-54391a68582d",
+    "relationship--602de535-0b17-5b8c-9f37-fde7788facd2",
+    "domain-name--5a82fcc9-417d-574b-8928-77a306949fd1",
+    "relationship--21bd9ef9-3ca2-5b86-8857-55483915528e",
+    "domain-name--262f2e55-0172-50ff-b55a-78485b2a7b1a",
+    "relationship--422dd37d-b3d7-5dd9-bbbf-443c82f8942d",
+    "domain-name--6110c169-18b3-51d5-a387-7450ec0b536e",
+    "relationship--b03c4cac-5e94-5c45-ba1e-f5e0a5fbe0f1",
+    "domain-name--55d730b2-1278-58c1-be4c-3b899ee201c6",
+    "relationship--ac4eb192-7883-5547-96c7-d092f4886f70",
+    "domain-name--8fc696f4-3aa0-541e-8ed8-062d2a922d49",
+    "relationship--abd3c8e2-7c51-56f7-9fff-30ccb3a65a1c",
+    "domain-name--1bd0393a-17e9-5d12-9d5d-ab52a4784f92",
+    "relationship--d06ee707-98e6-5784-9ad1-77bac43f15d8",
+    "domain-name--32e623e2-162c-543a-aeb1-cbcac604cbc9",
+    "relationship--08cebada-7359-55be-b6f3-a2a36bedbaf3",
+    "domain-name--473a269f-1b1e-5a9f-977e-db279240ef4e",
+    "relationship--e5863657-cc87-5b7c-917e-c6564f23aaa2",
+    "ipv4-addr--eea27b09-d24b-5431-be43-d3d85c466850",
+    "relationship--5a328952-dbae-5f59-8edc-9a6e9279a7ee",
+    "ipv4-addr--40f1abaf-1ce4-5996-a21f-050c6fda05db",
+    "relationship--586e141e-f9c8-50ba-9ed8-628fea30a810",
+    "ipv4-addr--3868f3c5-2cb8-5b3d-9aaf-71f80cf48e2b",
+    "relationship--d95ea408-da46-5140-9f77-58af89217bd1",
+    "ipv4-addr--a3cfcebb-d71a-526e-8d3a-6e4df77fa561",
+    "relationship--9da00885-a803-56c0-b694-897bd43f1c54",
+    "ipv4-addr--7afb2154-e575-584c-a15b-70c6f1d91416",
+    "relationship--437cd0fc-010a-572f-a0f9-3ea3408315b9",
+    "ipv4-addr--05666ce2-a9bf-550e-af7e-83f7c77a5c00",
+    "relationship--545586ed-2906-51b7-a038-93dca83911ac",
+    "ipv4-addr--04423f15-f02d-5705-909b-4c2d2e7bab57",
+    "relationship--fbbc20ac-2ef0-52a1-ab50-8597bd1fa24f",
+    "ipv4-addr--26b461e4-a113-5976-8c27-3afbea3dcb1a",
+    "relationship--e694f2f9-0a56-58e2-87e4-5aebf3b03e62",
+    "ipv4-addr--4804afa1-9b32-5dbd-8575-fa4d6e2b81e5",
+    "relationship--6ead1029-e998-5c72-b279-e235dc66d010",
+    "ipv4-addr--61c01326-780c-5b88-b397-39905afc32c3",
+    "relationship--d4fecd02-1333-59ba-b144-6b108e885409",
+    "email-addr--fbf99788-1072-5c20-8954-e938dbf4e3d3",
+    "relationship--848ad3b5-7344-53f1-81d4-2e1a79a65faa",
+    "email-addr--8ebbddd8-4fb1-599b-8ae5-fa785b955786",
+    "relationship--e0c7044c-b560-56f3-a0db-5e964847115d",
+    "email-addr--2a105bce-8252-5684-9cdd-c1f5ad37b363",
+    "relationship--baba4116-fcf8-5fbb-b3d5-c1fc8898a2e9",
+    "user-account--49544029-af01-5e3d-ab3e-a1692c6bd384",
+    "relationship--80311633-a447-54ba-abb4-1330a0047e45",
+    "user-account--44fc6dfe-5cc1-53f4-a8a7-141d64c62cdb",
+    "relationship--3f1e6fa0-397a-52a9-8404-c2a5ba869d8a",
+    "user-account--8cdf784e-d75d-56ae-b8c3-2d986bab4553",
+    "relationship--31ff3e13-c097-5767-ac99-2732ceb778d1",
+    "user-account--b6a050cb-144c-5e76-bd71-bff400b6d3bc",
+    "relationship--ac067b98-474c-570c-b440-a0c6cf7a2cea",
+    "user-account--78a30a49-bcea-5011-a442-9d6597a5293d",
+    "relationship--00d5d903-6baa-59b3-be2b-08288577db3d",
+    "user-account--274d8954-af14-5142-8847-03d52bedab18",
+    "relationship--d318f808-f33d-57b6-9173-0997d7b961bf",
+    "user-account--19bfb419-f8f2-5be9-a5c7-7cd6df8f194c",
+    "relationship--7a860c7f-c0c3-5651-ab9a-f186ddc4bce8",
+    "user-account--a9036f7c-0f4a-5a69-b292-39c478e98a44",
+    "relationship--652a790a-3872-5ddf-aabf-d47721744f7a",
+    "user-account--f0ce8747-a7e6-5dba-800c-a04f0f998794",
+    "relationship--d2ea610d-4beb-5a33-87bc-b88fddd7c881",
+    "user-account--34f6a358-8697-5108-a734-0111553fdd47",
+    "relationship--44258e90-469a-5b28-851e-64247c23ecbf",
+    "user-account--7ecaca6b-8643-5e83-9bce-4c9c88d80555",
+    "relationship--46004f2d-4b42-58b4-83ad-ee60a85db6b6",
+    "user-account--6870e7ea-d9c9-5db9-8f96-8c527cc780ab",
+    "relationship--ca7a6467-5223-56df-946a-23fd15a01295",
+    "user-account--72fdd768-1d98-5c3b-8b52-bc1ed73cb7fa",
+    "relationship--675ed98e-53ee-5d3d-86f6-3fad90d74e2f",
+    "user-account--20381690-5e33-5030-af65-ff21cd695c65",
+    "relationship--a2c95a2d-9da0-5e55-bc8f-83ca800bc67d",
+    "user-account--65848e17-b771-50db-8bdd-48e3a2c74a5f",
+    "relationship--06cf9e0a-b91d-5ad4-99ca-15cb57cb5e7f",
+    "user-account--51199054-d906-5bc6-a280-30415fe7922e",
+    "relationship--c18fd432-0f9f-5e81-ab37-595d9e9f6506",
+    "user-account--3e08ccc9-dc31-52c5-bd12-f67255d91f77",
+    "relationship--544a44f4-a192-5057-b395-69a6c516967a",
+    "user-account--e63a1fac-a8fc-54a8-a5a1-5732457061f4",
+    "relationship--8853cd18-9ae8-51bb-8f5f-ffb3e591f49f",
+    "user-account--ace27112-3ef7-557b-8c61-24da0202e09b",
+    "relationship--e9af76a0-10e2-567f-9a8c-6167fc770799",
+    "user-account--b2971267-606e-5920-9596-e4764a80b5e3",
+    "relationship--539f8ea7-b100-5357-a5c3-86d3ba67085c",
+    "user-account--1dc465c5-d395-5d47-bb2a-6a51c53d23de",
+    "relationship--e85b1316-64be-5eda-b79e-a98208ef0af2",
+    "user-account--5aa230b8-83de-5e45-bd5c-6a73db182e26",
+    "relationship--c650e965-ea8c-54a4-8f47-13eed4246d5c",
+    "user-account--faf68791-1627-5e14-9d63-fc51c66f4b10",
+    "relationship--954eb26d-f192-5bcd-affc-56cfc82f9630",
+    "user-account--eb32ab71-9b71-5afb-b55d-5bd09670000d",
+    "relationship--a03ded7c-184c-5710-96d3-d288cf9f17d8",
+    "user-account--86099bff-29f1-501f-9207-b37226931497",
+    "relationship--78d96c4d-b83d-5341-93e7-7594b55cfc1b",
+    "user-account--f96d7522-d269-57d8-b396-9769001e22ab",
+    "relationship--f5b2037d-d617-544f-b60d-a55d0b2473c0",
+    "user-account--f276a036-822e-582f-9b67-f83cbeb335cf",
+    "relationship--f318c0f4-b42a-55bb-a594-c76df7e8998d",
+    "user-account--cd8aea9d-7219-509a-bcee-82bd6eddc4a1",
+    "relationship--b43e74ae-3645-5a71-af93-cf6848e6f4b4",
+    "user-account--bc619732-a277-5436-9d9c-f395fe87f5bb",
+    "relationship--754486f5-0d95-547e-bc45-1ac715b639cc",
+    "user-account--13e75d06-0a0e-579b-8896-c5e02d3d382c",
+    "relationship--63d0142d-f531-5eb4-8ec9-6b70ee0734a5",
+    "user-account--057c6188-8e04-5544-82d2-a20f6d628b67",
+    "relationship--a4d393c0-2fea-5faf-b208-dab3f3b6a703",
+    "attack-pattern--1c20ba87-d6b2-557a-adc5-da40e80004e9",
+    "relationship--dbe061c3-1ab5-5d31-8ae3-32001323e612",
+    "attack-pattern--5eef0fd0-a698-5b2e-8836-01e52895e435",
+    "relationship--b9af2a3f-3270-57d2-945c-af47183f8f40",
+    "attack-pattern--70aa7fb2-d55e-5d97-a48b-ede2e9dce067",
+    "relationship--cff4415e-50cd-54d4-ac5c-4223931c6d97",
+    "attack-pattern--7603187a-b84e-5853-8e70-6382a404c00e",
+    "relationship--0b163e8a-c4ad-5692-82f4-030cdae66228",
+    "attack-pattern--82e8deae-1e64-56c0-be6c-9c0703e5a96a",
+    "relationship--cf472e51-7b0d-5073-b140-9ba5c9690696",
+    "attack-pattern--d0d19da8-8955-5fcd-8e82-d365ed75b296",
+    "relationship--ff3ee435-22d4-5cdb-b494-67362e78c96e",
+    "attack-pattern--06d2d87f-96e0-5a94-adcc-09cdd63ad475",
+    "relationship--e3ea25c8-d46c-5fab-b1ea-e84e99abdf74",
+    "attack-pattern--8956b8fb-a2ef-53f4-911a-d49c455b5ab9",
+    "relationship--1fb8aa07-cb94-5920-b234-796b0e31c5b7",
+    "relationship--90786abb-6677-57b7-9ceb-78080ce701e6",
+    "relationship--78995529-9ff3-5a8a-897e-b687c945e6a9",
+    "relationship--ceabe2b8-3c87-5a4f-97d3-3130a8470b70",
+    "relationship--1fd14181-034e-57f2-8207-a816e86417d3",
+    "relationship--83846c4a-00fe-5759-840b-11fbbf0258bd",
+    "relationship--6e22e955-3f44-517a-aba1-a5dad86360ba"
+   ],
+   "spec_version": "2.1",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,3730 @@
+{
+ "type": "bundle",
+ "id": "bundle--47f2fcf0-8f78-4179-8119-49609356d9f2",
+ "objects": [
+  {
+   "type": "identity",
+   "spec_version": "2.1",
+   "id": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "name": "VIGINUM",
+   "identity_class": "organization"
+  },
+  {
+   "type": "marking-definition",
+   "spec_version": "2.1",
+   "id": "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+   "definition_type": "tlp",
+   "name": "TLP:CLEAR",
+   "definition": {
+    "tlp": "clear"
+   }
+  },
+  {
+   "type": "intrusion-set",
+   "id": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "name": "AI-Freak",
+   "aliases": [
+    "AI-Freak"
+   ],
+   "description": "MOI probablement conduit par un sous-traitant d'African Initiative : faux sites d'actualité (écosystèmes « Afrique » et « Royaume-Uni »), chaîne YouTube @ActuAF, réseau d'avatars automatisés diffusant des rétroliens, contenus et images générés par IA.\n",
+   "spec_version": "2.1",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "identity",
+   "id": "identity--a130caa2-e2cf-5a22-8f22-9cff1f4b69a0",
+   "name": "African Initiative",
+   "identity_class": "organization",
+   "description": "Agence de presse russe (Moscou, sept. 2023), successeur des activités numériques d'influence de Wagner en Afrique ; structure bicéphale (agence + association russo-burkinabè).",
+   "x_opencti_aliases": [
+    "afrinz.ru",
+    "Африканская инициатива"
+   ],
+   "spec_version": "2.1",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "identity",
+   "id": "identity--b1334012-14be-5d39-812b-c5007d9a0ccb",
+   "name": "Artyom KOUREÏEV",
+   "identity_class": "individual",
+   "description": "Figure clé d'African Initiative ; selon Bloomberg, contacts fréquents pendant des années avec des officiers de renseignement russes ; aurait rémunéré Darko TODOROVSKY.",
+   "x_opencti_aliases": [
+    "Артём Куреев",
+    "Artem KUREEV"
+   ],
+   "spec_version": "2.1",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "identity",
+   "id": "identity--6dc53c3d-7f0c-568b-b38b-30f6c6eac8ba",
+   "name": "Maksim REVA",
+   "identity_class": "individual",
+   "description": "Rédacteur en chef adjoint d'African Initiative ; nationalité estonienne ; permis de séjour révoqué par l'Estonie en 2022 ; présenté dans un rapport du KAPO comme lié aux intérêts russes.",
+   "x_opencti_aliases": [
+    "Максим Рева"
+   ],
+   "spec_version": "2.1",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "identity",
+   "id": "identity--d8e26070-aa12-5854-a21c-5db3a1e17c5c",
+   "name": "Anna ZAMARAÏEVA",
+   "identity_class": "individual",
+   "description": "Rédactrice en chef adjointe d'African Initiative ; issue des structures d'influence de PRIGOJINE ; a travaillé comme porte-parole (2022 – juillet 2023 a minima).",
+   "spec_version": "2.1",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "identity",
+   "id": "identity--fabb979c-02b4-55d9-aac9-4a4dd3e44318",
+   "name": "Darko TODOROVSKY",
+   "identity_class": "individual",
+   "description": "Présenté comme « correspondant » sur afrinz.ru ; nord-macédonien ; accusé par Christo GROZEV d'avoir été rémunéré (via KOUREÏEV) pour publier des articles pro-russes dans les médias bulgares.",
+   "spec_version": "2.1",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "identity",
+   "id": "identity--fd53afac-0977-5ffc-884f-0423ec389dad",
+   "name": "Igor DAMYANOVITCH",
+   "identity_class": "individual",
+   "description": "Militant politique anti-OTAN et journaliste monténégrin ; a écrit pour balkanist.ru, Katehon, Geopolitica.ru ; rôle exact au sein d'African Initiative non déterminé.",
+   "spec_version": "2.1",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "identity",
+   "id": "identity--809ade16-2b72-5f6d-9c77-31130efaa440",
+   "name": "Savane FM",
+   "identity_class": "organization",
+   "description": "Radio burkinabè partenaire de l'association locale d'African Initiative.",
+   "spec_version": "2.1",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "identity",
+   "id": "identity--ffc965fe-f5fd-5162-b699-3b4c99ae5b95",
+   "name": "Maison russe au Burkina Faso",
+   "identity_class": "organization",
+   "description": "Antenne de Rossotroudnitchestvo ; coopération stratégique avec African Initiative.",
+   "spec_version": "2.1",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "identity",
+   "id": "identity--6bf1997d-3de0-5eed-a41c-ce07beddcc2b",
+   "name": "Rossotroudnitchestvo",
+   "identity_class": "organization",
+   "description": "Agence d'État russe de diplomatie publique ; réseau des Maisons russes.",
+   "spec_version": "2.1",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "identity",
+   "id": "identity--eab98bde-8860-5fe4-bb7c-314d29ed4c64",
+   "name": "SMP Wagner",
+   "identity_class": "organization",
+   "description": "Société militaire privée russe ; ses activités numériques d'influence en Afrique se poursuivent via African Initiative après la mort de PRIGOJINE.",
+   "x_opencti_aliases": [
+    "Groupe Wagner",
+    "Wagner"
+   ],
+   "spec_version": "2.1",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "domain-name",
+   "value": "afrinz.ru",
+   "id": "domain-name--f47a9afd-6681-5e69-8d38-7de6d2ecb343",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--91bea4ef-de9e-5cc2-b79c-7081dbada4c4",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "consists-of",
+   "source_ref": "identity--a130caa2-e2cf-5a22-8f22-9cff1f4b69a0",
+   "target_ref": "domain-name--f47a9afd-6681-5e69-8d38-7de6d2ecb343",
+   "description": "site principal d'African Initiative (§3.1)"
+  },
+  {
+   "type": "domain-name",
+   "value": "newstop.africa",
+   "id": "domain-name--c3efb4fc-1b71-5577-a651-685c2e705fb5",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--8d886852-08ab-597c-9c10-237cbb2b92a5",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "consists-of",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "domain-name--c3efb4fc-1b71-5577-a651-685c2e705fb5",
+   "description": "faux site d'actualité — écosystème « Afrique » (§5.1)"
+  },
+  {
+   "type": "domain-name",
+   "value": "afriquestories.com",
+   "id": "domain-name--6a869c98-a461-5204-9553-5a410b26d2ea",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--3e38105c-8527-54be-8532-a81c609be959",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "consists-of",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "domain-name--6a869c98-a461-5204-9553-5a410b26d2ea",
+   "description": "faux site d'actualité — écosystème « Afrique » (§5.1)"
+  },
+  {
+   "type": "domain-name",
+   "value": "nouvellesafrique.africa",
+   "id": "domain-name--5b554880-6fd3-58b1-9800-6a41e263dcf3",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--4764b5b5-91c5-5858-8c2f-5d9aa9a60516",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "consists-of",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "domain-name--5b554880-6fd3-58b1-9800-6a41e263dcf3",
+   "description": "faux site d'actualité — écosystème « Afrique » (§5.1)"
+  },
+  {
+   "type": "domain-name",
+   "value": "nouvelles-histoires-africaines.africa",
+   "id": "domain-name--edc893bf-fdae-5ba1-9ce9-883146b5bc5e",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--bba69b65-9d29-5d46-b751-d81855f04c19",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "consists-of",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "domain-name--edc893bf-fdae-5ba1-9ce9-883146b5bc5e",
+   "description": "faux site d'actualité — écosystème « Afrique » (§5.1)"
+  },
+  {
+   "type": "domain-name",
+   "value": "africanmedia.africa",
+   "id": "domain-name--904e7cb6-c410-5209-8241-41d9ce16f47a",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--2fe0f12d-e26c-57f6-aa57-e9dcc701a373",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "consists-of",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "domain-name--904e7cb6-c410-5209-8241-41d9ce16f47a",
+   "description": "faux site d'actualité — écosystème « Afrique » (§5.1)"
+  },
+  {
+   "type": "domain-name",
+   "value": "africadaily.africa",
+   "id": "domain-name--980bc62c-9fcf-5c40-8653-002d7192f126",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--12bf5e6b-5ad8-5136-8f04-4dd69859a1bb",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "consists-of",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "domain-name--980bc62c-9fcf-5c40-8653-002d7192f126",
+   "description": "faux site d'actualité — écosystème « Afrique » (§5.1)"
+  },
+  {
+   "type": "domain-name",
+   "value": "mediaeventhub.africa",
+   "id": "domain-name--17046466-f196-5c14-82db-5208fa3c33f5",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--99b7acc3-6534-58b1-a232-77137f8d6058",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "consists-of",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "domain-name--17046466-f196-5c14-82db-5208fa3c33f5",
+   "description": "faux site d'actualité — écosystème « Afrique » (§5.1)"
+  },
+  {
+   "type": "domain-name",
+   "value": "euronewstop.co.uk",
+   "id": "domain-name--c0fd1946-a93d-555c-8f7e-e17190e1dc5d",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--edcb90da-65ec-5156-b6a8-8717c76b8338",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "consists-of",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "domain-name--c0fd1946-a93d-555c-8f7e-e17190e1dc5d",
+   "description": "faux site d'actualité — écosystème « Royaume-Uni » (§5.1)"
+  },
+  {
+   "type": "domain-name",
+   "value": "britishattitudes.com",
+   "id": "domain-name--c74c1625-924d-58ab-ade8-217bef817b49",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--7fb5a945-5894-5b44-83f8-9d6f82cf52f3",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "consists-of",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "domain-name--c74c1625-924d-58ab-ade8-217bef817b49",
+   "description": "faux site d'actualité — écosystème « Royaume-Uni » (§5.1)"
+  },
+  {
+   "type": "domain-name",
+   "value": "britishtalks.com",
+   "id": "domain-name--f56b7453-a04a-5159-b946-b2bee21e6386",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--0736c35e-693d-587f-86d9-901edaadec44",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "consists-of",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "domain-name--f56b7453-a04a-5159-b946-b2bee21e6386",
+   "description": "faux site d'actualité — écosystème « Royaume-Uni » (§5.1)"
+  },
+  {
+   "type": "ipv4-addr",
+   "value": "102.130.123.180",
+   "id": "ipv4-addr--94e647e2-ca99-5b83-9d4c-3f9955744743",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--d33bbbbd-65e3-5654-a376-57d157671a64",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "consists-of",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "ipv4-addr--94e647e2-ca99-5b83-9d4c-3f9955744743",
+   "description": "adresse IP d'hébergement (§5.1)"
+  },
+  {
+   "type": "ipv4-addr",
+   "value": "38.180.64.215",
+   "id": "ipv4-addr--39b3da22-87bb-5ecc-bb5a-cd30e60f5715",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--24f32d8f-0656-57c0-af69-2e849b7b0bf6",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "consists-of",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "ipv4-addr--39b3da22-87bb-5ecc-bb5a-cd30e60f5715",
+   "description": "adresse IP d'hébergement (§5.1)"
+  },
+  {
+   "type": "ipv4-addr",
+   "value": "38.180.200.157",
+   "id": "ipv4-addr--cb474385-3326-5676-8067-a2500811454f",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--46d82726-fb6a-5d92-9a42-a3c5779ca1ca",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "consists-of",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "ipv4-addr--cb474385-3326-5676-8067-a2500811454f",
+   "description": "adresse IP d'hébergement (§5.1)"
+  },
+  {
+   "type": "email-addr",
+   "value": "info@newstop.africa",
+   "id": "email-addr--73583ea2-c95b-51ec-8861-a681378cda97",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--a347ef96-4422-588d-bdeb-27b84eb37851",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "email-addr--73583ea2-c95b-51ec-8861-a681378cda97",
+   "description": "adresse de contact d'un site du MOI (§5.1)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "youtube",
+   "account_login": "@ActuAF",
+   "id": "user-account--5e24184c-1d65-586c-ac17-742b4592ac13",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--e113bea1-2125-5662-9f1a-e8c66ca47684",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--5e24184c-1d65-586c-ac17-742b4592ac13",
+   "description": "chaîne YouTube du MOI (§5.1)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "youtube",
+   "account_login": "@NEWSTOP-AFRIQUE",
+   "id": "user-account--b782927d-5291-5b39-8a0e-eee4e8a19680",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--e8041e1f-b370-57da-9527-917ea6ecef3e",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--b782927d-5291-5b39-8a0e-eee4e8a19680",
+   "description": "chaîne YouTube du MOI (§5.1)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "twitter",
+   "account_login": "newstop_africa",
+   "id": "user-account--56e817d1-953d-578b-ab49-56a494014926",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--6609021d-98e3-5ca7-8909-187e8cfe0be8",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--56e817d1-953d-578b-ab49-56a494014926",
+   "description": "compte X du MOI (§5.1)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "Bradleyacask",
+   "id": "user-account--02022ac3-6f3d-5f3e-bba7-6c576b8a215d",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--3f592ede-1316-546f-9a41-ade9aeb58239",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--02022ac3-6f3d-5f3e-bba7-6c576b8a215d",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "Bradleydah",
+   "id": "user-account--15135957-d09c-5aa0-b2ef-f71adbe6ce03",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--d9ca7ed2-974b-5637-975c-3a69ac7f8f47",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--15135957-d09c-5aa0-b2ef-f71adbe6ce03",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "BradleyGak",
+   "id": "user-account--a7c3fb12-ebf3-550e-9d91-204708dc31b8",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--6956b230-c0ca-5785-9181-f4f587bcfe4d",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--a7c3fb12-ebf3-550e-9d91-204708dc31b8",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "BradleyJus",
+   "id": "user-account--c803af3c-6b50-518b-b64e-938451ca2d97",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--a4c95dbe-1529-5249-be06-4e41deab2660",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--c803af3c-6b50-518b-b64e-938451ca2d97",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "Bradleyvok",
+   "id": "user-account--b28f3582-32e0-52aa-8dc0-a56e950cbfe3",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--b845927c-d432-5b42-a9fc-d3c9a7f4ad79",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--b28f3582-32e0-52aa-8dc0-a56e950cbfe3",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "BradleyWhank",
+   "id": "user-account--6e8c4f7e-f10b-5934-b952-21a9f45ef2c1",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--7296fd0c-c5fc-594a-a77a-5529a44e3b55",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--6e8c4f7e-f10b-5934-b952-21a9f45ef2c1",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "Bradleywoots",
+   "id": "user-account--76a148fc-fce2-548a-a825-8040090edd6f",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--89bed1bb-ca90-59be-9b74-8ac95a7b9ccf",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--76a148fc-fce2-548a-a825-8040090edd6f",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "Brianbeelo",
+   "id": "user-account--7f7d8e52-867e-5169-ae53-7ed9777d22b4",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--069e357c-9a41-5020-aa84-643508519ea3",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--7f7d8e52-867e-5169-ae53-7ed9777d22b4",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "Brianbup",
+   "id": "user-account--0cfcf819-3aee-574b-8139-c2423c495d63",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--268af5cb-2aa5-58da-940f-4c2272468d1a",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--0cfcf819-3aee-574b-8139-c2423c495d63",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "Brianfum",
+   "id": "user-account--efd6f93d-2025-5767-ab5c-e8462634c330",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--35b17ee0-17f2-5dcd-a78c-7bff49d9a528",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--efd6f93d-2025-5767-ab5c-e8462634c330",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "BrianJax",
+   "id": "user-account--1e63934e-0c7d-59bd-8205-9fa8da0b15f3",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--706461d9-b81c-5148-bcf7-5a5d590c9eac",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--1e63934e-0c7d-59bd-8205-9fa8da0b15f3",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "BrianLed",
+   "id": "user-account--ca059e9c-4d47-5bae-83ae-0e29a04317fc",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--900e6824-8e63-5249-afca-4b369c8076a2",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--ca059e9c-4d47-5bae-83ae-0e29a04317fc",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "Brianmab",
+   "id": "user-account--020447a5-b017-575b-93a4-2fa44f6d6ad3",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--db95a079-d8f8-5431-a680-184852db5c77",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--020447a5-b017-575b-93a4-2fa44f6d6ad3",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "Briansop",
+   "id": "user-account--c0047928-30ed-5083-aef4-35c737d35081",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--c9b3e5f8-903f-5920-abc0-795c98c04ee6",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--c0047928-30ed-5083-aef4-35c737d35081",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "BrianVar",
+   "id": "user-account--a14cf87d-8cf7-5a40-99b3-2910dcfe2be1",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--7aedbf0e-bb51-54d4-bb67-c909845f96a1",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--a14cf87d-8cf7-5a40-99b3-2910dcfe2be1",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "Charlesdrise",
+   "id": "user-account--db9ecd7e-5768-5331-a452-722e9e2b4ec9",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--8f5f016f-f603-5ed9-b648-8676bcf53d3c",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--db9ecd7e-5768-5331-a452-722e9e2b4ec9",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "CharlesDum",
+   "id": "user-account--4eacf295-a562-5ac8-aca2-26ba9f35a08d",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--388ee413-d204-5076-8023-7e33b84bb1ba",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--4eacf295-a562-5ac8-aca2-26ba9f35a08d",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "CharlesLeads",
+   "id": "user-account--39c61064-af38-58b1-9378-7e473fc39456",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--3a68af74-7d5a-53af-ba9d-a661924d6fe4",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--39c61064-af38-58b1-9378-7e473fc39456",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "CharlesLer",
+   "id": "user-account--7ea9aee9-917a-530d-bb2b-dfbf8c16dc6e",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--ce5b208f-48a1-561b-adcf-b670fb5d5b78",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--7ea9aee9-917a-530d-bb2b-dfbf8c16dc6e",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "Charlesror",
+   "id": "user-account--57a1b174-ce0c-5eb2-865c-76324bf88643",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--15d4db0c-763d-51a7-9a18-5f772631a690",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--57a1b174-ce0c-5eb2-865c-76324bf88643",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "Coreyorink",
+   "id": "user-account--180dea7e-c0f7-5635-baa8-762a4af56bf1",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--8e9faba4-4741-5772-a69f-87c6aecb75a0",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--180dea7e-c0f7-5635-baa8-762a4af56bf1",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "CoreyRot",
+   "id": "user-account--82b8e558-2dee-59d1-96ab-b52699b3cbaf",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--8e30ad09-e63c-5046-8180-f066c5841b6d",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--82b8e558-2dee-59d1-96ab-b52699b3cbaf",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "CoreyVoips",
+   "id": "user-account--31ceb9d9-443e-527d-b3b9-7974742a2af6",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--db36d067-84e3-5d75-a172-941b0c48d2b3",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--31ceb9d9-443e-527d-b3b9-7974742a2af6",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "Ernestcok",
+   "id": "user-account--755cf3b0-47ef-50c8-8b8a-d1626a4521cb",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--0ecce931-e37a-5929-9996-3e580fb09f5c",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--755cf3b0-47ef-50c8-8b8a-d1626a4521cb",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "ErnestDak",
+   "id": "user-account--8522a5b2-b2eb-5dcd-9179-5a8264b8fd61",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--0eff21d5-a2a6-52c7-85c8-47201bab59c5",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--8522a5b2-b2eb-5dcd-9179-5a8264b8fd61",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "GeraldArept",
+   "id": "user-account--31d54ec4-db05-5d04-bf17-366b55f6a750",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--3c2d0c60-9568-55f3-bbc7-de2304390a5d",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--31d54ec4-db05-5d04-bf17-366b55f6a750",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "GeraldBOT",
+   "id": "user-account--970a32f9-d87b-5ef9-940b-0542375dc329",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--5c1e7f16-6324-519e-8562-404c7e182951",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--970a32f9-d87b-5ef9-940b-0542375dc329",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "GeraldCaw",
+   "id": "user-account--cdacf2aa-fc24-5959-ac73-56d5baef2a7f",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--149c9783-6e56-5ba3-b0c3-cdeeee9a9a83",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--cdacf2aa-fc24-5959-ac73-56d5baef2a7f",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "Geraldclope",
+   "id": "user-account--17bf73f3-b81a-5058-ab10-b6c6520c1841",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--b663756c-b927-5cb3-878d-ce682f4e09e2",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--17bf73f3-b81a-5058-ab10-b6c6520c1841",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "Geralddor",
+   "id": "user-account--36f021c1-8aea-5b76-ad2e-7777dcd1005e",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--8ad24710-37ab-5117-a7f1-d6935cf65683",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--36f021c1-8aea-5b76-ad2e-7777dcd1005e",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "GeraldJen",
+   "id": "user-account--3620b656-0d87-5cfd-87ac-52c95f83481a",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--8703e722-d21d-5ea5-9861-55c53f114062",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--3620b656-0d87-5cfd-87ac-52c95f83481a",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "Geraldsam",
+   "id": "user-account--8eac7fed-ec81-5072-8ec0-4de835886ae4",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--9ece9167-4d77-584e-9860-fa1cb1446363",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--8eac7fed-ec81-5072-8ec0-4de835886ae4",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "GeraldSap",
+   "id": "user-account--8e9169ca-8323-5071-8df5-91f71005e77d",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--0b3326d4-6fdc-55c6-ae2a-6f2c3e24ed88",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--8e9169ca-8323-5071-8df5-91f71005e77d",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "GeraldStuts",
+   "id": "user-account--101cba5f-b6db-5529-98f6-7ff961698404",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--a3232ae2-bfa1-5ee7-812e-07439279c2e0",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--101cba5f-b6db-5529-98f6-7ff961698404",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "GregoryAmumn",
+   "id": "user-account--8693383f-f2d8-5ba0-b8f6-1edb4456c43c",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--e28537fb-72a9-5d88-a716-8088257c0707",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--8693383f-f2d8-5ba0-b8f6-1edb4456c43c",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "Gregoryfaush",
+   "id": "user-account--5b02a02c-513e-5018-a58c-61b258822dbc",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--2411736c-5c7c-5568-b389-333cee713201",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--5b02a02c-513e-5018-a58c-61b258822dbc",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "Gregoryjag",
+   "id": "user-account--f798a9a3-fdd6-564d-af88-551c805f648e",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--6b978cb9-6a71-5741-a029-8a265e989051",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--f798a9a3-fdd6-564d-af88-551c805f648e",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "GregoryJopsy",
+   "id": "user-account--ee7711ae-0685-57cb-ad49-95afc693cdf6",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--6aa4945b-1a69-5e34-a672-a855133acd59",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--ee7711ae-0685-57cb-ad49-95afc693cdf6",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "Gregoryjuibe",
+   "id": "user-account--38710440-e1a2-51c2-97d0-febe0c910702",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--d4b53d8b-4604-51fe-b6c9-3c04d632b67b",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--38710440-e1a2-51c2-97d0-febe0c910702",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "GregoryTap",
+   "id": "user-account--17732607-2875-50ad-a6ff-b7ec4c01cabc",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--453d78ec-9188-5af2-bc99-17008c86e404",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--17732607-2875-50ad-a6ff-b7ec4c01cabc",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "GregoryTer",
+   "id": "user-account--ccb7981d-33df-539b-af89-5991d95f2126",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--5ba06622-bc9b-5a10-a52c-631b75b0958a",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--ccb7981d-33df-539b-af89-5991d95f2126",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "GregoryTes",
+   "id": "user-account--57196082-ec11-56ef-a87c-a09a68a94573",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--ed386998-9f01-5d35-b585-6e1c423226d3",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--57196082-ec11-56ef-a87c-a09a68a94573",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "JackieDag",
+   "id": "user-account--afdc47f9-3d15-52fd-804c-4573ad2d289e",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--0305aae9-dee8-59b6-bdba-0f1bd0ccde21",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--afdc47f9-3d15-52fd-804c-4573ad2d289e",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "Jackiekal",
+   "id": "user-account--c9bbea6c-7084-5277-bb6a-2168871bee71",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--636f3961-187e-50be-b762-68f87e539cd6",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--c9bbea6c-7084-5277-bb6a-2168871bee71",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "JackieSeway",
+   "id": "user-account--3ee4b8c1-429a-5eb3-a63c-edc08ce38db5",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--1d23c7d2-10ce-58ca-bf98-67e11aa2623a",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--3ee4b8c1-429a-5eb3-a63c-edc08ce38db5",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "Jackievok",
+   "id": "user-account--45a0ec1b-a357-5d6d-86f5-4514df1bd7e9",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--5a729fd4-113b-59a0-8dcf-a675c889bb00",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--45a0ec1b-a357-5d6d-86f5-4514df1bd7e9",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "MauriceBoarp",
+   "id": "user-account--ac1a7893-7a56-5647-8b59-0a8b7cbedde2",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--fa60b814-63fa-5f4c-b1cb-54ec756d63ec",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--ac1a7893-7a56-5647-8b59-0a8b7cbedde2",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "MauriceBract",
+   "id": "user-account--4c4060e2-c3ae-5ed6-89bf-9476e1a8f7b8",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--c8bacd85-4dd4-5fee-af0f-f18dcfb9ea28",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--4c4060e2-c3ae-5ed6-89bf-9476e1a8f7b8",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "Mauricecoofs",
+   "id": "user-account--f96a2e73-df63-514f-8ad0-08b20fd24d50",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--0d6d183d-67fe-53e7-b8f3-7bba9737a3a7",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--f96a2e73-df63-514f-8ad0-08b20fd24d50",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "MauriceExelt",
+   "id": "user-account--f3a04c50-11aa-5032-853c-f16e67f3649f",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--572782c9-d825-51dc-b5a8-4b2f1118375b",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--f3a04c50-11aa-5032-853c-f16e67f3649f",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "Mauricekak",
+   "id": "user-account--3928ffb8-15db-5729-8aac-5e0f1f4936c2",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--fa76d2a0-fccd-5de9-b51c-2513081c71df",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--3928ffb8-15db-5729-8aac-5e0f1f4936c2",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "Mauricened",
+   "id": "user-account--619d7a4f-b4d1-550c-b2c6-5672cd4d60a2",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--9fb3911b-9780-5d8c-9d72-afd75445ec45",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--619d7a4f-b4d1-550c-b2c6-5672cd4d60a2",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "Mauricetom",
+   "id": "user-account--b799ee20-a42c-5659-b5a0-233d64992364",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--2f70f913-3cbe-5a73-b29a-25bd0b76ddad",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--b799ee20-a42c-5659-b5a0-233d64992364",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "Mauricetrods",
+   "id": "user-account--a22d1405-7265-59da-9b24-700a4e512ac2",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--8f014ac4-3f84-57df-9145-0333419d0b79",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--a22d1405-7265-59da-9b24-700a4e512ac2",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "MichaelAgrip",
+   "id": "user-account--f3addc9d-43b8-587f-8382-51d67a9ed8a3",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--c1c0970b-52eb-56dd-88bb-5c299efd952b",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--f3addc9d-43b8-587f-8382-51d67a9ed8a3",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "Michaelfeess",
+   "id": "user-account--422fe95d-8431-59c0-9bb5-cd374cde15f6",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--1774e766-04bd-579e-a07a-671e9aeefea4",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--422fe95d-8431-59c0-9bb5-cd374cde15f6",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "Michaelheece",
+   "id": "user-account--87a0d3ca-15ff-56a6-9c92-3cf27a9cb7e4",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--eeee963c-999a-519d-a96d-20d2c33da10d",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--87a0d3ca-15ff-56a6-9c92-3cf27a9cb7e4",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "Michaeljag",
+   "id": "user-account--25ab1ab0-d3e7-55ed-a52a-eb8c97561c54",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--217e2b62-25c3-59a5-9c23-8fd264fcef7e",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--25ab1ab0-d3e7-55ed-a52a-eb8c97561c54",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "MichaelMailt",
+   "id": "user-account--eee38a9c-287d-5ff5-a557-976e3050cd08",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--43e7cec9-9917-5860-b6f1-9c7c4f090722",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--eee38a9c-287d-5ff5-a557-976e3050cd08",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "MichaelTer",
+   "id": "user-account--d5906b88-4ca8-5d2c-a5d7-d580b24eda6a",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--8698f236-6a3a-5faf-aca2-77ef8c3af874",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--d5906b88-4ca8-5d2c-a5d7-d580b24eda6a",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "Michaelzerse",
+   "id": "user-account--ce9981b4-eb71-5d96-9e91-37c286d4163e",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--74d7aa90-5b55-5dd7-b6b1-362b11996d16",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--ce9981b4-eb71-5d96-9e91-37c286d4163e",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "NormanDerry",
+   "id": "user-account--5c5cd230-54e2-50fc-87e6-8ddb3efc8e87",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--483e0aac-51c4-5cd5-95f4-3c651e954290",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--5c5cd230-54e2-50fc-87e6-8ddb3efc8e87",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "Normanphigh",
+   "id": "user-account--7a100918-a3f6-5272-bd27-877ea6ec3191",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--febbbb66-a181-5c40-88b4-f3bc8362302f",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--7a100918-a3f6-5272-bd27-877ea6ec3191",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "NormanRes",
+   "id": "user-account--3d0758cb-0133-5791-86de-7b5162bfd567",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--b8238cde-0e83-5f43-bdd3-e2f2f2faf821",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--3d0758cb-0133-5791-86de-7b5162bfd567",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "Normantex",
+   "id": "user-account--8b718cdc-ce32-5889-8239-15ec91b339bf",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--622a99bd-e29a-5dfb-8b90-f52414a42c57",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--8b718cdc-ce32-5889-8239-15ec91b339bf",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "Raymondfouck",
+   "id": "user-account--f9ecfc48-6de9-5111-b172-70ebc71361c0",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--9e2475a0-8138-5efb-b70e-7575f4b36be2",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--f9ecfc48-6de9-5111-b172-70ebc71361c0",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "RaymondInhiz",
+   "id": "user-account--2b92e670-f97b-5e21-a5ff-335a3538a8db",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--f068b48b-c9bf-5d50-9778-219077156d11",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--2b92e670-f97b-5e21-a5ff-335a3538a8db",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "RaymondMip",
+   "id": "user-account--bad43efe-db8d-5d1f-bb8d-f33569f1bdb0",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--540de66a-b181-57f6-8e57-2c90601493d9",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--bad43efe-db8d-5d1f-bb8d-f33569f1bdb0",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "RaymondNeice",
+   "id": "user-account--c8b8a866-7719-5ef2-bb3b-4186a0d74c7d",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--d37dba68-0f5c-5d16-a25e-2471f61b555e",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--c8b8a866-7719-5ef2-bb3b-4186a0d74c7d",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "RaymondPaups",
+   "id": "user-account--90b5751c-9ada-5f30-874c-a4696882b2a9",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--fcf43fe0-7e49-5deb-98a6-7091ae7d3d5c",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--90b5751c-9ada-5f30-874c-a4696882b2a9",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "Raymondwap",
+   "id": "user-account--d08ed777-f8d8-5655-8411-12506b3dc02c",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--3419e7c1-3d84-5ac1-879c-7ab87706713b",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--d08ed777-f8d8-5655-8411-12506b3dc02c",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "Romandaw",
+   "id": "user-account--dd8a9a40-38d2-54fd-8268-a2a478a3697a",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--69832060-0127-55db-9c80-5c6829cbb087",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--dd8a9a40-38d2-54fd-8268-a2a478a3697a",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "RomanFem",
+   "id": "user-account--9614ef57-359d-5039-a992-31577606c77b",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--1075a6a9-52f3-518c-81eb-3c4a23bd81c0",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--9614ef57-359d-5039-a992-31577606c77b",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "RomanFuela",
+   "id": "user-account--71e59fe2-7d73-5d29-b58f-553dbfdcd860",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--059dc49c-4684-586a-97a2-aecca7afa181",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--71e59fe2-7d73-5d29-b58f-553dbfdcd860",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "Romanprita",
+   "id": "user-account--33e90bd1-91b1-570d-b21f-841a0bc180f8",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--75e4274a-0ac7-5289-90ee-2fd997b5a0f7",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--33e90bd1-91b1-570d-b21f-841a0bc180f8",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "Romantab",
+   "id": "user-account--a9c5e7fd-64fc-5380-8f4d-47f21ae5d5d0",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--5d1a3838-bd21-5f1f-924d-ce25c3a050f8",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--a9c5e7fd-64fc-5380-8f4d-47f21ae5d5d0",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "Romanvulty",
+   "id": "user-account--b6fcd6c6-b2cc-5840-b2b8-6be3b181f75f",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--15d51553-fcaf-565e-a1ea-7a11074e8831",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--b6fcd6c6-b2cc-5840-b2b8-6be3b181f75f",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "RomanWem",
+   "id": "user-account--5ed6288f-66d5-5a8e-91db-0d9f0bca0c39",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--774fb63e-3758-589e-83fd-5a4d6e7cee3a",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--5ed6288f-66d5-5a8e-91db-0d9f0bca0c39",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "RubenAcamb",
+   "id": "user-account--3a791d34-cb85-50ba-a273-33f679d2be9b",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--6378a6c9-45b4-5736-94f1-56243b44cbfa",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--3a791d34-cb85-50ba-a273-33f679d2be9b",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "RubenAwaks",
+   "id": "user-account--174b740d-bae9-5d2d-b70d-9973ca743323",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--5b520302-d294-57ad-9705-dbfe209dd944",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--174b740d-bae9-5d2d-b70d-9973ca743323",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "Rubendoump",
+   "id": "user-account--8e78ffe0-1ce4-5cba-a0f6-e99903309bde",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--61e19f94-13d6-5f52-b4c3-e02b6ec0fbff",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--8e78ffe0-1ce4-5cba-a0f6-e99903309bde",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "Rubenexalk",
+   "id": "user-account--f19b0043-77b6-5ee0-95ff-36990de524a2",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--4b79eca6-97ed-5db7-8838-267f87a467d5",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--f19b0043-77b6-5ee0-95ff-36990de524a2",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "Rubenjuini",
+   "id": "user-account--0147a7d6-67bc-52af-a2c3-5af81c0435c7",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--34ee93a5-f7db-5389-8020-6884950caff1",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--0147a7d6-67bc-52af-a2c3-5af81c0435c7",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "RubenPer",
+   "id": "user-account--00ea0fca-4ee3-596c-86b8-7ce87cc5406f",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--e2074236-bc25-551d-a3b7-781cc4b0760d",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--00ea0fca-4ee3-596c-86b8-7ce87cc5406f",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "Sammymus",
+   "id": "user-account--8d290b5e-4094-5347-b8ba-455752f7b3a0",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--2d26b1e4-6a3f-5975-82f7-91187723e336",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--8d290b5e-4094-5347-b8ba-455752f7b3a0",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "Sammypumma",
+   "id": "user-account--da283332-2b9d-5e9f-a98d-3fb0d4be9230",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--4c3c2b90-d431-586c-9a89-2f9ab64b6dbf",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--da283332-2b9d-5e9f-a98d-3fb0d4be9230",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "Stevenamofe",
+   "id": "user-account--e85a62ed-e22c-5212-860c-74c83cb26ddb",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--f21b74a5-1254-55de-9a87-903cde3d5497",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--e85a62ed-e22c-5212-860c-74c83cb26ddb",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "Stevenemuri",
+   "id": "user-account--de4184b2-b6ef-5216-9078-227ead42f8a7",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--eda9108d-7f8e-5c16-9281-ce4f5fdcce84",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--de4184b2-b6ef-5216-9078-227ead42f8a7",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "Steveneraky",
+   "id": "user-account--6a8e2778-85e9-50c5-962f-e3f755f3695b",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--9a6f63b7-6572-5891-8705-03f44c1fa627",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--6a8e2778-85e9-50c5-962f-e3f755f3695b",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "StevenExema",
+   "id": "user-account--8e021695-ce92-5a7b-ab82-a0a2ee9e9126",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--ac6385b1-46fb-583b-8cb6-69257ce8a195",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--8e021695-ce92-5a7b-ab82-a0a2ee9e9126",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "StevenFuh",
+   "id": "user-account--89407eec-27f7-5a0b-a296-15deba12b009",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--f0de3b75-e691-5005-adf2-6f39164f5201",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--89407eec-27f7-5a0b-a296-15deba12b009",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "StevenInina",
+   "id": "user-account--7d851777-9a32-5468-96bf-906224f32c48",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--53a39e26-603c-5702-b559-9b920b7ad76a",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--7d851777-9a32-5468-96bf-906224f32c48",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "StevenNoura",
+   "id": "user-account--1f438dc0-2531-5775-8a04-c98dc7d8e05d",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--46d52f61-0203-51a5-9233-d5215b86de60",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--1f438dc0-2531-5775-8a04-c98dc7d8e05d",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "Steventrorb",
+   "id": "user-account--114aa6cf-b291-5ec4-93d5-e57b55d323a8",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--7a5ccc76-84ad-5996-88d2-7d95100f8b8e",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--114aa6cf-b291-5ec4-93d5-e57b55d323a8",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "TommieNilet",
+   "id": "user-account--e999145a-59ec-59cf-8a23-d0722f46d7f9",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--d913fd08-1ee6-510b-9e23-255101afd24c",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--e999145a-59ec-59cf-8a23-d0722f46d7f9",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "TommiePlups",
+   "id": "user-account--c03a04d1-5435-5268-a172-055f198d0fca",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--bc01f79e-0abe-5bdc-ae7c-03420f9e4e00",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--c03a04d1-5435-5268-a172-055f198d0fca",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "Tommiepooms",
+   "id": "user-account--2d832e63-0721-5306-b1e5-c4e7db8fb4f5",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--3d1d4f3a-7c83-5af8-8626-721873b794e0",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--2d832e63-0721-5306-b1e5-c4e7db8fb4f5",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "Tommieraw",
+   "id": "user-account--ab93394a-940b-5295-b94d-9e74f76263e8",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--942f507a-8105-5ad2-9988-9c57c7edc6c1",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--ab93394a-940b-5295-b94d-9e74f76263e8",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "Tommievar",
+   "id": "user-account--40a43a1b-9c11-59df-a417-2fa889b8d08f",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--1d99e775-d5be-5c7f-96c8-2f8ef1c21987",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--40a43a1b-9c11-59df-a417-2fa889b8d08f",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "Tommievop",
+   "id": "user-account--864454ce-ae43-579e-86d6-d040b8154639",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--4ac09d54-d8cd-58b4-9496-bb32dcdd6223",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--864454ce-ae43-579e-86d6-d040b8154639",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "TravisBuH",
+   "id": "user-account--e89f7059-cf0c-5b8c-817a-869b55d59019",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--c009e226-a627-52e9-a253-b46478fc21ab",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--e89f7059-cf0c-5b8c-817a-869b55d59019",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "TravisBus",
+   "id": "user-account--ebde18a1-01d6-5a41-8420-3084a4cdbf17",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--14bfeb9e-573c-50a0-9da2-84206021c013",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--ebde18a1-01d6-5a41-8420-3084a4cdbf17",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "TravisInfic",
+   "id": "user-account--3b542a71-307f-5156-8b5a-ddf5575878c4",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--e1be628a-5d01-567f-9aea-d49560e6982c",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--3b542a71-307f-5156-8b5a-ddf5575878c4",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "TravisLesse",
+   "id": "user-account--98a9aba8-e145-534f-a7e8-eee5dfc06f04",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--441dbe13-7850-5d6b-b702-76ef748c92b1",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--98a9aba8-e145-534f-a7e8-eee5dfc06f04",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "TravisPak",
+   "id": "user-account--05a1a1f5-1b54-5ed8-b3ef-e69ba759c14a",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--729c86f0-efb4-5946-a3f9-a5b9d1531b56",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "user-account--05a1a1f5-1b54-5ed8-b3ef-e69ba759c14a",
+   "description": "avatar automatisé diffusant des rétroliens vers les sites du MOI (annexe 2)"
+  },
+  {
+   "type": "attack-pattern",
+   "id": "attack-pattern--153080ce-b780-5dea-9e6c-02c53884ddd6",
+   "name": "Develop AI-Generated Text",
+   "external_references": [
+    {
+     "source_name": "DISARM",
+     "external_id": "T0085.001"
+    }
+   ],
+   "spec_version": "2.1",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--ece0279f-99d1-5d5c-a084-286968eb7218",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "uses",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "attack-pattern--153080ce-b780-5dea-9e6c-02c53884ddd6"
+  },
+  {
+   "type": "attack-pattern",
+   "id": "attack-pattern--0f570fee-7c28-5032-b64b-1b5d20f7628e",
+   "name": "Develop AI-Generated Images (Deepfakes)",
+   "external_references": [
+    {
+     "source_name": "DISARM",
+     "external_id": "T0086.002"
+    }
+   ],
+   "spec_version": "2.1",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--ce657677-d82a-54b8-b9ee-be8240e706fa",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "uses",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "attack-pattern--0f570fee-7c28-5032-b64b-1b5d20f7628e"
+  },
+  {
+   "type": "attack-pattern",
+   "id": "attack-pattern--0ebf593f-4243-5f0c-b8b4-244ca86526ff",
+   "name": "Create Inauthentic News Sites",
+   "external_references": [
+    {
+     "source_name": "DISARM",
+     "external_id": "T0098.001"
+    }
+   ],
+   "spec_version": "2.1",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--4a47474b-5e8d-527b-97ac-620cefa3cef4",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "uses",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "attack-pattern--0ebf593f-4243-5f0c-b8b4-244ca86526ff"
+  },
+  {
+   "type": "attack-pattern",
+   "id": "attack-pattern--520dfa0a-ca71-5b06-ac81-fecff65e09dc",
+   "name": "Create Anonymous Accounts",
+   "external_references": [
+    {
+     "source_name": "DISARM",
+     "external_id": "T0090.001"
+    }
+   ],
+   "spec_version": "2.1",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--9555a01c-d648-5db0-889f-bbf79dc66bbc",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "uses",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "attack-pattern--520dfa0a-ca71-5b06-ac81-fecff65e09dc"
+  },
+  {
+   "type": "attack-pattern",
+   "id": "attack-pattern--f6b17b9b-d53a-57d7-9610-ffd4b2855587",
+   "name": "Create Clickbait",
+   "external_references": [
+    {
+     "source_name": "DISARM",
+     "external_id": "T0016"
+    }
+   ],
+   "spec_version": "2.1",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--93de74d6-283c-5ab0-9034-b9bf4cf25cd8",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "uses",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "attack-pattern--f6b17b9b-d53a-57d7-9610-ffd4b2855587"
+  },
+  {
+   "type": "attack-pattern",
+   "id": "attack-pattern--653f0418-b100-510a-928a-437483666998",
+   "name": "Bypass Content Blocking",
+   "external_references": [
+    {
+     "source_name": "DISARM",
+     "external_id": "T0049.003"
+    }
+   ],
+   "spec_version": "2.1",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--fea56c5e-fb25-5fdf-8486-3b6f3f1af1dd",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "uses",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "attack-pattern--653f0418-b100-510a-928a-437483666998"
+  },
+  {
+   "type": "attack-pattern",
+   "id": "attack-pattern--06d2d87f-96e0-5a94-adcc-09cdd63ad475",
+   "name": "Cross-Posting",
+   "external_references": [
+    {
+     "source_name": "DISARM",
+     "external_id": "T0119"
+    }
+   ],
+   "spec_version": "2.1",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--769f1489-668c-5b4a-a013-76e1f354a1c8",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "uses",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "attack-pattern--06d2d87f-96e0-5a94-adcc-09cdd63ad475"
+  },
+  {
+   "type": "attack-pattern",
+   "id": "attack-pattern--5ed1528f-d484-5ca4-9788-039a76ab43c5",
+   "name": "Conduct fundraising",
+   "external_references": [
+    {
+     "source_name": "DISARM",
+     "external_id": "T0017"
+    }
+   ],
+   "spec_version": "2.1",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--c6744aa9-be88-5128-a8ba-a8c04a889ea3",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "uses",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "attack-pattern--5ed1528f-d484-5ca4-9788-039a76ab43c5"
+  },
+  {
+   "type": "attack-pattern",
+   "id": "attack-pattern--e28211f0-a902-566a-9c28-02294baa4c39",
+   "name": "Deliver Ads",
+   "external_references": [
+    {
+     "source_name": "DISARM",
+     "external_id": "T0114"
+    }
+   ],
+   "spec_version": "2.1",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--d8497d7c-b198-54dd-a1bc-47e3f53bc89b",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "uses",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "attack-pattern--e28211f0-a902-566a-9c28-02294baa4c39"
+  },
+  {
+   "type": "attack-pattern",
+   "id": "attack-pattern--977fb58b-a68e-5a48-9246-86cb9015c911",
+   "name": "Facilitate State Propaganda",
+   "external_references": [
+    {
+     "source_name": "DISARM",
+     "external_id": "T0002"
+    }
+   ],
+   "spec_version": "2.1",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--7bbd5751-147a-5b01-ac2e-bf4174e71a07",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "uses",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "attack-pattern--977fb58b-a68e-5a48-9246-86cb9015c911"
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--37be3531-a260-5fd7-bb46-563018db5dd2",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "attributed-to",
+   "source_ref": "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+   "target_ref": "identity--a130caa2-e2cf-5a22-8f22-9cff1f4b69a0",
+   "description": "MOI probablement conduit par un sous-traitant d'African Initiative"
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--fa4b5e65-46cd-5b02-81f8-1403ab546800",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "attributed-to",
+   "source_ref": "identity--b1334012-14be-5d39-812b-c5007d9a0ccb",
+   "target_ref": "identity--a130caa2-e2cf-5a22-8f22-9cff1f4b69a0",
+   "description": ""
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--cf824bf1-d38f-53e5-b384-b7cc5c890a65",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "attributed-to",
+   "source_ref": "identity--6dc53c3d-7f0c-568b-b38b-30f6c6eac8ba",
+   "target_ref": "identity--a130caa2-e2cf-5a22-8f22-9cff1f4b69a0",
+   "description": "rédacteur en chef adjoint"
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--a1ae179f-fac6-525c-bcf1-45eebb6cc4c0",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "attributed-to",
+   "source_ref": "identity--d8e26070-aa12-5854-a21c-5db3a1e17c5c",
+   "target_ref": "identity--a130caa2-e2cf-5a22-8f22-9cff1f4b69a0",
+   "description": "rédactrice en chef adjointe"
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--2ced6e27-e318-54ac-b638-dfc5ab8deb4f",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "identity--fabb979c-02b4-55d9-aac9-4a4dd3e44318",
+   "target_ref": "identity--a130caa2-e2cf-5a22-8f22-9cff1f4b69a0",
+   "description": "« correspondant » sur afrinz.ru"
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--5873e1cd-4fb5-5ff7-808b-376acefed39b",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "identity--fd53afac-0977-5ffc-884f-0423ec389dad",
+   "target_ref": "identity--a130caa2-e2cf-5a22-8f22-9cff1f4b69a0",
+   "description": ""
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--0a0ffeb8-39a7-5e55-b9e2-537f6097b9e8",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "identity--d8e26070-aa12-5854-a21c-5db3a1e17c5c",
+   "target_ref": "identity--eab98bde-8860-5fe4-bb7c-314d29ed4c64",
+   "description": "issue des structures d'influence de PRIGOJINE"
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--31941a36-8eae-57e2-bc29-5194c982e03b",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "identity--a130caa2-e2cf-5a22-8f22-9cff1f4b69a0",
+   "target_ref": "identity--eab98bde-8860-5fe4-bb7c-314d29ed4c64",
+   "description": "successeur des activités numériques d'influence de Wagner en Afrique"
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--0bb04b24-7bc2-5b6e-9cdc-046a54241df8",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "identity--a130caa2-e2cf-5a22-8f22-9cff1f4b69a0",
+   "target_ref": "identity--809ade16-2b72-5f6d-9c77-31130efaa440",
+   "description": "partenariat local (Burkina Faso)"
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--c7836666-382d-5c62-b753-b846d01f01bb",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "identity--a130caa2-e2cf-5a22-8f22-9cff1f4b69a0",
+   "target_ref": "identity--ffc965fe-f5fd-5162-b699-3b4c99ae5b95",
+   "description": "coopération stratégique"
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--df492dd3-f8d1-513b-89db-8c76da703282",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "part-of",
+   "source_ref": "identity--ffc965fe-f5fd-5162-b699-3b4c99ae5b95",
+   "target_ref": "identity--6bf1997d-3de0-5eed-a41c-ce07beddcc2b",
+   "description": ""
+  },
+  {
+   "type": "report",
+   "id": "report--fc1c1558-9c17-52e1-9f9f-d3e9d41c629a",
+   "name": "African Initiative : de la diplomatie publique aux opérations d'influence numériques",
+   "report_types": [
+    "threat-report"
+   ],
+   "published": "2025-06-12T00:00:00.000Z",
+   "created": "2025-06-12T00:00:00.000Z",
+   "description": "Rapport technique conjoint VIGINUM / FCDO (Royaume-Uni) / SEAE (12/06/2025, TLP:CLEAR). Après la mort d'Evgueni PRIGOJINE (23/08/2023), les activités numériques d'influence de la SMP Wagner en Afrique se poursuivent sous une forme différente, probablement intégrées au dispositif d'influence de l'État russe. Elles se structurent autour d'African Initiative, agence de presse russe créée en septembre 2023 à Moscou (site afrinz.ru), aspirant à devenir le « pont d'information entre la Russie et l'Afrique ». Structure bicéphale : agence de presse + « association russo-burkinabè » physiquement présente en Afrique, recrutant influenceurs, journalistes et activistes locaux (partenariats avec la radio Savane FM, la Maison russe au Burkina Faso, Rossotroudnitchestvo). Dirigeants suspectés de liens avec les services de renseignement russes (Artyom KOUREÏEV, Maksim REVA, Anna ZAMARAÏEVA, Darko TODOROVSKY, Igor DAMYANOVITCH). Exemple de campagne : désinformation sur l'épidémie de dengue au Burkina Faso. VIGINUM caractérise également AI-Freak, un MOI probablement conduit par un sous-traitant d'African Initiative : réseau de faux sites d'actualité (écosystème « Afrique » : newstop.africa, afriquestories.com, nouvellesafrique.africa, nouvelles-histoires-africaines.africa, africanmedia.africa, africadaily.africa, mediaeventhub.africa ; écosystème « Royaume-Uni » : euronewstop.co.uk, britishattitudes.com, britishtalks.com), chaîne YouTube @ActuAF, réseau d'avatars automatisés (~105, annexe 2) diffusant des rétroliens via des commentaires de blogs, images générées par IA (DALL-E, cf. rapports OpenAI et Meta). Annexes : fiches profils d'individus clés (1), comptes automatisés (2), schéma AI-Freak (3).\n",
+   "external_references": [
+    {
+     "source_name": "VIGINUM",
+     "description": "Rapport (PDF)",
+     "url": "https://www.sgdsn.gouv.fr/files/files/viginum/Publications/20250612_TLP-CLEAR_VIGINUM_FCDO_EEAS_Rapport_Technique_African_Initiative_FR.pdf"
+    },
+    {
+     "source_name": "FCDO",
+     "description": "Contribution — UK Foreign, Commonwealth & Development Office"
+    },
+    {
+     "source_name": "EEAS",
+     "description": "Contribution — Service européen pour l'action extérieure (SEAE)"
+    }
+   ],
+   "object_refs": [
+    "intrusion-set--f8a9fce4-3d6e-5591-9f92-ea18ef5d31ff",
+    "identity--a130caa2-e2cf-5a22-8f22-9cff1f4b69a0",
+    "identity--b1334012-14be-5d39-812b-c5007d9a0ccb",
+    "identity--6dc53c3d-7f0c-568b-b38b-30f6c6eac8ba",
+    "identity--d8e26070-aa12-5854-a21c-5db3a1e17c5c",
+    "identity--fabb979c-02b4-55d9-aac9-4a4dd3e44318",
+    "identity--fd53afac-0977-5ffc-884f-0423ec389dad",
+    "identity--809ade16-2b72-5f6d-9c77-31130efaa440",
+    "identity--ffc965fe-f5fd-5162-b699-3b4c99ae5b95",
+    "identity--6bf1997d-3de0-5eed-a41c-ce07beddcc2b",
+    "identity--eab98bde-8860-5fe4-bb7c-314d29ed4c64",
+    "domain-name--f47a9afd-6681-5e69-8d38-7de6d2ecb343",
+    "relationship--91bea4ef-de9e-5cc2-b79c-7081dbada4c4",
+    "domain-name--c3efb4fc-1b71-5577-a651-685c2e705fb5",
+    "relationship--8d886852-08ab-597c-9c10-237cbb2b92a5",
+    "domain-name--6a869c98-a461-5204-9553-5a410b26d2ea",
+    "relationship--3e38105c-8527-54be-8532-a81c609be959",
+    "domain-name--5b554880-6fd3-58b1-9800-6a41e263dcf3",
+    "relationship--4764b5b5-91c5-5858-8c2f-5d9aa9a60516",
+    "domain-name--edc893bf-fdae-5ba1-9ce9-883146b5bc5e",
+    "relationship--bba69b65-9d29-5d46-b751-d81855f04c19",
+    "domain-name--904e7cb6-c410-5209-8241-41d9ce16f47a",
+    "relationship--2fe0f12d-e26c-57f6-aa57-e9dcc701a373",
+    "domain-name--980bc62c-9fcf-5c40-8653-002d7192f126",
+    "relationship--12bf5e6b-5ad8-5136-8f04-4dd69859a1bb",
+    "domain-name--17046466-f196-5c14-82db-5208fa3c33f5",
+    "relationship--99b7acc3-6534-58b1-a232-77137f8d6058",
+    "domain-name--c0fd1946-a93d-555c-8f7e-e17190e1dc5d",
+    "relationship--edcb90da-65ec-5156-b6a8-8717c76b8338",
+    "domain-name--c74c1625-924d-58ab-ade8-217bef817b49",
+    "relationship--7fb5a945-5894-5b44-83f8-9d6f82cf52f3",
+    "domain-name--f56b7453-a04a-5159-b946-b2bee21e6386",
+    "relationship--0736c35e-693d-587f-86d9-901edaadec44",
+    "ipv4-addr--94e647e2-ca99-5b83-9d4c-3f9955744743",
+    "relationship--d33bbbbd-65e3-5654-a376-57d157671a64",
+    "ipv4-addr--39b3da22-87bb-5ecc-bb5a-cd30e60f5715",
+    "relationship--24f32d8f-0656-57c0-af69-2e849b7b0bf6",
+    "ipv4-addr--cb474385-3326-5676-8067-a2500811454f",
+    "relationship--46d82726-fb6a-5d92-9a42-a3c5779ca1ca",
+    "email-addr--73583ea2-c95b-51ec-8861-a681378cda97",
+    "relationship--a347ef96-4422-588d-bdeb-27b84eb37851",
+    "user-account--5e24184c-1d65-586c-ac17-742b4592ac13",
+    "relationship--e113bea1-2125-5662-9f1a-e8c66ca47684",
+    "user-account--b782927d-5291-5b39-8a0e-eee4e8a19680",
+    "relationship--e8041e1f-b370-57da-9527-917ea6ecef3e",
+    "user-account--56e817d1-953d-578b-ab49-56a494014926",
+    "relationship--6609021d-98e3-5ca7-8909-187e8cfe0be8",
+    "user-account--02022ac3-6f3d-5f3e-bba7-6c576b8a215d",
+    "relationship--3f592ede-1316-546f-9a41-ade9aeb58239",
+    "user-account--15135957-d09c-5aa0-b2ef-f71adbe6ce03",
+    "relationship--d9ca7ed2-974b-5637-975c-3a69ac7f8f47",
+    "user-account--a7c3fb12-ebf3-550e-9d91-204708dc31b8",
+    "relationship--6956b230-c0ca-5785-9181-f4f587bcfe4d",
+    "user-account--c803af3c-6b50-518b-b64e-938451ca2d97",
+    "relationship--a4c95dbe-1529-5249-be06-4e41deab2660",
+    "user-account--b28f3582-32e0-52aa-8dc0-a56e950cbfe3",
+    "relationship--b845927c-d432-5b42-a9fc-d3c9a7f4ad79",
+    "user-account--6e8c4f7e-f10b-5934-b952-21a9f45ef2c1",
+    "relationship--7296fd0c-c5fc-594a-a77a-5529a44e3b55",
+    "user-account--76a148fc-fce2-548a-a825-8040090edd6f",
+    "relationship--89bed1bb-ca90-59be-9b74-8ac95a7b9ccf",
+    "user-account--7f7d8e52-867e-5169-ae53-7ed9777d22b4",
+    "relationship--069e357c-9a41-5020-aa84-643508519ea3",
+    "user-account--0cfcf819-3aee-574b-8139-c2423c495d63",
+    "relationship--268af5cb-2aa5-58da-940f-4c2272468d1a",
+    "user-account--efd6f93d-2025-5767-ab5c-e8462634c330",
+    "relationship--35b17ee0-17f2-5dcd-a78c-7bff49d9a528",
+    "user-account--1e63934e-0c7d-59bd-8205-9fa8da0b15f3",
+    "relationship--706461d9-b81c-5148-bcf7-5a5d590c9eac",
+    "user-account--ca059e9c-4d47-5bae-83ae-0e29a04317fc",
+    "relationship--900e6824-8e63-5249-afca-4b369c8076a2",
+    "user-account--020447a5-b017-575b-93a4-2fa44f6d6ad3",
+    "relationship--db95a079-d8f8-5431-a680-184852db5c77",
+    "user-account--c0047928-30ed-5083-aef4-35c737d35081",
+    "relationship--c9b3e5f8-903f-5920-abc0-795c98c04ee6",
+    "user-account--a14cf87d-8cf7-5a40-99b3-2910dcfe2be1",
+    "relationship--7aedbf0e-bb51-54d4-bb67-c909845f96a1",
+    "user-account--db9ecd7e-5768-5331-a452-722e9e2b4ec9",
+    "relationship--8f5f016f-f603-5ed9-b648-8676bcf53d3c",
+    "user-account--4eacf295-a562-5ac8-aca2-26ba9f35a08d",
+    "relationship--388ee413-d204-5076-8023-7e33b84bb1ba",
+    "user-account--39c61064-af38-58b1-9378-7e473fc39456",
+    "relationship--3a68af74-7d5a-53af-ba9d-a661924d6fe4",
+    "user-account--7ea9aee9-917a-530d-bb2b-dfbf8c16dc6e",
+    "relationship--ce5b208f-48a1-561b-adcf-b670fb5d5b78",
+    "user-account--57a1b174-ce0c-5eb2-865c-76324bf88643",
+    "relationship--15d4db0c-763d-51a7-9a18-5f772631a690",
+    "user-account--180dea7e-c0f7-5635-baa8-762a4af56bf1",
+    "relationship--8e9faba4-4741-5772-a69f-87c6aecb75a0",
+    "user-account--82b8e558-2dee-59d1-96ab-b52699b3cbaf",
+    "relationship--8e30ad09-e63c-5046-8180-f066c5841b6d",
+    "user-account--31ceb9d9-443e-527d-b3b9-7974742a2af6",
+    "relationship--db36d067-84e3-5d75-a172-941b0c48d2b3",
+    "user-account--755cf3b0-47ef-50c8-8b8a-d1626a4521cb",
+    "relationship--0ecce931-e37a-5929-9996-3e580fb09f5c",
+    "user-account--8522a5b2-b2eb-5dcd-9179-5a8264b8fd61",
+    "relationship--0eff21d5-a2a6-52c7-85c8-47201bab59c5",
+    "user-account--31d54ec4-db05-5d04-bf17-366b55f6a750",
+    "relationship--3c2d0c60-9568-55f3-bbc7-de2304390a5d",
+    "user-account--970a32f9-d87b-5ef9-940b-0542375dc329",
+    "relationship--5c1e7f16-6324-519e-8562-404c7e182951",
+    "user-account--cdacf2aa-fc24-5959-ac73-56d5baef2a7f",
+    "relationship--149c9783-6e56-5ba3-b0c3-cdeeee9a9a83",
+    "user-account--17bf73f3-b81a-5058-ab10-b6c6520c1841",
+    "relationship--b663756c-b927-5cb3-878d-ce682f4e09e2",
+    "user-account--36f021c1-8aea-5b76-ad2e-7777dcd1005e",
+    "relationship--8ad24710-37ab-5117-a7f1-d6935cf65683",
+    "user-account--3620b656-0d87-5cfd-87ac-52c95f83481a",
+    "relationship--8703e722-d21d-5ea5-9861-55c53f114062",
+    "user-account--8eac7fed-ec81-5072-8ec0-4de835886ae4",
+    "relationship--9ece9167-4d77-584e-9860-fa1cb1446363",
+    "user-account--8e9169ca-8323-5071-8df5-91f71005e77d",
+    "relationship--0b3326d4-6fdc-55c6-ae2a-6f2c3e24ed88",
+    "user-account--101cba5f-b6db-5529-98f6-7ff961698404",
+    "relationship--a3232ae2-bfa1-5ee7-812e-07439279c2e0",
+    "user-account--8693383f-f2d8-5ba0-b8f6-1edb4456c43c",
+    "relationship--e28537fb-72a9-5d88-a716-8088257c0707",
+    "user-account--5b02a02c-513e-5018-a58c-61b258822dbc",
+    "relationship--2411736c-5c7c-5568-b389-333cee713201",
+    "user-account--f798a9a3-fdd6-564d-af88-551c805f648e",
+    "relationship--6b978cb9-6a71-5741-a029-8a265e989051",
+    "user-account--ee7711ae-0685-57cb-ad49-95afc693cdf6",
+    "relationship--6aa4945b-1a69-5e34-a672-a855133acd59",
+    "user-account--38710440-e1a2-51c2-97d0-febe0c910702",
+    "relationship--d4b53d8b-4604-51fe-b6c9-3c04d632b67b",
+    "user-account--17732607-2875-50ad-a6ff-b7ec4c01cabc",
+    "relationship--453d78ec-9188-5af2-bc99-17008c86e404",
+    "user-account--ccb7981d-33df-539b-af89-5991d95f2126",
+    "relationship--5ba06622-bc9b-5a10-a52c-631b75b0958a",
+    "user-account--57196082-ec11-56ef-a87c-a09a68a94573",
+    "relationship--ed386998-9f01-5d35-b585-6e1c423226d3",
+    "user-account--afdc47f9-3d15-52fd-804c-4573ad2d289e",
+    "relationship--0305aae9-dee8-59b6-bdba-0f1bd0ccde21",
+    "user-account--c9bbea6c-7084-5277-bb6a-2168871bee71",
+    "relationship--636f3961-187e-50be-b762-68f87e539cd6",
+    "user-account--3ee4b8c1-429a-5eb3-a63c-edc08ce38db5",
+    "relationship--1d23c7d2-10ce-58ca-bf98-67e11aa2623a",
+    "user-account--45a0ec1b-a357-5d6d-86f5-4514df1bd7e9",
+    "relationship--5a729fd4-113b-59a0-8dcf-a675c889bb00",
+    "user-account--ac1a7893-7a56-5647-8b59-0a8b7cbedde2",
+    "relationship--fa60b814-63fa-5f4c-b1cb-54ec756d63ec",
+    "user-account--4c4060e2-c3ae-5ed6-89bf-9476e1a8f7b8",
+    "relationship--c8bacd85-4dd4-5fee-af0f-f18dcfb9ea28",
+    "user-account--f96a2e73-df63-514f-8ad0-08b20fd24d50",
+    "relationship--0d6d183d-67fe-53e7-b8f3-7bba9737a3a7",
+    "user-account--f3a04c50-11aa-5032-853c-f16e67f3649f",
+    "relationship--572782c9-d825-51dc-b5a8-4b2f1118375b",
+    "user-account--3928ffb8-15db-5729-8aac-5e0f1f4936c2",
+    "relationship--fa76d2a0-fccd-5de9-b51c-2513081c71df",
+    "user-account--619d7a4f-b4d1-550c-b2c6-5672cd4d60a2",
+    "relationship--9fb3911b-9780-5d8c-9d72-afd75445ec45",
+    "user-account--b799ee20-a42c-5659-b5a0-233d64992364",
+    "relationship--2f70f913-3cbe-5a73-b29a-25bd0b76ddad",
+    "user-account--a22d1405-7265-59da-9b24-700a4e512ac2",
+    "relationship--8f014ac4-3f84-57df-9145-0333419d0b79",
+    "user-account--f3addc9d-43b8-587f-8382-51d67a9ed8a3",
+    "relationship--c1c0970b-52eb-56dd-88bb-5c299efd952b",
+    "user-account--422fe95d-8431-59c0-9bb5-cd374cde15f6",
+    "relationship--1774e766-04bd-579e-a07a-671e9aeefea4",
+    "user-account--87a0d3ca-15ff-56a6-9c92-3cf27a9cb7e4",
+    "relationship--eeee963c-999a-519d-a96d-20d2c33da10d",
+    "user-account--25ab1ab0-d3e7-55ed-a52a-eb8c97561c54",
+    "relationship--217e2b62-25c3-59a5-9c23-8fd264fcef7e",
+    "user-account--eee38a9c-287d-5ff5-a557-976e3050cd08",
+    "relationship--43e7cec9-9917-5860-b6f1-9c7c4f090722",
+    "user-account--d5906b88-4ca8-5d2c-a5d7-d580b24eda6a",
+    "relationship--8698f236-6a3a-5faf-aca2-77ef8c3af874",
+    "user-account--ce9981b4-eb71-5d96-9e91-37c286d4163e",
+    "relationship--74d7aa90-5b55-5dd7-b6b1-362b11996d16",
+    "user-account--5c5cd230-54e2-50fc-87e6-8ddb3efc8e87",
+    "relationship--483e0aac-51c4-5cd5-95f4-3c651e954290",
+    "user-account--7a100918-a3f6-5272-bd27-877ea6ec3191",
+    "relationship--febbbb66-a181-5c40-88b4-f3bc8362302f",
+    "user-account--3d0758cb-0133-5791-86de-7b5162bfd567",
+    "relationship--b8238cde-0e83-5f43-bdd3-e2f2f2faf821",
+    "user-account--8b718cdc-ce32-5889-8239-15ec91b339bf",
+    "relationship--622a99bd-e29a-5dfb-8b90-f52414a42c57",
+    "user-account--f9ecfc48-6de9-5111-b172-70ebc71361c0",
+    "relationship--9e2475a0-8138-5efb-b70e-7575f4b36be2",
+    "user-account--2b92e670-f97b-5e21-a5ff-335a3538a8db",
+    "relationship--f068b48b-c9bf-5d50-9778-219077156d11",
+    "user-account--bad43efe-db8d-5d1f-bb8d-f33569f1bdb0",
+    "relationship--540de66a-b181-57f6-8e57-2c90601493d9",
+    "user-account--c8b8a866-7719-5ef2-bb3b-4186a0d74c7d",
+    "relationship--d37dba68-0f5c-5d16-a25e-2471f61b555e",
+    "user-account--90b5751c-9ada-5f30-874c-a4696882b2a9",
+    "relationship--fcf43fe0-7e49-5deb-98a6-7091ae7d3d5c",
+    "user-account--d08ed777-f8d8-5655-8411-12506b3dc02c",
+    "relationship--3419e7c1-3d84-5ac1-879c-7ab87706713b",
+    "user-account--dd8a9a40-38d2-54fd-8268-a2a478a3697a",
+    "relationship--69832060-0127-55db-9c80-5c6829cbb087",
+    "user-account--9614ef57-359d-5039-a992-31577606c77b",
+    "relationship--1075a6a9-52f3-518c-81eb-3c4a23bd81c0",
+    "user-account--71e59fe2-7d73-5d29-b58f-553dbfdcd860",
+    "relationship--059dc49c-4684-586a-97a2-aecca7afa181",
+    "user-account--33e90bd1-91b1-570d-b21f-841a0bc180f8",
+    "relationship--75e4274a-0ac7-5289-90ee-2fd997b5a0f7",
+    "user-account--a9c5e7fd-64fc-5380-8f4d-47f21ae5d5d0",
+    "relationship--5d1a3838-bd21-5f1f-924d-ce25c3a050f8",
+    "user-account--b6fcd6c6-b2cc-5840-b2b8-6be3b181f75f",
+    "relationship--15d51553-fcaf-565e-a1ea-7a11074e8831",
+    "user-account--5ed6288f-66d5-5a8e-91db-0d9f0bca0c39",
+    "relationship--774fb63e-3758-589e-83fd-5a4d6e7cee3a",
+    "user-account--3a791d34-cb85-50ba-a273-33f679d2be9b",
+    "relationship--6378a6c9-45b4-5736-94f1-56243b44cbfa",
+    "user-account--174b740d-bae9-5d2d-b70d-9973ca743323",
+    "relationship--5b520302-d294-57ad-9705-dbfe209dd944",
+    "user-account--8e78ffe0-1ce4-5cba-a0f6-e99903309bde",
+    "relationship--61e19f94-13d6-5f52-b4c3-e02b6ec0fbff",
+    "user-account--f19b0043-77b6-5ee0-95ff-36990de524a2",
+    "relationship--4b79eca6-97ed-5db7-8838-267f87a467d5",
+    "user-account--0147a7d6-67bc-52af-a2c3-5af81c0435c7",
+    "relationship--34ee93a5-f7db-5389-8020-6884950caff1",
+    "user-account--00ea0fca-4ee3-596c-86b8-7ce87cc5406f",
+    "relationship--e2074236-bc25-551d-a3b7-781cc4b0760d",
+    "user-account--8d290b5e-4094-5347-b8ba-455752f7b3a0",
+    "relationship--2d26b1e4-6a3f-5975-82f7-91187723e336",
+    "user-account--da283332-2b9d-5e9f-a98d-3fb0d4be9230",
+    "relationship--4c3c2b90-d431-586c-9a89-2f9ab64b6dbf",
+    "user-account--e85a62ed-e22c-5212-860c-74c83cb26ddb",
+    "relationship--f21b74a5-1254-55de-9a87-903cde3d5497",
+    "user-account--de4184b2-b6ef-5216-9078-227ead42f8a7",
+    "relationship--eda9108d-7f8e-5c16-9281-ce4f5fdcce84",
+    "user-account--6a8e2778-85e9-50c5-962f-e3f755f3695b",
+    "relationship--9a6f63b7-6572-5891-8705-03f44c1fa627",
+    "user-account--8e021695-ce92-5a7b-ab82-a0a2ee9e9126",
+    "relationship--ac6385b1-46fb-583b-8cb6-69257ce8a195",
+    "user-account--89407eec-27f7-5a0b-a296-15deba12b009",
+    "relationship--f0de3b75-e691-5005-adf2-6f39164f5201",
+    "user-account--7d851777-9a32-5468-96bf-906224f32c48",
+    "relationship--53a39e26-603c-5702-b559-9b920b7ad76a",
+    "user-account--1f438dc0-2531-5775-8a04-c98dc7d8e05d",
+    "relationship--46d52f61-0203-51a5-9233-d5215b86de60",
+    "user-account--114aa6cf-b291-5ec4-93d5-e57b55d323a8",
+    "relationship--7a5ccc76-84ad-5996-88d2-7d95100f8b8e",
+    "user-account--e999145a-59ec-59cf-8a23-d0722f46d7f9",
+    "relationship--d913fd08-1ee6-510b-9e23-255101afd24c",
+    "user-account--c03a04d1-5435-5268-a172-055f198d0fca",
+    "relationship--bc01f79e-0abe-5bdc-ae7c-03420f9e4e00",
+    "user-account--2d832e63-0721-5306-b1e5-c4e7db8fb4f5",
+    "relationship--3d1d4f3a-7c83-5af8-8626-721873b794e0",
+    "user-account--ab93394a-940b-5295-b94d-9e74f76263e8",
+    "relationship--942f507a-8105-5ad2-9988-9c57c7edc6c1",
+    "user-account--40a43a1b-9c11-59df-a417-2fa889b8d08f",
+    "relationship--1d99e775-d5be-5c7f-96c8-2f8ef1c21987",
+    "user-account--864454ce-ae43-579e-86d6-d040b8154639",
+    "relationship--4ac09d54-d8cd-58b4-9496-bb32dcdd6223",
+    "user-account--e89f7059-cf0c-5b8c-817a-869b55d59019",
+    "relationship--c009e226-a627-52e9-a253-b46478fc21ab",
+    "user-account--ebde18a1-01d6-5a41-8420-3084a4cdbf17",
+    "relationship--14bfeb9e-573c-50a0-9da2-84206021c013",
+    "user-account--3b542a71-307f-5156-8b5a-ddf5575878c4",
+    "relationship--e1be628a-5d01-567f-9aea-d49560e6982c",
+    "user-account--98a9aba8-e145-534f-a7e8-eee5dfc06f04",
+    "relationship--441dbe13-7850-5d6b-b702-76ef748c92b1",
+    "user-account--05a1a1f5-1b54-5ed8-b3ef-e69ba759c14a",
+    "relationship--729c86f0-efb4-5946-a3f9-a5b9d1531b56",
+    "attack-pattern--153080ce-b780-5dea-9e6c-02c53884ddd6",
+    "relationship--ece0279f-99d1-5d5c-a084-286968eb7218",
+    "attack-pattern--0f570fee-7c28-5032-b64b-1b5d20f7628e",
+    "relationship--ce657677-d82a-54b8-b9ee-be8240e706fa",
+    "attack-pattern--0ebf593f-4243-5f0c-b8b4-244ca86526ff",
+    "relationship--4a47474b-5e8d-527b-97ac-620cefa3cef4",
+    "attack-pattern--520dfa0a-ca71-5b06-ac81-fecff65e09dc",
+    "relationship--9555a01c-d648-5db0-889f-bbf79dc66bbc",
+    "attack-pattern--f6b17b9b-d53a-57d7-9610-ffd4b2855587",
+    "relationship--93de74d6-283c-5ab0-9034-b9bf4cf25cd8",
+    "attack-pattern--653f0418-b100-510a-928a-437483666998",
+    "relationship--fea56c5e-fb25-5fdf-8486-3b6f3f1af1dd",
+    "attack-pattern--06d2d87f-96e0-5a94-adcc-09cdd63ad475",
+    "relationship--769f1489-668c-5b4a-a013-76e1f354a1c8",
+    "attack-pattern--5ed1528f-d484-5ca4-9788-039a76ab43c5",
+    "relationship--c6744aa9-be88-5128-a8ba-a8c04a889ea3",
+    "attack-pattern--e28211f0-a902-566a-9c28-02294baa4c39",
+    "relationship--d8497d7c-b198-54dd-a1bc-47e3f53bc89b",
+    "attack-pattern--977fb58b-a68e-5a48-9246-86cb9015c911",
+    "relationship--7bbd5751-147a-5b01-ac2e-bf4174e71a07",
+    "relationship--37be3531-a260-5fd7-bb46-563018db5dd2",
+    "relationship--fa4b5e65-46cd-5b02-81f8-1403ab546800",
+    "relationship--cf824bf1-d38f-53e5-b384-b7cc5c890a65",
+    "relationship--a1ae179f-fac6-525c-bcf1-45eebb6cc4c0",
+    "relationship--2ced6e27-e318-54ac-b638-dfc5ab8deb4f",
+    "relationship--5873e1cd-4fb5-5ff7-808b-376acefed39b",
+    "relationship--0a0ffeb8-39a7-5e55-b9e2-537f6097b9e8",
+    "relationship--31941a36-8eae-57e2-bc29-5194c982e03b",
+    "relationship--0bb04b24-7bc2-5b6e-9cdc-046a54241df8",
+    "relationship--c7836666-382d-5c62-b753-b846d01f01bb",
+    "relationship--df492dd3-f8d1-513b-89db-8c76da703282"
+   ],
+   "spec_version": "2.1",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  }
+ ]
+}

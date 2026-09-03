@@ -1,0 +1,230 @@
+{
+ "type": "bundle",
+ "id": "bundle--02a08a0c-bee4-4bd8-99f0-f32faa1471a8",
+ "objects": [
+  {
+   "type": "identity",
+   "spec_version": "2.1",
+   "id": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "name": "VIGINUM",
+   "identity_class": "organization"
+  },
+  {
+   "type": "marking-definition",
+   "spec_version": "2.1",
+   "id": "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+   "definition_type": "tlp",
+   "name": "TLP:CLEAR",
+   "definition": {
+    "tlp": "clear"
+   }
+  },
+  {
+   "type": "identity",
+   "id": "identity--7cec1efd-5fc7-5155-9743-b38db173ead3",
+   "name": "FameUp",
+   "identity_class": "organization",
+   "description": "Plateforme roumaine de marketing d'influence utilisée pour recruter des influenceurs devant relayer des messages en faveur du candidat GEORGESCU.",
+   "spec_version": "2.1",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "identity",
+   "id": "identity--aa875774-cf54-5fdf-a0b2-e80127461bb3",
+   "name": "Progresia",
+   "identity_class": "organization",
+   "description": "Structure ayant utilisé FameUp pour démarcher des influenceurs ; sans existence en ligne apparente.",
+   "spec_version": "2.1",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "identity",
+   "id": "identity--073b42ac-926c-5ac7-8a6d-39f1342ad901",
+   "name": "Fundament",
+   "identity_class": "organization",
+   "description": "Structure ayant utilisé FameUp pour démarcher des influenceurs ; sans existence en ligne apparente.",
+   "spec_version": "2.1",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "identity",
+   "id": "identity--d081b150-0bab-57e1-9dda-0d321ade8345",
+   "name": "Călin GEORGESCU",
+   "identity_class": "individual",
+   "description": "Candidat arrivé en tête du premier tour de la présidentielle roumaine 2024 après une campagne quasi exclusivement en ligne (TikTok) ; bénéficiaire de la campagne d'astroturfing analysée.",
+   "spec_version": "2.1",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "attack-pattern",
+   "id": "attack-pattern--db098668-534d-54c4-a6dc-3bee0942304c",
+   "name": "Use Search Engine Optimisation",
+   "external_references": [
+    {
+     "source_name": "DISARM",
+     "external_id": "T0046"
+    }
+   ],
+   "spec_version": "2.1",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "attack-pattern",
+   "id": "attack-pattern--a64b07bf-e306-5cfd-9129-c3046a071de8",
+   "name": "Comments Section",
+   "external_references": [
+    {
+     "source_name": "DISARM",
+     "external_id": "T0151.014"
+    }
+   ],
+   "spec_version": "2.1",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "attack-pattern",
+   "id": "attack-pattern--e28211f0-a902-566a-9c28-02294baa4c39",
+   "name": "Deliver Ads",
+   "external_references": [
+    {
+     "source_name": "DISARM",
+     "external_id": "T0114"
+    }
+   ],
+   "spec_version": "2.1",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "attack-pattern",
+   "id": "attack-pattern--db5fd9ab-c14e-5a67-a2bd-aca549136f3b",
+   "name": "Content Recommendation Algorithm",
+   "external_references": [
+    {
+     "source_name": "DISARM",
+     "external_id": "T0153.006"
+    }
+   ],
+   "spec_version": "2.1",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "attack-pattern",
+   "id": "attack-pattern--2765e570-9d58-5c60-bef2-7e327821d511",
+   "name": "Co-Opt Influencers",
+   "external_references": [
+    {
+     "source_name": "DISARM",
+     "external_id": "T0100.003"
+    }
+   ],
+   "spec_version": "2.1",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "attack-pattern",
+   "id": "attack-pattern--89cc9aad-a266-5f01-a935-11dfdc57bbe2",
+   "name": "Use Hashtags",
+   "external_references": [
+    {
+     "source_name": "DISARM",
+     "external_id": "T0049.005"
+    }
+   ],
+   "spec_version": "2.1",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--24298241-a0a0-5bac-a604-6f3bb4fe43c5",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "identity--aa875774-cf54-5fdf-a0b2-e80127461bb3",
+   "target_ref": "identity--7cec1efd-5fc7-5155-9743-b38db173ead3",
+   "description": "a utilisé la plateforme pour démarcher des influenceurs"
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--4bd68ef6-9789-50dd-80e1-264b6fa99b09",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "identity--073b42ac-926c-5ac7-8a6d-39f1342ad901",
+   "target_ref": "identity--7cec1efd-5fc7-5155-9743-b38db173ead3",
+   "description": "a utilisé la plateforme pour démarcher des influenceurs"
+  },
+  {
+   "type": "report",
+   "id": "report--602be222-8511-5ee6-85e8-74bf594cc79a",
+   "name": "Manipulation d'algorithmes et instrumentalisation d'influenceurs : enseignements de l'élection présidentielle en Roumanie & risques pour la France",
+   "report_types": [
+    "threat-report"
+   ],
+   "published": "2025-02-04T00:00:00.000Z",
+   "created": "2025-02-04T00:00:00.000Z",
+   "description": "Rapport « enjeux systémiques » VIGINUM (04/02/2025). Analyse des manipulations de l'information ayant ciblé l'élection présidentielle roumaine de 2024 (premier tour annulé par la Cour constitutionnelle le 06/12/2024), et évaluation du risque de transposition en France. La description des manœuvres sur TikTok s'appuie principalement sur des analyses tierces en source ouverte (notes déclassifiées du renseignement roumain, rapports de TikTok, EDMO, CheckFirst, Expert Forum, enquêtes de médias). VIGINUM y ajoute des éléments techniques sur les structures ayant démarché des influenceurs de manière non transparente. Constats : croissance fulgurante et inauthentique de la visibilité du candidat Călin GEORGESCU sur TikTok (#calingeorgescu, 73,2 M de vues en 7 jours) via une campagne d'astroturfing sophistiquée (manipulation de l'algorithme de recommandation, réseaux de comptes, influenceurs rémunérés de façon dissimulée) ; recrutement de 100+ influenceurs via la plateforme roumaine FameUp par deux structures, Progresia et Fundament. VIGINUM n'attribue pas formellement la campagne.\n",
+   "external_references": [
+    {
+     "source_name": "VIGINUM",
+     "description": "Rapport (PDF)",
+     "url": "https://www.sgdsn.gouv.fr/files/files/viginum/Publications/20250204_NP_SGDSN_VIGINUM_Rapport_public_Elections_roumanie_risques_france_VFF_1.pdf"
+    }
+   ],
+   "object_refs": [
+    "identity--7cec1efd-5fc7-5155-9743-b38db173ead3",
+    "identity--aa875774-cf54-5fdf-a0b2-e80127461bb3",
+    "identity--073b42ac-926c-5ac7-8a6d-39f1342ad901",
+    "identity--d081b150-0bab-57e1-9dda-0d321ade8345",
+    "attack-pattern--db098668-534d-54c4-a6dc-3bee0942304c",
+    "attack-pattern--a64b07bf-e306-5cfd-9129-c3046a071de8",
+    "attack-pattern--e28211f0-a902-566a-9c28-02294baa4c39",
+    "attack-pattern--db5fd9ab-c14e-5a67-a2bd-aca549136f3b",
+    "attack-pattern--2765e570-9d58-5c60-bef2-7e327821d511",
+    "attack-pattern--89cc9aad-a266-5f01-a935-11dfdc57bbe2",
+    "relationship--24298241-a0a0-5bac-a604-6f3bb4fe43c5",
+    "relationship--4bd68ef6-9789-50dd-80e1-264b6fa99b09"
+   ],
+   "spec_version": "2.1",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,502 @@
+{
+ "type": "bundle",
+ "id": "bundle--b36df468-a2f1-4d43-8402-56eb3104b83e",
+ "objects": [
+  {
+   "type": "identity",
+   "spec_version": "2.1",
+   "id": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "name": "VIGINUM",
+   "identity_class": "organization"
+  },
+  {
+   "type": "marking-definition",
+   "spec_version": "2.1",
+   "id": "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+   "definition_type": "tlp",
+   "name": "TLP:CLEAR",
+   "definition": {
+    "tlp": "clear"
+   }
+  },
+  {
+   "type": "intrusion-set",
+   "id": "intrusion-set--e7afca4f-e404-5d93-8a98-982d7599d50e",
+   "name": "Storm-1516",
+   "spec_version": "2.1",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "campaign",
+   "id": "campaign--e52ee709-fd1f-544a-a2e6-8415cc30d701",
+   "name": "Matrioshka",
+   "spec_version": "2.1",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "intrusion-set",
+   "id": "intrusion-set--00e72907-a327-547a-bf44-784571ffc807",
+   "name": "Rokh Solis",
+   "spec_version": "2.1",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "identity",
+   "id": "identity--fcd1dfec-7fb1-5d06-a40e-e024f5164bf2",
+   "name": "Blackcore",
+   "identity_class": "organization",
+   "spec_version": "2.1",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "intrusion-set",
+   "id": "intrusion-set--1ac6081a-8d30-5aed-b42f-6cc432c394be",
+   "name": "Storm-1679",
+   "aliases": [
+    "Storm-1679"
+   ],
+   "description": "MOI russe : diffusion coordonnée sur des chaînes Telegram russophones de faux contenus usurpant l'identité de médias et d'organisations, ensuite amplifiés via Matriochka.",
+   "spec_version": "2.1",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "intrusion-set",
+   "id": "intrusion-set--67aa4bf7-e202-5e2e-9251-39ecc871d97e",
+   "name": "Hydras Danbau",
+   "aliases": [
+    "Hydras Danbau"
+   ],
+   "description": "MOI à finalité lucrative opérant depuis le Vietnam (détecté fév. 2026) : ~100+ pages Facebook et 73 sites francophones inauthentiques générés par IA, contenus polarisants monétisés par publicité programmatique et programmes de redistribution des plateformes. Opérateurs finançant via des entreprises de communication numérique vietnamiennes ; usernames type « hailinh8386 ».",
+   "spec_version": "2.1",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "identity",
+   "id": "identity--4beef0a1-377a-59ca-87b6-3f1b7c19b5ca",
+   "name": "Pierre-Yves BOURNAZEL",
+   "identity_class": "individual",
+   "description": "Candidat à la mairie de Paris — cible d'une opération Storm-1516 (faux site macronavecbournazel.fr).",
+   "spec_version": "2.1",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "domain-name",
+   "value": "macronavecbournazel.fr",
+   "id": "domain-name--f65c7fde-0f6f-5d6c-b624-bc8f7a6a5bf9",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--00006179-1783-5b3e-a70f-cce97973c132",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "consists-of",
+   "source_ref": "intrusion-set--e7afca4f-e404-5d93-8a98-982d7599d50e",
+   "target_ref": "domain-name--f65c7fde-0f6f-5d6c-b624-bc8f7a6a5bf9",
+   "description": "faux site usurpant le site officiel du candidat BOURNAZEL (imputé à CopyCop)"
+  },
+  {
+   "type": "domain-name",
+   "value": "proposals.blackcore.online",
+   "id": "domain-name--2741d2eb-abc2-50aa-aee7-02e1ff85911d",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--7c233e7b-b25e-5651-af4f-59bddd5a2951",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "consists-of",
+   "source_ref": "identity--fcd1dfec-7fb1-5d06-a40e-e024f5164bf2",
+   "target_ref": "domain-name--2741d2eb-abc2-50aa-aee7-02e1ff85911d",
+   "description": "infrastructure Blackcore supplémentaire citée dans le rapport municipales (§Rokh Solis)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "hailinh8386",
+   "id": "user-account--752b29b9-124d-522b-bde6-5e057db51213",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--5470c31c-5087-593b-b85b-2df6d02b5af5",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--67aa4bf7-e202-5e2e-9251-39ecc871d97e",
+   "target_ref": "user-account--752b29b9-124d-522b-bde6-5e057db51213",
+   "description": "fragment d'username d'opérateur vietnamien (§2.2.2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "Nguyenlinh8386",
+   "id": "user-account--36d747c9-ebab-534e-b3a3-9487cddc5635",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--ff13b75d-734b-52b3-af4c-a1b8126df912",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--67aa4bf7-e202-5e2e-9251-39ecc871d97e",
+   "target_ref": "user-account--36d747c9-ebab-534e-b3a3-9487cddc5635",
+   "description": "fragment d'username d'opérateur vietnamien (§2.2.2)"
+  },
+  {
+   "type": "user-account",
+   "account_type": "unknown",
+   "account_login": "lananh8386",
+   "id": "user-account--81f9eb87-83b2-5826-b93c-8709449830ec",
+   "spec_version": "2.1",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--d2496eb3-7267-5dd8-aee5-670013d86365",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--67aa4bf7-e202-5e2e-9251-39ecc871d97e",
+   "target_ref": "user-account--81f9eb87-83b2-5826-b93c-8709449830ec",
+   "description": "fragment d'username d'opérateur vietnamien (§2.2.2)"
+  },
+  {
+   "type": "attack-pattern",
+   "id": "attack-pattern--153080ce-b780-5dea-9e6c-02c53884ddd6",
+   "name": "Develop AI-Generated Text",
+   "external_references": [
+    {
+     "source_name": "DISARM",
+     "external_id": "T0085.001"
+    }
+   ],
+   "spec_version": "2.1",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--0e3da2f7-e0b6-58ee-bfb7-0a558fc993f4",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "uses",
+   "source_ref": "intrusion-set--1ac6081a-8d30-5aed-b42f-6cc432c394be",
+   "target_ref": "attack-pattern--153080ce-b780-5dea-9e6c-02c53884ddd6"
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--fb723ee7-0b27-5cbe-97b3-e0ed022c9f9e",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "uses",
+   "source_ref": "intrusion-set--67aa4bf7-e202-5e2e-9251-39ecc871d97e",
+   "target_ref": "attack-pattern--153080ce-b780-5dea-9e6c-02c53884ddd6"
+  },
+  {
+   "type": "attack-pattern",
+   "id": "attack-pattern--980dd6fb-773f-5ab8-ad18-e5a5932b1ffc",
+   "name": "Impersonate Existing Media Outlet",
+   "external_references": [
+    {
+     "source_name": "DISARM",
+     "external_id": "T0099.004"
+    }
+   ],
+   "spec_version": "2.1",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--57e63998-51e1-57df-936a-87d23b4b3f3b",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "uses",
+   "source_ref": "intrusion-set--1ac6081a-8d30-5aed-b42f-6cc432c394be",
+   "target_ref": "attack-pattern--980dd6fb-773f-5ab8-ad18-e5a5932b1ffc"
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--921ba89a-e54a-5f00-a5cc-b233df05f687",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "uses",
+   "source_ref": "intrusion-set--67aa4bf7-e202-5e2e-9251-39ecc871d97e",
+   "target_ref": "attack-pattern--980dd6fb-773f-5ab8-ad18-e5a5932b1ffc"
+  },
+  {
+   "type": "attack-pattern",
+   "id": "attack-pattern--0ebf593f-4243-5f0c-b8b4-244ca86526ff",
+   "name": "Create Inauthentic News Sites",
+   "external_references": [
+    {
+     "source_name": "DISARM",
+     "external_id": "T0098.001"
+    }
+   ],
+   "spec_version": "2.1",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--48b997f5-b6cd-58ea-b87f-7f59dace96b9",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "uses",
+   "source_ref": "intrusion-set--1ac6081a-8d30-5aed-b42f-6cc432c394be",
+   "target_ref": "attack-pattern--0ebf593f-4243-5f0c-b8b4-244ca86526ff"
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--d3951805-0273-5f58-b8a5-225965261675",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "uses",
+   "source_ref": "intrusion-set--67aa4bf7-e202-5e2e-9251-39ecc871d97e",
+   "target_ref": "attack-pattern--0ebf593f-4243-5f0c-b8b4-244ca86526ff"
+  },
+  {
+   "type": "attack-pattern",
+   "id": "attack-pattern--5ed1528f-d484-5ca4-9788-039a76ab43c5",
+   "name": "Conduct fundraising",
+   "external_references": [
+    {
+     "source_name": "DISARM",
+     "external_id": "T0017"
+    }
+   ],
+   "spec_version": "2.1",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--0861a117-5b5f-5c3a-a7a4-9a5172e99b91",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "uses",
+   "source_ref": "intrusion-set--1ac6081a-8d30-5aed-b42f-6cc432c394be",
+   "target_ref": "attack-pattern--5ed1528f-d484-5ca4-9788-039a76ab43c5"
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--fb2deadc-ad7d-5c54-94b1-0e98eba7498c",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "uses",
+   "source_ref": "intrusion-set--67aa4bf7-e202-5e2e-9251-39ecc871d97e",
+   "target_ref": "attack-pattern--5ed1528f-d484-5ca4-9788-039a76ab43c5"
+  },
+  {
+   "type": "attack-pattern",
+   "id": "attack-pattern--e28211f0-a902-566a-9c28-02294baa4c39",
+   "name": "Deliver Ads",
+   "external_references": [
+    {
+     "source_name": "DISARM",
+     "external_id": "T0114"
+    }
+   ],
+   "spec_version": "2.1",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--eb4280c2-afda-5a46-95c8-d419a9999910",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "uses",
+   "source_ref": "intrusion-set--1ac6081a-8d30-5aed-b42f-6cc432c394be",
+   "target_ref": "attack-pattern--e28211f0-a902-566a-9c28-02294baa4c39"
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--142c0daf-e1a1-50f7-8f52-2c1bf00feb52",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "uses",
+   "source_ref": "intrusion-set--67aa4bf7-e202-5e2e-9251-39ecc871d97e",
+   "target_ref": "attack-pattern--e28211f0-a902-566a-9c28-02294baa4c39"
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--b556938c-6ff8-5c6e-9ee6-4d1beb594103",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "targets",
+   "source_ref": "intrusion-set--e7afca4f-e404-5d93-8a98-982d7599d50e",
+   "target_ref": "identity--4beef0a1-377a-59ca-87b6-3f1b7c19b5ca",
+   "description": "opération du 02/03/2026 (Centre Pompidou / migrants)"
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--8bc98ad9-c177-5be6-89e5-8ffa8f74ce75",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "related-to",
+   "source_ref": "intrusion-set--1ac6081a-8d30-5aed-b42f-6cc432c394be",
+   "target_ref": "campaign--e52ee709-fd1f-544a-a2e6-8415cc30d701",
+   "description": "contenus Storm-1679 amplifiés via Matriochka"
+  },
+  {
+   "type": "report",
+   "id": "report--7ea43444-393b-5d07-acd9-c8191b4ab61d",
+   "name": "Protection du débat public contre les ingérences numériques étrangères durant les élections municipales des 15 et 22 mars 2026",
+   "report_types": [
+    "threat-report"
+   ],
+   "published": "2026-06-11T00:00:00.000Z",
+   "created": "2026-06-11T00:00:00.000Z",
+   "description": "Rapport public VIGINUM (11/06/2026) sur l'action du Réseau de coordination et de protection des élections (RCPE) durant les municipales de mars 2026. Quatre INE caractérisées : (1) MOI Storm-1516 / CopyCop : enregistrement dès février 2025 de plus d'une centaine de noms de domaine en « .fr » imitant des sites de presse locaux, alimentés par IA générative (la plupart suspendus par l'Afnic) ; opération ciblant le candidat à la mairie de Paris Pierre-Yves BOURNAZEL via le faux site macronavecbournazel.fr (imputé à CopyCop, primo-diffusion 02/03/2026). Storm-1516 : 205 opérations imputées depuis août 2023, attribué à l'unité 29155 du GRU avec l'appui du Centre d'expertise géopolitique. (2) MOI Storm-1679 + Matriochka : 7 opérations (jan.-mars 2026), faux reportages usurpant l'identité de 20 Minutes, BFM TV, RTL, Le Monde, NewsGuard, Euronews. (3) MOI Hydras Danbau : nouveau MOI à finalité lucrative opérant depuis le Vietnam ; 100+ pages Facebook et 73 sites francophones inauthentiques générés par IA, contenus polarisants monétisés ; 173 publications référençant les municipales (jan.-mars 2026). (4) MOI Rokh Solis (rapport technique dédié) : acteur non-étatique localisé en Israël, ciblant LFI et ses candidats DELOGU / PIQUEMAL / GUIRAUD.\n",
+   "external_references": [
+    {
+     "source_name": "VIGINUM",
+     "description": "Rapport (PDF)",
+     "url": "https://www.sgdsn.gouv.fr/files/files/viginum/Publications/20260611_SGDSN_VIGINUM_Rapport-public_Elections-municipales.pdf"
+    }
+   ],
+   "object_refs": [
+    "intrusion-set--e7afca4f-e404-5d93-8a98-982d7599d50e",
+    "campaign--e52ee709-fd1f-544a-a2e6-8415cc30d701",
+    "intrusion-set--00e72907-a327-547a-bf44-784571ffc807",
+    "identity--fcd1dfec-7fb1-5d06-a40e-e024f5164bf2",
+    "intrusion-set--1ac6081a-8d30-5aed-b42f-6cc432c394be",
+    "intrusion-set--67aa4bf7-e202-5e2e-9251-39ecc871d97e",
+    "identity--4beef0a1-377a-59ca-87b6-3f1b7c19b5ca",
+    "domain-name--f65c7fde-0f6f-5d6c-b624-bc8f7a6a5bf9",
+    "relationship--00006179-1783-5b3e-a70f-cce97973c132",
+    "domain-name--2741d2eb-abc2-50aa-aee7-02e1ff85911d",
+    "relationship--7c233e7b-b25e-5651-af4f-59bddd5a2951",
+    "user-account--752b29b9-124d-522b-bde6-5e057db51213",
+    "relationship--5470c31c-5087-593b-b85b-2df6d02b5af5",
+    "user-account--36d747c9-ebab-534e-b3a3-9487cddc5635",
+    "relationship--ff13b75d-734b-52b3-af4c-a1b8126df912",
+    "user-account--81f9eb87-83b2-5826-b93c-8709449830ec",
+    "relationship--d2496eb3-7267-5dd8-aee5-670013d86365",
+    "attack-pattern--153080ce-b780-5dea-9e6c-02c53884ddd6",
+    "relationship--0e3da2f7-e0b6-58ee-bfb7-0a558fc993f4",
+    "relationship--fb723ee7-0b27-5cbe-97b3-e0ed022c9f9e",
+    "attack-pattern--980dd6fb-773f-5ab8-ad18-e5a5932b1ffc",
+    "relationship--57e63998-51e1-57df-936a-87d23b4b3f3b",
+    "relationship--921ba89a-e54a-5f00-a5cc-b233df05f687",
+    "attack-pattern--0ebf593f-4243-5f0c-b8b4-244ca86526ff",
+    "relationship--48b997f5-b6cd-58ea-b87f-7f59dace96b9",
+    "relationship--d3951805-0273-5f58-b8a5-225965261675",
+    "attack-pattern--5ed1528f-d484-5ca4-9788-039a76ab43c5",
+    "relationship--0861a117-5b5f-5c3a-a7a4-9a5172e99b91",
+    "relationship--fb2deadc-ad7d-5c54-94b1-0e98eba7498c",
+    "attack-pattern--e28211f0-a902-566a-9c28-02294baa4c39",
+    "relationship--eb4280c2-afda-5a46-95c8-d419a9999910",
+    "relationship--142c0daf-e1a1-50f7-8f52-2c1bf00feb52",
+    "relationship--b556938c-6ff8-5c6e-9ee6-4d1beb594103",
+    "relationship--8bc98ad9-c177-5be6-89e5-8ffa8f74ce75"
+   ],
+   "spec_version": "2.1",
+   "created_by_ref": "identity--400d6864-aee4-5269-b7ea-83615172ceb6",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  }
+ ]
+}
