@@ -19,4 +19,4 @@ Panorama des MOI russes depuis le 24/02/2022, par zone ciblée :
 **Importé dans OpenCTI** comme Report — nouveaux Intrusion-Sets Revolubots, Voice of
 Europe, Euromore, Stop Erdogan, Mriya + identité Projet Lakhta ; liens vers RRN /
 Matriochka / Portal Kombat / Storm-1516. Pas d'IOC (synthèse).
-Bundle : `opencti/bundles/2025-02_ukraine-3ans.json`.
+Bundle : `../../reports/viginum/2025-02_ukraine-3ans.json`.

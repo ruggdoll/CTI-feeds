@@ -50,7 +50,7 @@ débat public français.
 
 Détail : `../../importers/report_sources/viginum.yaml` (misp-cti). Fiches par
 rapport : `articles/` · fiches OpenCTI : `opencti/` · bundles réimportables :
-`opencti/bundles/` · scripts : `misp-cti:provisioning/viginum/`.
+`../../reports/viginum/` · scripts : `misp-cti:provisioning/viginum/`.
 
 ## Journal des anomalies / limites
 
@@ -80,7 +80,7 @@ rapport : `articles/` · fiches OpenCTI : `opencti/` · bundles réimportables :
 - **Groupe A** : `import_bundle_from_json` (pycti) des bundles natifs VIGINUM (GitHub).
 - **Groupe B** : `pdftotext -layout` → `provisioning/viginum/build.py` (générique,
   piloté par une spec YAML) → `import_bundle_from_json`. Bundles conservés dans
-  `opencti/bundles/` pour réimport (OpenCTI → Data → Import, ou pycti).
+  `../../reports/viginum/` pour réimport (OpenCTI → Data → Import, ou pycti).
 - **OpenCTI → MISP** : connecteur officiel **`opencti/connector-misp-intel`**
   (`opencti/docker-compose.yml`), live stream « VIGINUM -> MISP » filtré sur
   `entity_type = Report` ET `createdBy = VIGINUM`. Crée un event MISP par Report
@@ -88,26 +88,3 @@ rapport : `articles/` · fiches OpenCTI : `opencti/` · bundles réimportables :
   + `source:opencti` dans le `MISP_IMPORT_TAGS_NOT` du connecteur d'import.
   ⚠️ `MISP_OWNER_ORG=VIGINUM-CTI` non honoré par le connecteur (events créés sous
   DeeL-CTI) — protection assurée par le tag.
-4. **Storm-1516 / DISARM** — les URL des techniques pointent vers
-   `disarmframework.herokuapp.com` ; à remplacer si OpenCTI résout déjà le catalogue DISARM.
-5. **Doublons d'identités Portal Kombat** — le bundle STIX natif de PK1 contenait déjà
-   `Yevgeny SHEVCHENKO` / `Denis SHEVCHENKO` ; le build PK2 les avait recréés en
-   graphie française (`Evgueni CHEVTCHENKO` / `Denis CHEVTCHENKO`). Doublons supprimés,
-   graphies FR ajoutées en alias sur les objets canoniques. → à l'avenir : toujours
-   vérifier les entités déjà présentes avant d'en créer.
-6. **Extraction PDF** — les PDF VIGINUM ont une **couche texte fiable** : `pdftotext -layout`
-   suffit, pas besoin de transcrire depuis l'image. Storm-1516 : 300 domaines + annexes
-   extraits ainsi.
-
-## Chaîne d'outillage (vanilla)
-
-- **Groupe A** : `import_bundle_from_json` (pycti) des bundles natifs VIGINUM (GitHub).
-- **Groupe B** : `pdftotext -layout` → script de construction STIX par rapport
-  (`misp-cti:provisioning/viginum/`) → `import_bundle_from_json`. Bundles conservés
-  dans `opencti/bundles/` pour réimport.
-- **OpenCTI → MISP** : connecteur officiel **`opencti/connector-misp-intel`**
-  (`opencti/docker-compose.yml`), live stream « VIGINUM -> MISP » filtré sur
-  `createdBy = VIGINUM`. Remplace tout import MISP manuel.
-  ⚠️ en cours de réglage : filtre à restreindre aux `Report` (le stream capte aussi
-  les `grouping` des bundles natifs), org propriétaire MISP `VIGINUM-CTI` à créer.
-  Connecteur **arrêté** en attendant réglage.

@@ -31,4 +31,4 @@
 
 ## Verdict
 
-**Importé dans OpenCTI** (groupe B). Bundle : `opencti/bundles/2025-06_african-initiative.json`.
+**Importé dans OpenCTI** (groupe B). Bundle : `../../reports/viginum/2025-06_african-initiative.json`.

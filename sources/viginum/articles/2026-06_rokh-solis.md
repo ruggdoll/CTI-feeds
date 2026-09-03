@@ -26,5 +26,5 @@
 
 ## Verdict
 
-**Importé dans OpenCTI** (groupe B). Bundle : `opencti/bundles/2026-06_rokh-solis.json`.
+**Importé dans OpenCTI** (groupe B). Bundle : `../../reports/viginum/2026-06_rokh-solis.json`.
 Voir aussi le rapport public « municipales 2026 » (`2026-06_municipales-2026.md`).

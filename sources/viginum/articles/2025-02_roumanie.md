@@ -18,4 +18,4 @@ recrutés via la plateforme **FameUp** par deux structures, **Progresia** et **F
 
 **Importé dans OpenCTI** comme Report — identités FameUp / Progresia / Fundament /
 GEORGESCU, 6 techniques DISARM (dont *Content Recommendation Algorithm*, *Co-Opt
-Influencers*). Pas d'IOC. Bundle : `opencti/bundles/2025-02_roumanie.json`.
+Influencers*). Pas d'IOC. Bundle : `../../reports/viginum/2025-02_roumanie.json`.

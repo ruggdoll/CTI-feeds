@@ -26,4 +26,4 @@
 
 **Importé dans OpenCTI** — nouveaux Intrusion-Sets Storm-1679 & Hydras Danbau, liens
 vers Storm-1516 / Matriochka / Rokh Solis / Blackcore, cible BOURNAZEL.
-Bundle : `opencti/bundles/2026-06_municipales-2026.json`.
+Bundle : `../../reports/viginum/2026-06_municipales-2026.json`.
