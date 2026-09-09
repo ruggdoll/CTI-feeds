@@ -218,7 +218,7 @@ Liste de sources de renseignement concernant la menace d'origine cyber.
 | Canada | [CCCS](https://github.com/CybercentreCanada) · [avis](https://www.cyber.gc.ca/en/alerts-advisories) · [National Cyber Threat Assessment](https://www.cyber.gc.ca/en/guidance/national-cyber-threat-assessment-2025-2026) | IOC+RENS | repo/web | AssemblyLine, extracteurs de config ; évaluation biennale |
 | Chili | [CSIRT de Gobierno](https://csirt.gob.cl) | RENS | web, bot | très régulier ; IOC non vérifiés `[ES]` |
 | Chine | [CNCERT/CC](https://www.cert.org.cn/publish/english/index.html) | RENS | web | rapports et contre-attribution `[ZH/EN]` |
-| Chine | CNCERT风险评估 (WeChat, Wechat2RSS) | IOC+RENS | RSS (WeChat) | compte WeChat du CNCERT ; publie des IOC (2026-09-02 : 15 IP) `[ZH]` |
+| Chine | [CNCERT风险评估 (WeChat, Wechat2RSS)](https://wechat2rss.xlab.app/feed/c6662e88d278561b8293a607dcdcbe26aea98e04.xml) | IOC+RENS | RSS (WeChat) | compte WeChat du CNCERT ; publie des IOC (2026-09-02 : 15 IP) `[ZH]` |
 | Chine | [CVERC](https://www.cverc.org.cn) | IOC+RENS | web | rapports de contre-attribution `[ZH]` |
 | Chine | [关键基础设施安全应急响应中心 (WeChat, Wechat2RSS)](https://wechat2rss.xlab.app/feed/1aa5b8c8e4fb27ccb905694f7563b5529cd12269.xml) | RENS | RSS (WeChat) | CERT des infrastructures critiques ; dernier billet 2024-09 `[ZH]` |
 | Colombie | [colCERT](https://www.colcert.gov.co) | RENS | web | `[ES]` |
@@ -506,27 +506,27 @@ Liste de sources de renseignement concernant la menace d'origine cyber.
 |---|---|---|---|
 | [QiAnXin / 奇安信](https://ti.qianxin.com) · [RedDrip7](https://github.com/RedDrip7) | IOC+RENS | web (bot) / repo | IOC via le dépôt `APT_Digital_Weapon` ; le site bloque les robots `[ZH]` |
 | [奇安信威胁情报中心 (WeChat, Wechat2RSS)](https://wechat2rss.xlab.app/feed/b93962f981247c0091dad08df5b7a6864ab888e9.xml) | IOC+RENS | RSS (WeChat) | compte WeChat principal de QiAnXin ; IOC dans les articles (2026-09-04 : 47 SHA-256, 94 défangés, 21 IP) `[ZH]` |
-| 奇安信CERT (WeChat, Wechat2RSS) | RENS | RSS (WeChat) | avis de vulnérabilité `[ZH]` |
-| 奇安信病毒响应中心 (WeChat, Wechat2RSS) | RENS | RSS (WeChat) | réponse aux malwares `[ZH]` |
+| [奇安信CERT (WeChat, Wechat2RSS)](https://wechat2rss.xlab.app/feed/981c000a01bbdc1f128d260cc91c15d3a6afb530.xml) | RENS | RSS (WeChat) | avis de vulnérabilité `[ZH]` |
+| [奇安信病毒响应中心 (WeChat, Wechat2RSS)](https://wechat2rss.xlab.app/feed/7874947663d806190d77bdca6f8f6855f65a1b20.xml) | RENS | RSS (WeChat) | réponse aux malwares `[ZH]` |
 | [360 高级威胁研究院 / 威胁情报中心](https://ti.360.net) | RENS | web | hebdo « 每周高级威胁情报解读 », nommage APT-C-xx ; 360 Netlab est devenu QiAnXin XLab (ligne dédiée) `[ZH]` |
-| 360漏洞云 (WeChat, Wechat2RSS) | RENS | RSS (WeChat) | vulnérabilités (2026-09-03) `[ZH]` |
-| 360Quake空间测绘 (WeChat, Wechat2RSS) | RENS | RSS (WeChat) | mesure d'exposition (2026-09-03) `[ZH]` |
+| [360漏洞云 (WeChat, Wechat2RSS)](https://wechat2rss.xlab.app/feed/ca1fddd8505a3473feed12c0bee898e97d4d5eae.xml) | RENS | RSS (WeChat) | vulnérabilités (2026-09-03) `[ZH]` |
+| [360Quake空间测绘 (WeChat, Wechat2RSS)](https://wechat2rss.xlab.app/feed/fd912d34201eea9dbaaa73e22bffee21636c0f9e.xml) | RENS | RSS (WeChat) | mesure d'exposition (2026-09-03) `[ZH]` |
 | [Antiy / 安天](https://www.antiy.net) | IOC+RENS | web / RSS | hash dans les rapports `[ZH]` |
 | [DBAPPSecurity / 安恒](https://ti.dbappsecurity.com.cn/blog/) | IOC+RENS | web / RSS | hash dans les rapports `[ZH]` |
 | [NSFOCUS / 绿盟](https://nsfocusglobal.com/blog/) | RENS | web (JS) | site JS `[ZH/EN]` |
-| 绿盟科技研究通讯 (WeChat, Wechat2RSS) | RENS | RSS (WeChat) | compte WeChat de NSFOCUS, lisible et daté (2026-09-04), IOC insuffisants `[ZH]` |
+| [绿盟科技研究通讯 (WeChat, Wechat2RSS)](https://wechat2rss.xlab.app/feed/21b46d78e363b85d6927970267ecea4904f06bc8.xml) | RENS | RSS (WeChat) | compte WeChat de NSFOCUS, lisible et daté (2026-09-04), IOC insuffisants `[ZH]` |
 | [Knownsec 404](https://paper.seebug.org) | RENS | web, parfois géo | IOC non vérifiés `[ZH]` |
 | [Sangfor / 深信服](https://www.sangfor.com.cn/security-tech) | RENS | web, parfois géo | site JS, IOC non vérifiés `[ZH]` |
 | [Tencent 御见](https://tix.qq.com) | RENS | web (JS) | site JS `[ZH]` |
-| 腾讯安全威胁情报中心 (WeChat, Wechat2RSS) | IOC+RENS | RSS (WeChat) | compte WeChat de Tencent Security ; IOC dans les articles (2026-09-03 : 163 défangés, 27 IP, 52 hash) `[ZH]` |
-| 腾讯玄武实验室 (WeChat, Wechat2RSS) | RENS | RSS (WeChat) | labo Tencent, recherche offensive `[ZH]` |
-| 腾讯科恩实验室 (WeChat, Wechat2RSS) | IOC+RENS | RSS (WeChat) | labo Tencent (Keen Lab), recherche offensive `[ZH]` |
-| 云鼎实验室 (WeChat, Wechat2RSS) | RENS | RSS (WeChat) | labo Tencent, cloud `[ZH]` |
+| [腾讯安全威胁情报中心 (WeChat, Wechat2RSS)](https://wechat2rss.xlab.app/feed/034265b14906a59ef7cf1fcbd56699b54a696094.xml) | IOC+RENS | RSS (WeChat) | compte WeChat de Tencent Security ; IOC dans les articles (2026-09-03 : 163 défangés, 27 IP, 52 hash) `[ZH]` |
+| [腾讯玄武实验室 (WeChat, Wechat2RSS)](https://wechat2rss.xlab.app/feed/923c0e2f33b6d39c8a826a90f185725f0edb10e8.xml) | RENS | RSS (WeChat) | labo Tencent, recherche offensive `[ZH]` |
+| [腾讯科恩实验室 (WeChat, Wechat2RSS)](https://wechat2rss.xlab.app/feed/13584cb01e8bf3297943a0dad49e53c6faf20611.xml) | IOC+RENS | RSS (WeChat) | labo Tencent (Keen Lab), recherche offensive `[ZH]` |
+| [云鼎实验室 (WeChat, Wechat2RSS)](https://wechat2rss.xlab.app/feed/d762fbf5f8f256afb63bcfe9a362184072338819.xml) | RENS | RSS (WeChat) | labo Tencent, cloud `[ZH]` |
 | [ThreatBook / 微步](https://threatbook.io) | IOC+RENS | web (lookups) | lookups d'observables ; hash dans les billets de recherche `[ZH]` |
-| 微步在线研究响应中心 (WeChat, Wechat2RSS) | IOC+RENS | RSS (WeChat) | compte WeChat de ThreatBook ; IOC dans les articles (2026-09-05 : 7 SHA-256) `[ZH]` |
-| 天御攻防实验室 (WeChat, Wechat2RSS) | RENS | RSS (WeChat) | 2026-09 `[ZH]` |
-| 山石网科安全技术研究院 (WeChat, Wechat2RSS) | IOC+RENS | RSS (WeChat) | 2026-09 `[ZH]` |
-| 信息安全国家工程研究中心 (WeChat, Wechat2RSS) | RENS | RSS (WeChat) | 2026-08 `[ZH]` |
+| [微步在线研究响应中心 (WeChat, Wechat2RSS)](https://wechat2rss.xlab.app/feed/ac64c385ebcdb17fee8df733eb620a22b979928c.xml) | IOC+RENS | RSS (WeChat) | compte WeChat de ThreatBook ; IOC dans les articles (2026-09-05 : 7 SHA-256) `[ZH]` |
+| [天御攻防实验室 (WeChat, Wechat2RSS)](https://wechat2rss.xlab.app/feed/8b57281ce8c62c8bf12743aeb0279bfb807eb00d.xml) | RENS | RSS (WeChat) | 2026-09 `[ZH]` |
+| [山石网科安全技术研究院 (WeChat, Wechat2RSS)](https://wechat2rss.xlab.app/feed/dce539f9deadfc68ce8bf82d3be59a4c6d8ddef9.xml) | IOC+RENS | RSS (WeChat) | 2026-09 `[ZH]` |
+| [信息安全国家工程研究中心 (WeChat, Wechat2RSS)](https://wechat2rss.xlab.app/feed/7caad9bdb6b168fe174bc815a9b44b7f52d7198b.xml) | RENS | RSS (WeChat) | 2026-08 `[ZH]` |
 | [火绒 Huorong](https://www.huorong.cn/info/) | IOC+RENS | web | `[ZH]` |
 | [瑞星 Rising](https://www.rising.com.cn/) | RENS | web | `[ZH]` |
 | [QiAnXin XLab (ex-360 Netlab)](https://blog.xlab.qianxin.com/) | IOC+RENS | RSS | botnets, DDoS, IoT ; ex-équipe 360 Netlab ; flux `/rss/` `[ZH/EN]` |
@@ -825,14 +825,14 @@ Liste de sources de renseignement concernant la menace d'origine cyber.
 | [洞见 Doonsec](https://www.doonsec.com/) | RENS | web | vivant | moteur de recherche des articles sécurité WeChat, analyse LLM ; pas de flux public `[ZH]` |
 | [Sec.Today](https://sec.today/pulses/) | IOC+RENS | web | vivant | agrégateur avec résumés ; complète gm7.org et tanjiti `[ZH]` |
 | [先知社区 (Alibaba)](https://xz.aliyun.com/feed) | RENS | RSS | 2026-09-06 | communauté de recherche technique d'Alibaba, 100 items par flux `[ZH]` |
-| 二道情报贩子 (WeChat, Wechat2RSS) | RENS | RSS (WeChat) | 2026-09 | analyste CTI indépendant `[ZH]` |
-| 情报小蜜蜂 (WeChat, Wechat2RSS) | RENS | RSS (WeChat) | 2026-09 | analyste CTI indépendant `[ZH]` |
-| qz安全情报分析 (WeChat, Wechat2RSS) | RENS | RSS (WeChat) | 2026-04 | analyste CTI indépendant `[ZH]` |
-| 丁爸情报分析师的工具箱 (WeChat, Wechat2RSS) | RENS | RSS (WeChat) | 2026-09 | outillage d'analyste CTI `[ZH]` |
-| 看雪学院 (WeChat, Wechat2RSS) | RENS | RSS (WeChat) | 2026-09 | communauté reverse / vulnérabilités `[ZH]` |
-| Seebug漏洞平台 (WeChat, Wechat2RSS) | IOC+RENS | RSS (WeChat) | 2026-09 | vulnérabilités (Knownsec) `[ZH]` |
-| SecPulse安全脉搏 (WeChat, Wechat2RSS) | RENS | RSS (WeChat) | 2026-07 | communauté sécurité `[ZH]` |
-| 吾爱破解论坛 (WeChat, Wechat2RSS) | IOC+RENS | RSS (WeChat) | 2026-09 | forum reverse `[ZH]` |
+| [二道情报贩子 (WeChat, Wechat2RSS)](https://wechat2rss.xlab.app/feed/86512202e74d01447788f355c4a4171a3c86740a.xml) | RENS | RSS (WeChat) | 2026-09 | analyste CTI indépendant `[ZH]` |
+| [情报小蜜蜂 (WeChat, Wechat2RSS)](https://wechat2rss.xlab.app/feed/78f3da7a79babd1ab1a2831f37718630f41b77b5.xml) | RENS | RSS (WeChat) | 2026-09 | analyste CTI indépendant `[ZH]` |
+| [qz安全情报分析 (WeChat, Wechat2RSS)](https://wechat2rss.xlab.app/feed/1bbe066c89588a1aff71eb8b6a4446c7c422499f.xml) | RENS | RSS (WeChat) | 2026-04 | analyste CTI indépendant `[ZH]` |
+| [丁爸情报分析师的工具箱 (WeChat, Wechat2RSS)](https://wechat2rss.xlab.app/feed/4fad165589ac854de97e576a6dbcfbd8b9f75320.xml) | RENS | RSS (WeChat) | 2026-09 | outillage d'analyste CTI `[ZH]` |
+| [看雪学院 (WeChat, Wechat2RSS)](https://wechat2rss.xlab.app/feed/0e026637254d450ae84c59f87d4e4fb4616651ca.xml) | RENS | RSS (WeChat) | 2026-09 | communauté reverse / vulnérabilités `[ZH]` |
+| [Seebug漏洞平台 (WeChat, Wechat2RSS)](https://wechat2rss.xlab.app/feed/be2795d741304af2370cbf8d31d1e5d3675f8e85.xml) | IOC+RENS | RSS (WeChat) | 2026-09 | vulnérabilités (Knownsec) `[ZH]` |
+| [SecPulse安全脉搏 (WeChat, Wechat2RSS)](https://wechat2rss.xlab.app/feed/3bd096819fedf4e94ef23d95c24dd7b2644f3d10.xml) | RENS | RSS (WeChat) | 2026-07 | communauté sécurité `[ZH]` |
+| [吾爱破解论坛 (WeChat, Wechat2RSS)](https://wechat2rss.xlab.app/feed/90c827b8290310a96ef80a13df9dbcc06ab69892.xml) | IOC+RENS | RSS (WeChat) | 2026-09 | forum reverse `[ZH]` |
 | [Bert-JanP — Open-Source-Threat-Intel-Feeds](https://github.com/Bert-JanP/Open-Source-Threat-Intel-Feeds) | IOC | repo | vivant | |
 | [spydisec — spydithreatintel](https://github.com/spydisec/spydithreatintel) | IOC | repo | vivant | agrégat d'IOC quotidien |
 | [EndlessFractal — Threat-Intel-Feed](https://github.com/EndlessFractal/Threat-Intel-Feed) | IOC | repo | vivant | agrégat d'IOC |
