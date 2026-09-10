@@ -376,6 +376,7 @@ Liste de sources de renseignement concernant la menace d'origine cyber.
 | [Microsoft Security / MSTIC](https://www.microsoft.com/en-us/security/blog/) · [Azure-Sentinel](https://github.com/Azure/Azure-Sentinel) | IOC+RENS | web / repo | vivant | |
 | [Meta — threat-research](https://github.com/facebook/threat-research) | IOC | repo | vivant | |
 | [SentinelLABS](https://www.sentinelone.com/labs/) | IOC+RENS | web | vivant | |
+| [BlackBerry — Research & Intelligence](https://blogs.blackberry.com/en/category/research-and-intelligence) | IOC+RENS | web | 2026-09-02 | analyses de campagnes ; IOC non vérifiés (flux inaccessible aux robots) |
 | [Zscaler ThreatLabz](https://github.com/ThreatLabz/iocs) | IOC | repo | vivant | |
 | [Sophos](https://github.com/sophoslabs/IoCs) | IOC | repo | vivant | blog bloque les robots ; absorbe Secureworks CTU |
 | [Broadcom / Symantec Threat Hunter](https://www.security.com/threat-intelligence) · [protection bulletins](https://www.broadcom.com/support/security-center/protection-bulletin) | IOC+RENS | RSS / web | vivant | |
@@ -726,6 +727,7 @@ Liste de sources de renseignement concernant la menace d'origine cyber.
 | [Rapid7 AttackerKB / DB](https://www.rapid7.com/db/) | US | IOC+RENS | web | évaluation d'exploitabilité |
 | [ZDI](https://www.zerodayinitiative.com/blog) | US | RENS | Atom | divulgations coordonnées |
 | [Exploit-DB](https://www.exploit-db.com/) | US | RENS | web | PoC et exploits publics (OffSec) |
+| [Horizon3.ai — Attack Research](https://horizon3.ai/attack-research/) | US | RENS | RSS | analyses d'exploitation et PoC sur vulnérabilités récentes |
 | [Vulners](https://vulners.com/) | — | RENS | API | agrégat de bulletins de vulnérabilités |
 | [Wiz Vulnerability DB](https://www.wiz.io/vulnerability-database) | US | RENS | web | contexte cloud |
 | [Google Project Zero — 0days in the wild](https://github.com/googleprojectzero/0days-in-the-wild) | US | RENS | repo | 2026-08-10 |
@@ -920,6 +922,12 @@ Liste de sources de renseignement concernant la menace d'origine cyber.
 | [보안뉴스 Boan News](https://www.boannews.com/) | KR | RENS | RSS | `[KO]` |
 | [Bellingcat](https://www.bellingcat.com/) | NL | RENS | web | OSINT |
 | [The Hacker News](https://thehackernews.com/) | — | IOC+RENS | RSS | média, volume élevé ; reprend les hash et domaines des rapports cités |
+| [Dark Reading](https://www.darkreading.com/) | US | RENS | RSS | média généraliste sécurité, volume élevé |
+| [Infosecurity Magazine](https://www.infosecurity-magazine.com/rss/news/) | UK | RENS | RSS | média britannique, actualité quotidienne |
+| [The Register — Security](https://www.theregister.com/security/) | UK | RENS | RSS (Atom) | média britannique, ton critique, couvre incidents et fuites |
+| [CSO Online](https://www.csoonline.com/) | US | RENS | RSS | média orienté RSSI (IDG) |
+| [SC Media](https://www.scworld.com/) | US | RENS | RSS | média sécurité nord-américain |
+| [Cybernews](https://cybernews.com/security/) | LT | RENS | web | média lituanien ; flux et pages bloqués aux robots |
 | [CyberWire](https://thecyberwire.com/) | US | RENS | web | newsletter et podcast |
 | [Catalin Cimpanu](https://infosec.exchange/@campuscodi) | — | RENS | Mastodon | journaliste (Risky Business) |
 | [Darknet Diaries](https://darknetdiaries.com/) | US | RENS | podcast (RSS) | |
@@ -1048,6 +1056,7 @@ Rejetées : dépôt figé depuis plus de 18 mois, page morte, miroir, source abs
 | Source | Raison |
 |---|---|
 | NetManageIT — OpenCTI public | instance publique hors ligne en 2026 |
+| Threatpost | plus aucune publication depuis août 2022 (absorbé) |
 | `mandiant/iocs` | figé ou archivé (2019–2024) |
 | `advanced-threat-research/IOCs` (Trellix) | figé ou archivé (2019–2024) |
 | `Insikt-Group/Research` | figé ou archivé (2019–2024) |
