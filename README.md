@@ -2,7 +2,7 @@
 
 Liste de sources de renseignement concernant la menace d'origine cyber.
 
-> Dernière revue : 2026-09-07 — 750 sources actives, une par ligne, et 59 écartées (§18).
+> Dernière revue : 2026-09-10 — 775 sources actives, une par ligne, et 60 écartées (§18). Décompte par section : sommaire ci-dessous.
 >
 > Les sources ne sont pas restreintes à l'anglais. La langue est indiquée entre crochets — p. ex. `[ZH]`, `[RU]`, `[KO]` — lorsqu'elle n'est ni le français ni l'anglais.
 >
@@ -22,25 +22,27 @@ Liste de sources de renseignement concernant la menace d'origine cyber.
 
 ## Sommaire
 
-1. [Référentiels et annuaires](#1-référentiels-et-annuaires)
-2. [Feeds communautaires, fondations et lutte anti-abus](#2-feeds-communautaires-fondations-et-lutte-anti-abus)
-3. [CERT / CSIRT nationaux et organisations régionales](#3-cert--csirt-nationaux-et-organisations-régionales)
-4. [Police, justice, sanctions et attribution officielle](#4-police-justice-sanctions-et-attribution-officielle)
-5. [CERT sectoriels, ISAC et infrastructures critiques](#5-cert-sectoriels-isac-et-infrastructures-critiques)
-6. [Infrastructure Internet : registres, RIR, NREN, cloud, opérateurs](#6-infrastructure-internet--registres-rir-nren-cloud-opérateurs)
-7. [Éditeurs et laboratoires de recherche privés](#7-éditeurs-et-laboratoires-de-recherche-privés)
-8. [Réponse à incident, conseil, assurance](#8-réponse-à-incident-conseil-assurance)
-9. [Recherche académique et datasets](#9-recherche-académique-et-datasets)
-10. [Cybercriminalité : trackers, sites de fuite, victimologie](#10-cybercriminalité--trackers-sites-de-fuite-victimologie)
-11. [Chercheurs indépendants, communautés et agrégateurs](#11-chercheurs-indépendants-communautés-et-agrégateurs)
-12. [Journalistes et médias spécialisés](#12-journalistes-et-médias-spécialisés)
-13. [Ingérence numérique et abus de plateformes](#13-ingérence-numérique-et-abus-de-plateformes)
-14. [Bases d'incidents, think tanks et rapports de référence](#14-bases-dincidents-think-tanks-et-rapports-de-référence)
-15. [Sandboxes et dépôts d'échantillons](#15-sandboxes-et-dépôts-déchantillons)
-16. [Règles de détection](#16-règles-de-détection)
+1. [Référentiels et annuaires](#1-référentiels-et-annuaires) — 16 sources
+2. [Feeds communautaires, fondations et lutte anti-abus](#2-feeds-communautaires-fondations-et-lutte-anti-abus) — 50 sources
+3. [CERT / CSIRT nationaux et organisations régionales](#3-cert--csirt-nationaux-et-organisations-régionales) — 124 sources
+4. [Police, justice, sanctions et attribution officielle](#4-police-justice-sanctions-et-attribution-officielle) — 8 sources
+5. [CERT sectoriels, ISAC et infrastructures critiques](#5-cert-sectoriels-isac-et-infrastructures-critiques) — 18 sources
+6. [Infrastructure Internet : registres, RIR, NREN, cloud, opérateurs](#6-infrastructure-internet--registres-rir-nren-cloud-opérateurs) — 29 sources
+7. [Éditeurs et laboratoires de recherche privés](#7-éditeurs-et-laboratoires-de-recherche-privés) — 301 sources
+8. [Réponse à incident, conseil, assurance](#8-réponse-à-incident-conseil-assurance) — 13 sources
+9. [Recherche académique et datasets](#9-recherche-académique-et-datasets) — 19 sources
+10. [Cybercriminalité : trackers, sites de fuite, victimologie](#10-cybercriminalité--trackers-sites-de-fuite-victimologie) — 13 sources
+11. [Chercheurs indépendants, communautés et agrégateurs](#11-chercheurs-indépendants-communautés-et-agrégateurs) — 87 sources
+12. [Journalistes et médias spécialisés](#12-journalistes-et-médias-spécialisés) — 42 sources
+13. [Ingérence numérique et abus de plateformes](#13-ingérence-numérique-et-abus-de-plateformes) — 10 sources
+14. [Bases d'incidents, think tanks et rapports de référence](#14-bases-dincidents-think-tanks-et-rapports-de-référence) — 13 sources
+15. [Sandboxes et dépôts d'échantillons](#15-sandboxes-et-dépôts-déchantillons) — 15 sources
+16. [Règles de détection](#16-règles-de-détection) — 17 sources
 17. [Angles morts](#17-angles-morts)
-18. [Sources écartées](#18-sources-écartées)
+18. [Sources écartées](#18-sources-écartées) — 60 sources
 19. [Origine de la liste et contribution](#19-origine-de-la-liste-et-contribution)
+
+**Total actif (§1-16) : 775 sources.**
 
 ---
 
