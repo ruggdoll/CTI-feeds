@@ -339,7 +339,7 @@ Liste de sources de renseignement concernant la menace d'origine cyber.
 | [NetBeacon Institute](https://netbeacon.org/) | US | IOC+RENS | RSS | ex-DNS Abuse Institute |
 | [AFNIC — Observatoire](https://www.afnic.fr/observatoire-ressources/) | FR | RENS | RSS | abus du .fr |
 | [SIDN Labs](https://www.sidnlabs.nl/en/news-and-blogs) | NL | RENS | web | recherche DNS/abus .nl |
-| [Nominet](https://nominet.uk/news/) | UK | RENS | web | suspensions .uk |
+| [Nominet](https://nominet.uk/news/) | UK | RENS | web, bot | suspensions .uk ; site en 403 pour les robots |
 | [SWITCH-CERT](https://www.switch.ch/en/cert) | CH | RENS | web | abus .ch, universités |
 | [TWNIC](https://twnic.tw/blog/) | TW | RENS | web | `[ZH]` |
 | [RNIDS](https://www.rnids.rs/) | RS | RENS | web | registre .rs |
@@ -347,7 +347,7 @@ Liste de sources de renseignement concernant la menace d'origine cyber.
 | [Nameshield](https://blog.nameshield.com/fr/) | FR | RENS | RSS | registrar : typosquatting |
 | [RIPE Labs](https://labs.ripe.net/) | NL | RENS | RSS | hijacks BGP, mesures |
 | [APNIC Blog](https://blog.apnic.net/) | AU | RENS | RSS | |
-| [LACNIC CSIRT](https://www.lacnic.net/csirt) | UY | RENS | web | `[ES/EN]` |
+| [LACNIC CSIRT](https://www.lacnic.net/csirt) | UY | RENS | web | `[ES/EN]` ; contenu rendu en JavaScript côté client |
 | [CERN CERT](https://security.web.cern.ch/) | CH | RENS | web | |
 | [EGI CSIRT](https://csirt.egi.eu/) | EU | RENS | web | grille de calcul européenne |
 | [SURFcert](https://www.surf.nl/en/services/security/surfcert) | NL | RENS | web | NREN |
@@ -356,12 +356,12 @@ Liste de sources de renseignement concernant la menace d'origine cyber.
 | [Akamai — security research](https://www.akamai.com/blog/security-research) | US | RENS | web, bot | IOC non vérifiés |
 | [Fastly — security](https://www.fastly.com/blog/category/security) | US | IOC+RENS | RSS | |
 | [AWS Security Blog](https://aws.amazon.com/blogs/security/) | US | RENS | RSS | honeypot MadPot, takedowns |
-| [Telefónica Tech](https://telefonicatech.com/en/blog) | ES | RENS | web | |
+| [Telefónica Tech](https://telefonicatech.com/en/blog) | ES | RENS | web, bot | blog en 403 pour les robots |
 | [CERT Orange Polska](https://cert.orange.pl) | PL | IOC+RENS | RSS | alertes ; la blocklist CyberTarcza n'est pas publiée `[PL]` |
 | [Exatel](https://exatel.pl/blog/) | PL | RENS | RSS | opérateur d'État `[PL]` |
 | [CHT Security](https://www.chtsecurity.com/news) | TW | RENS | web | Chunghwa Telecom `[ZH]` |
 | [IIJ — wizSafe](https://wizsafe.iij.ad.jp) | JP | RENS | RSS | bilans mensuels `[JP]` |
-| [Viettel Cyber Security](https://blog.viettelcybersecurity.com) | VN | IOC+RENS | web | hash et IP dans les billets `[VI/EN]` |
+| [Viettel Cyber Security](https://blog.viettelcybersecurity.com) | VN | IOC+RENS | web, bot | hash et IP dans les billets `[VI/EN]` ; protection anti-robot (cookie puis coupure de la connexion) |
 | [CUJO AI](https://cujo.com/blog/) | US | RENS | RSS | télémétrie IoT domestique via FAI |
 | [Deutsche Telekom — T-Pot](https://github.com/telekom-security/tpotce) | DE | — | repo | outil honeypot (pas de feed public) |
 
@@ -813,8 +813,8 @@ Liste de sources de renseignement concernant la menace d'origine cyber.
 | [ransomwatch](https://ransomwatch.telemetry.ltd/) · [repo](https://github.com/joshhighet/ransomwatch) | RENS | repo (JSON) | 2026-03-03 | historique depuis 2021 |
 | [ecrime.ch](https://ecrime.ch/) | RENS | web | vivant | victimologie |
 | [DarkFeed](https://app.darkfeed.io/mainpage) | RENS | web | vivant | victimologie |
-| [Hackmanac](https://hackmanac.com/) | RENS | web | vivant | victimologie |
-| [ransom-db](https://www.ransom-db.com/) | RENS | web | vivant | victimologie |
+| [Hackmanac](https://hackmanac.com/) | RENS | web, bot | vivant | victimologie ; protection anti-robot, contenu rendu en JavaScript |
+| [ransom-db](https://www.ransom-db.com/) | RENS | web, bot | vivant | victimologie ; blocage anti-robot ferme |
 | [fastfire — deepdarkCTI](https://github.com/fastfire/deepdarkCTI) | RENS | repo | vivant | deep/dark web ; la copie `Cyberfury101` est inactive depuis 2021 |
 | [FalconFeeds](https://falconfeeds.io) | RENS | web | vivant | revendications, hacktivisme |
 | [BushidoUK — Ransomware Tool Matrix](https://github.com/BushidoUK/Ransomware-Tool-Matrix) | RENS | repo | 2026-08-29 | outils par groupe |
