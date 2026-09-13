@@ -590,7 +590,7 @@ Liste de sources de renseignement concernant la menace d'origine cyber.
 | [Genians](https://www.genians.co.kr/en/blog/threat_intelligence) | KR | IOC+RENS | web | ~50 indicateurs par lot d'articles ; APT nord-coréennes `[KO/EN]` |
 | [NSHC ThreatRecon](https://threatrecon.nshc.net) | KR | IOC+RENS | RSS | hash dans les billets `[KO/EN]` |
 | [EST Security / ESRC](https://blog.alyac.co.kr) | KR | IOC+RENS | RSS | indicateurs défangés dans les billets `[KO]` |
-| [ENKI WhiteHat](https://www.enki.co.kr/en/media-center/blog) | KR | IOC+RENS | web (JS) | `[KO]` |
+| [ENKI WhiteHat](https://www.enki.co.kr/en/media-center/blog) | KR | IOC+RENS | web (JS) | annexes IOC complètes (MD5/SHA-256, IP, domaines, règles YARA) ; blog bilingue, quelques analyses uniquement en coréen `[KO/EN]` |
 | [S2W](https://s2w.inc/en/resource) | KR | RENS | web (JS) | IOC non vérifiés `[KO/EN]` |
 | [Penta Security](https://www.pentasecurity.com/blog/) | KR | RENS | RSS | `[KO/EN]` |
 | [Cloudbric](https://www.cloudbric.com/blogs/) | KR | RENS | web | `[KO/EN]` |
