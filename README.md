@@ -40,7 +40,6 @@ Liste de sources de renseignement concernant la menace d'origine cyber.
 16. [Règles de détection](#16-règles-de-détection) — 17 sources
 17. [Angles morts](#17-angles-morts)
 18. [Sources écartées](#18-sources-écartées) — 60 sources
-19. [Origine de la liste et contribution](#19-origine-de-la-liste-et-contribution)
 
 **Total actif (§1-16) : 799 sources.**
 
@@ -62,7 +61,7 @@ Liste de sources de renseignement concernant la menace d'origine cyber.
 | [lazarus.day](https://lazarus.day) | — | IOC+RENS | web | vivant | index des rapports sur les groupes nord-coréens |
 | [RST Cloud — awesome-threat-actor-resources](https://github.com/rstcloud/awesome-threat-actor-resources) | — | RENS | repo | vivant | méta-liste de profils d'acteurs et datasets |
 | [Trusted Introducer](https://www.trusted-introducer.org) · [export JSON](https://www.trusted-introducer.org/trusted-introducer/directory/downloads/json/teams/) | EU | RENS | JSON | vivant | annuaire de 554 équipes (contacts, PGP, constituency) ; le seul export machine européen |
-| [FIRST](https://www.first.org) · [API](https://api.first.org/data/v1/teams?limit=100) · [blog (RSS)](https://www.first.org/blog/rss.xml) | — | RENS | API | vivant | 879 équipes mondiales, paginé par 100 ; diff mensuel recommandé (§19) |
+| [FIRST](https://www.first.org) · [API](https://api.first.org/data/v1/teams?limit=100) · [blog (RSS)](https://www.first.org/blog/rss.xml) | — | RENS | API | vivant | 879 équipes mondiales, paginé par 100 ; diff mensuel recommandé |
 | [Onetracker](https://onetracker.org/ti) | — | RENS | web | vivant | annuaire d'échantillons, PCAP, feeds, blocklists |
 | [hslatman — awesome-threat-intelligence](https://github.com/hslatman/awesome-threat-intelligence) | — | RENS | repo | vivant | liste de référence (sources CTI) |
 | [sroberts — awesome-iocs](https://github.com/sroberts/awesome-iocs) | — | RENS | repo | vivant | liste de référence (IOC) |
@@ -1141,9 +1140,3 @@ Rejetées : dépôt figé depuis plus de 18 mois, page morte, miroir, source abs
 | 0ffset | figé (2024-04) |
 | Security Soup | flux absent ou cassé ; à suivre manuellement |
 | hackers-arise | 403 aux robots (Cloudflare) ; à suivre manuellement |
-
-## 19. Origine de la liste et contribution
-
-**Comment les sources ont été trouvées.** Cinq passes : (1) recherche par pays et langue ; (2) rapports et référentiels d'acteurs ; (3) typologie de 20 familles de producteurs, chacune avec son biais, et fouille de la liste des membres de la Cyber Threat Alliance ; (4) JSON public Trusted Introducer (554 équipes) et communiqués M3AAWG ; (5) API publique FIRST (879 équipes). La fouille d'annuaires a rapporté plus que toutes les requêtes en langue locale réunies.
-
-**Contribuer.** Une ligne = une source, avec Contenu (`IOC` / `RENS` / `IOC+RENS`), Accès (feed/repo/API/RSS/web/PDF/inscr./bot/géo), date d'activité et un commentaire d'une ligne indiquant ce qu'elle apporte que les autres n'ont pas. Une source morte, figée ou sans production originale va en §18 avec sa raison.
