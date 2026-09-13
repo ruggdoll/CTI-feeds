@@ -2,7 +2,7 @@
 
 Liste de sources de renseignement concernant la menace d'origine cyber.
 
-> Dernière revue : 2026-09-10 — 775 sources actives, une par ligne, et 60 écartées (§18). Décompte par section : sommaire ci-dessous.
+> Dernière revue : 2026-09-13 — 798 sources actives, une par ligne, et 60 écartées (§18). Décompte par section : sommaire ci-dessous.
 >
 > Les sources ne sont pas restreintes à l'anglais. La langue est indiquée entre crochets — p. ex. `[ZH]`, `[RU]`, `[KO]` — lorsqu'elle n'est ni le français ni l'anglais.
 >
@@ -23,17 +23,17 @@ Liste de sources de renseignement concernant la menace d'origine cyber.
 ## Sommaire
 
 1. [Référentiels et annuaires](#1-référentiels-et-annuaires) — 16 sources
-2. [Feeds communautaires, fondations et lutte anti-abus](#2-feeds-communautaires-fondations-et-lutte-anti-abus) — 50 sources
-3. [CERT / CSIRT nationaux et organisations régionales](#3-cert--csirt-nationaux-et-organisations-régionales) — 124 sources
-4. [Police, justice, sanctions et attribution officielle](#4-police-justice-sanctions-et-attribution-officielle) — 8 sources
-5. [CERT sectoriels, ISAC et infrastructures critiques](#5-cert-sectoriels-isac-et-infrastructures-critiques) — 18 sources
+2. [Feeds communautaires, fondations et lutte anti-abus](#2-feeds-communautaires-fondations-et-lutte-anti-abus) — 51 sources
+3. [CERT / CSIRT nationaux et organisations régionales](#3-cert--csirt-nationaux-et-organisations-régionales) — 125 sources
+4. [Police, justice, sanctions et attribution officielle](#4-police-justice-sanctions-et-attribution-officielle) — 9 sources
+5. [CERT sectoriels, ISAC et infrastructures critiques](#5-cert-sectoriels-isac-et-infrastructures-critiques) — 19 sources
 6. [Infrastructure Internet : registres, RIR, NREN, cloud, opérateurs](#6-infrastructure-internet--registres-rir-nren-cloud-opérateurs) — 29 sources
-7. [Éditeurs et laboratoires de recherche privés](#7-éditeurs-et-laboratoires-de-recherche-privés) — 301 sources
+7. [Éditeurs et laboratoires de recherche privés](#7-éditeurs-et-laboratoires-de-recherche-privés) — 315 sources
 8. [Réponse à incident, conseil, assurance](#8-réponse-à-incident-conseil-assurance) — 13 sources
 9. [Recherche académique et datasets](#9-recherche-académique-et-datasets) — 19 sources
 10. [Cybercriminalité : trackers, sites de fuite, victimologie](#10-cybercriminalité--trackers-sites-de-fuite-victimologie) — 13 sources
-11. [Chercheurs indépendants, communautés et agrégateurs](#11-chercheurs-indépendants-communautés-et-agrégateurs) — 87 sources
-12. [Journalistes et médias spécialisés](#12-journalistes-et-médias-spécialisés) — 42 sources
+11. [Chercheurs indépendants, communautés et agrégateurs](#11-chercheurs-indépendants-communautés-et-agrégateurs) — 90 sources
+12. [Journalistes et médias spécialisés](#12-journalistes-et-médias-spécialisés) — 44 sources
 13. [Ingérence numérique et abus de plateformes](#13-ingérence-numérique-et-abus-de-plateformes) — 10 sources
 14. [Bases d'incidents, think tanks et rapports de référence](#14-bases-dincidents-think-tanks-et-rapports-de-référence) — 13 sources
 15. [Sandboxes et dépôts d'échantillons](#15-sandboxes-et-dépôts-déchantillons) — 15 sources
@@ -42,7 +42,7 @@ Liste de sources de renseignement concernant la menace d'origine cyber.
 18. [Sources écartées](#18-sources-écartées) — 60 sources
 19. [Origine de la liste et contribution](#19-origine-de-la-liste-et-contribution)
 
-**Total actif (§1-16) : 775 sources.**
+**Total actif (§1-16) : 798 sources.**
 
 ---
 
@@ -94,6 +94,7 @@ Liste de sources de renseignement concernant la menace d'origine cyber.
 | [Global Cyber Alliance](https://globalcyberalliance.org/) | US | RENS | RSS | vivant | honeyfarm AIDE, DMARC |
 | [APWG](https://apwg.org/) | US | RENS | PDF ; eCrime eXchange inscr. | vivant | rapports trimestriels phishing |
 | [Global Anti-Scam Alliance](https://gasa.org/) | — | RENS | PDF | vivant | rapports scam par pays |
+| [Cloud Security Alliance Labs](https://labs.cloudsecurityalliance.org) | US | RENS | API (WordPress) | vivant | incubateur de projets de recherche CSA (MAESTRO, Mythos, sécurité MCP) |
 
 ### 2.2 Blocklists IP / domaines
 
@@ -252,6 +253,7 @@ Liste de sources de renseignement concernant la menace d'origine cyber.
 | Kenya | [National KE-CIRT/CC](https://ke-cirt.go.ke) | RENS | web | |
 | Macédoine du Nord | [MKD-CIRT](https://mkd-cirt.mk) | IOC+RENS | web | `[MK/EN]` |
 | Malaisie | [MyCERT](https://www.mycert.org.my) | RENS | web, bot | |
+| Malaisie | [NC4 / NACSA](https://www.nc4.gov.my) | RENS | web | Centre national de coordination cyber, distinct de MyCERT ; avis numérotés (NC4-ALR-…) |
 | Maroc | [DGSSI / maCERT](https://www.dgssi.gov.ma) | RENS | web | `[FR/AR]` |
 | Maurice | [CERT-MU](https://cert-mu.govmu.org) | RENS | web | |
 | Mexique | [CERT-MX](https://www.gob.mx/gncertmx) | RENS | web | `[ES]` |
@@ -300,6 +302,7 @@ Liste de sources de renseignement concernant la menace d'origine cyber.
 | [Europol](https://www.europol.europa.eu/media-press/newsroom) | UE | RENS | web | voir §3 |
 | [Interpol — cyber threat assessments](https://www.interpol.int/Crimes/Cybercrime/Cyber-threat-assessments) | — | RENS | PDF, bot | seule synthèse régionale Afrique |
 | [Access Now — Digital Security Helpline](https://www.accessnow.org/help/) | — | RENS | RSS | société civile : spyware et phishing ciblant ONG/journalistes |
+| [AIVD](https://english.aivd.nl) | NL | RENS | web | service de renseignement néerlandais ; attribution nominative (ciblage Signal/WhatsApp par des acteurs étatiques russes) |
 
 ## 5. CERT sectoriels, ISAC et infrastructures critiques
 
@@ -325,6 +328,7 @@ Liste de sources de renseignement concernant la menace d'origine cyber.
 | [Cyber Threat Alliance](https://www.cyberthreatalliance.org/resources/) | US | multi | RENS | web | rapports conjoints ; ses communiqués listent les membres |
 | [ECSO](https://www.ecso.org/) | EU | multi | RENS | RSS | |
 | [Kaspersky ICS-CERT](https://ics-cert.kaspersky.com) | RU | OT | RENS | web | IOC en PDF, non vérifiés ; voir aussi §7.2 |
+| [NHS England — Cyber Alerts](https://digital.nhs.uk/cyber-alerts) | UK | santé | RENS | web, bot | alertes numérotées (cc-xxxx) ; site bloque les robots |
 
 ## 6. Infrastructure Internet : registres, RIR, NREN, cloud, opérateurs
 
@@ -372,7 +376,7 @@ Liste de sources de renseignement concernant la menace d'origine cyber.
 
 | Source | Contenu | Accès | Activité | Commentaire |
 |---|---|---|---|---|
-| [Cisco Talos](https://blog.talosintelligence.com) · [IOCs](https://github.com/Cisco-Talos/IOCs) | IOC+RENS | RSS / repo | vivant | |
+| [Cisco Talos](https://blog.talosintelligence.com) · [IOCs](https://github.com/Cisco-Talos/IOCs) · [règles Snort](https://snort.org) | IOC+RENS | RSS / repo | vivant | |
 | [Palo Alto Unit 42](https://unit42.paloaltonetworks.com) · [Article IOCs](https://github.com/PaloAltoNetworks/Unit42-Threat-Intelligence-Article-Information) · [timely-threat-intel](https://github.com/PaloAltoNetworks/Unit42-timely-threat-intel) | IOC+RENS | RSS / repo | 2026-09-01 | `pan-unit42/iocs` archivé |
 | [Google Cloud Threat Intelligence / Mandiant](https://cloud.google.com/blog/topics/threat-intelligence) · [M-Trends](https://cloud.google.com/security/mandiant) · [TAG/GTIG](https://blog.google/security/) | IOC+RENS | web | vivant | le dépôt `mandiant/iocs` est archivé (2019) |
 | [Microsoft Security / MSTIC](https://www.microsoft.com/en-us/security/blog/) · [Azure-Sentinel](https://github.com/Azure/Azure-Sentinel) | IOC+RENS | web / repo | vivant | |
@@ -419,6 +423,16 @@ Liste de sources de renseignement concernant la menace d'origine cyber.
 | [Trellix ARC](https://www.trellix.com/blogs/research/) | RENS | web, bot | — | dépôt IOC figé 2021 |
 | [Imperva Threat Research — Weekly TI](https://imperva.substack.com/) | RENS | RSS | vivant | hebdo + podcast ; seule ouverture de la famille adtech / anti-bot |
 | [Zvelo](https://zvelo.com/) | RENS | RSS | vivant | catégorisation d'URL, phishing |
+| [Tenable Research](https://www.tenable.com/blog) | RENS | web | 2026-09-10 | exposure management ; recherche sur vulnérabilités exploitées |
+| [Checkmarx](https://checkmarx.com/blog/) | RENS | web | 2026-09-09 | AppSec ; recherche supply chain (Shai-Hulud, keyv/cacheable) |
+| [JFrog Security Research](https://research.jfrog.com) | RENS | web | 2026-09-06 | supply chain npm/PyPI/crates.io ; CVE et paquets malveillants |
+| [Sysdig](https://sysdig.com/blog/) | RENS | web | 2026-09-11 | runtime cloud/conteneurs ; ransomware et CVE exploitées |
+| [StepSecurity](https://www.stepsecurity.io/blog) | RENS | web | 2026-09-01 | sécurité CI/CD (GitHub Actions) ; campagne Team PCP (2 186 organisations touchées) |
+| [Endor Labs](https://www.endorlabs.com/learn) | RENS | web | 2026-09-10 | risque open source ; suivi Shai-Hulud |
+| [Coralogix — Security](https://coralogix.com/blog/category/security/) | RENS | web | vivant | observabilité ; billets d'attribution d'infrastructure (EvilTokens) |
+| [Push Security](https://pushsecurity.com/blog/) | RENS | web | 2026-03-06 | phishing d'identité (device code, ClickFix navigateur) |
+| [Deepwatch](https://www.deepwatch.com/blog/) | RENS | web | 2026-08-26 | MDR ; recherche RAT et supply chain |
+| [Socket](https://socket.dev/blog) · [flux](https://socket.dev/api/blog/feed.atom) | RENS | web / Atom | vivant | supply chain npm/PyPI/NuGet/Composer (Shai-Hulud, TanStack, keyv/cacheable) |
 
 **Europe (hors Russie)**
 
@@ -467,6 +481,7 @@ Liste de sources de renseignement concernant la menace d'origine cyber.
 | [Northwave](https://northwave-cybersecurity.com/threat-intel-research) | NL | IOC+RENS | web | vivant | |
 | [Tesorion](https://www.tesorion.nl/en) | NL | RENS | web | vivant | |
 | [NVISO Labs](https://blog.nviso.eu/) | BE | IOC+RENS | RSS | vivant | hash dans le flux |
+| [Aikido Security](https://www.aikido.dev/blog) | BE | RENS | web | 2026-09-10 | AppSec ; supply chain npm (Shai-Hulud, paquets SAP compromis) |
 | [Truesec](https://www.truesec.com/hub/blog) | SE | RENS | web | vivant | |
 | [Conscia](https://conscia.com/blog/) | DK | RENS | web | vivant | |
 | [mnemonic](https://www.mnemonic.io/resources/blog/) | NO | RENS | web, bot | vivant | bloque les robots |
@@ -676,6 +691,8 @@ Liste de sources de renseignement concernant la menace d'origine cyber.
 | [Cleafy Labs](https://www.cleafy.com/labs) | IT | IOC+RENS | web | vivant | IOC ponctuels |
 | [Lookout Threat Lab](https://www.lookout.com/threat-intelligence) | US | IOC+RENS | web | vivant | surveillanceware |
 | [Apple — Threat notifications](https://support.apple.com/en-us/102174) | US | RENS | web | vivant | spyware mercenaire |
+| [Jamf Threat Labs](https://www.jamf.com/blog/) | US | RENS | web | 2026-09-03 | recherche macOS/iOS (Contagious Interview, ChillyHell) |
+| [Calif Research](https://calif.io) | US | RENS | web | vivant | recherche offensive mobile ; découvreur de WeWorm (ver zéro-clic Android/iOS sur le protocole VoIP WeChat) |
 
 **Sécurité mail et phishing**
 
@@ -735,6 +752,7 @@ Liste de sources de renseignement concernant la menace d'origine cyber.
 | [Google Project Zero — 0days in the wild](https://github.com/googleprojectzero/0days-in-the-wild) | US | RENS | repo | 2026-08-10 |
 | [Nuclei templates](https://github.com/projectdiscovery/nuclei-templates) | — | IOC | repo | 2026-09-01 |
 | [DEVCORE / Orange Tsai](https://blog.orange.tw/) | TW | RENS | Atom | recherche offensive |
+| [Zellic](https://zellic.io/blog) | — | RENS | web | audits et recherche de vulnérabilités blockchain/crypto (Bitcoin, Solana, TON) |
 
 **Crypto / Web3** — voir §2.3.
 
@@ -897,6 +915,9 @@ Liste de sources de renseignement concernant la menace d'origine cyber.
 | [POC — Power of Community](https://powerofcommunity.net/) | RENS | web | vivant | archives de conférence (Corée) |
 | [AVAR](https://aavar.org/) | RENS | web | vivant | archives de conférence |
 | [SANS Summit archives](https://www.sans.org/cyber-security-summit/archives/) | RENS | web | vivant | archives de conférence |
+| [Ctrl-Alt-Intel](https://ctrlaltintel.com) | RENS | web | 2026-07 | chercheur indépendant ; erreur OPSEC d'un serveur C2 APT28 (FancyBear, >2 800 e-mails exfiltrés), ransomware Gentlemen/Qilin ; accès parfois bloqué aux robots |
+| [Hive Security](https://hivesecurity.gitlab.io) | RENS | web | 2026-09-12 | recherche indépendante (analyse de CVE, red/blue team) |
+| [iQBlack](https://iqblack.com/es/insight/) | RENS | web | 2026-09-12 | recherche sur la fraude financière et l'hacktivisme en Amérique latine `[ES/EN]` |
 
 ## 12. Journalistes et médias spécialisés
 
@@ -946,6 +967,8 @@ Liste de sources de renseignement concernant la menace d'origine cyber.
 | [嘶吼专业版 (WeChat, Wechat2RSS)](https://wechat2rss.xlab.app/feed/d351be711510e0b7ccbcb275cdfab5c4c7e3e839.xml) | CN | RENS | RSS (WeChat) | média `[ZH]` |
 | [虎符智库 (WeChat, Wechat2RSS)](https://wechat2rss.xlab.app/feed/792558edf818ce03d377d1d2677afb4d6537853d.xml) | CN | RENS | RSS (WeChat) | think tank `[ZH]` |
 | [榫卯江湖 (WeChat, Wechat2RSS)](https://wechat2rss.xlab.app/feed/d1988b840deaf6a79edd32e83a1b152038f1b6a1.xml) | CN | RENS | RSS (WeChat) | média `[ZH]` |
+| [Help Net Security](https://www.helpnetsecurity.com/feed/) | US | RENS | RSS | média sécurité généraliste, actif depuis 1998 |
+| [Cyber Kendra](https://cyberkendra.com) | IN | RENS | RSS | média sécurité indien |
 
 ## 13. Ingérence numérique et abus de plateformes
 
