@@ -2,7 +2,7 @@
 
 Liste de sources de renseignement concernant la menace d'origine cyber.
 
-> Dernière revue : 2026-09-13 — 798 sources actives, une par ligne, et 60 écartées (§18). Décompte par section : sommaire ci-dessous.
+> Dernière revue : 2026-09-13 — 799 sources actives, une par ligne, et 60 écartées (§18). Décompte par section : sommaire ci-dessous.
 >
 > Les sources ne sont pas restreintes à l'anglais. La langue est indiquée entre crochets — p. ex. `[ZH]`, `[RU]`, `[KO]` — lorsqu'elle n'est ni le français ni l'anglais.
 >
@@ -28,7 +28,7 @@ Liste de sources de renseignement concernant la menace d'origine cyber.
 4. [Police, justice, sanctions et attribution officielle](#4-police-justice-sanctions-et-attribution-officielle) — 9 sources
 5. [CERT sectoriels, ISAC et infrastructures critiques](#5-cert-sectoriels-isac-et-infrastructures-critiques) — 19 sources
 6. [Infrastructure Internet : registres, RIR, NREN, cloud, opérateurs](#6-infrastructure-internet--registres-rir-nren-cloud-opérateurs) — 29 sources
-7. [Éditeurs et laboratoires de recherche privés](#7-éditeurs-et-laboratoires-de-recherche-privés) — 315 sources
+7. [Éditeurs et laboratoires de recherche privés](#7-éditeurs-et-laboratoires-de-recherche-privés) — 316 sources
 8. [Réponse à incident, conseil, assurance](#8-réponse-à-incident-conseil-assurance) — 13 sources
 9. [Recherche académique et datasets](#9-recherche-académique-et-datasets) — 19 sources
 10. [Cybercriminalité : trackers, sites de fuite, victimologie](#10-cybercriminalité--trackers-sites-de-fuite-victimologie) — 13 sources
@@ -42,7 +42,7 @@ Liste de sources de renseignement concernant la menace d'origine cyber.
 18. [Sources écartées](#18-sources-écartées) — 60 sources
 19. [Origine de la liste et contribution](#19-origine-de-la-liste-et-contribution)
 
-**Total actif (§1-16) : 798 sources.**
+**Total actif (§1-16) : 799 sources.**
 
 ---
 
@@ -433,6 +433,7 @@ Liste de sources de renseignement concernant la menace d'origine cyber.
 | [Push Security](https://pushsecurity.com/blog/) | RENS | web | 2026-03-06 | phishing d'identité (device code, ClickFix navigateur) |
 | [Deepwatch](https://www.deepwatch.com/blog/) | RENS | web | 2026-08-26 | MDR ; recherche RAT et supply chain |
 | [Socket](https://socket.dev/blog) · [flux](https://socket.dev/api/blog/feed.atom) | RENS | web / Atom | vivant | supply chain npm/PyPI/NuGet/Composer (Shai-Hulud, TanStack, keyv/cacheable) |
+| [Field Effect](https://www.fieldeffect.com/blog) | RENS | web | 2026-07 | éditeur canadien ; recherche sur l'exploitation de pare-feux (Akira/SonicWall SonicOS), ClickFix |
 
 **Europe (hors Russie)**
 
@@ -862,7 +863,7 @@ Liste de sources de renseignement concernant la menace d'origine cyber.
 | [Intezer — community-intelligence](https://github.com/intezer/community-intelligence) | IOC | repo | vivant | IOC communautaires |
 | [GithubInfosec — latest-malware-IoC](https://github.com/GithubInfosec/latest-malware-IoC) | IOC | repo | mi-2025 | ralenti |
 | [malware-traffic — indicators](https://github.com/malware-traffic/indicators) | IOC | repo | vivant | IOC des analyses de malware-traffic-analysis.net |
-| [PRODAFT](https://github.com/prodaft) | IOC | repo | vivant | IOC et outils publiés par l'éditeur |
+| [PRODAFT](https://github.com/prodaft) · [blog](https://www.prodaft.com/blog) | IOC+RENS | repo / web, bot | vivant | IOC et outils publiés par l'éditeur ; rapports de fond sur des acteurs (ex. alerte précoce Interlock avant l'attaque de Saint Paul) — blog bloque les robots |
 | [DigitalSide](https://github.com/davidonzo/Threat-Intel) · [site](https://osint.digitalside.it) | IOC | repo / feed | 2026-09-06 | OSINT.DigitalSide (STIX / MISP / CSV) ; sous-domaine `osint.digitalside.it` intermittent → privilégier le dépôt GitHub `davidonzo/Threat-Intel` |
 | [TweetFeed](https://tweetfeed.live) | IOC | web / API | vivant | IOC partagés sur X, agrégés et datés |
 | [0xDanielLopez](https://github.com/0xDanielLopez) | IOC | repo | vivant | phishunt, phishing_kits |
