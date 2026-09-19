@@ -43,7 +43,7 @@ Liste de sources de renseignement concernant la menace d'origine cyber.
 
 **Total actif (§1-16) : 826 sources.**
 
-Voir aussi [flux-CTI.md](flux-CTI.md) : les sources de cette liste dont la production est directement ingérable, en feed MISP natif ou en bundle STIX 2.1.
+Voir aussi [flux-CTI.md](flux-CTI.md) : les sources de cette liste qui se chargent telles quelles dans MISP ou OpenCTI (feed MISP, STIX 2.1, TAXII), et par quoi commencer pour peupler une plateforme vide.
 
 ---
 

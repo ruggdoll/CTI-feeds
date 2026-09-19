@@ -1,31 +1,82 @@
-# Flux CTI structurés : MISP et OpenCTI
+# Flux CTI structurés : MISP et STIX 2.1
 
-Ce fichier recense les sources du [catalogue](README.md) qui se branchent directement sur une plateforme de renseignement : feeds au format MISP, bundles STIX 2.1, serveurs TAXII 2.1. Il sert à peupler MISP ou OpenCTI sans écrire de convertisseur — on prend l'URL, on l'abonne, ça s'importe.
+Ce fichier recense les sources du [catalogue](README.md) qui se chargent telles quelles dans une plateforme de renseignement : feeds au format MISP, bundles STIX 2.1, serveurs TAXII 2.1. Aucun convertisseur à écrire — on prend l'URL, on l'abonne, ça s'importe.
+
+Il est organisé pour un cas précis : **peupler un OpenCTI vide, pour un CSIRT qui démarre**. La première partie dit par quoi commencer et dans quel ordre ; la seconde, en annexe, classe les mêmes flux par format, ce qui sert surtout côté MISP.
 
 Chaque entrée donne le point d'entrée exact, le volume et la date de la dernière donnée (état au 2026-09-19), et ce qu'il faut savoir avant de l'ingérer : provenance, rythme, retard, conditions d'accès.
 
-## Ce qui figure ici
-
-| Section | Ce qui est retenu | Ce qui ne l'est pas |
-|---|---|---|
-| **MISP** | feed MISP (`manifest.json` + un JSON par événement) · export d'événement MISP · galaxie ou warninglist au format MISP | CSV, TXT, JSON maison — même référencés dans les *default feeds* de MISP, qui les importe en `freetext`/`csv` |
-| **OpenCTI** | bundle STIX 2.x (`"type": "bundle"`, objets `spec_version 2.1`) · collection TAXII 2.1 | STIX 1.x XML · TAXII 1.x · IOC en texte, YARA, Sigma |
-
-**Ce qu'OpenCTI accepte.** OpenCTI n'a pas de format à lui : il lit le STIX 2.1, un standard public, soit sous forme de fichier (*bundle*), soit en s'abonnant à un serveur TAXII 2.1. La section OpenCTI recense donc les sources qui publient l'un ou l'autre.
-
-**Ne pas confondre avec la liste des feeds livrée avec MISP.** MISP est fourni avec une liste de feeds préconfigurés ([`defaults.json`](https://github.com/MISP/MISP/blob/2.5/app/files/feed-metadata/defaults.json) : 88 entrées en version 2.4, 107 en 2.5). La grande majorité sont des fichiers texte ou CSV que MISP sait lire, pas des feeds au format MISP : seules 18 sur 107 le sont. Les autres restent au §2.2 du catalogue avec les blocklists.
+**Deux rappels.** OpenCTI n'a pas de format à lui : il lit le STIX 2.1, un standard public, en fichier (*bundle*) ou par TAXII 2.1 ; il lit aussi les feeds MISP par son connecteur `misp-feed`. Et la liste de feeds livrée avec MISP ([`defaults.json`](https://github.com/MISP/MISP/blob/2.5/app/files/feed-metadata/defaults.json), 107 entrées en 2.5) contient surtout des fichiers texte et CSV : seules 18 entrées sont au format MISP, les autres sont des blocklists que MISP découpe lui-même et qui restent au §2.2 du catalogue.
 
 ---
 
-## 1. MISP
+## 1. Par quoi commencer
 
-### 1.1 Feeds MISP complets
+Quatre paliers. Les trois premiers se branchent dans cet ordre ; le quatrième ne se branche pas dans OpenCTI. Le réglage de fenêtre compte autant que le choix du flux : une machine modeste ne tient pas 170 000 indicateurs.
+
+### 1.1 Le socle — à charger une fois, avant tout le reste
+
+Les objets auxquels les rapports vont se rattacher. Sans eux, chaque rapport crée ses propres acteurs, secteurs et techniques.
+
+| Flux | Ce qu'il apporte | Connecteur OpenCTI | Réglage | Détail |
+|---|---|---|---|---|
+| **MITRE ATT&CK** | techniques, groupes, logiciels, campagnes | `mitre` (ou `taxii2` sur `attack-taxii.mitre.org`) | tout | §B.1, §B.4 |
+| **MISP Galaxy** | la table des alias d'acteurs et de familles | arrive avec les tags galaxy des événements MISP (`misp-feed`) | — | §A.3 |
+| **Filigran — datasets** | secteurs, pays, régions normalisés | `opencti` (import natif) | tout | §B.3 |
+| CAPEC · ATLAS · DISARM | modèles d'attaque applicatifs · menaces sur l'IA · manipulation de l'information | `mitre` (option CAPEC) · `mitre-atlas` · `disarm-framework` | seulement si le périmètre le demande | §B.3 |
+
+### 1.2 La connaissance — ce qui fait une base de renseignement
+
+Des événements contextualisés : un rapport, un acteur, des indicateurs reliés. C'est le palier le plus maigre de la liste, et le plus précieux.
+
+| Flux | Ce qu'il apporte | Connecteur OpenCTI | Réglage | Détail |
+|---|---|---|---|---|
+| **CIRCL — feed OSINT** | 1 680 événements tagués galaxy, TLP:CLEAR, depuis 2011 | `misp-feed` | tout | §A.1 |
+| **Le CERT de rattachement** | CERT-FR (18 événements, dernier 2024-06) · CSIRT Italia (fenêtre glissante quotidienne) | `misp-feed` | tout | §A.1 |
+| **ESET** | 60 événements attribués par acteur (Turla, Winnti, Gelsemium…) | import de fichier (pas de manifeste) | tout | §A.2 |
+| **Rösti** | un événement par rapport public, IOC extraits, lien vers la source ; 9 636 événements depuis juin 2026 | `misp-feed` | fenêtre 90 jours, confiance basse : réemballage | §A.1 |
+| MVT · Amnesty Tech · AssoEchap | spyware mobile, stalkerware | import de fichier STIX | si le périmètre inclut le mobile ou la société civile | §B.1 |
+| Rectifyq | renseignement centré sur la Malaisie | `misp-feed` | si le périmètre le demande | §A.1 |
+
+### 1.3 La détection — indicateurs frais, à scoper
+
+Pour corréler avec les journaux. Volume élevé, valeur courte : sans fenêtre, ils noient le graphe.
+
+| Flux | Ce qu'il apporte | Connecteur OpenCTI | Réglage | Détail |
+|---|---|---|---|---|
+| **ThreatFox** | C2 et botnets, tagués par famille | `threatfox` ou `misp-feed` | 30 jours | §A.1 |
+| URLhaus | URL de distribution de malware | `urlhaus` | 7 à 30 jours ; plutôt côté MISP | §A.1 |
+| MalwareBazaar | hash d'échantillons | `malwarebazaar-recent-additions` | plutôt côté MISP : sans les échantillons, un hash ne dit que « connu » | §A.1 |
+| Elastic Security Labs | indicateurs par campagne, sans rapport ni acteur dans le bundle | import de fichier STIX | complément | §B.1 |
+| TweetFeed | IOC relayés sur X par la communauté, non vérifiés | `tweetfeed` ou `taxii2` | 7 jours, confiance basse | §A.1, §B.4 |
+
+### 1.4 Hors OpenCTI
+
+Pas du renseignement, ou pas à cette échelle. Leur place est un RPZ DNS, un pare-feu ou une warninglist MISP.
+
+| Flux | Pourquoi | Où le mettre |
+|---|---|---|
+| PhishDestroy (122 617 indicateurs) · APTtrail (172 923) · xfeeds · chrome-mal-ids | blocklists | DNS RPZ, pare-feu, MISP en feed `freetext` |
+| MISP warninglists · Deutsche Telekom | faux positifs et plages de scanners | MISP (OpenCTI n'en fait rien) |
+| DigitalSide · CyberMonitor · blackorbird · Citizen Lab et Meta (STIX 1.x) | arrêtés, miroirs ou format non lu | — |
+| NOCACTI · cyberdefense.blue · TI-Collector | producteur inconnu ou capteur unique | — |
+| Gatewatcher · Pulsedive · Q-Feeds · isMalicious · Dark Web Informer · ReversingLabs | sous licence | quand le budget existe |
+
+En une ligne, pour un CSIRT qui démarre : **ATT&CK → Galaxy → datasets → CIRCL → CERT national → ESET → Rösti (90 j) → ThreatFox (30 j)**. Huit flux, six sans compte.
+
+---
+
+## 2. Annexe — les mêmes flux, par format
+
+## A. MISP
+
+### A.1 Feeds MISP complets
 
 Un `manifest.json` et un fichier par événement : abonnables tels quels dans *Sync Actions → Feeds* (pointer le répertoire, MISP ajoute `/manifest.json`).
 
 | Source | § README | Point d'entrée | Volume / dernière donnée | Commentaire |
 |---|---|---|---|---|
-| [CIRCL](https://www.circl.lu/doc/misp/feed-osint/) | §2.1 · §3 (LU) | `https://www.circl.lu/doc/misp/feed-osint/` | 1 680 événements, 2011-09-22 → 2026-08-13 | produit par l'éditeur de MISP, premier feed de sa liste par défaut ; agrège plusieurs organisations contributrices. Le même feed est **converti en STIX 2.1** par CIRCL (§2.1) |
+| [CIRCL](https://www.circl.lu/doc/misp/feed-osint/) | §2.1 · §3 (LU) | `https://www.circl.lu/doc/misp/feed-osint/` | 1 680 événements, 2011-09-22 → 2026-08-13 | produit par l'éditeur de MISP, premier feed de sa liste par défaut ; agrège plusieurs organisations contributrices. Le même feed est **converti en STIX 2.1** par CIRCL (§B.1) |
 | [abuse.ch — URLhaus](https://urlhaus.abuse.ch/downloads/misp/) | §2.1 | `https://urlhaus.abuse.ch/downloads/misp/` | 1 949 événements, dernier 2026-09-18 | un événement par jour ; accès sans authentification |
 | [abuse.ch — ThreatFox](https://threatfox.abuse.ch/downloads/misp/) | §2.1 | `https://threatfox.abuse.ch/downloads/misp/` | 1 993 événements, dernier 2026-09-18 | idem ; abuse.ch propose aussi une URL de feed personnelle (Auth-Key, compte gratuit), le chemin anonyme reste accessible |
 | [abuse.ch — MalwareBazaar](https://bazaar.abuse.ch/downloads/misp/) | §2.1 | `https://bazaar.abuse.ch/downloads/misp/` | 1 918 événements, dernier 2026-09-07 | échantillons du jour |
@@ -33,20 +84,20 @@ Un `manifest.json` et un fichier par événement : abonnables tels quels dans *S
 | [CSIRT Italia / ACN](https://www.acn.gov.it/portale/en/csirt-italia/misp) | §3 (Italie) | `https://www.csirt.gov.it/feed-misp/` | 60 événements, 2026-09-16 → 2026-09-19 (fenêtre glissante) | CSIRT national italien ; tout IoC TLP:CLEAR de l'agence passe par ce feed, renouvelé quotidiennement |
 | [CERT-FR / ANSSI](https://misp.cert.ssi.gouv.fr/feed-misp/) | §3 (France) | `https://misp.cert.ssi.gouv.fr/feed-misp/` | 18 événements, dernier daté 2024-06-04 (fichiers régénérés 2026-04-09) | feed public annoncé par [CERTFR-2022-IOC-001](https://www.cert.ssi.gouv.fr/ioc/CERTFR-2022-IOC-001/) ; dormant depuis mi-2024 mais toujours servi, avec un `hashes.csv` agrégé |
 | [Infoblox](https://github.com/infobloxopen/threat-intelligence/tree/main/indicators/misp) | §7.1 (Amérique du Nord) | `https://raw.githubusercontent.com/infobloxopen/threat-intelligence/main/indicators/misp` | 46 événements, 2022-04-08 → 2026-08-13 | un événement par campagne DNS (malvertising, *drop catch*, smishing) ; dépôt actif (2026-09-15) |
-| [TweetFeed](https://tweetfeed.live/feeds/) | §11 | `https://tweetfeed.live/misp` (miroir `0xDanielLopez/TweetFeed`, `misp/`) | 365 événements (un par jour, fenêtre glissante d'un an), dernier 2026-09-19 | régénéré toutes les 15 minutes ; CC0. Publie **aussi** des bundles STIX 2.1 et un serveur TAXII 2.1 (§2) |
+| [TweetFeed](https://tweetfeed.live/feeds/) | §11 | `https://tweetfeed.live/misp` (miroir `0xDanielLopez/TweetFeed`, `misp/`) | 365 événements (un par jour, fenêtre glissante d'un an), dernier 2026-09-19 | régénéré toutes les 15 minutes ; CC0. Publie **aussi** des bundles STIX 2.1 et un serveur TAXII 2.1 (§B) |
 | [Rösti](https://rosti.dev/misp) | §11 | `https://misp.rosti.dev/` | 9 636 événements, 2026-06-16 → 2026-09-18 | *Repackaged Öpen Source Threat Intelligence* (Johannes Bader, auteur de bin.re) : un événement par rapport public, IOC extraits automatiquement de 292 sources. **Réemballage**, pas production : la provenance est celle du rapport cité. Remplace `rosti.64617461.xyz`, mort |
 | [PrecisionSec — OSINT](https://precisionsec.com/free-misp-feed/) | §7.2 (C2) | `https://misp-osint.precisionsec.com/` | 864 événements, 2026-07-25 → 2026-08-22 | présenté par l'éditeur comme « a subset of PrecisionSec's premium feed » (couverture ClickFix), **retardé de 30 jours**, fenêtre glissante de 30 jours |
 | [Rectifyq](https://rectifyq.com/) | §7.1 (Asie du Sud-Est) | `https://feeds.rectifyq.com/MISP2026/` (aussi `MISP2024/`, `MISP2025/`, `MISP-ICS-OT/`, `MISP-MY/`) | 867 événements en 2026 (→ 2026-07-30) ; 1 283 en 2025 ; 551 en 2024 ; ICS-OT 101 ; Malaisie 214 | initiative malaisienne, un événement par entrée de renseignement ; cinq feeds par année et par thème |
-| [SiberKapan](https://siberkapan.org/misp-feed/) | §2.1 | `https://siberkapan.org/misp-feed/` | 60 événements, 2026-07-22 → 2026-09-19 | plateforme communautaire turque (honeypots, capteurs FortiGate) ; publie **aussi** un bundle STIX 2.1 et un serveur TAXII 2.1 (§2), et **republie la liste USOM** que l'agence ne diffuse plus en clair (§3, Turquie) |
+| [SiberKapan](https://siberkapan.org/misp-feed/) | §2.1 | `https://siberkapan.org/misp-feed/` | 60 événements, 2026-07-22 → 2026-09-19 | plateforme communautaire turque (honeypots, capteurs FortiGate) ; publie **aussi** un bundle STIX 2.1 et un serveur TAXII 2.1 (§B), et **republie la liste USOM** que l'agence ne diffuse plus en clair (§3, Turquie) |
 | [ThreatCluster](https://threatcluster.io/) | §11 | `https://threatcluster.io/misp` | 9 événements, 2026-09-13 → 2026-09-16 (fenêtre glissante) | agrégateur (20 000 sources, résumés IA, selon le site) |
-| [chrome-mal-ids](https://github.com/The-Privacy-Commons-Institute/chrome-mal-ids) | §2.2 | `https://raw.githubusercontent.com/The-Privacy-Commons-Institute/chrome-mal-ids/master/formats/misp-feed` | 187 événements, régénérés 2026-09-18 | identifiants d'extensions Chrome malveillantes, agrégés depuis les publications des éditeurs ; publie **aussi** un bundle STIX 2.1 (§2.1) |
+| [chrome-mal-ids](https://github.com/The-Privacy-Commons-Institute/chrome-mal-ids) | §2.2 | `https://raw.githubusercontent.com/The-Privacy-Commons-Institute/chrome-mal-ids/master/formats/misp-feed` | 187 événements, régénérés 2026-09-18 | identifiants d'extensions Chrome malveillantes, agrégés depuis les publications des éditeurs ; publie **aussi** un bundle STIX 2.1 (§B.1) |
 | [APTtrail](https://trilwu.github.io/apttrail/) | §11 | `https://trilwu.github.io/apttrail/misp-feed/` | 340 événements (un par groupe), générés 2026-08-15 | **réemballage des trails APT de Maltrail** (§2.2) avec correspondance ATT&CK ; annoncé « horaire », dernière génération datée d'un mois |
 | [xfeeds](https://github.com/neilweitzel/xfeeds) | §11 | `https://raw.githubusercontent.com/neilweitzel/xfeeds/main/feeds` (`misp-manifest.json`) | 1 événement, 2026-09-19 | agrégat de blocklists IP ne retenant que les IP corroborées par plusieurs sources indépendantes ; publie **aussi** un bundle STIX 2.1 |
 | [NOCACTI](https://misp-feed.nocacti.com/Intrusion/) | — | `https://misp-feed.nocacti.com/Intrusion/` · `…/AdversaryInfrastructure/` | 3 + 1 événements, 2026-09-01 | dans les *default feeds* MISP depuis la 2.5.31 ; le site n'expose qu'une page de connexion MISP, aucune information sur le producteur — hors catalogue pour cette raison |
 | [cyberdefense.blue](https://github.com/RedBlue232/threat-feed-publisher) | — | `https://raw.githubusercontent.com/RedBlue232/threat-feed-publisher/main/misp-feed` | 3 événements (un par périmètre), 2026-04-27 | IP vues par un seul capteur CrowdSec/Suricata en France, fenêtre de 7 jours (« best-effort feed derived from a single self-hosted sensor », selon l'auteur) — hors catalogue |
 | [DigitalSide](https://github.com/davidonzo/Threat-Intel/tree/master/digitalside-misp-feed) | §11 | `https://osint.digitalside.it/Threat-Intel/digitalside-misp-feed/` | 1 062 événements, 2022-10-03 → **2024-10-18** | **arrêté.** Le site ne répond plus et le dépôt GitHub n'a plus reçu de commit depuis le 2024-10-18. Reste dans les *default feeds* MISP |
 
-### 1.2 Événements MISP isolés
+### A.2 Événements MISP isolés
 
 Pas de manifeste : des exports d'événement à importer un par un (*Import from MISP export*).
 
@@ -54,11 +105,11 @@ Pas de manifeste : des exports d'événement à importer un par un (*Import from
 |---|---|---|---|---|
 | [ESET](https://github.com/eset/malware-ioc) | §7.1 (Europe) | `eset/malware-ioc`, fichiers `*misp*.json` | 60 fichiers d'événement dans 26 des 148 dossiers ; dernière mise à jour d'un événement 2026-06-09 | le dépôt est très actif (2026-09-17) mais les campagnes récentes ne sont livrées qu'en `samples.sha256` : l'export MISP est intermittent. Couvre Turla, Winnti, Gelsemium, BackdoorDiplomacy, Winter Vivern… |
 | [HvS-Consulting](https://github.com/hvs-consulting/ioc_signatures) | §7.1 (Europe) | `hvs-consulting/ioc_signatures`, fichiers `*Misp-Event.json` | 4 événements : Black Basta (2024-04, 2024-11), feed T3 2024, BlueHammer (2026-04-08, 5 attributs) | société de réponse à incident allemande ; un export MISP par rapport, à côté des YARA et CSV. Un export XML plus ancien (APT27, 2021) |
-| [AssoEchap — stalkerware-indicators](https://github.com/AssoEchap/stalkerware-indicators) | §7.2 (Mobile) | `generated/misp_event.json` | 1 événement, 1 692 objets MISP, régénéré 2026-06-21 | événement unique tenu à jour ; publie **aussi** un bundle STIX 2.1 (§2.1) |
+| [AssoEchap — stalkerware-indicators](https://github.com/AssoEchap/stalkerware-indicators) | §7.2 (Mobile) | `generated/misp_event.json` | 1 événement, 1 692 objets MISP, régénéré 2026-06-21 | événement unique tenu à jour ; publie **aussi** un bundle STIX 2.1 (§B.1) |
 | [GovCERT.ch](https://github.com/govcert-ch/CTI) | §3 (Suisse) | `20241202_LummaStealer/misp.event.31002.json` | 1 événement, 112 attributs, 2024-12-02 | export `restSearch` complet ; ponctuel, le reste du dépôt est en CSV/TXT |
 | [TTC-CERT](https://github.com/ttc-cert/TTC-CERT-MISP-Shared-Events) | §3 (Thaïlande) | `ttc-cert/TTC-CERT-MISP-Shared-Events` | 9 événements, figé 2024-05-23 | Sharp Panda, Mustang Panda, infostealers visant la Thaïlande |
 
-### 1.3 Contenu MISP natif hors événements
+### A.3 Contenu MISP natif hors événements
 
 Ni IOC ni rapports : les référentiels (alias d'acteurs, familles) et les listes de faux positifs que MISP applique aux feeds.
 
@@ -69,7 +120,7 @@ Ni IOC ni rapports : les référentiels (alias d'acteurs, familles) et les liste
 | [Malpedia](https://malpedia.caad.fkie.fraunhofer.de/usage/api) | §1 | `https://malpedia.caad.fkie.fraunhofer.de/api/get/misp` | ~4 Mo, sans clé | vue courante de Malpedia **au format galaxy cluster MISP** ; le reste de l'API demande une clé |
 | [Deutsche Telekom](https://github.com/telekom-security/misp-warning-lists) | §6 | `telekom-security/misp-warning-lists`, `lists/` | 229 warninglists, 2026-09-19 | plages IP de scanners et de fournisseurs cloud, mises à jour quotidiennement ; production distincte de T-Pot |
 
-### 1.4 MISP sous condition
+### A.4 MISP sous condition
 
 Instances ou feeds qui existent mais ne s'obtiennent pas par une URL publique.
 
@@ -86,9 +137,9 @@ Instances ou feeds qui existent mais ne s'obtiennent pas par une URL publique.
 
 ---
 
-## 2. OpenCTI (STIX 2.1)
+## B. STIX 2.1
 
-### 2.1 Bundles STIX 2.1 publiés — production propre
+### B.1 Bundles STIX 2.1 publiés — production propre
 
 | Source | § README | Point d'entrée | Volume / dernière donnée | Commentaire |
 |---|---|---|---|---|
@@ -108,7 +159,7 @@ Instances ou feeds qui existent mais ne s'obtiennent pas par une URL publique.
 | [CTID — Attack Flow](https://center-for-threat-informed-defense.github.io/attack-flow/example_flows/) | §9 | `.../corpus/<nom>.json` (le dépôt ne versionne que les `.afb`) | 41 flux, dépôt actif 2026-09-09 | extension *attack-flow* : les SDO/SCO standards s'ingèrent, les objets `attack-action` / `attack-flow` demandent la définition d'extension livrée dans le bundle |
 | [DigitalSide](https://github.com/davidonzo/Threat-Intel/tree/master/stix2) | §11 | `davidonzo/Threat-Intel`, `stix2/` | 1 000+ bundles, **figé 2024-10-18** | même arrêt que le feed MISP |
 
-### 2.2 Bundles STIX 2.1 — agrégats et réemballages
+### B.2 Bundles STIX 2.1 — agrégats et réemballages
 
 Ingérables ; la provenance est celle des sources amont, indiquée dans la dernière colonne.
 
@@ -117,9 +168,9 @@ Ingérables ; la provenance est celle des sources amont, indiquée dans la derni
 | [APTtrail](https://trilwu.github.io/apttrail/) | §11 | release `apttrail_threat_feed_stix.json` (164 Mo) | 172 923 indicateurs, 340 `intrusion-set` ; généré 2026-08-15 | trails APT de Maltrail (§2.2), enrichis d'identifiants ATT&CK |
 | [xfeeds](https://github.com/neilweitzel/xfeeds) | §11 | `feeds/stix-bundle.json` | 8 429 indicateurs, 2026-09-19 | blocklists IP publiques, corroboration multi-sources |
 | [TI-Collector — CTAC MY](https://github.com/r4y79/ti-feed) | — | `taxii2/` (arbre TAXII 2.1 statique) · `feeds/*.txt` | 2 005 indicateurs sur 24 h, 2026-09-18 | feeds amont republiés (certificats SSLBL, domaines, hash) + CISA KEV 30 jours ; producteur non identifié — hors catalogue |
-| [Rösti](https://rosti.dev/feeds) | §11 | API v2, sur clé de compte — STIX annoncé ; le feed MISP (§1.1) est public | — | rapports publics de 292 sources |
+| [Rösti](https://rosti.dev/feeds) | §11 | API v2, sur clé de compte — STIX annoncé ; le feed MISP (§A.1) est public | — | rapports publics de 292 sources |
 
-### 2.3 Référentiels STIX 2.1
+### B.3 Référentiels STIX 2.1
 
 Pas d'observables : les cadres à charger une fois, qui donnent aux rapports leurs `attack-pattern`, `identity` et `location`.
 
@@ -132,14 +183,14 @@ Pas d'observables : les cadres à charger une fois, qui donnent aux rapports leu
 | [Filigran — OpenCTI datasets](https://github.com/OpenCTI-Platform/datasets) | §1 | `data/sectors.json` · `geography.json` · `companies.json` | secteurs : 121 objets (72 `identity`) ; 2026-06-07 | référentiels de secteurs, pays et régions que les connecteurs OpenCTI utilisent |
 | [VIGINUM — Doctrine OpenCTI](https://github.com/VIGINUM-FR/Doctrine-OpenCTI) | §3 (France) · §13 | `SGDSN_VIGINUM_DoctrineOpenCTI.pdf` (FR/EN) | 2025-04-24 | pas de données : le cadre de capitalisation de la menace informationnelle dans OpenCTI publié par le SGDSN |
 
-### 2.4 TAXII
+### B.4 TAXII
 
 | Source | § README | Point d'entrée | État |
 |---|---|---|---|
 | [MITRE ATT&CK](https://attack-taxii.mitre.org/api/v21/) | §1 | `https://attack-taxii.mitre.org/api/v21/collections/` | **TAXII 2.1 ouvert**, sans authentification ; collections Enterprise / Mobile / ICS. Exige l'en-tête `Accept: application/taxii+json;version=2.1` — sans lui le serveur renvoie 400 |
 | [TweetFeed](https://tweetfeed.live/api/) | §11 | `https://tweetfeed.live/taxii2/` | **TAXII 2.1 ouvert** ; Cloudflare refuse les User-Agent `python-urllib` et `libwww-perl` |
 | [SiberKapan](https://siberkapan.org/taxii/) | §2.1 | `https://siberkapan.org/taxii/` (API root `…/taxii/api-root/`) | **TAXII 2.1 ouvert** ; trois collections : toutes menaces, score ≥ 75, honeypots |
-| [TI-Collector — CTAC MY](https://github.com/r4y79/ti-feed) | — | `taxii2/api/collections/<id>/` sur GitHub | arbre TAXII 2.1 **statique** (fichiers JSON servis par `raw.githubusercontent.com`) ; voir §2.2 |
+| [TI-Collector — CTAC MY](https://github.com/r4y79/ti-feed) | — | `taxii2/api/collections/<id>/` sur GitHub | arbre TAXII 2.1 **statique** (fichiers JSON servis par `raw.githubusercontent.com`) ; voir §B.2 |
 | [EclecticIQ — collections publiques](https://www.eclecticiq.com/public-feed-manual) | §7.1 (Europe) | `https://cti.eclecticiq.com/taxii/discovery` (POST) · `…/taxii/poll` | **TAXII 1.1**, sans authentification, contenu livré en STIX 2.1, STIX 1.2 ou eiq-json. OpenCTI ne parle que TAXII 2.x : passer par un client TAXII 1 puis importer les bundles |
 | [DigitalSide](https://osint.digitalside.it/taxiiserver.html) | §11 | `https://osint.digitalside.it/taxii2` (`guest` / `guest`) | **injoignable** |
 | [Pulsedive](https://docs.pulsedive.com/taxii/overview) | §11 | serveur TAXII 2.1 | **plan Pro ou Feed requis** ; une collection de test avec données réelles est accessible avec une clé de compte gratuit |
@@ -147,9 +198,9 @@ Pas d'observables : les cadres à charger une fois, qui donnent aux rapports leu
 | [isMalicious](https://ismalicious.com/data/stix-taxii) | §7.2 (C2) | TAXII 2.1 | **plans Pro et Enterprise**, clé API |
 | [CISA — AIS](https://www.cisa.gov/topics/cyber-threats-and-advisories/information-sharing/automated-indicator-sharing-ais) | §3 (États-Unis) | connexion TAXII 2.1 bidirectionnelle | **sous convention** : *Terms of Use* pour les organisations non fédérales, MISA pour les fédérales |
 
-### 2.5 STIX 2.1 sous licence
+### B.5 STIX 2.1 sous licence
 
-Éditeurs dont la sortie est nativement STIX 2.1 (le connecteur OpenCTI ne fait que relayer), mais derrière une clé commerciale.
+Éditeurs dont la sortie est nativement STIX 2.1, derrière une clé commerciale.
 
 | Source | § README | Ce qui est documenté |
 |---|---|---|
@@ -157,7 +208,7 @@ Pas d'observables : les cadres à charger une fois, qui donnent aux rapports leu
 | [Dark Web Informer](https://darkwebinformer.com/) | §12 | bundles STIX 2.1 pré-générés (`feed`, `ransomware`, `iocs`), régénérés toutes les 30 minutes ; clé API des paliers payants |
 | [ReversingLabs](https://docs.reversinglabs.com/Integrations/OpenCTI/feed-configuration/) | — | flux TAXII (ransomware, malware) activables dans OpenCTI ; licence Spectra |
 
-### 2.6 STIX 1.x — non ingérable tel quel
+### B.6 STIX 1.x
 
 | Source | § README | Point d'entrée | Dernière donnée |
 |---|---|---|---|
@@ -166,7 +217,7 @@ Pas d'observables : les cadres à charger une fois, qui donnent aux rapports leu
 
 ---
 
-## 3. Avant d'ingérer
+## C. Avant d'ingérer
 
 - **Figurer dans les *default feeds* de MISP ne fait pas un feed MISP.** ELLIO, Bambenek, DataPlane, IPsum, Phishing.Database, threatview.io, hole.cert.pl, eCrimeLabs, APNIC Honeynet, OpenPhish, PhishTank y sont en `freetext` ou `csv` : des blocklists que MISP découpe lui-même.
 - **Un dépôt vivant ne fait pas un flux vivant.** ESET pousse du code toutes les semaines mais n'a pas rafraîchi d'événement MISP depuis juin 2026 ; APTtrail annonce une génération horaire et date d'un mois ; DigitalSide n'a plus de commit depuis octobre 2024. La date qui compte est celle du contenu, pas celle du dépôt.
@@ -176,7 +227,7 @@ Pas d'observables : les cadres à charger une fois, qui donnent aux rapports leu
 - **Un index de feeds n'est pas un feed.** `rodanmaharjan/ThreatIntelligence` (§11) publie un `MISP_Feed_index.json` de 118 définitions, chargeable d'un bloc — 117 en `freetext`, 1 en `csv`, aucune native.
 - **Sekoia.io** (§7.1) publie un unique `IOCs/apt31/2021-11-10 APT31 - STIX2.jsonl` dans son dépôt *Community* ; c'est le seul fichier STIX du dépôt, daté de 2021.
 
-## 4. Ce qu'on ne trouvera pas
+## D. Ce qu'on ne trouvera pas
 
 **Chez les CERT nationaux.** Aucun feed MISP ni STIX public chez NCSC-NL (STIX/TAXII 2.1 sont obligatoires pour l'administration néerlandaise depuis le 2026-07-01, sans feed public pour autant), CCB, CERT.at, NCSC-FI, CERT-EE, CERT Polska (n6 et MISP fermés), BSI, NCSC-UK, CCCS, ACSC (CTIS réservé), CERT NZ, CSA Singapour, JPCERT/CC, KrCERT, CERT-In, CERT.br. USOM a retiré sa liste publique ; SiberKapan la republie. Les CERT slovaque, indien et chilien opèrent des MISP fermés. En Europe, seuls CERT-FR, CSIRT Italia, CIRCL et GovCERT.ch publient du MISP en clair.
 
