@@ -2,7 +2,7 @@
 
 Liste de sources de renseignement concernant la menace d'origine cyber.
 
-> Dernière revue : 2026-09-19 — 848 sources actives, une par ligne, et 60 écartées (§18). Décompte par section : sommaire ci-dessous.
+> Dernière revue : 2026-09-20 — 852 sources actives, une par ligne, et 60 écartées (§18). Décompte par section : sommaire ci-dessous.
 >
 > Les sources ne sont pas restreintes à l'anglais. La langue est indiquée entre crochets — p. ex. `[ZH]`, `[RU]`, `[KO]` — lorsqu'elle n'est ni le français ni l'anglais.
 >
@@ -23,7 +23,7 @@ Liste de sources de renseignement concernant la menace d'origine cyber.
 ## Sommaire
 
 1. [Référentiels et annuaires](#1-référentiels-et-annuaires) — 18 sources
-2. [Feeds communautaires, fondations et lutte anti-abus](#2-feeds-communautaires-fondations-et-lutte-anti-abus) — 58 sources
+2. [Feeds communautaires, fondations et lutte anti-abus](#2-feeds-communautaires-fondations-et-lutte-anti-abus) — 60 sources
 3. [CERT / CSIRT nationaux et organisations régionales](#3-cert--csirt-nationaux-et-organisations-régionales) — 126 sources
 4. [Police, justice, sanctions et attribution officielle](#4-police-justice-sanctions-et-attribution-officielle) — 10 sources
 5. [CERT sectoriels, ISAC et infrastructures critiques](#5-cert-sectoriels-isac-et-infrastructures-critiques) — 21 sources
@@ -32,7 +32,7 @@ Liste de sources de renseignement concernant la menace d'origine cyber.
 8. [Réponse à incident, conseil, assurance](#8-réponse-à-incident-conseil-assurance) — 13 sources
 9. [Recherche académique et datasets](#9-recherche-académique-et-datasets) — 19 sources
 10. [Cybercriminalité : trackers, sites de fuite, victimologie](#10-cybercriminalité--trackers-sites-de-fuite-victimologie) — 15 sources
-11. [Chercheurs indépendants, communautés et agrégateurs](#11-chercheurs-indépendants-communautés-et-agrégateurs) — 102 sources
+11. [Chercheurs indépendants, communautés et agrégateurs](#11-chercheurs-indépendants-communautés-et-agrégateurs) — 104 sources
 12. [Journalistes et médias spécialisés](#12-journalistes-et-médias-spécialisés) — 46 sources
 13. [Ingérence numérique et abus de plateformes](#13-ingérence-numérique-et-abus-de-plateformes) — 11 sources
 14. [Bases d'incidents, think tanks et rapports de référence](#14-bases-dincidents-think-tanks-et-rapports-de-référence) — 14 sources
@@ -41,7 +41,7 @@ Liste de sources de renseignement concernant la menace d'origine cyber.
 17. [Angles morts](#17-angles-morts)
 18. [Sources écartées](#18-sources-écartées) — 60 sources
 
-**Total actif (§1-16) : 848 sources.**
+**Total actif (§1-16) : 852 sources.**
 
 Voir aussi [flux-CTI.md](flux-CTI.md) : les sources de cette liste qui se chargent telles quelles dans MISP ou OpenCTI (feed MISP, STIX 2.1, TAXII), et par quoi commencer pour peupler une plateforme vide.
 
@@ -99,7 +99,9 @@ Voir aussi [flux-CTI.md](flux-CTI.md) : les sources de cette liste qui se charge
 | [Global Anti-Scam Alliance](https://gasa.org/) | — | RENS | PDF | vivant | rapports scam par pays |
 | [Cloud Security Alliance Labs](https://labs.cloudsecurityalliance.org) | US | RENS | API (WordPress) | vivant | incubateur de projets de recherche CSA (MAESTRO, Mythos, sécurité MCP) |
 | [SiberKapan](https://siberkapan.org/) | TR | IOC | feed (MISP / STIX 2.1 / TAXII 2.1) | 2026-09-19 | plateforme communautaire turque (honeypots, capteurs FortiGate) ; republie la liste de domaines USOM que l'agence ne diffuse plus en clair `[TR/EN]` |
-| [DoGoodCybersecurity — honeypot feed](https://github.com/leeg0010/DoGoodCybersecurity-STIX-Threat-Intel-Feed) | — | IOC | repo (STIX 2.1) | 2026-09-18 | IP d'attaque vues par un réseau de honeypots, un bundle par jour ; site du projet injoignable, seul le dépôt fait foi |
+| [DoGoodCybersecurity — honeypot feed](https://github.com/leeg0010/DoGoodCybersecurity-STIX-Threat-Intel-Feed) | — | IOC | repo (STIX 2.1) | 2026-09-18 | IP d'attaque vues par un réseau de honeypots, un bundle par jour ; site du projet injoignable |
+| [HoneyLabs](https://honeylabs.net/) | NL | IOC+RENS | feed (TXT/CSV, Atom) ; inscr. pour le reste | 2026-09-19 | télémétrie de honeypots : feeds d'IP exploitant activement des CVE et d'URL de distribution de malware (dans les *default feeds* MISP depuis 2026-07), flux Atom des campagnes et des pics de ports ; recherche ouverte gratuite, offres payantes |
+| [HFish Honeypot Threat Feed](https://github.com/yuexuan521/honeypot-blocklist) | CN | IOC | repo / feed (TXT) | 2026-09-19 | IP d'attaque observées par des honeypots HFish exposés (SSH, HTTP, bases de données), filtrées et mises à jour toutes les 2 à 4 heures `[ZH/EN]` |
 
 ### 2.2 Blocklists IP / domaines
 
@@ -293,7 +295,7 @@ Voir aussi [flux-CTI.md](flux-CTI.md) : les sources de cette liste qui se charge
 | Thaïlande | [TTC-CERT](https://github.com/ttc-cert) | IOC | repo, figé 2024 | blocklist, Sigma/YARA, events MISP (télécom) |
 | Thaïlande | [ThaiCERT](https://www.thaicert.or.th/) | RENS | RSS | agence nationale |
 | Tunisie | [ANCS / tunCERT](https://www.ancs.tn) | RENS | web, géo | `[FR/AR]` |
-| Turquie | [USOM → Siber Güvenlik Başkanlığı](https://www.usom.gov.tr) | RENS | web | **l'ancienne liste publique `url-list.txt` redirige vers une API Swagger (siberguvenlik.gov.tr/api) : plus de feed ouvert** `[TR]` |
+| Turquie | [USOM → Siber Güvenlik Başkanlığı](https://www.usom.gov.tr) | RENS | web ; API sur clé | **l'ancienne liste publique `url-list.txt` redirige vers une API Swagger (siberguvenlik.gov.tr/api) : plus de feed ouvert** ; la liste est republiée par SiberKapan (§2.1) et par le dépôt [TC-SGB-API-to-List](https://github.com/bayraktarozcan/TC-SGB-API-to-List) (AdGuard, Pi-hole, NextDNS, CSV) `[TR]` |
 | Ukraine | [CERT-UA](https://cert.gov.ua) | IOC+RENS | web (JS) + MISP sur demande | sections « Індикатори компрометації » (URL défangées, hash) dans chaque article ; très prolifique sur l'activité russe `[UA/EN]` |
 | Ukraine | [SSSCIP](https://cip.gov.ua/en) | RENS | web | autorité de tutelle, rapports semestriels |
 | Uruguay | [CERTuy](https://www.cert.uy) | RENS | web | `[ES]` |
@@ -964,6 +966,8 @@ Voir aussi [flux-CTI.md](flux-CTI.md) : les sources de cette liste qui se charge
 | [CTI-Driven — LOLBins](https://github.com/CTI-Driven/LOLBins) | RENS | repo (STIX 2.1 / KQL) | 2024-04 | binaires Windows détournés, avec techniques, acteurs et requêtes de chasse |
 | [Asim (heyitsas.im)](https://heyitsas.im/) | RENS | RSS | 2026-09-18 | chercheur indépendant ; vulnérabilités locales du noyau Linux (CIFSwitch, OVSwrap, DirtyAH6) |
 | [SAS — Security Analyst Summit (Kaspersky)](https://thesascon.com/) | RENS | web (JS) | vivant | archives de conférence ; analyses présentées avant leur publication écrite (MetaRAT, décembre 2025) |
+| [CIAC — Ciberinteligencia](https://t.me/s/ciberciac) | RENS | Telegram | 2026-09-19 | communauté ouverte de renseignement sur la menace pour l'Amérique latine (TLP:CLEAR) ; canal Telegram et WhatsApp, simulateur MISP `[ES]` |
+| [Threat-Broadcast](https://github.com/EXP-Tools/threat-broadcast) | RENS | repo | 2026-09-18 | agrégateur des bulletins de vulnérabilités de 360, QiAnXin, NSFOCUS, Tophant, Red Queen, NVD, CNNVD et Tenable `[ZH]` |
 
 ## 12. Journalistes et médias spécialisés
 
