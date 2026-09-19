@@ -2,7 +2,7 @@
 
 Liste de sources de renseignement concernant la menace d'origine cyber.
 
-> Dernière revue : 2026-09-19 — 826 sources actives, une par ligne, et 60 écartées (§18). Décompte par section : sommaire ci-dessous.
+> Dernière revue : 2026-09-19 — 832 sources actives, une par ligne, et 60 écartées (§18). Décompte par section : sommaire ci-dessous.
 >
 > Les sources ne sont pas restreintes à l'anglais. La langue est indiquée entre crochets — p. ex. `[ZH]`, `[RU]`, `[KO]` — lorsqu'elle n'est ni le français ni l'anglais.
 >
@@ -22,7 +22,7 @@ Liste de sources de renseignement concernant la menace d'origine cyber.
 
 ## Sommaire
 
-1. [Référentiels et annuaires](#1-référentiels-et-annuaires) — 17 sources
+1. [Référentiels et annuaires](#1-référentiels-et-annuaires) — 18 sources
 2. [Feeds communautaires, fondations et lutte anti-abus](#2-feeds-communautaires-fondations-et-lutte-anti-abus) — 56 sources
 3. [CERT / CSIRT nationaux et organisations régionales](#3-cert--csirt-nationaux-et-organisations-régionales) — 126 sources
 4. [Police, justice, sanctions et attribution officielle](#4-police-justice-sanctions-et-attribution-officielle) — 9 sources
@@ -31,8 +31,8 @@ Liste de sources de renseignement concernant la menace d'origine cyber.
 7. [Éditeurs et laboratoires de recherche privés](#7-éditeurs-et-laboratoires-de-recherche-privés) — 325 sources
 8. [Réponse à incident, conseil, assurance](#8-réponse-à-incident-conseil-assurance) — 13 sources
 9. [Recherche académique et datasets](#9-recherche-académique-et-datasets) — 19 sources
-10. [Cybercriminalité : trackers, sites de fuite, victimologie](#10-cybercriminalité--trackers-sites-de-fuite-victimologie) — 14 sources
-11. [Chercheurs indépendants, communautés et agrégateurs](#11-chercheurs-indépendants-communautés-et-agrégateurs) — 96 sources
+10. [Cybercriminalité : trackers, sites de fuite, victimologie](#10-cybercriminalité--trackers-sites-de-fuite-victimologie) — 15 sources
+11. [Chercheurs indépendants, communautés et agrégateurs](#11-chercheurs-indépendants-communautés-et-agrégateurs) — 100 sources
 12. [Journalistes et médias spécialisés](#12-journalistes-et-médias-spécialisés) — 45 sources
 13. [Ingérence numérique et abus de plateformes](#13-ingérence-numérique-et-abus-de-plateformes) — 11 sources
 14. [Bases d'incidents, think tanks et rapports de référence](#14-bases-dincidents-think-tanks-et-rapports-de-référence) — 13 sources
@@ -41,7 +41,7 @@ Liste de sources de renseignement concernant la menace d'origine cyber.
 17. [Angles morts](#17-angles-morts)
 18. [Sources écartées](#18-sources-écartées) — 60 sources
 
-**Total actif (§1-16) : 826 sources.**
+**Total actif (§1-16) : 832 sources.**
 
 Voir aussi [flux-CTI.md](flux-CTI.md) : les sources de cette liste qui se chargent telles quelles dans MISP ou OpenCTI (feed MISP, STIX 2.1, TAXII), et par quoi commencer pour peupler une plateforme vide.
 
@@ -56,6 +56,7 @@ Voir aussi [flux-CTI.md](flux-CTI.md) : les sources de cette liste qui se charge
 | [MITRE ATT&CK — STIX](https://github.com/mitre-attack/attack-stix-data) · [Groups](https://attack.mitre.org/groups/) · [Campaigns](https://attack.mitre.org/campaigns/) · [CAPEC (STIX 2.1)](https://github.com/mitre/cti/tree/master/capec/2.1) · [ATLAS (STIX 2.1)](https://github.com/mitre-atlas/atlas-navigator-data) | US | RENS | repo/web ; TAXII 2.1 | vivant | référentiel de techniques, groupes, logiciels et campagnes ; serveur TAXII 2.1 ouvert ; CAPEC et ATLAS (menaces contre les systèmes d'IA) sur des dépôts frères |
 | [MISP Galaxy](https://github.com/MISP/misp-galaxy) | LU/EU | RENS | repo (JSON) | 2026-08-31 | référentiel d'acteurs, outils, campagnes ; table de correspondance des alias |
 | [Filigran — OpenCTI datasets](https://github.com/OpenCTI-Platform/datasets) | FR | RENS | repo (STIX 2.1) | 2026-06-07 | référentiels de secteurs, pays et régions utilisés par les connecteurs OpenCTI |
+| [MBC — Malware Behavior Catalog](https://github.com/MBCProject/mbc-stix2) | US | RENS | repo (STIX 2.1) | 2023-10 | catalogue de comportements de malware, complément d'ATT&CK pour l'analyse d'échantillons |
 | [Malpedia](https://malpedia.caad.fkie.fraunhofer.de) · [acteurs](https://malpedia.caad.fkie.fraunhofer.de/actors) | DE | IOC+RENS | web/API, inscr. | vivant | familles de malware, règles YARA, références (Fraunhofer FKIE) |
 | [ETDA / ThaiCERT APT Encyclopedia](https://apt.etda.or.th) | TH | RENS | web | vivant | fiches groupes et outils APT |
 | [APT Groups and Operations (F. Roth)](https://apt.threattracking.com) | DE | RENS | web (Google Sheets) | vivant | tableur historique des alias APT par pays |
@@ -238,7 +239,7 @@ Voir aussi [flux-CTI.md](flux-CTI.md) : les sources de cette liste qui se charge
 | Égypte | [EG-CERT](https://egcert.eg) | RENS | web, géo | `[AR/EN]` |
 | Émirats arabes unis | [aeCERT](https://aecert.ae) | RENS | web | `[AR/EN]` |
 | Équateur | [EcuCERT](https://www.ecucert.gob.ec) | RENS | web | `[ES]` |
-| États-Unis | [CISA](https://github.com/cisagov) · [KEV](https://github.com/cisagov/kev-data) · [avis](https://www.cisa.gov/news-events/cybersecurity-advisories) | IOC+RENS | repo/web | |
+| États-Unis | [CISA](https://github.com/cisagov) · [KEV](https://github.com/cisagov/kev-data) · [avis](https://www.cisa.gov/news-events/cybersecurity-advisories) | IOC+RENS | repo/web (STIX 2.1 par avis) | chaque avis conjoint (AA) livre un bundle STIX 2.1 : rapport, techniques ATT&CK, indicateurs, acteurs |
 | États-Unis | [CERT/CC](https://github.com/CERTCC) | IOC+RENS | repo/web | |
 | États-Unis | [NSA Cybersecurity](https://github.com/nsacyber) | IOC+RENS | repo/web | |
 | Géorgie | [CERT.GOV.GE](https://cert.dga.gov.ge) | RENS | web | `[KA/EN]` |
@@ -385,7 +386,7 @@ Voir aussi [flux-CTI.md](flux-CTI.md) : les sources de cette liste qui se charge
 
 | Source | Contenu | Accès | Activité | Commentaire |
 |---|---|---|---|---|
-| [Cisco Talos](https://blog.talosintelligence.com) · [IOCs](https://github.com/Cisco-Talos/IOCs) · [règles Snort](https://snort.org) | IOC+RENS | RSS / repo | vivant | |
+| [Cisco Talos](https://blog.talosintelligence.com) · [IOCs](https://github.com/Cisco-Talos/IOCs) · [règles Snort](https://snort.org) | IOC+RENS | RSS / repo (STIX 2.0) | vivant | un bundle STIX par billet de recherche dans le dépôt IOCs (134 depuis 2022) |
 | [Palo Alto Unit 42](https://unit42.paloaltonetworks.com) · [Article IOCs](https://github.com/PaloAltoNetworks/Unit42-Threat-Intelligence-Article-Information) · [timely-threat-intel](https://github.com/PaloAltoNetworks/Unit42-timely-threat-intel) | IOC+RENS | RSS / repo | 2026-09-01 | `pan-unit42/iocs` archivé |
 | [Google Cloud Threat Intelligence / Mandiant](https://cloud.google.com/blog/topics/threat-intelligence) · [M-Trends](https://cloud.google.com/security/mandiant) · [TAG/GTIG](https://blog.google/security/) | IOC+RENS | web | vivant | le dépôt `mandiant/iocs` est archivé (2019) |
 | [Microsoft Security / MSTIC](https://www.microsoft.com/en-us/security/blog/) · [Azure-Sentinel](https://github.com/Azure/Azure-Sentinel) | IOC+RENS | web / repo | vivant | |
@@ -841,6 +842,7 @@ Voir aussi [flux-CTI.md](flux-CTI.md) : les sources de cette liste qui se charge
 | [Have I Been Pwned — breaches](https://haveibeenpwned.com/feed/breaches/) | RENS | RSS / API | vivant | |
 | [cyberwarfare.live](https://cyberwarfare.live/) | RENS | RSS | vivant | hacktivisme |
 | [RansomFeed](https://ransomfeed.it/) | RENS | web, bot | vivant | victimologie ransomware tenue depuis l'Italie (Dario Fadda) ; connecteur OpenCTI officiel ; protection anti-robot `[IT/EN]` |
+| [AFRINTEL](https://github.com/Hatchepsoute/AFRINTEL) | RENS | repo (Markdown / STIX 2.1) | 2026-09-16 | incidents visant les organisations africaines (54 pays), observés sur les sites de fuite et forums ; rapports mensuels et bundles STIX ; MIT `[FR/EN]` |
 
 ## 11. Chercheurs indépendants, communautés et agrégateurs
 
@@ -944,6 +946,10 @@ Voir aussi [flux-CTI.md](flux-CTI.md) : les sources de cette liste qui se charge
 | [xfeeds (Neil Weitzel)](https://github.com/neilweitzel/xfeeds) | IOC | repo / feed (TXT/MISP/STIX 2.1) | 2026-09-19 | agrégat d'IP ne retenant que les entrées corroborées par plusieurs listes indépendantes |
 | [Threat Actors' use of AI (Rachel James)](https://github.com/cybershujin/Threat-Actors-use-of-Artifical-Intelligence) | RENS | repo (STIX 2.1) | 2026-09-14 | recension de l'usage de l'IA par les acteurs de la menace, à partir des rapports des éditeurs de modèles ; bundle STIX généré du README |
 | [The Hunter's Ledger (Joseph Harrison)](https://github.com/PixelatedContinuum/Threat-Intel-Reports) | IOC+RENS | repo (STIX 2.1) | 2026-09-19 | analyses de malware et d'*open directories* d'un chercheur indépendant ; un bundle STIX par rapport |
+| [FDC Threat Intelligence (Aleksei Fokin)](https://github.com/freedatacenter/threat-intelligence) · [site](https://freedatacenter.org/) | IOC+RENS | repo (PDF / STIX 2.1 / MISP) | 2026-09-17 | enquêtes indépendantes : phishing visant des ONG, hébergement *bulletproof*, honeypots ; 28 rapports EN/RU avec bundle STIX et événement MISP `[EN/RU]` |
+| [Threat Actor Intelligence Profiles (tm-ho)](https://github.com/proshiba/threatactor-intel-analysis) | RENS | repo (JSON / STIX 2.1) | 2026-09-19 | 689 profils d'acteurs structurés depuis des rapports publics, avec confiance et audit par affirmation ; génération par agents, revue humaine `[JP]` |
+| [VigilIntel](https://github.com/kidrek/VigilIntel) | RENS | repo (Markdown / STIX 2.1) | 2026-09-19 | synthèse quotidienne de flux RSS par un modèle de langage, FR et EN ; CC BY-NC `[FR/EN]` |
+| [CTI-Driven — LOLBins](https://github.com/CTI-Driven/LOLBins) | RENS | repo (STIX 2.1 / KQL) | 2024-04 | binaires Windows détournés, avec techniques, acteurs et requêtes de chasse |
 
 ## 12. Journalistes et médias spécialisés
 

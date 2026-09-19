@@ -33,10 +33,14 @@ Des événements contextualisés : un rapport, un acteur, des indicateurs relié
 |---|---|---|---|---|
 | **CIRCL — feed OSINT** | 1 680 événements tagués galaxy, TLP:CLEAR, depuis 2011 | `misp-feed` | tout | §A.1 |
 | **Le CERT de rattachement** | CERT-FR (18 événements, dernier 2024-06) · CSIRT Italia (fenêtre glissante quotidienne) | `misp-feed` | tout | §A.1 |
+| **CISA — avis conjoints (AA)** | un bundle STIX 2.1 par avis : rapport, techniques ATT&CK, indicateurs, acteurs, vulnérabilités (AA25-141B : 556 objets) | import de fichier STIX, un par avis | tout | §B.1 |
+| **Cisco Talos** | un bundle par billet de recherche depuis 2022 (134) : rapport, techniques, indicateurs | import de fichier STIX | tout ; STIX 2.0 | §B.1 |
 | **ESET** | 60 événements attribués par acteur (Turla, Winnti, Gelsemium…) | import de fichier (pas de manifeste) | tout | §A.2 |
 | **Rösti** | un événement par rapport public, IOC extraits, lien vers la source ; 9 636 événements depuis juin 2026 | `misp-feed` | fenêtre 90 jours, confiance basse : réemballage | §A.1 |
 | MVT · Amnesty Tech · AssoEchap | spyware mobile, stalkerware | import de fichier STIX | si le périmètre inclut le mobile ou la société civile | §B.1 |
 | Rectifyq | renseignement centré sur la Malaisie | `misp-feed` | si le périmètre le demande | §A.1 |
+| AFRINTEL | incidents et acteurs visant l'Afrique, un bundle par mois (`incident`, `threat-actor`, `report`) | import de fichier STIX | si le périmètre inclut l'Afrique | §B.1 |
+| FDC Threat Intelligence | 28 enquêtes originales (phishing, hébergement *bulletproof*), STIX 2.1 et MISP | import de fichier | complément | §B.1 |
 
 ### 1.3 La détection — indicateurs frais, à scoper
 
@@ -62,7 +66,7 @@ Pas du renseignement, ou pas à cette échelle. Leur place est un RPZ DNS, un pa
 | NOCACTI · cyberdefense.blue · TI-Collector | producteur inconnu ou capteur unique | — |
 | Gatewatcher · Pulsedive · Q-Feeds · isMalicious · Dark Web Informer · ReversingLabs | sous licence | quand le budget existe |
 
-En une ligne, pour un CSIRT qui démarre : **ATT&CK → Galaxy → datasets → CIRCL → CERT national → ESET → Rösti (90 j) → ThreatFox (30 j)**. Huit flux, six sans compte.
+En une ligne, pour un CSIRT qui démarre : **ATT&CK → Galaxy → datasets → CIRCL → CERT national → avis CISA → ESET → Talos → Rösti (90 j) → ThreatFox (30 j)**. Dix flux, tous sans compte.
 
 ---
 
@@ -144,7 +148,11 @@ Instances ou feeds qui existent mais ne s'obtiennent pas par une URL publique.
 | Source | § README | Point d'entrée | Volume / dernière donnée | Commentaire |
 |---|---|---|---|---|
 | [MITRE ATT&CK](https://github.com/mitre-attack/attack-stix-data) | §1 | `mitre-attack/attack-stix-data` (`enterprise-attack/`, `mobile-attack/`, `ics-attack/`, `index.json`) | 2026-08-05 | ATT&CK Enterprise, Mobile et ICS en STIX 2.1 ; versionné, avec un index machine |
-| [Elastic Security Labs](https://github.com/elastic/labs-releases) | §7.1 (Amérique du Nord) | `elastic/labs-releases`, `indicators/<campagne>/stix-bundle.json` | 23 bundles, dépôt actif 2026-09-11 | un bundle par famille ou campagne (BLISTER, BITSLOTH, WARMCOOKIE, SHELLTER…) ; seul éditeur privé du catalogue à le faire |
+| [Elastic Security Labs](https://github.com/elastic/labs-releases) | §7.1 (Amérique du Nord) | `elastic/labs-releases`, `indicators/<campagne>/stix-bundle.json` | 23 bundles, dépôt actif 2026-09-11 | un bundle par famille ou campagne (BLISTER, BITSLOTH, WARMCOOKIE, SHELLTER…) |
+| [CISA — avis conjoints](https://www.cisa.gov/news-events/cybersecurity-advisories) | §3 (États-Unis) | fichier `AA<xx>-<nnn><L>.stix_.json` joint à chaque avis (ex. [AA26-204A](https://www.cisa.gov/sites/default/files/2026-07/AA26-204A.stix_.json), [AA25-141B](https://www.cisa.gov/sites/default/files/2025-05/AA25-141B-Threat-Actors-Deploy-LummaC2-Malware-to-Exfiltrate-Sensitive-Data-from-Organizations.stix_.json)) | AA26-204A : 113 objets · AA25-141B : 556 · AA26-097A : 48 ; mis à jour avec l'avis (AA25-071A régénéré 2026-08) | rapport, `attack-pattern` ATT&CK, `indicator`, `malware`, `threat-actor`, `vulnerability` reliés ; pas de flux, un fichier par avis sur la page de l'avis ; le STIX 1.x XML est fourni en parallèle |
+| [Cisco Talos — IOCs](https://github.com/Cisco-Talos/IOCs) | §7.1 (Amérique du Nord) | `Cisco-Talos/IOCs`, `<année>/<mois>/<billet>.json` | 134 bundles, 2022-04 → 2026-09 (27 en 2026) | un bundle par billet de recherche : `report`, `attack-pattern`, `indicator`, `vulnerability` ; **STIX 2.0** exporté de MISP (objets `x-misp-attribute`), à côté des TXT |
+| [AFRINTEL](https://github.com/Hatchepsoute/AFRINTEL) | §10 | `stix/<année>/<mois>/afrintel_<mois>_<année>_opencti.json` · semestriels | 42 bundles, janvier 2024 → septembre 2026 ; H1 2026 : 1 651 objets (294 `incident`, 147 `threat-actor`, 36 `report`) | incidents visant les organisations africaines (54 pays), observés sur les sites de fuite et forums ; type, statut, confiance et impact séparés ; FR/EN, MIT |
+| [FDC Threat Intelligence](https://github.com/freedatacenter/threat-intelligence) | §11 | `reports/<date>-<sujet>/iocs.stix2.json` (+ `iocs.misp.json`, PDF EN/RU) | 28 enquêtes, dernière 2026-09-17 | recherche indépendante (Aleksei Fokin) : phishing ciblant des ONG, hébergement *bulletproof*, honeypots ; un bundle STIX et un événement MISP par rapport |
 | [PhishDestroy](https://github.com/phishdestroy/destroylist) | §2.2 | `destroylist`, `stix/bundle.json` · dossiers de preuves `*-evidence/data/ioc/stix-bundle.json` | 122 617 indicateurs (2026-08-17) ; ShortDot 5 006 ; NameSilo, NICENIC, Trustname | blocklist de phishing et d'arnaque (205 000 domaines) ; les dossiers *evidence* documentent l'abus par registrar ou par TLD avec un bundle par dossier |
 | [MVT — mvt-indicators](https://github.com/mvt-project/mvt-indicators) | §7.2 (Mobile) | `mvt-project/mvt-indicators`, `<campagne>/*.stix2` | 14 bundles, dépôt actif 2026-08-27 | spyware mobile (Predator, Triangulation, Candiru, Cellebrite, EagleMsgSpy, Spyrtacus, Coruna, DarkSword…) |
 | [Amnesty Tech](https://github.com/AmnestyTech/investigations) | §7.2 (Mobile) | `AmnestyTech/investigations`, `<enquête>/*.stix2` | 5 bundles, dernier 2024-12-16 (NoviSpy / Serbie) | rythme dicté par les publications |
@@ -169,6 +177,9 @@ Ingérables ; la provenance est celle des sources amont, indiquée dans la derni
 | [xfeeds](https://github.com/neilweitzel/xfeeds) | §11 | `feeds/stix-bundle.json` | 8 429 indicateurs, 2026-09-19 | blocklists IP publiques, corroboration multi-sources |
 | [TI-Collector — CTAC MY](https://github.com/r4y79/ti-feed) | — | `taxii2/` (arbre TAXII 2.1 statique) · `feeds/*.txt` | 2 005 indicateurs sur 24 h, 2026-09-18 | feeds amont republiés (certificats SSLBL, domaines, hash) + CISA KEV 30 jours ; producteur non identifié — hors catalogue |
 | [Rösti](https://rosti.dev/feeds) | §11 | API v2, sur clé de compte — STIX annoncé ; le feed MISP (§A.1) est public | — | rapports publics de 292 sources |
+| [Threat Actor Intelligence Profiles (tm-ho)](https://github.com/proshiba/threatactor-intel-analysis) | §11 | `profiles/<acteur>/generated/profile.stix2.json` | 689 profils, dépôt actif 2026-09-19 ; Kimsuky : 161 objets (campagnes, malwares, techniques, rapport de 76 références) | rapports publics et jeux de données OSINT, structurés par des agents sous règles de génération avec file de revue humaine ; profils en japonais, `confidence` et `claim-audit.json` par affirmation |
+| [VigilIntel](https://github.com/kidrek/VigilIntel) | §11 | `<année>/<mois>/<date>-report.stix.json` (FR et EN) | 268 bundles quotidiens, 2026-02 → 2026-09 | synthèse quotidienne de flux RSS par un modèle de langage ; le bundle ne contient qu'un objet `report` sans objets référencés ; CC BY-NC |
+| [CyberNetSec](https://github.com/jaybodecode/netsecops.github.io) | — | `stix/<article>-STIX.json` | 1 000 bundles, 2026 | articles d'actualité extraits automatiquement en STIX ; producteur non identifié — hors catalogue |
 
 ### B.3 Référentiels STIX 2.1
 
@@ -180,6 +191,8 @@ Pas d'observables : les cadres à charger une fois, qui donnent aux rapports leu
 | [MITRE ATLAS](https://github.com/mitre-atlas/atlas-navigator-data) | §1 | `dist/stix-atlas.json` · `dist/stix-atlas-attack-enterprise.json` | 538 objets (170 `attack-pattern`, 35 `course-of-action`), 2026-04-30 | tactiques et techniques contre les systèmes d'IA ; `atlas-data` (source) actif 2026-09-15 |
 | [DISARM Foundation](https://github.com/DISARMFoundation/DISARMframeworks) | §13 | `generated_files/DISARM_STIX/DISARM.json` | 698 objets (391 `attack-pattern`, 16 tactiques), 2024-11-22 | cadre de description des opérations de manipulation de l'information ; connecteur OpenCTI officiel |
 | [CTID — Sensor Mappings to ATT&CK](https://github.com/center-for-threat-informed-defense/sensor-mappings-to-attack) | §9 | `mappings/stix/enterprise/*.json` | 7 bundles (Sysmon, Auditd, Zeek, CloudTrail, OSQuery, WinEvtx…), 2025-06-21 | objets `x-mitre-sensor-mapping` : quelle source de journal couvre quelle composante de donnée ATT&CK |
+| [MBC — Malware Behavior Catalog](https://github.com/MBCProject/mbc-stix2) | §1 | `mbc/mbc.json` | 1 738 objets (617 `attack-pattern`, 38 `malware`), 2023-10 | comportements de malware, complément d'ATT&CK pour l'analyse d'échantillons |
+| [CTI-Driven — LOLBins](https://github.com/CTI-Driven/LOLBins) | §11 | `lolbins/stix2/<binaire>.json` | un bundle par binaire, 2024-04 | binaires Windows détournés, avec `report`, techniques et acteurs les utilisant |
 | [Filigran — OpenCTI datasets](https://github.com/OpenCTI-Platform/datasets) | §1 | `data/sectors.json` · `geography.json` · `companies.json` | secteurs : 121 objets (72 `identity`) ; 2026-06-07 | référentiels de secteurs, pays et régions que les connecteurs OpenCTI utilisent |
 | [VIGINUM — Doctrine OpenCTI](https://github.com/VIGINUM-FR/Doctrine-OpenCTI) | §3 (France) · §13 | `SGDSN_VIGINUM_DoctrineOpenCTI.pdf` (FR/EN) | 2025-04-24 | pas de données : le cadre de capitalisation de la menace informationnelle dans OpenCTI publié par le SGDSN |
 
@@ -232,6 +245,8 @@ Pas d'observables : les cadres à charger une fois, qui donnent aux rapports leu
 **Chez les CERT nationaux.** Aucun feed MISP ni STIX public chez NCSC-NL (STIX/TAXII 2.1 sont obligatoires pour l'administration néerlandaise depuis le 2026-07-01, sans feed public pour autant), CCB, CERT.at, NCSC-FI, CERT-EE, CERT Polska (n6 et MISP fermés), BSI, NCSC-UK, CCCS, ACSC (CTIS réservé), CERT NZ, CSA Singapour, JPCERT/CC, KrCERT, CERT-In, CERT.br. USOM a retiré sa liste publique ; SiberKapan la republie. Les CERT slovaque, indien et chilien opèrent des MISP fermés. En Europe, seuls CERT-FR, CSIRT Italia, CIRCL et GovCERT.ch publient du MISP en clair.
 
 **Dans les espaces non anglophones.** Aucun feed MISP ou STIX public connu dans les espaces japonais, coréen, chinois et arabe.
+
+**Dans la recherche académique.** Les jeux de données aCTIon (204 rapports en STIX, NEC Laboratories) et « A Structured CTI Dataset Using STIX 2.1 » (150 rapports, 4 777 entités) sont décrits sur arXiv sans dépôt de téléchargement.
 
 **Chez les sandboxes.** ANY.RUN exporte en MISP sur abonnement ; Joe Sandbox et Hybrid Analysis derrière un compte ; à la pièce, pas en flux.
 
