@@ -2,7 +2,7 @@
 
 Liste de sources de renseignement concernant la menace d'origine cyber.
 
-> Dernière revue : 2026-09-20 — 872 sources actives, une par ligne, et 60 écartées (§18). Décompte par section : sommaire ci-dessous.
+> Dernière revue : 2026-09-20 — 873 sources actives, une par ligne, et 60 écartées (§18). Décompte par section : sommaire ci-dessous.
 >
 > Les sources ne sont pas restreintes à l'anglais. La langue est indiquée entre crochets — p. ex. `[ZH]`, `[RU]`, `[KO]` — lorsqu'elle n'est ni le français ni l'anglais.
 >
@@ -32,7 +32,7 @@ Liste de sources de renseignement concernant la menace d'origine cyber.
 8. [Réponse à incident, conseil, assurance](#8-réponse-à-incident-conseil-assurance) — 13 sources
 9. [Recherche académique et datasets](#9-recherche-académique-et-datasets) — 22 sources
 10. [Cybercriminalité : trackers, sites de fuite, victimologie](#10-cybercriminalité--trackers-sites-de-fuite-victimologie) — 16 sources
-11. [Chercheurs indépendants, communautés et agrégateurs](#11-chercheurs-indépendants-communautés-et-agrégateurs) — 109 sources
+11. [Chercheurs indépendants, communautés et agrégateurs](#11-chercheurs-indépendants-communautés-et-agrégateurs) — 110 sources
 12. [Journalistes et médias spécialisés](#12-journalistes-et-médias-spécialisés) — 46 sources
 13. [Ingérence numérique et abus de plateformes](#13-ingérence-numérique-et-abus-de-plateformes) — 11 sources
 14. [Bases d'incidents, think tanks et rapports de référence](#14-bases-dincidents-think-tanks-et-rapports-de-référence) — 14 sources
@@ -41,7 +41,7 @@ Liste de sources de renseignement concernant la menace d'origine cyber.
 17. [Angles morts](#17-angles-morts)
 18. [Sources écartées](#18-sources-écartées) — 60 sources
 
-**Total actif (§1-16) : 872 sources.**
+**Total actif (§1-16) : 873 sources.**
 
 Voir aussi [flux-CTI.md](flux-CTI.md) : les sources de cette liste qui se chargent telles quelles dans MISP ou OpenCTI (feed MISP, STIX 2.1, TAXII), et par quoi commencer pour peupler une plateforme vide.
 
@@ -987,6 +987,7 @@ Voir aussi [flux-CTI.md](flux-CTI.md) : les sources de cette liste qui se charge
 | [SAS — Security Analyst Summit (Kaspersky)](https://thesascon.com/) | RENS | web (JS) | vivant | archives de conférence ; analyses présentées avant leur publication écrite (MetaRAT, décembre 2025) |
 | [CIAC — Ciberinteligencia](https://t.me/s/ciberciac) | RENS | Telegram | 2026-09-19 | communauté ouverte de renseignement sur la menace pour l'Amérique latine (TLP:CLEAR) ; canal Telegram et WhatsApp, simulateur MISP `[ES]` |
 | [Threat-Broadcast](https://github.com/EXP-Tools/threat-broadcast) | RENS | repo | 2026-09-18 | agrégateur des bulletins de vulnérabilités de 360, QiAnXin, NSFOCUS, Tophant, Red Queen, NVD, CNNVD et Tenable `[ZH]` |
+| [cyberthreatintelligence.net](https://cyberthreatintelligence.net/) · [Bluesky](https://bsky.app/profile/cyberintelligence.bsky.social) | RENS | RSS | 2026-09-20 | agrégateur : actualité, analyses de malware, carte des rançongiciels, base de victimes et de CVE ; éditeur non identifié |
 | [Dissecting Impacket (ThatTotallyRealMyth)](https://github.com/ThatTotallyRealMyth/Impacket-IoCs) · [blog](https://www.abdulmhsblog.com/posts/impacket-iocs/) | RENS | repo / web | 2026-09-07 | indicateurs de niveau protocole et d'implémentation pour détecter l'usage d'Impacket, issus d'une réécriture interne de l'outil |
 
 ## 12. Journalistes et médias spécialisés
