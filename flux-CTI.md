@@ -183,7 +183,7 @@ Ingérables ; la provenance est celle des sources amont, indiquée dans la derni
 | [Rösti](https://rosti.dev/feeds) | §11 | API v2, sur clé de compte — STIX annoncé ; le feed MISP (§A.1) est public | — | rapports publics de 292 sources |
 | [Threat Actor Intelligence Profiles (tm-ho)](https://github.com/proshiba/threatactor-intel-analysis) | §11 | `profiles/<acteur>/generated/profile.stix2.json` | 689 profils, dépôt actif 2026-09-19 ; Kimsuky : 161 objets (campagnes, malwares, techniques, rapport de 76 références) | rapports publics et jeux de données OSINT, structurés par des agents sous règles de génération avec file de revue humaine ; profils en japonais, `confidence` et `claim-audit.json` par affirmation |
 | [VigilIntel](https://github.com/kidrek/VigilIntel) | §11 | `<année>/<mois>/<date>-report.stix.json` (FR et EN) | 268 bundles quotidiens, 2026-02 → 2026-09 | synthèse quotidienne de flux RSS par un modèle de langage ; le bundle ne contient qu'un objet `report` sans objets référencés ; CC BY-NC |
-| [CyberNetSec](https://github.com/jaybodecode/netsecops.github.io) | — | `stix/<article>-STIX.json` | 1 000 bundles, 2026 | articles d'actualité extraits automatiquement en STIX ; producteur non identifié — hors catalogue |
+| [CyberNetSec](https://github.com/jaybodecode/netsecops.github.io) | — | `stix/<article>-STIX.json` | 1 000 bundles, 2026 | articles d'actualité extraits automatiquement en STIX ; un point TAXII 2.1 est annoncé sans URL publiée ; producteur non identifié — hors catalogue |
 
 ### B.3 Référentiels STIX 2.1
 
@@ -224,6 +224,7 @@ Pas d'observables : les cadres à charger une fois, qui donnent aux rapports leu
 | [Gatewatcher — LastInfoSec](https://www.gatewatcher.com/) | §7.1 (Europe) | trois flux STIX 2.1 (IOC, CVE horaire, rapports), *direct bundle import without transformation* ; clé à demander à l'éditeur |
 | [Dark Web Informer](https://darkwebinformer.com/) | §12 | bundles STIX 2.1 pré-générés (`feed`, `ransomware`, `iocs`), régénérés toutes les 30 minutes ; clé API des paliers payants |
 | [ReversingLabs](https://docs.reversinglabs.com/Integrations/OpenCTI/feed-configuration/) | — | flux TAXII (ransomware, malware) activables dans OpenCTI ; licence Spectra |
+| [Recorded Future](https://docs.recordedfuture.com/reference/stix-taxii-collections) | §7.1 (Amérique du Nord) | collections STIX servies en TAXII 1.x et 2.1 (C2, phishing, vulnérabilités…) ; abonnement |
 | [ESET Threat Intelligence](https://help.eset.com/eti_portal/en-US/taxii_feeds.html) | §7.1 (Europe) | *data feeds* servis en STIX par TAXII depuis le portail ETI ; abonnement (distinct des événements MISP gratuits du dépôt `malware-ioc`, §A.2) |
 
 ### B.6 STIX 1.x
@@ -257,4 +258,4 @@ Pas d'observables : les cadres à charger une fois, qui donnent aux rapports leu
 
 **Chez les agences qui relaient.** L'ACSC (Australie) et les PDF de `media.defense.gov` (NSA) reprennent les avis conjoints avec le bundle STIX de CISA ; il n'y a pas de production STIX distincte. Le Honeynet Project (GreedyBear) sert ses feeds de honeypots en TXT et JSON, pas en STIX. L'instance OpenCTI publique de NetmanageIT est hors ligne.
 
-**Sur les adresses mortes.** `rosti.64617461.xyz` (remplacé par `misp.rosti.dev`), `urlabuse.com/public/misp`, `dragnet.dev`, `osint.digitalside.it`.
+**Sur les adresses mortes.** `rosti.64617461.xyz` (remplacé par `misp.rosti.dev`), `urlabuse.com/public/misp`, `dragnet.dev`, `osint.digitalside.it`. Les serveurs TAXII souvent cités dans les tutoriels ne répondent plus : Anomali Limo, Hail a TAXII, et `cti-taxii.mitre.org` (TAXII 2.0, remplacé par `attack-taxii.mitre.org`).
