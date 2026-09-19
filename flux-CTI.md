@@ -13,9 +13,9 @@ Le catalogue principal classe les sources par ce qu'elles **disent** ; ce fichie
 | **MISP** | feed MISP (`manifest.json` + un JSON par événement) · export d'événement MISP · galaxie ou warninglist au format MISP | CSV, TXT, JSON maison — même référencés dans les *default feeds* de MISP, qui les importe en `freetext`/`csv` : c'est MISP qui structure, pas la source |
 | **OpenCTI** | bundle STIX 2.x (`"type": "bundle"`, objets `spec_version 2.1`) · collection TAXII 2.1 | STIX 1.x XML (non ingérable tel quel) · TAXII 1.x · IOC en texte, YARA, Sigma |
 
-**OpenCTI n'a pas de format propre.** Sa langue native est STIX 2.1 ; « publier au format OpenCTI » signifie donc publier des bundles STIX 2.1 ou exposer une collection TAXII 2.1. Aucune source ne publie un format spécifique à la plateforme ; quelques-unes exportent depuis OpenCTI (propriétés `x_opencti_*`), ce qui est signalé.
+**Ce qu'OpenCTI accepte.** OpenCTI n'a pas de format à lui : il lit le STIX 2.1, un standard public, soit sous forme de fichier (*bundle*), soit en s'abonnant à un serveur TAXII 2.1. La section OpenCTI recense donc les sources qui publient l'un ou l'autre.
 
-Repère : la liste des *default feeds* de MISP dépend de la branche. Sur `2.4` ([`defaults.json`](https://github.com/MISP/MISP/blob/2.4/app/files/feed-metadata/defaults.json)) : 88 entrées, 8 en `source_format: misp`. Sur `2.5` / `develop` : **107 entrées, 18 natives** — TweetFeed y a été ajouté le 2026-09-15, NOCACTI en décembre 2025. Les autres entrées sont des blocklists que MISP découpe lui-même ; elles restent au §2.2 du catalogue.
+**Ne pas confondre avec la liste des feeds livrée avec MISP.** MISP est fourni avec une liste de feeds préconfigurés ([`defaults.json`](https://github.com/MISP/MISP/blob/2.5/app/files/feed-metadata/defaults.json) : 88 entrées en version 2.4, 107 en 2.5). La grande majorité sont des fichiers texte ou CSV que MISP sait lire, pas des feeds au format MISP : seules 18 sur 107 le sont. Les autres restent au §2.2 du catalogue avec les blocklists.
 
 ---
 
