@@ -2,7 +2,7 @@
 
 Liste de sources de renseignement concernant la menace d'origine cyber.
 
-> Dernière revue : 2026-09-20 — 868 sources actives, une par ligne, et 60 écartées (§18). Décompte par section : sommaire ci-dessous.
+> Dernière revue : 2026-09-20 — 872 sources actives, une par ligne, et 60 écartées (§18). Décompte par section : sommaire ci-dessous.
 >
 > Les sources ne sont pas restreintes à l'anglais. La langue est indiquée entre crochets — p. ex. `[ZH]`, `[RU]`, `[KO]` — lorsqu'elle n'est ni le français ni l'anglais.
 >
@@ -23,7 +23,7 @@ Liste de sources de renseignement concernant la menace d'origine cyber.
 ## Sommaire
 
 1. [Référentiels et annuaires](#1-référentiels-et-annuaires) — 18 sources
-2. [Feeds communautaires, fondations et lutte anti-abus](#2-feeds-communautaires-fondations-et-lutte-anti-abus) — 65 sources
+2. [Feeds communautaires, fondations et lutte anti-abus](#2-feeds-communautaires-fondations-et-lutte-anti-abus) — 66 sources
 3. [CERT / CSIRT nationaux et organisations régionales](#3-cert--csirt-nationaux-et-organisations-régionales) — 126 sources
 4. [Police, justice, sanctions et attribution officielle](#4-police-justice-sanctions-et-attribution-officielle) — 10 sources
 5. [CERT sectoriels, ISAC et infrastructures critiques](#5-cert-sectoriels-isac-et-infrastructures-critiques) — 22 sources
@@ -31,8 +31,8 @@ Liste de sources de renseignement concernant la menace d'origine cyber.
 7. [Éditeurs et laboratoires de recherche privés](#7-éditeurs-et-laboratoires-de-recherche-privés) — 337 sources
 8. [Réponse à incident, conseil, assurance](#8-réponse-à-incident-conseil-assurance) — 13 sources
 9. [Recherche académique et datasets](#9-recherche-académique-et-datasets) — 22 sources
-10. [Cybercriminalité : trackers, sites de fuite, victimologie](#10-cybercriminalité--trackers-sites-de-fuite-victimologie) — 15 sources
-11. [Chercheurs indépendants, communautés et agrégateurs](#11-chercheurs-indépendants-communautés-et-agrégateurs) — 107 sources
+10. [Cybercriminalité : trackers, sites de fuite, victimologie](#10-cybercriminalité--trackers-sites-de-fuite-victimologie) — 16 sources
+11. [Chercheurs indépendants, communautés et agrégateurs](#11-chercheurs-indépendants-communautés-et-agrégateurs) — 109 sources
 12. [Journalistes et médias spécialisés](#12-journalistes-et-médias-spécialisés) — 46 sources
 13. [Ingérence numérique et abus de plateformes](#13-ingérence-numérique-et-abus-de-plateformes) — 11 sources
 14. [Bases d'incidents, think tanks et rapports de référence](#14-bases-dincidents-think-tanks-et-rapports-de-référence) — 14 sources
@@ -41,7 +41,7 @@ Liste de sources de renseignement concernant la menace d'origine cyber.
 17. [Angles morts](#17-angles-morts)
 18. [Sources écartées](#18-sources-écartées) — 60 sources
 
-**Total actif (§1-16) : 868 sources.**
+**Total actif (§1-16) : 872 sources.**
 
 Voir aussi [flux-CTI.md](flux-CTI.md) : les sources de cette liste qui se chargent telles quelles dans MISP ou OpenCTI (feed MISP, STIX 2.1, TAXII), et par quoi commencer pour peupler une plateforme vide.
 
@@ -140,6 +140,7 @@ Voir aussi [flux-CTI.md](flux-CTI.md) : les sources de cette liste qui se charge
 | [FFraud — IP Fraud Database](https://github.com/FFraud-com/ip-fraud-database) · [site](https://ffraud.com/) | — | IOC | repo (CSV) / API | 2026-09-19 | 1,3 million d'IP (C2, botnets, phishing, brute force) issues de honeypots et de signalements, une IP n'est listée qu'à partir de deux observations ; reconstruit toutes les 30 minutes ; MIT |
 | [APT Watch](https://aptwatch.org/) · [aptwatch](https://github.com/aptwatcher/aptwatch) | — | IOC | repo / feed (FireHOL, hosts, TXT) | 2026-09-19 | IOC d'infrastructures attribuées à des acteurs étatiques russes, agrégés de sources ouvertes et validés par enrichissement ; feeds régénérés toutes les 6 heures |
 | [DevHunter Security — DNS Blocklist](https://github.com/devhuntersecurity/dns-blocklist) | ID | IOC | repo (Unbound, listes) | 2026-09-19 | listes de domaines et d'IP (brute force SSH/FTP, scanners) pour résolveur DNS, projet indonésien `[ID/EN]` |
+| [CyberHost — Malware and Phishing Blocklist](https://cyberhost.uk/malware-blocklist/) · [liste](https://lists.cyberhost.uk/malware.txt) · [Mastodon](https://infosec.exchange/@cyberhost_blocklist) | UK | IOC | feed (TXT) | 2026-09-19 | 61 000 domaines de malware et de phishing, mise à jour quotidienne annoncée par un compte-robot Mastodon |
 
 ### 2.3 Crypto / Web3
 
@@ -174,7 +175,7 @@ Voir aussi [flux-CTI.md](flux-CTI.md) : les sources de cette liste qui se charge
 
 | Source | Contenu | Accès | Commentaire |
 |---|---|---|---|
-| [ENISA — CSIRTs Network](https://github.com/enisaeu/CNW) · [publications](https://www.enisa.europa.eu/publications) (UE) | IOC+RENS | repo / PDF | avis agrégés des CSIRT de l'UE ; Threat Landscape annuel |
+| [ENISA — CSIRTs Network](https://github.com/enisaeu/CNW) · [publications](https://www.enisa.europa.eu/publications) · [EUVD](https://euvd.enisa.europa.eu/) (UE) | IOC+RENS | repo / PDF / API (EUVD, sans clé) | avis agrégés des CSIRT de l'UE ; Threat Landscape annuel ; base européenne des vulnérabilités avec API JSON et compte-robot Mastodon (`@euvdfeed`) |
 | [CERT-EU](https://cert.europa.eu/publications/threat-intelligence) · [`droid`](https://github.com/certeu/droid) (UE) | IOC+RENS | web / repo | institutions de l'UE ; gestion de règles Sigma |
 | [Europol — newsroom](https://www.europol.europa.eu/media-press/newsroom) (UE) | RENS | web | démantèlements, infrastructures saisies |
 | [NATO CCDCOE](https://ccdcoe.org/library/publications/) | RENS | PDF | recherche cyber-conflit |
@@ -869,6 +870,7 @@ Voir aussi [flux-CTI.md](flux-CTI.md) : les sources de cette liste qui se charge
 | [Have I Been Pwned — breaches](https://haveibeenpwned.com/feed/breaches/) | RENS | RSS / API | vivant | |
 | [cyberwarfare.live](https://cyberwarfare.live/) | RENS | RSS | vivant | hacktivisme |
 | [RansomFeed](https://ransomfeed.it/) | RENS | web, bot | vivant | victimologie ransomware tenue depuis l'Italie (Dario Fadda) ; connecteur OpenCTI officiel ; protection anti-robot `[IT/EN]` |
+| [CTI.FYI](https://cti.fyi/) · [Mastodon](https://infosec.exchange/@CTI_FYI) | RENS | RSS / API | 2026-09-19 | tableau de bord des revendications de rançongiciel ; flux RSS, API et compte-robot Mastodon (plus de 5 900 messages) |
 | [AFRINTEL](https://github.com/Hatchepsoute/AFRINTEL) | RENS | repo (Markdown / STIX 2.1) | 2026-09-16 | incidents visant les organisations africaines (54 pays), observés sur les sites de fuite et forums ; rapports mensuels et bundles STIX ; MIT `[FR/EN]` |
 
 ## 11. Chercheurs indépendants, communautés et agrégateurs
@@ -946,6 +948,8 @@ Voir aussi [flux-CTI.md](flux-CTI.md) : les sources de cette liste qui se charge
 | [矛和盾的故事 (WeChat, Wechat2RSS)](https://wechat2rss.xlab.app/feed/308da52e82d7f7bc2a9f6a5f63633c5567b7af08.xml) | IOC+RENS | RSS (WeChat) | 2026-09 | analyste CTI indépendant `[ZH]` |
 | [Detect FYI](https://detect.fyi/feed) | IOC+RENS | RSS (Medium) | 2026-09 | publication collective d'ingénierie de détection ; hash et indicateurs défangés |
 | [Emanuele Carlesi](https://infosec.exchange/@ecarlesi) | IOC+RENS | RSS (Mastodon) | 2026-09 | chasseur de phishing ; domaines défangés |
+| [Malicious Extension Bot](https://infosec.exchange/@malicious_browser_bot) | IOC | RSS (Mastodon) | 2026-09-19 | compte-robot : identifiants d'extensions malveillantes (Chrome, Firefox, VS Code) avec score, en JSON dans chaque message (plus de 7 500 messages depuis mai 2025) ; opérateur non identifié |
+| [SarlackLab (Abjuri5t)](https://ioc.exchange/@SarlackLab) | IOC | RSS (Mastodon) | 2026-03 | compte-robot d'un bac à sable et cartographe de C2 ; 3 600 messages, inactif depuis mars 2026 |
 | [1ZRR4H](https://infosec.exchange/@1ZRR4H) | RENS | RSS (Mastodon) | 2024-06 | chasseur de C2 ; inactif depuis 2024 |
 | [SecAtor](https://t.me/s/true_secator) | IOC+RENS | Telegram | 2026-08 | canal CTI russophone `[RU]` |
 | [Alex Makus](https://t.me/s/alexmakus) | RENS | Telegram | vivant | analyste russophone `[RU]` |
