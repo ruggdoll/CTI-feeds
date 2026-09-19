@@ -2,7 +2,7 @@
 
 Ce fichier recense les sources du [catalogue](README.md) qui se branchent directement sur une plateforme de renseignement : feeds au format MISP, bundles STIX 2.1, serveurs TAXII 2.1. Il sert à peupler MISP ou OpenCTI sans écrire de convertisseur — on prend l'URL, on l'abonne, ça s'importe.
 
-Chaque entrée donne le point d'entrée exact, le volume et la date de la dernière donnée constatée le 2026-09-19, et ce qu'il faut savoir avant de l'ingérer : provenance réelle, rythme, retard, conditions d'accès.
+Chaque entrée donne le point d'entrée exact, le volume et la date de la dernière donnée (état au 2026-09-19), et ce qu'il faut savoir avant de l'ingérer : provenance, rythme, retard, conditions d'accès.
 
 ## Ce qui figure ici
 
@@ -26,8 +26,8 @@ Un `manifest.json` et un fichier par événement : abonnables tels quels dans *S
 | Source | § README | Point d'entrée | Volume / dernière donnée | Commentaire |
 |---|---|---|---|---|
 | [CIRCL](https://www.circl.lu/doc/misp/feed-osint/) | §2.1 · §3 (LU) | `https://www.circl.lu/doc/misp/feed-osint/` | 1 680 événements, 2011-09-22 → 2026-08-13 | produit par l'éditeur de MISP, premier feed de sa liste par défaut ; agrège plusieurs organisations contributrices. Le même feed est **converti en STIX 2.1** par CIRCL (§2.1) |
-| [abuse.ch — URLhaus](https://urlhaus.abuse.ch/downloads/misp/) | §2.1 | `https://urlhaus.abuse.ch/downloads/misp/` | 1 949 événements, dernier 2026-09-18 | un événement par jour ; le manifeste répond sans authentification |
-| [abuse.ch — ThreatFox](https://threatfox.abuse.ch/downloads/misp/) | §2.1 | `https://threatfox.abuse.ch/downloads/misp/` | 1 993 événements, dernier 2026-09-18 | idem ; la page d'export pousse vers une URL de feed personnelle (Auth-Key, compte gratuit) — le chemin anonyme fonctionne encore |
+| [abuse.ch — URLhaus](https://urlhaus.abuse.ch/downloads/misp/) | §2.1 | `https://urlhaus.abuse.ch/downloads/misp/` | 1 949 événements, dernier 2026-09-18 | un événement par jour ; accès sans authentification |
+| [abuse.ch — ThreatFox](https://threatfox.abuse.ch/downloads/misp/) | §2.1 | `https://threatfox.abuse.ch/downloads/misp/` | 1 993 événements, dernier 2026-09-18 | idem ; abuse.ch propose aussi une URL de feed personnelle (Auth-Key, compte gratuit), le chemin anonyme reste accessible |
 | [abuse.ch — MalwareBazaar](https://bazaar.abuse.ch/downloads/misp/) | §2.1 | `https://bazaar.abuse.ch/downloads/misp/` | 1 918 événements, dernier 2026-09-07 | échantillons du jour |
 | [Botvrij.eu](https://www.botvrij.eu/data/feed-osint/) | §2.1 | `https://www.botvrij.eu/data/feed-osint/` | 435 événements, 2013-08-07 → 2026-02-03 | feed OSINT de Koen Van Impe ; relaie aussi des événements ESET |
 | [CSIRT Italia / ACN](https://www.acn.gov.it/portale/en/csirt-italia/misp) | §3 (Italie) | `https://www.csirt.gov.it/feed-misp/` | 60 événements, 2026-09-16 → 2026-09-19 (fenêtre glissante) | CSIRT national italien ; tout IoC TLP:CLEAR de l'agence passe par ce feed, renouvelé quotidiennement |
@@ -44,7 +44,7 @@ Un `manifest.json` et un fichier par événement : abonnables tels quels dans *S
 | [xfeeds](https://github.com/neilweitzel/xfeeds) | §11 | `https://raw.githubusercontent.com/neilweitzel/xfeeds/main/feeds` (`misp-manifest.json`) | 1 événement, 2026-09-19 | agrégat de blocklists IP ne retenant que les IP corroborées par plusieurs sources indépendantes ; publie **aussi** un bundle STIX 2.1 |
 | [NOCACTI](https://misp-feed.nocacti.com/Intrusion/) | — | `https://misp-feed.nocacti.com/Intrusion/` · `…/AdversaryInfrastructure/` | 3 + 1 événements, 2026-09-01 | dans les *default feeds* MISP depuis la 2.5.31 ; le site n'expose qu'une page de connexion MISP, aucune information sur le producteur — hors catalogue pour cette raison |
 | [cyberdefense.blue](https://github.com/RedBlue232/threat-feed-publisher) | — | `https://raw.githubusercontent.com/RedBlue232/threat-feed-publisher/main/misp-feed` | 3 événements (un par périmètre), 2026-04-27 | IP vues par un seul capteur CrowdSec/Suricata en France, fenêtre de 7 jours (« best-effort feed derived from a single self-hosted sensor », selon l'auteur) — hors catalogue |
-| [DigitalSide](https://github.com/davidonzo/Threat-Intel/tree/master/digitalside-misp-feed) | §11 | `https://osint.digitalside.it/Threat-Intel/digitalside-misp-feed/` | 1 062 événements, 2022-10-03 → **2024-10-18** | **arrêté.** Le site ne répond plus (le DNS résout, l'hôte non) et le dépôt GitHub n'a plus reçu de commit depuis le 2024-10-18. Reste dans les *defaults* MISP |
+| [DigitalSide](https://github.com/davidonzo/Threat-Intel/tree/master/digitalside-misp-feed) | §11 | `https://osint.digitalside.it/Threat-Intel/digitalside-misp-feed/` | 1 062 événements, 2022-10-03 → **2024-10-18** | **arrêté.** Le site ne répond plus et le dépôt GitHub n'a plus reçu de commit depuis le 2024-10-18. Reste dans les *default feeds* MISP |
 
 ### 1.2 Événements MISP isolés
 
@@ -103,7 +103,7 @@ Instances ou feeds qui existent mais ne s'obtiennent pas par une URL publique.
 | [DoGoodCybersecurity](https://github.com/leeg0010/DoGoodCybersecurity-STIX-Threat-Intel-Feed) | §2.1 | `daily/<date>.json` | 382 bundles quotidiens ; 2 715 indicateurs le 2026-09-17 | IP vues par un réseau de honeypots distribué ; le site du projet ne répond pas, le dépôt est le seul point d'accès |
 | [SiberKapan](https://siberkapan.org/api-docs) | §2.1 | `https://siberkapan.org/api/v1/stix` | bundle courant (188 Ko), sans clé | même corpus que le feed MISP et la collection TAXII |
 | [TweetFeed](https://tweetfeed.live/feeds/) | §11 | `https://tweetfeed.live/stix/today.json` · `week.json` · `month.json` (`manifest.json` les décrit) | 64 indicateurs le 2026-09-19 (jour) | même corpus que le feed MISP |
-| [CIRCL — feed OSINT en STIX 2.1](https://codeberg.org/adulau/misp-circl-feed) | §2.1 | `feeds/circl/stix-2.1/<uuid>.json` (Codeberg ; miroir `helga.circl.lu` fermé aux robots) | un bundle par événement (ex. 991 objets) ; dernier commit 2026-02-02 | conversion du feed MISP par `misp-stix`, publiée par CIRCL ; l'API Codeberg renvoie des erreurs 504 par moments, les fichiers bruts répondent |
+| [CIRCL — feed OSINT en STIX 2.1](https://codeberg.org/adulau/misp-circl-feed) | §2.1 | `feeds/circl/stix-2.1/<uuid>.json` (Codeberg) | un bundle par événement (ex. 991 objets) ; dernier commit 2026-02-02 | conversion du feed MISP par `misp-stix`, publiée par CIRCL |
 | [The Hunter's Ledger](https://github.com/PixelatedContinuum/Threat-Intel-Reports) | §11 | `stix/*.json` | 43 bundles, dépôt actif 2026-09-19 | recherche originale d'un analyste indépendant (RAT, open directories, sites de fuite) ; bundles exportés d'OpenCTI (`x_opencti_*`) |
 | [CTID — Attack Flow](https://center-for-threat-informed-defense.github.io/attack-flow/example_flows/) | §9 | `.../corpus/<nom>.json` (le dépôt ne versionne que les `.afb`) | 41 flux, dépôt actif 2026-09-09 | extension *attack-flow* : les SDO/SCO standards s'ingèrent, les objets `attack-action` / `attack-flow` demandent la définition d'extension livrée dans le bundle |
 | [DigitalSide](https://github.com/davidonzo/Threat-Intel/tree/master/stix2) | §11 | `davidonzo/Threat-Intel`, `stix2/` | 1 000+ bundles, **figé 2024-10-18** | même arrêt que le feed MISP |
@@ -180,7 +180,7 @@ Pas d'observables : les cadres à charger une fois, qui donnent aux rapports leu
 
 **Chez les CERT nationaux.** Aucun feed MISP ni STIX public chez NCSC-NL (STIX/TAXII 2.1 sont obligatoires pour l'administration néerlandaise depuis le 2026-07-01, sans feed public pour autant), CCB, CERT.at, NCSC-FI, CERT-EE, CERT Polska (n6 et MISP fermés), BSI, NCSC-UK, CCCS, ACSC (CTIS réservé), CERT NZ, CSA Singapour, JPCERT/CC, KrCERT, CERT-In, CERT.br. USOM a retiré sa liste publique ; SiberKapan la republie. Les CERT slovaque, indien et chilien opèrent des MISP fermés. En Europe, seuls CERT-FR, CSIRT Italia, CIRCL et GovCERT.ch publient du MISP en clair.
 
-**Dans les espaces non anglophones.** Aucun feed MISP ou STIX public identifié dans les espaces japonais, coréen, chinois et arabe.
+**Dans les espaces non anglophones.** Aucun feed MISP ou STIX public connu dans les espaces japonais, coréen, chinois et arabe.
 
 **Chez les sandboxes.** ANY.RUN exporte en MISP sur abonnement ; Joe Sandbox et Hybrid Analysis derrière un compte ; à la pièce, pas en flux.
 
