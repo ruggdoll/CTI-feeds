@@ -2,7 +2,7 @@
 
 Liste de sources de renseignement concernant la menace d'origine cyber.
 
-> Dernière revue : 2026-09-19 — 832 sources actives, une par ligne, et 60 écartées (§18). Décompte par section : sommaire ci-dessous.
+> Dernière revue : 2026-09-19 — 833 sources actives, une par ligne, et 60 écartées (§18). Décompte par section : sommaire ci-dessous.
 >
 > Les sources ne sont pas restreintes à l'anglais. La langue est indiquée entre crochets — p. ex. `[ZH]`, `[RU]`, `[KO]` — lorsqu'elle n'est ni le français ni l'anglais.
 >
@@ -26,7 +26,7 @@ Liste de sources de renseignement concernant la menace d'origine cyber.
 2. [Feeds communautaires, fondations et lutte anti-abus](#2-feeds-communautaires-fondations-et-lutte-anti-abus) — 56 sources
 3. [CERT / CSIRT nationaux et organisations régionales](#3-cert--csirt-nationaux-et-organisations-régionales) — 126 sources
 4. [Police, justice, sanctions et attribution officielle](#4-police-justice-sanctions-et-attribution-officielle) — 9 sources
-5. [CERT sectoriels, ISAC et infrastructures critiques](#5-cert-sectoriels-isac-et-infrastructures-critiques) — 20 sources
+5. [CERT sectoriels, ISAC et infrastructures critiques](#5-cert-sectoriels-isac-et-infrastructures-critiques) — 21 sources
 6. [Infrastructure Internet : registres, RIR, NREN, cloud, opérateurs](#6-infrastructure-internet--registres-rir-nren-cloud-opérateurs) — 29 sources
 7. [Éditeurs et laboratoires de recherche privés](#7-éditeurs-et-laboratoires-de-recherche-privés) — 325 sources
 8. [Réponse à incident, conseil, assurance](#8-réponse-à-incident-conseil-assurance) — 13 sources
@@ -41,7 +41,7 @@ Liste de sources de renseignement concernant la menace d'origine cyber.
 17. [Angles morts](#17-angles-morts)
 18. [Sources écartées](#18-sources-écartées) — 60 sources
 
-**Total actif (§1-16) : 832 sources.**
+**Total actif (§1-16) : 833 sources.**
 
 Voir aussi [flux-CTI.md](flux-CTI.md) : les sources de cette liste qui se chargent telles quelles dans MISP ou OpenCTI (feed MISP, STIX 2.1, TAXII), et par quoi commencer pour peupler une plateforme vide.
 
@@ -339,6 +339,7 @@ Voir aussi [flux-CTI.md](flux-CTI.md) : les sources de cette liste qui se charge
 | [Kaspersky ICS-CERT](https://ics-cert.kaspersky.com) | RU | OT | RENS | web | IOC en PDF, non vérifiés ; voir aussi §7.2 |
 | [NHS England — Cyber Alerts](https://digital.nhs.uk/cyber-alerts) | UK | santé | RENS | web, bot | alertes numérotées (cc-xxxx) ; site bloque les robots |
 | [ICS-CSIRT.io](https://www.ics-csirt.io/) | BE | OT | IOC+RENS | inscr. (gratuite) | communauté ICS animée par cudeso.be ; MISP et OpenCVE sur adhésion gratuite, export STIX/CSV/JSON |
+| [CiviCERT](https://www.civicert.org/) | — | société civile | RENS | web ; MISP sur adhésion | centre de réponse pour les organisations d'assistance à la société civile ; instance MISP réservée aux membres |
 
 ## 6. Infrastructure Internet : registres, RIR, NREN, cloud, opérateurs
 
