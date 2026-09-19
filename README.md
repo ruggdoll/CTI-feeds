@@ -752,7 +752,7 @@ Voir aussi [flux-CTI.md](flux-CTI.md) : les sources de cette liste dont la produ
 | [Critical Path Security](https://github.com/CriticalPathSecurity/Public-Intelligence-Feeds) | US | IOC | repo (Zeek Intel) | 2026-09-01 |
 | [Criminal IP — C2 Daily Feed](https://github.com/criminalip/C2-Daily-Feed) | KR | IOC | repo (CSV quotidien) | IP de C2 détectées par le moteur de Criminal IP (AI Spera), un fichier par jour ; dépôt actif 2026-09-19 |
 | [BeaconBeagle](https://beaconbeagle.com/) | — | IOC | web / API | tracker Cobalt Strike : configurations de beacons collectées dans la nature |
-| [PrecisionSec](https://precisionsec.com/) | — | IOC | feed (MISP) ; payant | C2 et RAT (Cobalt Strike, njRAT, ClickFix) ; le feed OSINT gratuit est le feed payant retardé de 30 jours |
+| [PrecisionSec](https://precisionsec.com/) | — | IOC | feed (MISP) ; payant | C2 et RAT (Cobalt Strike, njRAT, ClickFix) ; le feed OSINT gratuit est, selon l'éditeur, un sous-ensemble du feed payant retardé de 30 jours |
 | [isMalicious](https://ismalicious.com/) | — | IOC | API ; TAXII 2.1 payant | réputation IP/domaines/e-mails/portefeuilles ; clé gratuite pour les recherches unitaires |
 | [Pulsedive](https://pulsedive.com/) | US | IOC+RENS | web / API ; TAXII 2.1 payant | plateforme communautaire de renseignement ; collection TAXII de test sur compte gratuit |
 
