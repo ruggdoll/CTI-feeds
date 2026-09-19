@@ -54,7 +54,7 @@ Voir aussi [flux-CTI.md](flux-CTI.md) : les sources de cette liste dont la produ
 | Source | Pays | Contenu | Accès | Activité | Commentaire |
 |---|---|---|---|---|---|
 | [MITRE ATT&CK — STIX](https://github.com/mitre-attack/attack-stix-data) · [Groups](https://attack.mitre.org/groups/) · [Campaigns](https://attack.mitre.org/campaigns/) · [CAPEC (STIX 2.1)](https://github.com/mitre/cti/tree/master/capec/2.1) · [ATLAS (STIX 2.1)](https://github.com/mitre-atlas/atlas-navigator-data) | US | RENS | repo/web ; TAXII 2.1 | vivant | référentiel de techniques, groupes, logiciels et campagnes ; serveur TAXII 2.1 ouvert ; CAPEC et ATLAS (menaces contre les systèmes d'IA) sur des dépôts frères |
-| [MISP Galaxy](https://github.com/MISP/misp-galaxy) | LU/EU | RENS | repo (JSON) | 2026-08-31 | référentiel canonique d'acteurs, outils, campagnes ; **la** table de correspondance des alias |
+| [MISP Galaxy](https://github.com/MISP/misp-galaxy) | LU/EU | RENS | repo (JSON) | 2026-08-31 | référentiel d'acteurs, outils, campagnes ; table de correspondance des alias |
 | [Filigran — OpenCTI datasets](https://github.com/OpenCTI-Platform/datasets) | FR | RENS | repo (STIX 2.1) | 2026-06-07 | référentiels de secteurs, pays et régions utilisés par les connecteurs OpenCTI |
 | [Malpedia](https://malpedia.caad.fkie.fraunhofer.de) · [acteurs](https://malpedia.caad.fkie.fraunhofer.de/actors) | DE | IOC+RENS | web/API, inscr. | vivant | familles de malware, règles YARA, références (Fraunhofer FKIE) |
 | [ETDA / ThaiCERT APT Encyclopedia](https://apt.etda.or.th) | TH | RENS | web | vivant | fiches groupes et outils APT |
@@ -63,8 +63,8 @@ Voir aussi [flux-CTI.md](flux-CTI.md) : les sources de cette liste dont la produ
 | [ORKL](https://orkl.eu) | EU | RENS | web/API | vivant | bibliothèque de rapports CTI indexés |
 | [lazarus.day](https://lazarus.day) | — | IOC+RENS | web | vivant | index des rapports sur les groupes nord-coréens |
 | [RST Cloud — awesome-threat-actor-resources](https://github.com/rstcloud/awesome-threat-actor-resources) | — | RENS | repo | vivant | méta-liste de profils d'acteurs et datasets |
-| [Trusted Introducer](https://www.trusted-introducer.org) · [export JSON](https://www.trusted-introducer.org/trusted-introducer/directory/downloads/json/teams/) | EU | RENS | JSON | vivant | annuaire de 554 équipes (contacts, PGP, constituency) ; le seul export machine européen |
-| [FIRST](https://www.first.org) · [API](https://api.first.org/data/v1/teams?limit=100) · [blog (RSS)](https://www.first.org/blog/rss.xml) | — | RENS | API | vivant | 879 équipes mondiales, paginé par 100 ; diff mensuel recommandé |
+| [Trusted Introducer](https://www.trusted-introducer.org) · [export JSON](https://www.trusted-introducer.org/trusted-introducer/directory/downloads/json/teams/) | EU | RENS | JSON | vivant | annuaire de 554 équipes (contacts, PGP, constituency), export JSON |
+| [FIRST](https://www.first.org) · [API](https://api.first.org/data/v1/teams?limit=100) · [blog (RSS)](https://www.first.org/blog/rss.xml) | — | RENS | API | vivant | 879 équipes mondiales, paginé par 100 |
 | [Onetracker](https://onetracker.org/ti) | — | RENS | web | vivant | annuaire d'échantillons, PCAP, feeds, blocklists |
 | [hslatman — awesome-threat-intelligence](https://github.com/hslatman/awesome-threat-intelligence) | — | RENS | repo | vivant | liste de référence (sources CTI) |
 | [sroberts — awesome-iocs](https://github.com/sroberts/awesome-iocs) | — | RENS | repo | vivant | liste de référence (IOC) |
@@ -80,7 +80,7 @@ Voir aussi [flux-CTI.md](flux-CTI.md) : les sources de cette liste dont la produ
 | Source | Pays | Contenu | Accès | Activité | Commentaire |
 |---|---|---|---|---|---|
 | [abuse.ch](https://abuse.ch) — [URLhaus](https://urlhaus.abuse.ch), [MalwareBazaar](https://bazaar.abuse.ch), [ThreatFox](https://threatfox.abuse.ch), [Feodo Tracker](https://feodotracker.abuse.ch), [SSLBL](https://sslbl.abuse.ch) · [Mastodon](https://ioc.exchange/@abuse_ch) | CH | IOC | feed/API (CSV/JSON/MISP/Suricata) | vivant | hébergé par la Haute école spécialisée bernoise ; site bloque les robots, les feeds non |
-| [AlienVault OTX](https://otx.alienvault.com) | US | IOC+RENS | API | vivant | pulses communautaires, très gros volume |
+| [AlienVault OTX](https://otx.alienvault.com) | US | IOC+RENS | API | vivant | pulses communautaires |
 | [Shadowserver](https://www.shadowserver.org/what-we-do/network-reporting/) · [dashboard](https://dashboard.shadowserver.org) | US | IOC+RENS | inscr. | vivant | ONG ; rapports quotidiens gratuits pour votre ASN |
 | [SANS ISC / DShield](https://isc.sans.edu) · [feeds](https://www.dshield.org/howto.html) | US | IOC+RENS | feed | vivant | IP de scan et d'attaque, blocklists quotidiennes, diary |
 | [Spamhaus DROP / EDROP](https://www.spamhaus.org/blocklists/do-not-route-or-peer/) | CH/UK | IOC | feed (TXT/JSON) | vivant | plages IP détournées ou criminelles |
@@ -119,13 +119,13 @@ Voir aussi [flux-CTI.md](flux-CTI.md) : les sources de cette liste dont la produ
 | [Inversion DNSBL Blocklists](https://github.com/elliotwutingfeng/Inversion-DNSBL-Blocklists) | SG | IOC | repo | 2026-09-01 | URL malveillantes issues de scans originaux (ses dépôts `ThreatFox-IOC-*` sont des miroirs) |
 | [HaGeZi DNS Blocklists](https://github.com/hagezi/dns-blocklists) | DE | IOC | repo (hosts/ABP/RPZ) | 2026-09-01 | liste TIF pour DNS-RPZ |
 | [The Block List Project](https://blocklistproject.github.io/Lists/) | — | IOC | repo | 2026-07-20 | |
-| [FireHOL IP lists](https://iplists.firehol.org) · [repo](https://github.com/firehol/blocklist-ipsets) | — | IOC | repo | 2026-09-01 | agrégation scorée de ~400 listes ; plutôt warninglist / comparaison de couverture |
+| [FireHOL IP lists](https://iplists.firehol.org) · [repo](https://github.com/firehol/blocklist-ipsets) | — | IOC | repo | 2026-09-01 | agrégation scorée de ~400 listes |
 | [SURBL](https://www.surbl.org) | US | IOC | DNSBL, licence | vivant | URI de spam et phishing |
 | [URIBL](https://uribl.com) | US | IOC | DNSBL, licence | vivant | URI de spam ; usage libre à faible volume |
 | [CleanTalk](https://cleantalk.org/blacklists) | — | IOC | API | vivant | |
 | [AbuseIPDB](https://www.abuseipdb.com) | — | IOC | API, bot | vivant | signalements communautaires |
 | [Stop Forum Spam](https://www.stopforumspam.com/downloads) | — | IOC | feed | vivant | |
-| [dan.me.uk Tor list](https://www.dan.me.uk/torlist/) | UK | IOC | feed (1 req/30 min) | vivant | nœuds Tor ; à charger en warninglist |
+| [dan.me.uk Tor list](https://www.dan.me.uk/torlist/) | UK | IOC | feed (1 req/30 min) | vivant | nœuds Tor |
 | [threatview.io](https://threatview.io) | — | IOC | feed | vivant | IP/domaines/hash/C2 quotidiens |
 | [ELLIO](https://ellio.tech) | CZ | IOC | inscr. ; blog RSS | vivant | IP de scans massifs |
 | [hole.cert.pl](https://hole.cert.pl) | PL | IOC | feed | vivant | blocklist de domaines CERT Polska |
@@ -220,14 +220,14 @@ Voir aussi [flux-CTI.md](flux-CTI.md) : les sources de cette liste dont la produ
 | Albanie | [AKSK](https://aksk.gov.al) | RENS | web | `[SQ/EN]` |
 | Arabie saoudite | [Saudi CERT](https://cert.gov.sa) | RENS | web | `[AR/EN]` |
 | Argentine | [CERT.ar](https://www.argentina.gob.ar/jefatura/innovacion-ciencia-y-tecnologia/centro-nacional-de-ciberseguridad/certar) | RENS | web | `[ES]` |
-| Australie | [ACSC / ASD](https://www.cyber.gov.au/about-us/view-all-content/alerts-and-advisories) | RENS | web, bot | IOC non vérifiés (503 au robot) |
+| Australie | [ACSC / ASD](https://www.cyber.gov.au/about-us/view-all-content/alerts-and-advisories) | RENS | web, bot | IOC non vérifiés |
 | Azerbaïdjan | [CERT.AZ](https://cert.az) | RENS | web | `[AZ/EN]` |
-| Bangladesh | [BGD e-GOV CIRT](https://www.cirt.gov.bd) | IOC+RENS | web, bot | très actif |
+| Bangladesh | [BGD e-GOV CIRT](https://www.cirt.gov.bd) | IOC+RENS | web, bot | |
 | Bélarus | [CERT.BY](https://cert.by) | RENS | web | `[RU]` |
 | Bolivie | [CGII / CSIRT-Bolivia](https://csirt.gob.bo) | RENS | web | `[ES]` |
 | Brésil | [CERT.br](https://cert.br) | RENS | web | honeypots, spam, statistiques agrégées (pas d'IOC publiés) `[PT/EN]` |
 | Canada | [CCCS](https://github.com/CybercentreCanada) · [avis](https://www.cyber.gc.ca/en/alerts-advisories) · [National Cyber Threat Assessment](https://www.cyber.gc.ca/en/guidance/national-cyber-threat-assessment-2025-2026) | IOC+RENS | repo/web | AssemblyLine, extracteurs de config ; évaluation biennale |
-| Chili | [CSIRT de Gobierno](https://csirt.gob.cl) | RENS | web, bot | très régulier ; IOC non vérifiés `[ES]` |
+| Chili | [CSIRT de Gobierno](https://csirt.gob.cl) | RENS | web, bot | IOC non vérifiés `[ES]` |
 | Chine | [CNCERT/CC](https://www.cert.org.cn/publish/english/index.html) | RENS | web | rapports et contre-attribution `[ZH/EN]` |
 | Chine | [CNCERT风险评估 (WeChat, Wechat2RSS)](https://wechat2rss.xlab.app/feed/c6662e88d278561b8293a607dcdcbe26aea98e04.xml) | IOC+RENS | RSS (WeChat) | compte WeChat du CNCERT ; publie des IOC (2026-09-02 : 15 IP) `[ZH]` |
 | Chine | [CVERC](https://www.cverc.org.cn) | IOC+RENS | web | rapports de contre-attribution `[ZH]` |
@@ -331,8 +331,8 @@ Voir aussi [flux-CTI.md](flux-CTI.md) : les sources de cette liste dont la produ
 | [RH-ISAC](https://rhisac.org/) | US | retail | IOC+RENS | RSS | |
 | [Aviation ISAC](https://www.a-isac.com/) | US | aviation | RENS | web | |
 | [Auto-ISAC](https://automotiveisac.com/) | US | automobile | RENS | web | |
-| [EE-ISAC](https://www.ee-isac.eu/) | EU | énergie | RENS | web, bot | URL corrigée 2026-09-06 (`eeisac.eu`→`ee-isac.eu`) |
-| [ER-ISAC](https://er.isacs.eu/) | EU | rail | RENS | web, bot | URL corrigée 2026-09-06 (`er-isac.eu`→`er.isacs.eu`) |
+| [EE-ISAC](https://www.ee-isac.eu/) | EU | énergie | RENS | web, bot | anciennement `eeisac.eu` |
+| [ER-ISAC](https://er.isacs.eu/) | EU | rail | RENS | web, bot | anciennement `er-isac.eu` |
 | [Cyber Threat Alliance](https://www.cyberthreatalliance.org/resources/) | US | multi | RENS | web | rapports conjoints ; ses communiqués listent les membres |
 | [ECSO](https://www.ecso.org/) | EU | multi | RENS | RSS | |
 | [Kaspersky ICS-CERT](https://ics-cert.kaspersky.com) | RU | OT | RENS | web | IOC en PDF, non vérifiés ; voir aussi §7.2 |
@@ -391,7 +391,7 @@ Voir aussi [flux-CTI.md](flux-CTI.md) : les sources de cette liste dont la produ
 | [Microsoft Security / MSTIC](https://www.microsoft.com/en-us/security/blog/) · [Azure-Sentinel](https://github.com/Azure/Azure-Sentinel) | IOC+RENS | web / repo | vivant | |
 | [Meta — threat-research](https://github.com/facebook/threat-research) | IOC | repo | vivant | |
 | [SentinelLABS](https://www.sentinelone.com/labs/) | IOC+RENS | web | vivant | |
-| [BlackBerry — Research & Intelligence](https://blogs.blackberry.com/en/category/research-and-intelligence) | IOC+RENS | web | 2026-09-02 | analyses de campagnes ; IOC non vérifiés (flux inaccessible aux robots) |
+| [BlackBerry — Research & Intelligence](https://blogs.blackberry.com/en/category/research-and-intelligence) | IOC+RENS | web, bot | 2026-09-02 | analyses de campagnes ; IOC non vérifiés |
 | [Zscaler ThreatLabz](https://github.com/ThreatLabz/iocs) | IOC | repo | vivant | |
 | [Sophos](https://github.com/sophoslabs/IoCs) | IOC | repo | vivant | blog bloque les robots ; absorbe Secureworks CTU |
 | [Broadcom / Symantec Threat Hunter](https://www.security.com/threat-intelligence) · [protection bulletins](https://www.broadcom.com/support/security-center/protection-bulletin) | IOC+RENS | RSS / web | vivant | |
@@ -407,7 +407,7 @@ Voir aussi [flux-CTI.md](flux-CTI.md) : les sources de cette liste dont la produ
 | [Datadog Security Labs](https://securitylabs.datadoghq.com) · [malicious-software-packages-dataset](https://github.com/datadog/malicious-software-packages-dataset) | IOC+RENS | repo | 2026-08-31 | supply chain PyPI/npm, quotidien |
 | [Infoblox](https://github.com/infobloxopen/threat-intelligence) | IOC+RENS | repo (feed MISP) | 2026-09-15 | DNS ; feed MISP, un événement par campagne |
 | [Cybereason](https://www.cybereason.com/blog) | IOC+RENS | RSS | vivant | IOC défangés dans les billets |
-| [Rapid7](https://www.rapid7.com/blog/) · [Emergent Threat Response](https://www.rapid7.com/blog/tag/emergent-threat-response/rss/) | IOC+RENS | RSS | vivant | IOC dans les billets ; le sous-flux Emergent Threat Response est le plus dense |
+| [Rapid7](https://www.rapid7.com/blog/) · [Emergent Threat Response](https://www.rapid7.com/blog/tag/emergent-threat-response/rss/) | IOC+RENS | RSS | vivant | IOC dans les billets ; sous-flux Emergent Threat Response dédié aux menaces émergentes |
 | [Arctic Wolf](https://arcticwolf.com/resources/blog/) | IOC+RENS | RSS | vivant | IOC dans les billets |
 | [ReliaQuest](https://reliaquest.com/blog/) | IOC+RENS | RSS | vivant | |
 | [Varonis](https://www.varonis.com/blog/tag/threat-research) | RENS | RSS | vivant | |
@@ -430,7 +430,7 @@ Voir aussi [flux-CTI.md](flux-CTI.md) : les sources de cette liste dont la produ
 | [SecurityScorecard](https://securityscorecard.com/resources/research/) | RENS | web | vivant | membre CTA |
 | [Aryaka](https://www.aryaka.com/blog/) | RENS | web | vivant | Transparent Tribe / APT36 |
 | [Trellix ARC](https://www.trellix.com/blogs/research/) | RENS | web, bot | — | dépôt IOC figé 2021 |
-| [Imperva Threat Research — Weekly TI](https://imperva.substack.com/) | RENS | RSS | vivant | hebdo + podcast ; seule ouverture de la famille adtech / anti-bot |
+| [Imperva Threat Research — Weekly TI](https://imperva.substack.com/) | RENS | RSS | vivant | hebdo + podcast |
 | [Zvelo](https://zvelo.com/) | RENS | RSS | vivant | catégorisation d'URL, phishing |
 | [Tenable Research](https://www.tenable.com/blog) | RENS | web | 2026-09-10 | exposure management ; recherche sur vulnérabilités exploitées |
 | [Checkmarx](https://checkmarx.com/blog/) | RENS | web | 2026-09-09 | AppSec ; recherche supply chain (Shai-Hulud, keyv/cacheable) |
@@ -450,7 +450,7 @@ Voir aussi [flux-CTI.md](flux-CTI.md) : les sources de cette liste dont la produ
 |---|---|---|---|---|---|
 | [Nextron Systems / Florian Roth (blog)](https://www.nextron-systems.com/feed/) | DE | IOC+RENS | RSS | 2026-08-12 | 11 SHA-256, 27 défangés dans les billets ; complète `Neo23x0/signature-base` (§16) |
 | [EclecticIQ](https://blog.eclecticiq.com/rss.xml) | NL | RENS | RSS | 2026-08-21 | éditeur TIP, rapports d'acteurs |
-| [watchTowr Labs](https://labs.watchtowr.com/rss/) | UK/SG | RENS | RSS | 2026-08-14 | exploitation d'appliances de périmètre (Citrix, Ivanti, Fortinet), utile en anticipation |
+| [watchTowr Labs](https://labs.watchtowr.com/rss/) | UK/SG | RENS | RSS | 2026-08-14 | exploitation d'appliances de périmètre (Citrix, Ivanti, Fortinet) |
 | [ESET — WeLiveSecurity](https://www.welivesecurity.com) · [malware-ioc](https://github.com/eset/malware-ioc) | SK | IOC+RENS | web / repo (événements MISP) | vivant | 60 exports d'événement MISP dans le dépôt, livrés de façon intermittente |
 | [Gen Digital / Avast Threat Labs](https://www.gendigital.com/blog/insights) · [ioc](https://github.com/avast/ioc) | CZ | IOC+RENS | RSS / repo | 2026-06-01 | |
 | [Bitdefender](https://github.com/bitdefender/malware-ioc) | RO | IOC | repo | vivant | |
@@ -525,8 +525,8 @@ Voir aussi [flux-CTI.md](flux-CTI.md) : les sources de cette liste dont la produ
 | [BI.ZONE](https://bi.zone) · [bizone-ti-lib](https://github.com/bi-zone/bizone-ti-lib) · [Telegram](https://t.me/s/bizone_channel) | RENS | web / repo (lib) / Telegram | groupe Sber ; IOC non vérifiés `[EN/RU]` |
 | [Positive Technologies](https://github.com/PositiveTechnologies) · [AttackDetection](https://github.com/ptresearch/AttackDetection) | RENS | repo (Suricata figé 2022), site bot | `[EN/RU]` |
 | [Doctor Web](https://news.drweb.com) | IOC+RENS | web | indicateurs défangés dans les analyses `[RU/EN]` |
-| [F6](https://www.f6.ru) | RENS | web, géo | injoignable au robot : IOC non vérifiés `[RU]` |
-| [Solar 4RAYS](https://solar4rays.ru) · [Solar analytics](https://rt-solar.ru/analytics/reports/) | RENS | web, géo | injoignable au robot : IOC non vérifiés `[RU]` |
+| [F6](https://www.f6.ru) | RENS | web, géo | IOC non vérifiés `[RU]` |
+| [Solar 4RAYS](https://solar4rays.ru) · [Solar analytics](https://rt-solar.ru/analytics/reports/) | RENS | web, géo | IOC non vérifiés `[RU]` |
 | [Security Vision](https://www.securityvision.ru/blog/) | RENS | web, géo | `[RU]` |
 | [Infosecurity/Softline](https://www.infosec.ru/glavnye-temy/) | RENS | web, géo | `[RU]` |
 | [Group-IB](https://www.group-ib.com/blog/) | IOC+RENS | web | siège Singapour ; hash et IP dans les billets `[EN]` |
@@ -599,7 +599,7 @@ Voir aussi [flux-CTI.md](flux-CTI.md) : les sources de cette liste dont la produ
 | [Hitachi HIRT](https://www.hitachi.com/en/hirt/) | JP | RENS | web | `[JP/EN]` |
 | [SecureBrain](https://www.securebrain.co.jp/top/) | JP | RENS | web | `[JP]` |
 | [Cyber Defense Institute](https://www.cyberdefense.jp/) | JP | RENS | web | `[JP]` |
-| [AhnLab ASEC](https://asec.ahnlab.com/en/) · [flux coréen](https://asec.ahnlab.com/ko/feed/) | KR | IOC+RENS | RSS | MD5 et indicateurs défangés ; fort sur les APT nord-coréennes ; **le flux `ko` publie les IOC retirés de la version anglaise** (2026-09-04 : 49 défangés, 5 hash) `[KO/EN]` |
+| [AhnLab ASEC](https://asec.ahnlab.com/en/) · [flux coréen](https://asec.ahnlab.com/ko/feed/) | KR | IOC+RENS | RSS | MD5 et indicateurs défangés ; APT nord-coréennes ; **le flux `ko` publie les IOC retirés de la version anglaise** (2026-09-04 : 49 défangés, 5 hash) `[KO/EN]` |
 | [Genians](https://www.genians.co.kr/en/blog/threat_intelligence) | KR | IOC+RENS | web | ~50 indicateurs par lot d'articles ; APT nord-coréennes `[KO/EN]` |
 | [NSHC ThreatRecon](https://threatrecon.nshc.net) | KR | IOC+RENS | RSS | hash dans les billets `[KO/EN]` |
 | [EST Security / ESRC](https://blog.alyac.co.kr) | KR | IOC+RENS | RSS | indicateurs défangés dans les billets `[KO]` |
@@ -650,8 +650,8 @@ Voir aussi [flux-CTI.md](flux-CTI.md) : les sources de cette liste dont la produ
 | Source | Pays | Contenu | Accès | Commentaire |
 |---|---|---|---|---|
 | [CTM360](https://www.ctm360.com) | BH | IOC+RENS | web | Golfe ; domaines défangés dans les billets |
-| [Help AG](https://www.helpag.com) | AE | RENS | RSS présent, blog 404 | à vérifier en navigateur |
-| [DTS Solution](https://www.dts-solution.com) | AE | RENS | RSS présent, blog 404 | à vérifier en navigateur |
+| [Help AG](https://www.helpag.com) | AE | RENS | RSS présent, blog 404 | |
+| [DTS Solution](https://www.dts-solution.com) | AE | RENS | RSS présent, blog 404 | |
 | [LMPS](https://www.lmps-group.com/fr/blog/) | MA | RENS | web | `[FR]` |
 | [Raiseguard](https://raiseguard.com/blog) | TN | RENS | web | `[FR]` |
 | [Serianu](https://www.serianu.com/) | KE | RENS | PDF | rapport annuel Afrique |
@@ -670,12 +670,12 @@ Voir aussi [flux-CTI.md](flux-CTI.md) : les sources de cette liste dont la produ
 | [Apura](https://apura.io/) | BR | RENS | web | `[PT]` |
 | [Base4](https://base4sec.com/insights/) | AR | RENS | web | `[ES]` |
 | [INSSIDE](https://www.insside.net/blog-ciberseguridad-insside/) | AR | RENS | RSS | `[ES]` |
-| [B-Secure](https://www.b-secure.co/blog) | CO | RENS | RSS | surtout du marketing `[ES]` |
-| [Datasec](https://datasec-soft.com/blog/) | UY | RENS | web | surtout du marketing `[ES]` |
-| [Cyberseg](https://www.cyberseg.com/blog) | GT | RENS | web | surtout du marketing `[ES]` |
-| [SISAP](https://www.sisap.com/) | GT | RENS | web | surtout du marketing `[ES]` |
-| [GBM](https://www.gbm.net/) | CR | RENS | web | surtout du marketing `[ES]` |
-| [Canvia](https://www.canvia.com/blog/) | PE | RENS | web | surtout du marketing ; CronUp et Metabase Q restent les vraies sources CTI de la région `[ES]` |
+| [B-Secure](https://www.b-secure.co/blog) | CO | RENS | RSS | blog d'entreprise `[ES]` |
+| [Datasec](https://datasec-soft.com/blog/) | UY | RENS | web | blog d'entreprise `[ES]` |
+| [Cyberseg](https://www.cyberseg.com/blog) | GT | RENS | web | blog d'entreprise `[ES]` |
+| [SISAP](https://www.sisap.com/) | GT | RENS | web | blog d'entreprise `[ES]` |
+| [GBM](https://www.gbm.net/) | CR | RENS | web | blog d'entreprise `[ES]` |
+| [Canvia](https://www.canvia.com/blog/) | PE | RENS | web | blog d'entreprise `[ES]` |
 
 ### 7.2 Spécialisés, par thème
 
@@ -839,7 +839,7 @@ Voir aussi [flux-CTI.md](flux-CTI.md) : les sources de cette liste dont la produ
 | [BushidoUK — Ransomware Tool Matrix](https://github.com/BushidoUK/Ransomware-Tool-Matrix) | RENS | repo | 2026-08-29 | outils par groupe |
 | [databreaches.net](https://databreaches.net/) | RENS | RSS | vivant | journalisme sur les fuites |
 | [Have I Been Pwned — breaches](https://haveibeenpwned.com/feed/breaches/) | RENS | RSS / API | vivant | |
-| [cyberwarfare.live](https://cyberwarfare.live/) | RENS | RSS | vivant | hacktivisme ; à recouper |
+| [cyberwarfare.live](https://cyberwarfare.live/) | RENS | RSS | vivant | hacktivisme |
 | [RansomFeed](https://ransomfeed.it/) | RENS | web, bot | vivant | victimologie ransomware tenue depuis l'Italie (Dario Fadda) ; connecteur OpenCTI officiel ; protection anti-robot `[IT/EN]` |
 
 ## 11. Chercheurs indépendants, communautés et agrégateurs
@@ -848,14 +848,14 @@ Voir aussi [flux-CTI.md](flux-CTI.md) : les sources de cette liste dont la produ
 
 | Source | Contenu | Accès | Activité | Commentaire |
 |---|---|---|---|---|
-| [Netresec (Erik Hjelmvik)](https://www.netresec.com/rss.ashx) | IOC+RENS | RSS | 2026-08-31 | analyse PCAP (NetworkMiner, CapLoader) ; 114 IP, 84 hash sur les 6 derniers billets — plus d'IOC par article que la plupart des labos commerciaux |
+| [Netresec (Erik Hjelmvik)](https://www.netresec.com/rss.ashx) | IOC+RENS | RSS | 2026-08-31 | analyse PCAP (NetworkMiner, CapLoader) ; 114 IP, 84 hash sur les 6 derniers billets |
 | [malware-traffic-analysis.net (Brad Duncan)](https://www.malware-traffic-analysis.net/blog-entries.rss) | IOC+RENS | RSS | 2026-09-04 | PCAP + IOC quasi quotidiens ; le site, distinct du dépôt `malware-traffic/indicators` ci-dessous |
 | [Didier Stevens](https://blog.didierstevens.com/feed/) | IOC+RENS | RSS | 2026-09-01 | outils d'analyse (oledump, pdf-parser) et hash d'échantillons |
 | [Embee Research](https://www.embeeresearch.io/rss/) | IOC+RENS | RSS | 2024-10 | chasse au C2, déobfuscation ; 112 indicateurs défangés ; rythme ralenti |
 | [bin.re](https://bin.re/feed.xml) | IOC+RENS | RSS | 2024-12 | analyse de malware, DGA ; ralenti |
 | [Zerophage](https://zerophagemalware.com/feed/) | IOC | RSS | 2019 | archive de kits d'exploitation ; historique seulement |
-| [Hexacorn](https://www.hexacorn.com/blog/feed/) | RENS | RSS | 2026-06-07 | persistance Windows (série « Beyond good ol' Run key »), référence pour la détection |
-| [cocomelonc](https://cocomelonc.github.io/feed.xml) | RENS | RSS | 2026-09-05 | techniques d'implants, très actif `[EN/RU]` |
+| [Hexacorn](https://www.hexacorn.com/blog/feed/) | RENS | RSS | 2026-06-07 | persistance Windows (série « Beyond good ol' Run key ») |
+| [cocomelonc](https://cocomelonc.github.io/feed.xml) | RENS | RSS | 2026-09-05 | techniques d'implants `[EN/RU]` |
 | [Xavier Mertens (rootshell.be)](https://blog.rootshell.be/feed/) | RENS | RSS | 2023 (blog) ; actif comme handler SANS ISC |  |
 | [struppigel / Malware Analysis Spotlight (K. Hahn)](https://struppigel.blogspot.com/feeds/posts/default) | RENS | Atom | 2025-12 | analyse statique PE |
 | [Pentest Partners](https://www.pentestpartners.com/feed/) | RENS | RSS | 2026-09 | recherche offensive |
@@ -863,7 +863,7 @@ Voir aussi [flux-CTI.md](flux-CTI.md) : les sources de cette liste dont la produ
 | [ProjectDiscovery](https://projectdiscovery.io/rss.xml) | RENS | RSS | 2026-09 | recherche offensive, éditeur de Nuclei (§7.2) |
 | [hackyboiz](https://hackyboiz.github.io/rss2.xml) | RENS | RSS | 2026-08-30 | collectif de chercheurs coréens `[KO]` |
 | [malware-log (はてな)](https://malware-log.hatenablog.com/feed) | RENS | RSS | 2026-09-04 | chronologie d'incidents et de familles, tenue par un indépendant `[JP]` |
-| [Wechat2RSS — bundle sécurité (OPML, 326 comptes)](https://wechat2rss.xlab.app/opml/sec.opml) · [dépôt](https://github.com/ttttmr/wechat2rss) | RENS | RSS (OPML) | 2026-07-31 (dépôt) ; flux vivants | passerelle WeChat (微信公众号) → RSS : le seul moyen d'abonnement aux comptes des labos chinois (§7.1 Chine) ; importable dans un lecteur ou un connecteur RSS ; auto-hébergeable `[ZH]` |
+| [Wechat2RSS — bundle sécurité (OPML, 326 comptes)](https://wechat2rss.xlab.app/opml/sec.opml) · [dépôt](https://github.com/ttttmr/wechat2rss) | RENS | RSS (OPML) | 2026-07-31 (dépôt) ; flux vivants | passerelle WeChat (微信公众号) → RSS : permet l'abonnement aux comptes des labos chinois (§7.1 Chine) ; importable dans un lecteur ou un connecteur RSS ; auto-hébergeable `[ZH]` |
 | [洞见 Doonsec](https://www.doonsec.com/) | RENS | web | vivant | moteur de recherche des articles sécurité WeChat, analyse LLM ; pas de flux public `[ZH]` |
 | [Sec.Today](https://sec.today/pulses/) | IOC+RENS | web | vivant | agrégateur avec résumés ; complète gm7.org et tanjiti `[ZH]` |
 | [先知社区 (Alibaba)](https://xz.aliyun.com/feed) | RENS | RSS | 2026-09-06 | communauté de recherche technique d'Alibaba, 100 items par flux `[ZH]` |
@@ -901,9 +901,9 @@ Voir aussi [flux-CTI.md](flux-CTI.md) : les sources de cette liste dont la produ
 | [Xakep](https://xakep.ru/) | RENS | RSS | vivant | `[RU]` |
 | [piyolog](https://piyolog.hatenadiary.jp/) | IOC+RENS | RSS | vivant | chronologies d'incidents japonais `[JP]` |
 | [Midnight Slayer — start.me](https://start.me/p/wMPxqX/cyber-threat-intelligence) | RENS | web, bot | vivant | |
-| [dragnet](https://github.com/dragnet-dev) | IOC | repo | annoncé | à surveiller |
-| [Mr Looquer](https://iocfeed.mrlooquer.com) | IOC | feed | 2023 | peu ou pas maintenu |
-| [xxspell — ctifeeds](https://gitlab.com/xxspell/ctifeeds) | IOC | repo | 2024 | peu ou pas maintenu |
+| [dragnet](https://github.com/dragnet-dev) | IOC | repo | annoncé | site `dragnet.dev` injoignable |
+| [Mr Looquer](https://iocfeed.mrlooquer.com) | IOC | feed | 2023 | |
+| [xxspell — ctifeeds](https://gitlab.com/xxspell/ctifeeds) | IOC | repo | 2024 | |
 | [黑鸟 (WeChat, Wechat2RSS)](https://wechat2rss.xlab.app/feed/f22e132bbbc4e8070cd51c0a84802f940e131a20.xml) | IOC+RENS | RSS (WeChat) | 2026-09 | analyste indépendant ; indicateurs défangés et IP `[ZH]` |
 | [ChaMd5安全团队 (WeChat, Wechat2RSS)](https://wechat2rss.xlab.app/feed/ffb536c22df3989d8077ce9babb475f41719d62d.xml) | IOC+RENS | RSS (WeChat) | 2026-09 | équipe communautaire `[ZH]` |
 | [漕河泾小黑屋 (WeChat, Wechat2RSS)](https://wechat2rss.xlab.app/feed/f38c9a9f230e19f49918faefc5d0d0fc71e52d29.xml) | IOC+RENS | RSS (WeChat) | 2026-09 | analyste indépendant `[ZH]` |
@@ -916,7 +916,7 @@ Voir aussi [flux-CTI.md](flux-CTI.md) : les sources de cette liste dont la produ
 | [Detect FYI](https://detect.fyi/feed) | IOC+RENS | RSS (Medium) | 2026-09 | publication collective d'ingénierie de détection ; hash et indicateurs défangés |
 | [Emanuele Carlesi](https://infosec.exchange/@ecarlesi) | IOC+RENS | RSS (Mastodon) | 2026-09 | chasseur de phishing ; domaines défangés |
 | [1ZRR4H](https://infosec.exchange/@1ZRR4H) | RENS | RSS (Mastodon) | 2024-06 | chasseur de C2 ; inactif depuis 2024 |
-| [SecAtor](https://t.me/s/true_secator) | IOC+RENS | Telegram | 2026-08 | canal CTI russophone le plus suivi `[RU]` |
+| [SecAtor](https://t.me/s/true_secator) | IOC+RENS | Telegram | 2026-08 | canal CTI russophone `[RU]` |
 | [Alex Makus](https://t.me/s/alexmakus) | RENS | Telegram | vivant | analyste russophone `[RU]` |
 | [Cyber Threat Intel (Telegram)](https://t.me/s/cyber_threat_intel) | RENS | Telegram | vivant | canal russophone `[RU]` |
 | [Kevin Beaumont](https://cyberplace.social/@GossiTheDog) | RENS | RSS (Mastodon) | vivant | complète DoublePulsar (Medium, bloque les robots) |
@@ -962,7 +962,7 @@ Voir aussi [flux-CTI.md](flux-CTI.md) : les sources de cette liste dont la produ
 | [The Record](https://therecord.media/) | US | RENS | RSS | média de Recorded Future (§7.1) |
 | [BleepingComputer](https://www.bleepingcomputer.com/news/security/) | US | RENS | RSS, bot | |
 | [ZATAZ](https://www.zataz.com/) | FR | RENS | RSS | |
-| [LeMagIT](https://www.lemagit.fr/actualites/cybersecurite) | FR | RENS | RSS | suivi ransomware très fin |
+| [LeMagIT](https://www.lemagit.fr/actualites/cybersecurite) | FR | RENS | RSS | suivi ransomware |
 | [Numerama Cyberguerre](https://www.numerama.com/cyberguerre/) | FR | RENS | web, bot | |
 | [Hispasec — una al día](https://unaaldia.hispasec.com/) | ES | RENS | RSS | `[ES]` |
 | [Red Hot Cyber](https://www.redhotcyber.com/) | IT | RENS | RSS | `[IT]` |
@@ -1076,7 +1076,7 @@ Voir aussi [flux-CTI.md](flux-CTI.md) : les sources de cette liste dont la produ
 | [ReversingLabs — yara-rules](https://github.com/reversinglabs/reversinglabs-yara-rules) | IOC | repo | 2025-11 | règles de l'éditeur |
 | HarfangLab (voir §7.1) | IOC | repo | — | dépôt YARA couvert dans sa section |
 | JPCERT/CC yara (voir §3) | IOC | repo | — | dépôt YARA couvert dans sa section |
-| [MISP warninglists](https://github.com/MISP/misp-warninglists) | IOC | repo | vivant | faux positifs ; y ajouter FireHOL level1 et la liste Tor |
+| [MISP warninglists](https://github.com/MISP/misp-warninglists) | IOC | repo | vivant | faux positifs |
 | [RuleCheck.io Detections Digest](https://detections-digest.rulecheck.io) | RENS | newsletter | vivant | ctichef.com hors ligne |
 | [Nuclei — voir §7.2] | | | | |
 
