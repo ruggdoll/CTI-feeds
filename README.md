@@ -2,7 +2,7 @@
 
 Liste de sources de renseignement concernant la menace d'origine cyber.
 
-> Dernière revue : 2026-09-20 — 852 sources actives, une par ligne, et 60 écartées (§18). Décompte par section : sommaire ci-dessous.
+> Dernière revue : 2026-09-20 — 861 sources actives, une par ligne, et 60 écartées (§18). Décompte par section : sommaire ci-dessous.
 >
 > Les sources ne sont pas restreintes à l'anglais. La langue est indiquée entre crochets — p. ex. `[ZH]`, `[RU]`, `[KO]` — lorsqu'elle n'est ni le français ni l'anglais.
 >
@@ -23,16 +23,16 @@ Liste de sources de renseignement concernant la menace d'origine cyber.
 ## Sommaire
 
 1. [Référentiels et annuaires](#1-référentiels-et-annuaires) — 18 sources
-2. [Feeds communautaires, fondations et lutte anti-abus](#2-feeds-communautaires-fondations-et-lutte-anti-abus) — 60 sources
+2. [Feeds communautaires, fondations et lutte anti-abus](#2-feeds-communautaires-fondations-et-lutte-anti-abus) — 64 sources
 3. [CERT / CSIRT nationaux et organisations régionales](#3-cert--csirt-nationaux-et-organisations-régionales) — 126 sources
 4. [Police, justice, sanctions et attribution officielle](#4-police-justice-sanctions-et-attribution-officielle) — 10 sources
-5. [CERT sectoriels, ISAC et infrastructures critiques](#5-cert-sectoriels-isac-et-infrastructures-critiques) — 21 sources
+5. [CERT sectoriels, ISAC et infrastructures critiques](#5-cert-sectoriels-isac-et-infrastructures-critiques) — 22 sources
 6. [Infrastructure Internet : registres, RIR, NREN, cloud, opérateurs](#6-infrastructure-internet--registres-rir-nren-cloud-opérateurs) — 29 sources
-7. [Éditeurs et laboratoires de recherche privés](#7-éditeurs-et-laboratoires-de-recherche-privés) — 333 sources
+7. [Éditeurs et laboratoires de recherche privés](#7-éditeurs-et-laboratoires-de-recherche-privés) — 336 sources
 8. [Réponse à incident, conseil, assurance](#8-réponse-à-incident-conseil-assurance) — 13 sources
 9. [Recherche académique et datasets](#9-recherche-académique-et-datasets) — 19 sources
 10. [Cybercriminalité : trackers, sites de fuite, victimologie](#10-cybercriminalité--trackers-sites-de-fuite-victimologie) — 15 sources
-11. [Chercheurs indépendants, communautés et agrégateurs](#11-chercheurs-indépendants-communautés-et-agrégateurs) — 104 sources
+11. [Chercheurs indépendants, communautés et agrégateurs](#11-chercheurs-indépendants-communautés-et-agrégateurs) — 105 sources
 12. [Journalistes et médias spécialisés](#12-journalistes-et-médias-spécialisés) — 46 sources
 13. [Ingérence numérique et abus de plateformes](#13-ingérence-numérique-et-abus-de-plateformes) — 11 sources
 14. [Bases d'incidents, think tanks et rapports de référence](#14-bases-dincidents-think-tanks-et-rapports-de-référence) — 14 sources
@@ -41,7 +41,7 @@ Liste de sources de renseignement concernant la menace d'origine cyber.
 17. [Angles morts](#17-angles-morts)
 18. [Sources écartées](#18-sources-écartées) — 60 sources
 
-**Total actif (§1-16) : 852 sources.**
+**Total actif (§1-16) : 861 sources.**
 
 Voir aussi [flux-CTI.md](flux-CTI.md) : les sources de cette liste qui se chargent telles quelles dans MISP ou OpenCTI (feed MISP, STIX 2.1, TAXII), et par quoi commencer pour peupler une plateforme vide.
 
@@ -136,6 +136,9 @@ Voir aussi [flux-CTI.md](flux-CTI.md) : les sources de cette liste qui se charge
 | [PhishDestroy — destroylist](https://github.com/phishdestroy/destroylist) · [site](https://phishdestroy.io/) | — | IOC | repo (TXT/hosts/RPZ/STIX 2.1) / API | 2026-09-19 | 205 000 domaines de phishing et d'arnaque ; dossiers de preuves d'abus par registrar (NameSilo, NICENIC, Trustname, ShortDot) avec bundle STIX |
 | [chrome-mal-ids](https://github.com/The-Privacy-Commons-Institute/chrome-mal-ids) | US | IOC | repo (JSON / MISP / STIX 2.1) | 2026-09-18 | identifiants d'extensions Chrome malveillantes agrégés depuis les publications des éditeurs (The Privacy Commons Institute) |
 | [Red Flag Domains](https://red.flag.domains/) | FR | IOC | feed (TXT quotidien) | 2026-09-18 | domaines fraîchement enregistrés, probablement malveillants, dans les TLD français |
+| [PhishCan](https://phishcan.ca/) · [phishcan-data](https://github.com/Phishcan/phishcan-data) | CA | IOC | feed (TXT/CSV/JSON) / API / repo | 2026-09-19 | domaines de phishing visant le Canada (banques, services publics, gouvernement), mis à jour toutes les 12 heures ; OSINT, contributions et balayage propre `[EN/FR]` |
+| [FFraud — IP Fraud Database](https://github.com/FFraud-com/ip-fraud-database) · [site](https://ffraud.com/) | — | IOC | repo (CSV) / API | 2026-09-19 | 1,3 million d'IP (C2, botnets, phishing, brute force) issues de honeypots et de signalements, une IP n'est listée qu'à partir de deux observations ; reconstruit toutes les 30 minutes ; MIT |
+| [APT Watch](https://aptwatch.org/) · [aptwatch](https://github.com/aptwatcher/aptwatch) | — | IOC | repo / feed (FireHOL, hosts, TXT) | 2026-09-19 | IOC d'infrastructures attribuées à des acteurs étatiques russes, agrégés de sources ouvertes et validés par enrichissement ; feeds régénérés toutes les 6 heures |
 
 ### 2.3 Crypto / Web3
 
@@ -145,6 +148,7 @@ Voir aussi [flux-CTI.md](flux-CTI.md) : les sources de cette liste qui se charge
 | [MetaMask — eth-phishing-detect](https://github.com/MetaMask/eth-phishing-detect) | US | IOC | repo (JSON) | 2026-09-01 | liste du wallet |
 | [polkadot-js phishing](https://github.com/polkadot-js/phishing) | — | IOC | repo (JSON) | 2026-08-01 | non-EVM |
 | [PhishFort lists](https://github.com/phishfort/phishfort-lists) | — | IOC | repo | 2025-08-05 | ralenti |
+| [Crypto Scam and Crypto Phishing Threat Intel Feed (spmedia)](https://github.com/spmedia/Crypto-Scam-and-Crypto-Phishing-Threat-Intel-Feed) | — | IOC | repo (TXT/JSON) | 2026-09-18 | URL de phishing et d'arnaque en cryptomonnaie (drainers, arnaques sentimentales, *pig butchering*), mises à jour quotidiennes |
 | [TRM Labs — Chainabuse](https://chainabuse.com) | US | IOC | web/API | vivant | adresses signalées, pas d'export bulk gratuit |
 | [Chainalysis](https://www.chainalysis.com/blog/) | US | RENS | RSS | 2026-09-17 | analyse de flux en cryptomonnaie appliquée à la criminalité : services de garantie, marchés clandestins, blanchiment, rançongiciel |
 | [Elliptic](https://www.elliptic.co/blog) | UK | RENS | web | 2026-09-17 | traçage de flux en cryptomonnaie, cartographie des places de marché clandestines |
@@ -345,6 +349,7 @@ Voir aussi [flux-CTI.md](flux-CTI.md) : les sources de cette liste qui se charge
 | [NHS England — Cyber Alerts](https://digital.nhs.uk/cyber-alerts) | UK | santé | RENS | web, bot | alertes numérotées (cc-xxxx) ; site bloque les robots |
 | [ICS-CSIRT.io](https://www.ics-csirt.io/) | BE | OT | IOC+RENS | inscr. (gratuite) | communauté ICS animée par cudeso.be ; MISP et OpenCVE sur adhésion gratuite, export STIX/CSV/JSON |
 | [CiviCERT](https://www.civicert.org/) | — | société civile | RENS | web ; MISP sur adhésion | centre de réponse pour les organisations d'assistance à la société civile ; instance MISP réservée aux membres |
+| [Migros Cyber Defense Center](https://github.com/migros/migros-threat-feeds) | CH | commerce de détail | IOC | repo (CSV/JSON) | IOC d'usurpation de marque (phishing, faux sites) identifiés par le CDC de Migros ; CC BY 4.0 ; dernière mise à jour 2026-03-12 |
 
 ## 6. Infrastructure Internet : registres, RIR, NREN, cloud, opérateurs
 
@@ -544,6 +549,7 @@ Voir aussi [flux-CTI.md](flux-CTI.md) : les sources de cette liste qui se charge
 | [Security Vision](https://www.securityvision.ru/blog/) | RENS | web, géo | `[RU]` |
 | [Infosecurity/Softline](https://www.infosec.ru/glavnye-temy/) | RENS | web, géo | `[RU]` |
 | [Group-IB](https://www.group-ib.com/blog/) | IOC+RENS | web | siège Singapour ; hash et IP dans les billets `[EN]` |
+| [CyberART (Innostage) — CARTI-Feeds](https://github.com/SOC-CyberART/CARTI-Feeds) | IOC | repo (CSV/JSON), site géo | échantillon quotidien de 100 IOC tirés au hasard des feeds payants du SOC CyberART ; site injoignable hors Russie `[RU]` |
 
 **Chine**
 
@@ -787,6 +793,8 @@ Voir aussi [flux-CTI.md](flux-CTI.md) : les sources de cette liste qui se charge
 | [DEVCORE / Orange Tsai](https://blog.orange.tw/) | TW | RENS | Atom | recherche offensive |
 | [Zellic](https://zellic.io/blog) | — | RENS | web | audits et recherche de vulnérabilités blockchain/crypto (Bitcoin, Solana, TON) |
 | [V12](https://v12.security/blog) | — | RENS | web | recherche de vulnérabilités (Signal, WebKit, DirtyDecrypt CVE-2026-31635 avec Zellic) publiée sur le blog d'un éditeur d'audit de code |
+| [CVEdetails](https://www.cvedetails.com/documentation/taxii-stix) | — | RENS | web, bot ; TAXII 2.1 | base de vulnérabilités ; collections CVE en STIX 2.1 servies par TAXII 2.1 selon sa documentation ; protection anti-robot |
+| [VulDB — Cyber Threat Intelligence](https://github.com/vuldb/cyber_threat_intelligence) | CH | IOC+RENS | repo | fiches d'acteurs avec indicateurs, issues de la veille des forums et marchés clandestins de VulDB ; dépôt public d'un produit sur abonnement, mis à jour 2026-08-03 |
 
 **Crypto / Web3** — voir §2.3.
 
@@ -968,6 +976,7 @@ Voir aussi [flux-CTI.md](flux-CTI.md) : les sources de cette liste qui se charge
 | [SAS — Security Analyst Summit (Kaspersky)](https://thesascon.com/) | RENS | web (JS) | vivant | archives de conférence ; analyses présentées avant leur publication écrite (MetaRAT, décembre 2025) |
 | [CIAC — Ciberinteligencia](https://t.me/s/ciberciac) | RENS | Telegram | 2026-09-19 | communauté ouverte de renseignement sur la menace pour l'Amérique latine (TLP:CLEAR) ; canal Telegram et WhatsApp, simulateur MISP `[ES]` |
 | [Threat-Broadcast](https://github.com/EXP-Tools/threat-broadcast) | RENS | repo | 2026-09-18 | agrégateur des bulletins de vulnérabilités de 360, QiAnXin, NSFOCUS, Tophant, Red Queen, NVD, CNNVD et Tenable `[ZH]` |
+| [Dissecting Impacket (ThatTotallyRealMyth)](https://github.com/ThatTotallyRealMyth/Impacket-IoCs) · [blog](https://www.abdulmhsblog.com/posts/impacket-iocs/) | RENS | repo / web | 2026-09-07 | indicateurs de niveau protocole et d'implémentation pour détecter l'usage d'Impacket, issus d'une réécriture interne de l'outil |
 
 ## 12. Journalistes et médias spécialisés
 

@@ -214,6 +214,8 @@ Pas d'observables : les cadres à charger une fois, qui donnent aux rapports leu
 | [Q-Feeds](https://qfeeds.com/taxii-feeds-server/) | §7.1 (Europe) | serveur TAXII 2.1 | **licence Enterprise** ; l'édition Community ne l'inclut pas |
 | [isMalicious](https://ismalicious.com/data/stix-taxii) | §7.2 (C2) | TAXII 2.1 | **plans Pro et Enterprise**, clé API |
 | [CISA — AIS](https://www.cisa.gov/topics/cyber-threats-and-advisories/information-sharing/automated-indicator-sharing-ais) | §3 (États-Unis) | connexion TAXII 2.1 bidirectionnelle | **sous convention** : *Terms of Use* pour les organisations non fédérales, MISA pour les fédérales |
+| [OneFirewall Alliance](https://onefirewall.com/stix-and-taxii) | — | `/taxii2/` (JWT ou Basic Auth) | **réservé aux membres** de l'alliance (290 organisations, siège Londres) ; STIX 2.1 en lecture et en dépôt, programme d'essai *Proof of Value* |
+| [CVEdetails](https://www.cvedetails.com/documentation/taxii-stix) | §7.2 (vulnérabilités) | collections CVE en STIX 2.1 par TAXII 2.1 | **documenté par l'éditeur, non consultable ici** : le site et sa documentation sont derrière une protection anti-robot |
 
 ### B.5 STIX 2.1 sous licence
 
