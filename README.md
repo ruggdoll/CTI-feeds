@@ -2,7 +2,7 @@
 
 Liste de sources de renseignement concernant la menace d'origine cyber.
 
-> Dernière revue : 2026-09-19 — 833 sources actives, une par ligne, et 60 écartées (§18). Décompte par section : sommaire ci-dessous.
+> Dernière revue : 2026-09-19 — 848 sources actives, une par ligne, et 60 écartées (§18). Décompte par section : sommaire ci-dessous.
 >
 > Les sources ne sont pas restreintes à l'anglais. La langue est indiquée entre crochets — p. ex. `[ZH]`, `[RU]`, `[KO]` — lorsqu'elle n'est ni le français ni l'anglais.
 >
@@ -23,25 +23,25 @@ Liste de sources de renseignement concernant la menace d'origine cyber.
 ## Sommaire
 
 1. [Référentiels et annuaires](#1-référentiels-et-annuaires) — 18 sources
-2. [Feeds communautaires, fondations et lutte anti-abus](#2-feeds-communautaires-fondations-et-lutte-anti-abus) — 56 sources
+2. [Feeds communautaires, fondations et lutte anti-abus](#2-feeds-communautaires-fondations-et-lutte-anti-abus) — 58 sources
 3. [CERT / CSIRT nationaux et organisations régionales](#3-cert--csirt-nationaux-et-organisations-régionales) — 126 sources
-4. [Police, justice, sanctions et attribution officielle](#4-police-justice-sanctions-et-attribution-officielle) — 9 sources
+4. [Police, justice, sanctions et attribution officielle](#4-police-justice-sanctions-et-attribution-officielle) — 10 sources
 5. [CERT sectoriels, ISAC et infrastructures critiques](#5-cert-sectoriels-isac-et-infrastructures-critiques) — 21 sources
 6. [Infrastructure Internet : registres, RIR, NREN, cloud, opérateurs](#6-infrastructure-internet--registres-rir-nren-cloud-opérateurs) — 29 sources
-7. [Éditeurs et laboratoires de recherche privés](#7-éditeurs-et-laboratoires-de-recherche-privés) — 325 sources
+7. [Éditeurs et laboratoires de recherche privés](#7-éditeurs-et-laboratoires-de-recherche-privés) — 333 sources
 8. [Réponse à incident, conseil, assurance](#8-réponse-à-incident-conseil-assurance) — 13 sources
 9. [Recherche académique et datasets](#9-recherche-académique-et-datasets) — 19 sources
 10. [Cybercriminalité : trackers, sites de fuite, victimologie](#10-cybercriminalité--trackers-sites-de-fuite-victimologie) — 15 sources
-11. [Chercheurs indépendants, communautés et agrégateurs](#11-chercheurs-indépendants-communautés-et-agrégateurs) — 100 sources
-12. [Journalistes et médias spécialisés](#12-journalistes-et-médias-spécialisés) — 45 sources
+11. [Chercheurs indépendants, communautés et agrégateurs](#11-chercheurs-indépendants-communautés-et-agrégateurs) — 102 sources
+12. [Journalistes et médias spécialisés](#12-journalistes-et-médias-spécialisés) — 46 sources
 13. [Ingérence numérique et abus de plateformes](#13-ingérence-numérique-et-abus-de-plateformes) — 11 sources
-14. [Bases d'incidents, think tanks et rapports de référence](#14-bases-dincidents-think-tanks-et-rapports-de-référence) — 13 sources
+14. [Bases d'incidents, think tanks et rapports de référence](#14-bases-dincidents-think-tanks-et-rapports-de-référence) — 14 sources
 15. [Sandboxes et dépôts d'échantillons](#15-sandboxes-et-dépôts-déchantillons) — 16 sources
 16. [Règles de détection](#16-règles-de-détection) — 17 sources
 17. [Angles morts](#17-angles-morts)
 18. [Sources écartées](#18-sources-écartées) — 60 sources
 
-**Total actif (§1-16) : 833 sources.**
+**Total actif (§1-16) : 848 sources.**
 
 Voir aussi [flux-CTI.md](flux-CTI.md) : les sources de cette liste qui se chargent telles quelles dans MISP ou OpenCTI (feed MISP, STIX 2.1, TAXII), et par quoi commencer pour peupler une plateforme vide.
 
@@ -144,6 +144,8 @@ Voir aussi [flux-CTI.md](flux-CTI.md) : les sources de cette liste qui se charge
 | [polkadot-js phishing](https://github.com/polkadot-js/phishing) | — | IOC | repo (JSON) | 2026-08-01 | non-EVM |
 | [PhishFort lists](https://github.com/phishfort/phishfort-lists) | — | IOC | repo | 2025-08-05 | ralenti |
 | [TRM Labs — Chainabuse](https://chainabuse.com) | US | IOC | web/API | vivant | adresses signalées, pas d'export bulk gratuit |
+| [Chainalysis](https://www.chainalysis.com/blog/) | US | RENS | RSS | 2026-09-17 | analyse de flux en cryptomonnaie appliquée à la criminalité : services de garantie, marchés clandestins, blanchiment, rançongiciel |
+| [Elliptic](https://www.elliptic.co/blog) | UK | RENS | web | 2026-09-17 | traçage de flux en cryptomonnaie, cartographie des places de marché clandestines |
 | [SlowMist / 慢雾](https://hacked.slowmist.io) · [Knowledge-Base](https://github.com/SlowMist/Knowledge-Base) | CN | RENS | web/repo | 2026-08-12 | base d'incidents Web3 `[ZH/EN]` |
 | [慢雾科技 SlowMist (WeChat, Wechat2RSS)](https://wechat2rss.xlab.app/feed/9e9c3c70e598266a1ac993e50458a10a6d853eb7.xml) | CN | IOC+RENS | RSS (WeChat) | 2026-09 | hash et indicateurs défangés des incidents Web3 `[ZH]` |
 
@@ -312,6 +314,7 @@ Voir aussi [flux-CTI.md](flux-CTI.md) : les sources de cette liste qui se charge
 | [Interpol — cyber threat assessments](https://www.interpol.int/Crimes/Cybercrime/Cyber-threat-assessments) | — | RENS | PDF, bot | seule synthèse régionale Afrique |
 | [Access Now — Digital Security Helpline](https://www.accessnow.org/help/) | — | RENS | RSS | société civile : spyware et phishing ciblant ONG/journalistes |
 | [AIVD](https://english.aivd.nl) | NL | RENS | web | service de renseignement néerlandais ; attribution nominative (ciblage Signal/WhatsApp par des acteurs étatiques russes) |
+| [MSMT — Multilateral Sanctions Monitoring Team](https://msmt.info/) | — | RENS | PDF | organe de onze États créé en octobre 2024 pour suivre les sanctions de l'ONU visant la Corée du Nord ; rapport d'octobre 2025 sur les activités cyber et les travailleurs informatiques de la RPDC, cité par les éditeurs coréens pour l'attribution organisationnelle des groupes |
 
 ## 5. CERT sectoriels, ISAC et infrastructures critiques
 
@@ -445,6 +448,9 @@ Voir aussi [flux-CTI.md](flux-CTI.md) : les sources de cette liste qui se charge
 | [Deepwatch](https://www.deepwatch.com/blog/) | RENS | web | 2026-08-26 | MDR ; recherche RAT et supply chain |
 | [Socket](https://socket.dev/blog) · [flux](https://socket.dev/api/blog/feed.atom) | RENS | web / Atom | vivant | supply chain npm/PyPI/NuGet/Composer (Shai-Hulud, TanStack, keyv/cacheable) |
 | [Field Effect](https://www.fieldeffect.com/blog) | RENS | web | 2026-07 | éditeur canadien ; recherche sur l'exploitation de pare-feux (Akira/SonicWall SonicOS), ClickFix |
+| [Resecurity](https://www.resecurity.com/blog) | RENS | RSS | 2026-09-11 | renseignement sur la menace ; échanges revendiqués avec des opérateurs de rançongiciel ; IOC non vérifiés |
+| [Koi Security](https://blog.koi.security/) | RENS | web (JS) | 2026 | chaîne d'approvisionnement des extensions de navigateur et d'IDE (DarkSpectre, GhostPoster) ; intégré à Palo Alto Networks ; IOC non vérifiés |
+| [OX Security](https://www.ox.security/blog/) | RENS | RSS | 2026-09-16 | AppSec et chaîne d'approvisionnement ; recherche sur les extensions Chrome malveillantes, à côté des annonces produit |
 
 **Europe (hors Russie)**
 
@@ -518,7 +524,11 @@ Voir aussi [flux-CTI.md](flux-CTI.md) : les sources de cette liste qui se charge
 | [Silobreaker](https://www.silobreaker.com/blog/) | UK | RENS | web | vivant | plateforme de veille |
 | [HvS-Consulting](https://github.com/hvs-consulting/ioc_signatures) · [site](https://www.hvs-consulting.de/en/) | DE | IOC+RENS | repo | 2026-04-08 | réponse à incident ; YARA, CSV et événements MISP par acteur (Black Basta, BlueHammer, APT27) |
 | [Q-Feeds](https://qfeeds.com/) | NL | IOC | inscr. ; TAXII 2.1 sous licence | vivant | agrégation de 2 500 sources ; édition Community gratuite, serveur TAXII réservé à la licence Enterprise |
-| [Gatewatcher — LastInfoSec](https://www.gatewatcher.com/) | FR | IOC+RENS | API, licence (STIX 2.1) | vivant | flux CTI nativement STIX 2.1 (IOC, CVE, rapports) ; clé à demander à l'éditeur |
+| [Gatewatcher — LastInfoSec](https://www.gatewatcher.com/) · [The Lab](https://www.gatewatcher.com/en/lab/) | FR | IOC+RENS | API, licence (STIX 2.1) / web | vivant | flux CTI nativement STIX 2.1 (IOC, CVE, rapports), clé à demander à l'éditeur ; blog de recherche « The Lab » (écosystème francophone des voleurs d'identifiants ; dernier billet 2025) |
+| [Synacktiv](https://www.synacktiv.com/en/publications) | FR | RENS | RSS | 2026-08-31 | sécurité offensive et réponse à incident ; publications techniques (hyperviseurs ciblés par Hunters International, forensique EKS) ; IOC non vérifiés `[FR/EN]` |
+| [GLIMPS](https://www.glimps.re/type-de-ressource/articles/) | FR | RENS | web | 2026-07-24 | analyse de code malveillant ; articles sur MetaStealer, Nitrogen, LukaLocker ; IOC non vérifiés `[FR]` |
+| [InfoGuard](https://www.infoguard.ch/en/blog) | CH | RENS | RSS | 2026-09-14 | réponse à incident ; analyses techniques (porte dérobée VIPERTUNNEL, DragonForce) parmi des billets de conformité `[EN/DE]` |
+| [Hudson Rock](https://www.hudsonrock.com/blog) · [infostealers.com](https://www.infostealers.com/) | IL | RENS | web (JS) / RSS (infostealers.com) | 2026 | renseignement sur les infostealers : rapports hebdomadaires, enquêtes à partir des journaux d'infection ; IOC non vérifiés |
 
 **Russie**
 
@@ -595,7 +605,7 @@ Voir aussi [flux-CTI.md](flux-CTI.md) : les sources de cette liste qui se charge
 | [nao-sec](https://nao-sec.org) | JP | IOC+RENS | RSS | hash dans les billets `[JP/EN]` |
 | [IIJ-SECT](https://sect.iij.ad.jp/) | JP | IOC+RENS | RSS | hash dans les billets `[JP]` |
 | [LAC WATCH](https://www.lac.co.jp/lacwatch/) | JP | RENS | web | `[JP]` |
-| [MBSD](https://www.mbsd.jp/research/) | JP | RENS | web | `[JP]` |
+| [MBSD](https://www.mbsd.jp/research/) · [CIG Ransomware Portal](https://www.mbsd.jp/cig-ransomware-portal/) | JP | RENS | web | portail gratuit : plus de 400 groupes de rançongiciel, leurs relations, base de notes de rançon `[JP]` |
 | [NRI Secure](https://www.nri-secure.co.jp/blog) | JP | RENS | web | `[JP]` |
 | [NEC](https://jpn.nec.com/cybersecurity/blog/) | JP | RENS | web | `[JP]` |
 | [Hitachi HIRT](https://www.hitachi.com/en/hirt/) | JP | RENS | web | `[JP/EN]` |
@@ -774,6 +784,7 @@ Voir aussi [flux-CTI.md](flux-CTI.md) : les sources de cette liste qui se charge
 | [Nuclei templates](https://github.com/projectdiscovery/nuclei-templates) | — | IOC | repo | 2026-09-01 |
 | [DEVCORE / Orange Tsai](https://blog.orange.tw/) | TW | RENS | Atom | recherche offensive |
 | [Zellic](https://zellic.io/blog) | — | RENS | web | audits et recherche de vulnérabilités blockchain/crypto (Bitcoin, Solana, TON) |
+| [V12](https://v12.security/blog) | — | RENS | web | recherche de vulnérabilités (Signal, WebKit, DirtyDecrypt CVE-2026-31635 avec Zellic) publiée sur le blog d'un éditeur d'audit de code |
 
 **Crypto / Web3** — voir §2.3.
 
@@ -882,7 +893,7 @@ Voir aussi [flux-CTI.md](flux-CTI.md) : les sources de cette liste qui se charge
 | [spydisec — spydithreatintel](https://github.com/spydisec/spydithreatintel) | IOC | repo | vivant | agrégat d'IOC quotidien |
 | [EndlessFractal — Threat-Intel-Feed](https://github.com/EndlessFractal/Threat-Intel-Feed) | IOC | repo | vivant | agrégat d'IOC |
 | [rodanmaharjan — ThreatIntelligence](https://github.com/rodanmaharjan/ThreatIntelligence) | IOC | repo | 2025-09 | agrégat, ralenti |
-| [Intezer — community-intelligence](https://github.com/intezer/community-intelligence) | IOC | repo | vivant | IOC communautaires |
+| [Intezer — community-intelligence](https://github.com/intezer/community-intelligence) · [blog](https://intezer.com/blog/) | IOC+RENS | repo / web (JS) | vivant | IOC communautaires ; billets de recherche (Paper Werewolf / GOFFEE) |
 | [GithubInfosec — latest-malware-IoC](https://github.com/GithubInfosec/latest-malware-IoC) | IOC | repo | mi-2025 | ralenti |
 | [malware-traffic — indicators](https://github.com/malware-traffic/indicators) | IOC | repo | vivant | IOC des analyses de malware-traffic-analysis.net |
 | [PRODAFT](https://github.com/prodaft) · [blog](https://www.prodaft.com/blog) | IOC+RENS | repo / web, bot | vivant | IOC et outils publiés par l'éditeur ; rapports de fond sur des acteurs (ex. alerte précoce Interlock avant l'attaque de Saint Paul) — blog bloque les robots |
@@ -951,6 +962,8 @@ Voir aussi [flux-CTI.md](flux-CTI.md) : les sources de cette liste qui se charge
 | [Threat Actor Intelligence Profiles (tm-ho)](https://github.com/proshiba/threatactor-intel-analysis) | RENS | repo (JSON / STIX 2.1) | 2026-09-19 | 689 profils d'acteurs structurés depuis des rapports publics, avec confiance et audit par affirmation ; génération par agents, revue humaine `[JP]` |
 | [VigilIntel](https://github.com/kidrek/VigilIntel) | RENS | repo (Markdown / STIX 2.1) | 2026-09-19 | synthèse quotidienne de flux RSS par un modèle de langage, FR et EN ; CC BY-NC `[FR/EN]` |
 | [CTI-Driven — LOLBins](https://github.com/CTI-Driven/LOLBins) | RENS | repo (STIX 2.1 / KQL) | 2024-04 | binaires Windows détournés, avec techniques, acteurs et requêtes de chasse |
+| [Asim (heyitsas.im)](https://heyitsas.im/) | RENS | RSS | 2026-09-18 | chercheur indépendant ; vulnérabilités locales du noyau Linux (CIFSwitch, OVSwrap, DirtyAH6) |
+| [SAS — Security Analyst Summit (Kaspersky)](https://thesascon.com/) | RENS | web (JS) | vivant | archives de conférence ; analyses présentées avant leur publication écrite (MetaRAT, décembre 2025) |
 
 ## 12. Journalistes et médias spécialisés
 
@@ -1003,6 +1016,7 @@ Voir aussi [flux-CTI.md](flux-CTI.md) : les sources de cette liste qui se charge
 | [Help Net Security](https://www.helpnetsecurity.com/feed/) | US | RENS | RSS | média sécurité généraliste, actif depuis 1998 |
 | [Cyber Kendra](https://cyberkendra.com) | IN | RENS | RSS | média sécurité indien |
 | [Dark Web Informer](https://darkwebinformer.com/) | — | RENS | RSS ; STIX 2.1 payant | projet d'une personne : revendications, fuites, alertes ; bundles STIX sur abonnement |
+| [SecurityLab.ru](https://www.securitylab.ru/) | RU | RENS | web, bot | média édité par Positive Technologies ; fil d'actualité repris par des éditeurs tiers ; protection anti-robot `[RU]` |
 
 ## 13. Ingérence numérique et abus de plateformes
 
@@ -1041,6 +1055,7 @@ Voir aussi [flux-CTI.md](flux-CTI.md) : les sources de cette liste qui se charge
 | [Picus Red Report](https://www.picussecurity.com/red-report) | — | RENS | PDF | rapport annuel |
 | [NETSCOUT](https://www.netscout.com/threatreport) | US | RENS | PDF | rapport annuel |
 | [CLUSIT](https://clusit.it/rapporto-clusit/) | IT | RENS | PDF | rapport annuel `[IT]` |
+| [38 North (Stimson Center)](https://www.38north.org/) | US | RENS | web, bot | analyse de la Corée du Nord, dont sa posture cyber (« HWP as an Attack Surface », 2025) |
 
 ## 15. Sandboxes et dépôts d'échantillons
 
