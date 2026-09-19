@@ -35,6 +35,7 @@ Des événements contextualisés : un rapport, un acteur, des indicateurs relié
 | **Le CERT de rattachement** | CERT-FR (18 événements, dernier 2024-06) · CSIRT Italia (fenêtre glissante quotidienne) | `misp-feed` | tout | §A.1 |
 | **CISA — avis conjoints (AA)** | un bundle STIX 2.1 par avis : rapport, techniques ATT&CK, indicateurs, acteurs, vulnérabilités (AA25-141B : 556 objets) | import de fichier STIX, un par avis | tout | §B.1 |
 | **Cisco Talos** | un bundle par billet de recherche depuis 2022 (134) : rapport, techniques, indicateurs | import de fichier STIX | tout ; STIX 2.0 | §B.1 |
+| NCSC-UK — rapports d'analyse de malware | bundle STIX 2.1 joint à certains rapports (Cyclops Blink : 352 objets) | import de fichier STIX | ponctuel | §B.1 |
 | **ESET** | 60 événements attribués par acteur (Turla, Winnti, Gelsemium…) | import de fichier (pas de manifeste) | tout | §A.2 |
 | **Rösti** | un événement par rapport public, IOC extraits, lien vers la source ; 9 636 événements depuis juin 2026 | `misp-feed` | fenêtre 90 jours, confiance basse : réemballage | §A.1 |
 | MVT · Amnesty Tech · AssoEchap | spyware mobile, stalkerware | import de fichier STIX | si le périmètre inclut le mobile ou la société civile | §B.1 |
@@ -135,6 +136,7 @@ Instances ou feeds qui existent mais ne s'obtiennent pas par une URL publique.
 | [AusCERT](https://auscert.org.au/services/threat-intelligence/) | — | instance MISP réservée aux membres, incluant le flux CTIS de l'ACSC |
 | [CSIRT de Gobierno](https://csirt.gob.cl/servicios/intercambio-de-indicadores-de-compromiso/) | §3 (Chili) | serveur MISP partagé avec les services publics chiliens connectés |
 | [PISAX](https://misp.pisax.org/) | — | ISAC paneuropéen des points d'échange Internet ; instance MISP sur compte |
+| [CSIRTAmericas](https://csirtamericas.org/en/services) | §3 (OEA) | *feeds hub* et MISP régional réservés aux équipes membres du réseau |
 | [CERT-UA](https://cert.gov.ua) | §3 (Ukraine) | instance MISP accessible sur demande |
 | [CERT.LV](https://www.cert.lv/en/data-feed) | §3 (Lettonie) | *data feed* national sur demande, contenu réservé |
 | [RST Cloud](https://github.com/rstcloud/rstcloud_misp) | §1 | importateur officiel créant événements, attributs et clusters dans MISP — depuis un flux commercial sous licence |
@@ -150,6 +152,7 @@ Instances ou feeds qui existent mais ne s'obtiennent pas par une URL publique.
 | [MITRE ATT&CK](https://github.com/mitre-attack/attack-stix-data) | §1 | `mitre-attack/attack-stix-data` (`enterprise-attack/`, `mobile-attack/`, `ics-attack/`, `index.json`) | 2026-08-05 | ATT&CK Enterprise, Mobile et ICS en STIX 2.1 ; versionné, avec un index machine |
 | [Elastic Security Labs](https://github.com/elastic/labs-releases) | §7.1 (Amérique du Nord) | `elastic/labs-releases`, `indicators/<campagne>/stix-bundle.json` | 23 bundles, dépôt actif 2026-09-11 | un bundle par famille ou campagne (BLISTER, BITSLOTH, WARMCOOKIE, SHELLTER…) |
 | [CISA — avis conjoints](https://www.cisa.gov/news-events/cybersecurity-advisories) | §3 (États-Unis) | fichier `AA<xx>-<nnn><L>.stix_.json` joint à chaque avis (ex. [AA26-204A](https://www.cisa.gov/sites/default/files/2026-07/AA26-204A.stix_.json), [AA25-141B](https://www.cisa.gov/sites/default/files/2025-05/AA25-141B-Threat-Actors-Deploy-LummaC2-Malware-to-Exfiltrate-Sensitive-Data-from-Organizations.stix_.json)) | AA26-204A : 113 objets · AA25-141B : 556 · AA26-097A : 48 ; mis à jour avec l'avis (AA25-071A régénéré 2026-08) | rapport, `attack-pattern` ATT&CK, `indicator`, `malware`, `threat-actor`, `vulnerability` reliés ; pas de flux, un fichier par avis sur la page de l'avis ; le STIX 1.x XML est fourni en parallèle |
+| [NCSC-UK — Malware Analysis Reports](https://www.ncsc.gov.uk/section/keep-up-to-date/malware-analysis-reports) | §3 (Royaume-Uni) | fichier joint au rapport (ex. [Cyclops Blink](https://www.ncsc.gov.uk/sites/default/files/documents/NCSC-MAR-Cyclops-Blink-STIX2.1.json), [Small Sieve](https://www.ncsc.gov.uk/sites/default/files/documents/NCSC-Malware-Analysis-Report-Small-Sieve.json)) | Cyclops Blink : 352 objets · Small Sieve : 77 ; rapports de 2022 | `attack-pattern`, `indicator`, relations ; CSV et YARA à côté ; Open Government Licence v3. Les rapports récents (Cisco 2025, CHOSEN BRICK 2026) sont publiés en PDF |
 | [Cisco Talos — IOCs](https://github.com/Cisco-Talos/IOCs) | §7.1 (Amérique du Nord) | `Cisco-Talos/IOCs`, `<année>/<mois>/<billet>.json` | 134 bundles, 2022-04 → 2026-09 (27 en 2026) | un bundle par billet de recherche : `report`, `attack-pattern`, `indicator`, `vulnerability` ; **STIX 2.0** exporté de MISP (objets `x-misp-attribute`), à côté des TXT |
 | [AFRINTEL](https://github.com/Hatchepsoute/AFRINTEL) | §10 | `stix/<année>/<mois>/afrintel_<mois>_<année>_opencti.json` · semestriels | 42 bundles, janvier 2024 → septembre 2026 ; H1 2026 : 1 651 objets (294 `incident`, 147 `threat-actor`, 36 `report`) | incidents visant les organisations africaines (54 pays), observés sur les sites de fuite et forums ; type, statut, confiance et impact séparés ; FR/EN, MIT |
 | [FDC Threat Intelligence](https://github.com/freedatacenter/threat-intelligence) | §11 | `reports/<date>-<sujet>/iocs.stix2.json` (+ `iocs.misp.json`, PDF EN/RU) | 28 enquêtes, dernière 2026-09-17 | recherche indépendante (Aleksei Fokin) : phishing ciblant des ONG, hébergement *bulletproof*, honeypots ; un bundle STIX et un événement MISP par rapport |
@@ -220,6 +223,7 @@ Pas d'observables : les cadres à charger une fois, qui donnent aux rapports leu
 | [Gatewatcher — LastInfoSec](https://www.gatewatcher.com/) | §7.1 (Europe) | trois flux STIX 2.1 (IOC, CVE horaire, rapports), *direct bundle import without transformation* ; clé à demander à l'éditeur |
 | [Dark Web Informer](https://darkwebinformer.com/) | §12 | bundles STIX 2.1 pré-générés (`feed`, `ransomware`, `iocs`), régénérés toutes les 30 minutes ; clé API des paliers payants |
 | [ReversingLabs](https://docs.reversinglabs.com/Integrations/OpenCTI/feed-configuration/) | — | flux TAXII (ransomware, malware) activables dans OpenCTI ; licence Spectra |
+| [ESET Threat Intelligence](https://help.eset.com/eti_portal/en-US/taxii_feeds.html) | §7.1 (Europe) | *data feeds* servis en STIX par TAXII depuis le portail ETI ; abonnement (distinct des événements MISP gratuits du dépôt `malware-ioc`, §A.2) |
 
 ### B.6 STIX 1.x
 
@@ -249,5 +253,7 @@ Pas d'observables : les cadres à charger une fois, qui donnent aux rapports leu
 **Dans la recherche académique.** Les jeux de données aCTIon (204 rapports en STIX, NEC Laboratories) et « A Structured CTI Dataset Using STIX 2.1 » (150 rapports, 4 777 entités) sont décrits sur arXiv sans dépôt de téléchargement.
 
 **Chez les sandboxes.** ANY.RUN exporte en MISP sur abonnement ; Joe Sandbox et Hybrid Analysis derrière un compte ; à la pièce, pas en flux.
+
+**Chez les agences qui relaient.** L'ACSC (Australie) et les PDF de `media.defense.gov` (NSA) reprennent les avis conjoints avec le bundle STIX de CISA ; il n'y a pas de production STIX distincte. Le Honeynet Project (GreedyBear) sert ses feeds de honeypots en TXT et JSON, pas en STIX. L'instance OpenCTI publique de NetmanageIT est hors ligne.
 
 **Sur les adresses mortes.** `rosti.64617461.xyz` (remplacé par `misp.rosti.dev`), `urlabuse.com/public/misp`, `dragnet.dev`, `osint.digitalside.it`.

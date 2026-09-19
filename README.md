@@ -88,7 +88,7 @@ Voir aussi [flux-CTI.md](flux-CTI.md) : les sources de cette liste qui se charge
 | [CIRCL — feed MISP OSINT](https://www.circl.lu/doc/misp/feed-osint/) · [STIX 2.1](https://codeberg.org/adulau/misp-circl-feed) · [GitHub](https://github.com/CIRCL) | LU | IOC+RENS | feed (MISP / STIX 2.1) | vivant | éditeur de MISP, AIL, Passive DNS/SSL ; le feed est aussi converti en STIX 2.1 |
 | [Botvrij.eu](https://www.botvrij.eu) | NL | IOC | feed (MISP/CSV) | vivant | |
 | [Stratosphere Laboratory](https://www.stratosphereips.org) | CZ | IOC+RENS | feed/repo | vivant | datasets CTU-13, IoT-23, blocklists, IDS Slips (CTU Prague) |
-| [The Honeynet Project](https://www.honeynet.org) | — | RENS | web | vivant | outils, challenges, données honeypot |
+| [The Honeynet Project](https://www.honeynet.org) · [GreedyBear](https://greedybear.honeynet.org) | — | IOC+RENS | web / feed (TXT/JSON) | vivant | outils, challenges, données honeypot ; GreedyBear publie les feeds des T-Pot de la communauté |
 | [APNIC Community Honeynet](https://feeds.honeynet.asia) | AU | IOC | feed | vivant | honeypots Asie-Pacifique |
 | [DataPlane.org](https://dataplane.org) | US | IOC | feed (TXT) | vivant | ONG ; honeypots SSH/SIP/DNS/VNC |
 | [Project Honey Pot / http:BL](https://www.projecthoneypot.org) | US | IOC | API DNS | vivant | harvesters, spammers |
@@ -173,7 +173,7 @@ Voir aussi [flux-CTI.md](flux-CTI.md) : les sources de cette liste qui se charge
 | [APCERT](https://www.apcert.org) (Asie-Pacifique) | RENS | web | organisation régionale |
 | [ASEAN Regional CERT](https://www.csa.gov.sg/news-events/press-releases/establishment-of-asean-regional-computer-emergency-response-team/) | RENS | web | organisation régionale, hébergée par la CSA de Singapour |
 | [AfricaCERT](https://www.africacert.org) | RENS | web | organisation régionale |
-| [OEA — CSIRTAmericas](https://csirtamericas.org) | RENS | web | organisation régionale `[ES/EN/PT]` |
+| [OEA — CSIRTAmericas](https://csirtamericas.org) | RENS | web | organisation régionale ; *feeds hub* et MISP régional réservés aux membres `[ES/EN/PT]` |
 | [OIC-CERT](https://oic-cert.org) | RENS | web | organisation régionale ; parfois injoignable hors région |
 | [FIRST](https://www.first.org) | RENS | API | voir §1 |
 | [UNODC cybercrime](https://www.unodc.org/unodc/en/cybercrime/) | RENS | web | rapports, pas d'observables |
@@ -280,7 +280,7 @@ Voir aussi [flux-CTI.md](flux-CTI.md) : les sources de cette liste qui se charge
 | Philippines | [CERT-PH / NCERT](https://ncert.gov.ph) | RENS | web, bot | |
 | Qatar | [NCSA / Q-CERT](https://www.ncsa.gov.qa) | RENS | web | `[AR/EN]` |
 | République dominicaine | [CNCS / CSIRT-RD](https://cncs.gob.do) | RENS | web | `[ES]` |
-| Royaume-Uni | [NCSC-UK — threat reports](https://www.ncsc.gov.uk/section/keep-up-to-date/threat-reports) · [blog](https://www.ncsc.gov.uk/section/keep-up-to-date/ncsc-blog) · [GitHub](https://github.com/ukncsc) | IOC+RENS | web/repo | |
+| Royaume-Uni | [NCSC-UK — threat reports](https://www.ncsc.gov.uk/section/keep-up-to-date/threat-reports) · [malware analysis reports](https://www.ncsc.gov.uk/section/keep-up-to-date/malware-analysis-reports) · [blog](https://www.ncsc.gov.uk/section/keep-up-to-date/ncsc-blog) · [GitHub](https://github.com/ukncsc) | IOC+RENS | web/repo (STIX 2.1 sur certains rapports) | rapports d'analyse de malware avec bundle STIX 2.1, CSV et YARA (Open Government Licence) |
 | Russie | [NKTsKI / GosSOPKA](https://safe-surf.ru) | RENS | web, géo | `[RU]` |
 | Serbie | [Nacionalni CERT](https://www.cert.rs) | RENS | web | `[SR/EN]` |
 | Singapour | [SingCERT / CSA](https://www.csa.gov.sg/singcert) | RENS | web | |
