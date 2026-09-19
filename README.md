@@ -2,7 +2,7 @@
 
 Liste de sources de renseignement concernant la menace d'origine cyber.
 
-> Dernière revue : 2026-09-20 — 861 sources actives, une par ligne, et 60 écartées (§18). Décompte par section : sommaire ci-dessous.
+> Dernière revue : 2026-09-20 — 868 sources actives, une par ligne, et 60 écartées (§18). Décompte par section : sommaire ci-dessous.
 >
 > Les sources ne sont pas restreintes à l'anglais. La langue est indiquée entre crochets — p. ex. `[ZH]`, `[RU]`, `[KO]` — lorsqu'elle n'est ni le français ni l'anglais.
 >
@@ -23,16 +23,16 @@ Liste de sources de renseignement concernant la menace d'origine cyber.
 ## Sommaire
 
 1. [Référentiels et annuaires](#1-référentiels-et-annuaires) — 18 sources
-2. [Feeds communautaires, fondations et lutte anti-abus](#2-feeds-communautaires-fondations-et-lutte-anti-abus) — 64 sources
+2. [Feeds communautaires, fondations et lutte anti-abus](#2-feeds-communautaires-fondations-et-lutte-anti-abus) — 65 sources
 3. [CERT / CSIRT nationaux et organisations régionales](#3-cert--csirt-nationaux-et-organisations-régionales) — 126 sources
 4. [Police, justice, sanctions et attribution officielle](#4-police-justice-sanctions-et-attribution-officielle) — 10 sources
 5. [CERT sectoriels, ISAC et infrastructures critiques](#5-cert-sectoriels-isac-et-infrastructures-critiques) — 22 sources
 6. [Infrastructure Internet : registres, RIR, NREN, cloud, opérateurs](#6-infrastructure-internet--registres-rir-nren-cloud-opérateurs) — 29 sources
-7. [Éditeurs et laboratoires de recherche privés](#7-éditeurs-et-laboratoires-de-recherche-privés) — 336 sources
+7. [Éditeurs et laboratoires de recherche privés](#7-éditeurs-et-laboratoires-de-recherche-privés) — 337 sources
 8. [Réponse à incident, conseil, assurance](#8-réponse-à-incident-conseil-assurance) — 13 sources
-9. [Recherche académique et datasets](#9-recherche-académique-et-datasets) — 19 sources
+9. [Recherche académique et datasets](#9-recherche-académique-et-datasets) — 22 sources
 10. [Cybercriminalité : trackers, sites de fuite, victimologie](#10-cybercriminalité--trackers-sites-de-fuite-victimologie) — 15 sources
-11. [Chercheurs indépendants, communautés et agrégateurs](#11-chercheurs-indépendants-communautés-et-agrégateurs) — 105 sources
+11. [Chercheurs indépendants, communautés et agrégateurs](#11-chercheurs-indépendants-communautés-et-agrégateurs) — 107 sources
 12. [Journalistes et médias spécialisés](#12-journalistes-et-médias-spécialisés) — 46 sources
 13. [Ingérence numérique et abus de plateformes](#13-ingérence-numérique-et-abus-de-plateformes) — 11 sources
 14. [Bases d'incidents, think tanks et rapports de référence](#14-bases-dincidents-think-tanks-et-rapports-de-référence) — 14 sources
@@ -41,7 +41,7 @@ Liste de sources de renseignement concernant la menace d'origine cyber.
 17. [Angles morts](#17-angles-morts)
 18. [Sources écartées](#18-sources-écartées) — 60 sources
 
-**Total actif (§1-16) : 861 sources.**
+**Total actif (§1-16) : 868 sources.**
 
 Voir aussi [flux-CTI.md](flux-CTI.md) : les sources de cette liste qui se chargent telles quelles dans MISP ou OpenCTI (feed MISP, STIX 2.1, TAXII), et par quoi commencer pour peupler une plateforme vide.
 
@@ -139,6 +139,7 @@ Voir aussi [flux-CTI.md](flux-CTI.md) : les sources de cette liste qui se charge
 | [PhishCan](https://phishcan.ca/) · [phishcan-data](https://github.com/Phishcan/phishcan-data) | CA | IOC | feed (TXT/CSV/JSON) / API / repo | 2026-09-19 | domaines de phishing visant le Canada (banques, services publics, gouvernement), mis à jour toutes les 12 heures ; OSINT, contributions et balayage propre `[EN/FR]` |
 | [FFraud — IP Fraud Database](https://github.com/FFraud-com/ip-fraud-database) · [site](https://ffraud.com/) | — | IOC | repo (CSV) / API | 2026-09-19 | 1,3 million d'IP (C2, botnets, phishing, brute force) issues de honeypots et de signalements, une IP n'est listée qu'à partir de deux observations ; reconstruit toutes les 30 minutes ; MIT |
 | [APT Watch](https://aptwatch.org/) · [aptwatch](https://github.com/aptwatcher/aptwatch) | — | IOC | repo / feed (FireHOL, hosts, TXT) | 2026-09-19 | IOC d'infrastructures attribuées à des acteurs étatiques russes, agrégés de sources ouvertes et validés par enrichissement ; feeds régénérés toutes les 6 heures |
+| [DevHunter Security — DNS Blocklist](https://github.com/devhuntersecurity/dns-blocklist) | ID | IOC | repo (Unbound, listes) | 2026-09-19 | listes de domaines et d'IP (brute force SSH/FTP, scanners) pour résolveur DNS, projet indonésien `[ID/EN]` |
 
 ### 2.3 Crypto / Web3
 
@@ -649,6 +650,7 @@ Voir aussi [flux-CTI.md](flux-CTI.md) : les sources de cette liste qui se charge
 | Source | Pays | Contenu | Accès | Commentaire |
 |---|---|---|---|---|
 | [CyRadar](https://cyradar.com/feed/) | VN | IOC+RENS | RSS | éditeur vietnamien `[VI]` |
+| [CyStack](https://cystack.net/research) · [stealer-fingerprints](https://github.com/cystack/stealer-fingerprints) | VN | RENS | web / repo | recherche (dernier billet 2026-09-04) ; catalogue de 194 profils de formats de journaux d'infostealers (42 familles), en anglais et en vietnamien `[EN/VI]` |
 | [VinCSS (Vingroup)](https://blog.vincss.net) | VN | RENS | web | recherche vietnamienne ; flux Blogger instable `[VI/EN]` |
 | [CloudSEK](https://www.cloudsek.com/blog) | IN | IOC+RENS | web | hash et IP dans les billets |
 | [Cyble](https://cyble.com/blog/) | IN | IOC+RENS | RSS | hash et IP dans les billets |
@@ -831,6 +833,9 @@ Voir aussi [flux-CTI.md](flux-CTI.md) : les sources de cette liste qui se charge
 | [UNSW Canberra — ToN_IoT](https://research.unsw.edu.au/projects/toniot-datasets) | AU | — | datasets | télémétrie IoT/OT étiquetée |
 | [SecRepo](https://secrepo.com) | — | — | datasets | index de datasets sécurité |
 | [theZoo](https://github.com/ytisf/theZoo) | — | — | repo | échantillons de malware vivants (recherche) |
+| [Malware Research Hub](https://github.com/darama22/Malware-Research-Hub) | — | — | repo | catalogue de 80 familles (1971-2024) et 2 764 échantillons chiffrés, documentation en espagnol et en anglais `[ES/EN]` |
+| [Rust Malware Gallery](https://github.com/decoderloop/rust-malware-gallery) | — | — | repo | familles de malware écrites en Rust, au moins un échantillon public par famille |
+| [mrmoor — cyber-threat-intelligence](https://huggingface.co/datasets/mrmoor/cyber-threat-intelligence) | — | — | datasets (Hugging Face) | rapports CTI annotés en entités et relations, CC BY 4.0 |
 | [VirusShare](https://virusshare.com) | — | — | inscr. | dépôt d'échantillons, accès sur invitation |
 | [DARPA OpTC](https://github.com/FiveDirections/OpTC-data) | US | — | datasets | traces host/réseau étiquetées (2019) |
 | [IMPACT Cyber Trust](https://www.impactcybertrust.org) | US | — | datasets | catalogue DHS, accès sur demande |
@@ -915,6 +920,8 @@ Voir aussi [flux-CTI.md](flux-CTI.md) : les sources de cette liste qui se charge
 | [blackorbird — APT_REPORT](https://github.com/blackorbird/APT_REPORT) | IOC+RENS | repo | vivant | collection de rapports APT |
 | [despacito420 — The-Feed](https://github.com/despacito420/The-Feed) | IOC+RENS | repo | vivant | agrégat d'IOC |
 | [APTnotes](https://github.com/aptnotes/data) | RENS | repo | figé 2024 | archive de rapports APT |
+| [apt-cti-reports (Hugging Face)](https://huggingface.co/datasets/hackerman700000/apt-cti-reports) | RENS | datasets (Hugging Face) | 2026-02-13 | 2 710 rapports APT et CTI en PDF, nommés par groupe et par année ; MIT |
+| [esoadamo — feeds MISP dérivés](https://gitlab.com/esoadamo-org) | IOC | feed (MISP/CSV, GitLab Pages) | 2026-09-19 | deux feeds MISP générés automatiquement : l'un depuis les rapports texte d'Unit 42 (extraction par modèles de langage, 436 événements), l'autre depuis le compte Mastodon `@malicious_browser_bot` (extensions Chrome, Firefox, VS Code) |
 | [CyberMonitor](https://github.com/CyberMonitor/APT_CyberCriminal_Campagin_Collections) | RENS | repo | figé 2024 | archive de rapports APT et cybercrime |
 | [vx-underground](https://vx-underground.org) · [Telegram](https://t.me/s/vxunderground) | IOC+RENS | web, bot / Telegram | vivant | l'aperçu public du canal Telegram est lisible, le site non |
 | [gm7.org — 信息安全知识库](https://www.gm7.org) | IOC+RENS | RSS | vivant | agrégateur chinois `[ZH]` |
