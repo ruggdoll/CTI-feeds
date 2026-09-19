@@ -1,6 +1,6 @@
 # Flux CTI structurés : MISP et OpenCTI
 
-Extrait du [catalogue](README.md) des seules sources dont la production est **directement ingérable** par une plateforme MISP ou OpenCTI, sans écrire de convertisseur.
+Parmi les sources du [catalogue](README.md), celles dont la production se charge **telle quelle** dans MISP ou OpenCTI : feed MISP, bundle STIX 2.1 ou collection TAXII, sans conversion préalable.
 
 > Revue : 2026-09-19 — chaque point d'entrée listé ici a été interrogé à cette date. Les volumes et les dates de dernière donnée sont ceux constatés, pas ceux annoncés par l'éditeur. La méthode de recherche et ses angles morts sont en §4.
 
