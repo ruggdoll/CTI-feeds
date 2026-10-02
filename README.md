@@ -2,7 +2,7 @@
 
 Liste de sources de renseignement concernant la menace d'origine cyber.
 
-> Dernière revue : 2026-09-20 — 873 sources actives, une par ligne, et 60 écartées (§18). Décompte par section : sommaire ci-dessous.
+> Dernière revue : 2026-09-20 — 901 sources actives, une par ligne, et 60 écartées (§18). Décompte par section : sommaire ci-dessous.
 >
 > Les sources ne sont pas restreintes à l'anglais. La langue est indiquée entre crochets — p. ex. `[ZH]`, `[RU]`, `[KO]` — lorsqu'elle n'est ni le français ni l'anglais.
 >
@@ -16,13 +16,13 @@ Liste de sources de renseignement concernant la menace d'origine cyber.
 | **Accès** | `feed` (TXT/CSV/JSON/STIX/MISP, URL stable) · `repo` (GitHub/GitLab) · `API` · `RSS` (flux disponible) · `web` (pas de flux) · `PDF` · `inscr.` (compte requis) · `bot` (site vivant mais bloque les robots : ouvrir dans un navigateur) · `géo` (filtrage géographique probable) |
 | **Activité** | date du dernier commit pour les dépôts ; sinon « vivant » = site répondant à la dernière revue |
 | **Source** | une organisation ou un compte par ligne ; les liens secondaires d'une même organisation (dépôt d'IOC, flux, rapport annuel) restent sur sa ligne. Les comptes WeChat sont des lignes à part : leur contenu diffère du site de l'éditeur |
-| **Vecteurs** | WeChat : flux `wechat2rss.xlab.app/feed/<id>.xml` (passerelle Wechat2RSS, §11) · Mastodon : `https://<instance>/@<compte>.rss` · Telegram : aperçu public `t.me/s/<canal>` · Medium : `<publication>/feed` · Bluesky : `bsky.app/profile/<handle>/rss` |
+| **Vecteurs** | WeChat : flux `wechat2rss.xlab.app/feed/<id>.xml` (passerelle Wechat2RSS, §11) · Mastodon : `https://<instance>/@<compte>.rss` · Telegram : aperçu public `t.me/s/<canal>` · Medium : `<publication>/feed` · Bluesky : `bsky.app/profile/<handle>/rss` · Reddit : `reddit.com/r/<subreddit>/.rss` · Hacker News : `hnrss.org` (filtres par mot-clé) |
 
 `feed`, `repo` et `API` se consomment par machine ; `RSS` et `web` se lisent.
 
 ## Sommaire
 
-1. [Référentiels et annuaires](#1-référentiels-et-annuaires) — 18 sources
+1. [Référentiels et annuaires](#1-référentiels-et-annuaires) — 27 sources
 2. [Feeds communautaires, fondations et lutte anti-abus](#2-feeds-communautaires-fondations-et-lutte-anti-abus) — 66 sources
 3. [CERT / CSIRT nationaux et organisations régionales](#3-cert--csirt-nationaux-et-organisations-régionales) — 126 sources
 4. [Police, justice, sanctions et attribution officielle](#4-police-justice-sanctions-et-attribution-officielle) — 10 sources
@@ -32,16 +32,16 @@ Liste de sources de renseignement concernant la menace d'origine cyber.
 8. [Réponse à incident, conseil, assurance](#8-réponse-à-incident-conseil-assurance) — 13 sources
 9. [Recherche académique et datasets](#9-recherche-académique-et-datasets) — 22 sources
 10. [Cybercriminalité : trackers, sites de fuite, victimologie](#10-cybercriminalité--trackers-sites-de-fuite-victimologie) — 16 sources
-11. [Chercheurs indépendants, communautés et agrégateurs](#11-chercheurs-indépendants-communautés-et-agrégateurs) — 110 sources
-12. [Journalistes et médias spécialisés](#12-journalistes-et-médias-spécialisés) — 46 sources
+11. [Chercheurs indépendants, communautés et agrégateurs](#11-chercheurs-indépendants-communautés-et-agrégateurs) — 123 sources
+12. [Journalistes et médias spécialisés](#12-journalistes-et-médias-spécialisés) — 51 sources
 13. [Ingérence numérique et abus de plateformes](#13-ingérence-numérique-et-abus-de-plateformes) — 11 sources
-14. [Bases d'incidents, think tanks et rapports de référence](#14-bases-dincidents-think-tanks-et-rapports-de-référence) — 14 sources
+14. [Bases d'incidents, think tanks et rapports de référence](#14-bases-dincidents-think-tanks-et-rapports-de-référence) — 15 sources
 15. [Sandboxes et dépôts d'échantillons](#15-sandboxes-et-dépôts-déchantillons) — 16 sources
 16. [Règles de détection](#16-règles-de-détection) — 17 sources
 17. [Angles morts](#17-angles-morts)
 18. [Sources écartées](#18-sources-écartées) — 60 sources
 
-**Total actif (§1-16) : 873 sources.**
+**Total actif (§1-16) : 901 sources.**
 
 Voir aussi [flux-CTI.md](flux-CTI.md) : les sources de cette liste qui se chargent telles quelles dans MISP ou OpenCTI (feed MISP, STIX 2.1, TAXII), et par quoi commencer pour peupler une plateforme vide.
 
@@ -71,6 +71,15 @@ Voir aussi [flux-CTI.md](flux-CTI.md) : les sources de cette liste qui se charge
 | [sroberts — awesome-iocs](https://github.com/sroberts/awesome-iocs) | — | RENS | repo | vivant | liste de référence (IOC) |
 | [InQuest — awesome-yara](https://github.com/InQuest/awesome-yara) | — | RENS | repo | vivant | liste de référence (YARA) |
 | [Threatfeeds.io](https://threatfeeds.io) | — | RENS | web | ~2019 | annuaire de feeds, peu mis à jour |
+| [LOLBAS](https://lolbas-project.github.io/) · [dépôt](https://github.com/LOLBAS-Project/LOLBAS) | — | RENS | repo/web | 2026-09-26 | binaires, scripts et bibliothèques Windows signés détournés par les attaquants, avec techniques ATT&CK et détections |
+| [GTFOBins](https://gtfobins.github.io/) · [dépôt](https://github.com/GTFOBins/GTFOBins.github.io) | — | RENS | repo/web | 2026-05-27 | équivalent Unix de LOLBAS : contournements, élévation de privilèges, transfert de fichiers |
+| [LOOBins](https://www.loobins.io/) · [dépôt](https://github.com/infosecB/LOOBins) | — | RENS | repo/web | 2026-09-06 | équivalent macOS de LOLBAS |
+| [HijackLibs](https://hijacklibs.net/) · [dépôt](https://github.com/wietze/HijackLibs) | — | RENS | repo/web | 2026-09-09 | DLL détournables par *hijacking* / *sideloading*, avec règles Sigma ; mode opératoire courant des groupes chinois |
+| [MagicSword — LOLDrivers](https://www.loldrivers.io/) · [dépôt](https://github.com/magicsword-io/LOLDrivers) · [LOLRMM](https://lolrmm.io/) · [dépôt](https://github.com/magicsword-io/LOLRMM) | US | IOC+RENS | repo/web (JSON/CSV) | 2026-10-01 | pilotes vulnérables ou malveillants (BYOVD) avec hash ; outils de prise en main à distance détournés par les rançongiciels |
+| [LOLC2](https://lolc2.github.io/) · [dépôt](https://github.com/lolc2/lolc2.github.io) | — | RENS | repo/web | 2026-07-22 | C2 bâtis sur des services légitimes (API cloud, messageries, SaaS), avec détections |
+| [LOTS Project (mrd0x)](https://lots-project.com/) | — | RENS | web | vivant | domaines de confiance détournés pour le phishing, le C2, l'exfiltration et le téléchargement d'outils |
+| [Unprotect Project](https://unprotect.it/) | — | RENS | web | vivant | techniques d'évasion (anti-analyse, anti-sandbox, anti-débogage) : 376 techniques, extraits de code et règles de détection |
+| [CTID — Attack Flow](https://center-for-threat-informed-defense.github.io/attack-flow/) · [dépôt](https://github.com/center-for-threat-informed-defense/attack-flow) | US | RENS | repo (STIX 2.1) | 2026-09-24 | langage de description des séquences d'attaque (extension STIX), corpus d'exemples tirés d'incidents publics |
 
 ## 2. Feeds communautaires, fondations et lutte anti-abus
 
@@ -989,6 +998,19 @@ Voir aussi [flux-CTI.md](flux-CTI.md) : les sources de cette liste qui se charge
 | [Threat-Broadcast](https://github.com/EXP-Tools/threat-broadcast) | RENS | repo | 2026-09-18 | agrégateur des bulletins de vulnérabilités de 360, QiAnXin, NSFOCUS, Tophant, Red Queen, NVD, CNNVD et Tenable `[ZH]` |
 | [cyberthreatintelligence.net](https://cyberthreatintelligence.net/) · [Bluesky](https://bsky.app/profile/cyberintelligence.bsky.social) | RENS | RSS | 2026-09-20 | agrégateur : actualité, analyses de malware, carte des rançongiciels, base de victimes et de CVE ; éditeur non identifié |
 | [Dissecting Impacket (ThatTotallyRealMyth)](https://github.com/ThatTotallyRealMyth/Impacket-IoCs) · [blog](https://www.abdulmhsblog.com/posts/impacket-iocs/) | RENS | repo / web | 2026-09-07 | indicateurs de niveau protocole et d'implémentation pour détecter l'usage d'Impacket, issus d'une réécriture interne de l'outil |
+| [r/blueteamsec](https://www.reddit.com/r/blueteamsec/) | RENS | RSS, bot | — | revue quotidienne de rapports APT, d'outils et de détections, modérée ; le plus dense des subreddits pour le suivi des modes opératoires |
+| [r/threatintel](https://www.reddit.com/r/threatintel/) | RENS | RSS, bot | — | rapports et discussions CTI |
+| [r/netsec](https://www.reddit.com/r/netsec/) | RENS | RSS, bot | — | recherche technique, modération stricte (pas d'actualité commerciale) |
+| [r/Malware](https://www.reddit.com/r/Malware/) | RENS | RSS, bot | — | analyses d'échantillons et de familles |
+| [r/ReverseEngineering](https://www.reddit.com/r/ReverseEngineering/) | RENS | RSS, bot | — | rétro-ingénierie, outillage d'analyse |
+| [Hacker News (Y Combinator)](https://news.ycombinator.com/) · [hnrss](https://hnrss.org/) | RENS | RSS | 2026-10-01 | agrégateur généraliste ; hnrss produit des flux filtrés par mot-clé et par score (p. ex. `hnrss.org/newest?q=APT+OR+ransomware&points=20`) ; à ne pas confondre avec The Hacker News (§12) |
+| [Lobsters — security](https://lobste.rs/t/security) | RENS | RSS, bot | vivant | agrégateur sur invitation, moins bruité que Hacker News ; flux `lobste.rs/t/security.rss` |
+| [BushidoToken (Will Thomas)](https://blog.bushidotoken.net/feeds/posts/default) · [Russian-APT-Tool-Matrix](https://github.com/BushidoUK/Russian-APT-Tool-Matrix) · [Ransomware-Vulnerability-Matrix](https://github.com/BushidoUK/Ransomware-Vulnerability-Matrix) | RENS | Atom / repo | 2026-09-23 | cybercriminalité britannique (série « UK Cybercrime Journal »), outils par groupe APT russe (2025-08), vulnérabilités exploitées par les rançongiciels (2026-08) ; Ransomware Tool Matrix au §10 |
+| [Stranded on Pylos (Joe Slowik)](https://pylos.co/feed/) | RENS | RSS | 2026-05-25 | attribution, ICS, guerre de l'information ; billets de fond peu fréquents |
+| [Objective-See (Patrick Wardle)](https://objective-see.org/rss.xml) | RENS | RSS | 2026-08-23 | malware macOS : analyses, outils et détection |
+| [Cyberknow](https://cyberknow.substack.com/feed) | RENS | RSS (Substack) | 2026-07-24 | suivi de l'hacktivisme par conflit (Iran-Israël, Inde-Pakistan, Russie-Ukraine) |
+| [LABScon (SentinelOne)](https://www.labscon.io/) · [talks](https://www.sentinelone.com/labs/category/labscon/) | RENS | web | 2026-09 | conférence sur invitation : analyses d'APT présentées avant publication ; seuls les talks autorisés par les orateurs sont mis en ligne |
+| [CYBERWARCON](https://www.cyberwarcon.com/) · [archive](https://www.cyberwarcon.com/archive) | RENS | web | 2025 (archive) | conférence sur les opérations étatiques ; archive 2018-2025 incomplète, une partie des talks n'est jamais publiée |
 
 ## 12. Journalistes et médias spécialisés
 
@@ -1042,6 +1064,11 @@ Voir aussi [flux-CTI.md](flux-CTI.md) : les sources de cette liste qui se charge
 | [Cyber Kendra](https://cyberkendra.com) | IN | RENS | RSS | média sécurité indien |
 | [Dark Web Informer](https://darkwebinformer.com/) | — | RENS | RSS ; STIX 2.1 payant | projet d'une personne : revendications, fuites, alertes ; bundles STIX sur abonnement |
 | [SecurityLab.ru](https://www.securitylab.ru/) | RU | RENS | web, bot | média édité par Positive Technologies ; fil d'actualité repris par des éditeurs tiers ; protection anti-robot `[RU]` |
+| [TechCrunch — Security](https://techcrunch.com/category/security/feed/) | US | RENS | RSS | logiciels espions, fuites, opérations de police (Z. Whittaker, L. Franceschi-Bicchierai) |
+| [404 Media](https://www.404media.co/rss/) | US | RENS | RSS | journalisme d'enquête : surveillance, logiciels espions, cybercriminalité |
+| [Security Affairs](https://securityaffairs.com/feed) | IT | RENS | RSS | blog de P. Paganini ; relaie très vite les rapports d'éditeurs |
+| [Intelligence Online](https://www.intelligenceonline.fr/) | FR | RENS | web, inscr. | lettre sur le renseignement, rubrique Cyber : services, sous-traitants, marché de l'offensif ; majoritairement payant |
+| [Security Conversations (Ryan Naraine)](https://securityconversations.com/) | US | RENS | newsletter / podcast | newsletter du lundi et podcast hebdomadaire de discussion sur l'attribution et les opérations étatiques |
 
 ## 13. Ingérence numérique et abus de plateformes
 
@@ -1081,6 +1108,7 @@ Voir aussi [flux-CTI.md](flux-CTI.md) : les sources de cette liste qui se charge
 | [NETSCOUT](https://www.netscout.com/threatreport) | US | RENS | PDF | rapport annuel |
 | [CLUSIT](https://clusit.it/rapporto-clusit/) | IT | RENS | PDF | rapport annuel `[IT]` |
 | [38 North (Stimson Center)](https://www.38north.org/) | US | RENS | web, bot | analyse de la Corée du Nord, dont sa posture cyber (« HWP as an Attack Surface », 2025) |
+| [Hackmageddon (Paolo Passeri)](https://www.hackmageddon.com/) | IT | RENS | web | chronologies mensuelles des attaques publiques et statistiques par motivation, secteur et technique |
 
 ## 15. Sandboxes et dépôts d'échantillons
 
@@ -1148,7 +1176,7 @@ Constats après cinq passes de recherche (IOC, rapports, typologie, annuaires TI
 | **Plateformes russes** (R-Vision, Security Vision, UserGate, Гарда, Код Безопасности, InfoWatch) | marketing ou blocage ; l'écosystème CTI russe se réduit à Kaspersky, F6, PT, BI.ZONE, Solar, Dr.Web (listés). |
 | **SSII indiennes** | hors Quick Heal/Seqrite, K7, CloudSEK, Cyble, CYFIRMA, rien de publié. |
 | **Constructeurs japonais** (Panasonic, Omron, Sony, Canon, Fujitsu) | fermés aux robots ; note.com et Hatena ne résolvent pas. |
-| **Reddit, Bluesky** | Reddit refuse les robots (403) ; Bluesky quasi vide de CTI. |
+| **Reddit, Bluesky** | Reddit refuse les robots (403) mais reste lisible dans un lecteur via `reddit.com/r/<subreddit>/.rss` : les subreddits du §11 n'ont pas pu être vérifiés automatiquement. Bluesky quasi vide de CTI. |
 
 ## 18. Sources écartées
 
