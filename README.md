@@ -1006,7 +1006,7 @@ Voir aussi [flux-CTI.md](flux-CTI.md) : les sources de cette liste qui se charge
 | [BushidoToken (Will Thomas)](https://blog.bushidotoken.net/feeds/posts/default) · [Russian-APT-Tool-Matrix](https://github.com/BushidoUK/Russian-APT-Tool-Matrix) · [Ransomware-Vulnerability-Matrix](https://github.com/BushidoUK/Ransomware-Vulnerability-Matrix) | RENS | Atom / repo | 2026-09-23 | cybercriminalité britannique (série « UK Cybercrime Journal »), outils par groupe APT russe (2025-08), vulnérabilités exploitées par les rançongiciels (2026-08) ; Ransomware Tool Matrix au §10 |
 | [Stranded on Pylos (Joe Slowik)](https://pylos.co/feed/) | RENS | RSS | 2026-05-25 | attribution, ICS, guerre de l'information ; billets de fond peu fréquents |
 | [Objective-See (Patrick Wardle)](https://objective-see.org/rss.xml) | RENS | RSS | 2026-08-23 | malware macOS : analyses, outils et détection |
-| [Cyberknow](https://cyberknow.substack.com/feed) | RENS | RSS (Substack) | 2026-07-24 | suivi de l'hacktivisme par conflit (Iran-Israël, Inde-Pakistan, Russie-Ukraine) |
+| [Cyberknow](https://cyberknow.substack.com/feed) | RENS | RSS (Substack) | 2025-06-22 | suivi de l'hacktivisme par conflit (Iran-Israël, Inde-Pakistan, Russie-Ukraine) ; flux mort depuis cette date malgré l'abonnement toujours actif |
 | [LABScon (SentinelOne)](https://www.labscon.io/) · [talks](https://www.sentinelone.com/labs/category/labscon/) | RENS | web | 2026-09 | conférence sur invitation : analyses d'APT présentées avant publication ; seuls les talks autorisés par les orateurs sont mis en ligne |
 | [CYBERWARCON](https://www.cyberwarcon.com/) · [archive](https://www.cyberwarcon.com/archive) | RENS | web | 2025 (archive) | conférence sur les opérations étatiques ; archive 2018-2025 incomplète, une partie des talks n'est jamais publiée |
 | [RadioCSIRT](https://www.radiocsirt.org/feed/podcast/radio) | RENS | podcast (RSS) | 2026-10-01 | flash info quotidien pour CERT et CSIRT : vulnérabilités exploitées, campagnes APT, rançongiciels |
@@ -1115,7 +1115,7 @@ Voir aussi [flux-CTI.md](flux-CTI.md) : les sources de cette liste qui se charge
 | [NETSCOUT](https://www.netscout.com/threatreport) | US | RENS | PDF | rapport annuel |
 | [CLUSIT](https://clusit.it/rapporto-clusit/) | IT | RENS | PDF | rapport annuel `[IT]` |
 | [38 North (Stimson Center)](https://www.38north.org/) | US | RENS | web, bot | analyse de la Corée du Nord, dont sa posture cyber (« HWP as an Attack Surface », 2025) |
-| [Hackmageddon (Paolo Passeri)](https://www.hackmageddon.com/) | IT | RENS | web | chronologies mensuelles des attaques publiques et statistiques par motivation, secteur et technique |
+| [Hackmageddon (Paolo Passeri)](https://www.hackmageddon.com/) | IT | RENS | web, bot | chronologies mensuelles des attaques publiques et statistiques par motivation, secteur et technique |
 
 ## 15. Sandboxes et dépôts d'échantillons
 
